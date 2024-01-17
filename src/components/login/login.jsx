@@ -1,49 +1,150 @@
-import React from 'react'
-import Logo from '../../assets/images/Mask group.svg'
+import React from "react";
+import Logo from "../../assets/images/site-logo.svg";
+import DashboardSideImg from "../../assets/images/loginandsignup/dashboard-side.svg";
+import GoogleIcon from "../../assets/images/loginandsignup/google-icon.svg"
+import AppleIcon from "../../assets/images/loginandsignup/apple-icon.svg"
+import LineDivider from '../../assets/images/loginandsignup/line-divider.svg'
 
 const login = () => {
   return (
-    <section class="bg-gray-50 dark:bg-gray-900">
-  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-          <img class="w-[308px] h-[104px] mr-2" src={Logo} alt="logo"/>
-            
-      </a>
-      <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white ">
-              Log In
-              </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
-                  <div>
-                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required=""/>
-                  </div>
-                  <div>
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                      <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
-                  </div>
-                  <div class="flex items-center justify-between">
-                      <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                            <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required=""/>
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-                          </div>
-                      </div>
-                      <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
-                  </div>
-                  <button type="submit" class="w-full text-white bg-[red] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
-                  <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
-                  </p>
-              </form>
+    <section className=" grid grid-cols-1 lg:grid-cols-2 py-12  ">
+      <div className="flex flex-col justify-center items-center  w-4/5 pl-32 py-4">
+        <div className=" ">
+          <div>
+            <a
+              href="#"
+              class="flex  mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+            >
+              <img className="w-[290px] h-[110px] mr-2" src={Logo} alt="logo" />
+            </a>
           </div>
-      </div>
-  </div>
-</section>
-  )
-}
+          
+          <div>
+          <h1 className="font-rubik text-4xl font-bold leading-tight text[#000] mb-8 ">
+              Welcome back! Please log in to continue.
+            </h1>
+            <p className="text-[#000] font-rubik font-normal leading-6 text-base mb-8">
+              By signing up, you will gain access to exclusive content, special
+              offers, and be the first to hear about exciting news and updates.
+            </p>
+            <div className="grid grid-cols-2 gap-4 ">
+              <div className="flex gap-2 border border-[#C0C0C0] rounded-md px-2 py-2  align-middle items-center " >
+                <img className="h-5 w-5" src={AppleIcon} alt="" />
+                <p className="font-rubik font-normal text-lg text-[#404040] leading-7">Log in With Apple</p>
+              </div>
+              <div className="flex gap-2 border border-[#C0C0C0] rounded-md px-2 py-2 align-middle items-center " >
+                <img className="h-5 w-5 " src={GoogleIcon} alt="" />
+                <p className="font-rubik font-normal text-lg text-[#404040] leading-7">Log in With Google</p>
+              </div>
+            </div>
+            <div className="flex mt-8 mb-8 items-center justify-center ">
+              <img className="w-[220px]" src={LineDivider} alt="" />
+              <h6 className="text-lg font-rubik text-[#161642] font-bold leading-7 px-4">OR</h6>
+              <img className="w-[220px]" src={LineDivider} alt="" />
 
-export default login
+            </div>
+          </div>
+            <form className="space-y-4 md:space-y-6" action="#">
+              <div>
+                <label
+                  for="email"
+                  className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"  
+               placeholder="johnsmith@example.com"
+                  required=""
+                />
+              </div>
+              <div>
+                <label
+                  for="password"
+                  className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="•••••••••••"
+                  className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"  
+               required=""
+                />
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-start">
+                  <div className="flex items-center h-5">
+                    <input
+                      id="remember"
+                      aria-describedby="remember"
+                      type="checkbox"
+                      className="w-4 h-4 border border-[#c0c0c0] rounded "
+                      required=""
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label
+                      for="remember"
+                      className="text-base font-normal text-[#818181] font-rubik leading-7"
+                    >
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  className="text-sm font-normal text-[#634AF9] font-rubik leading-7 underline "
+                >
+                Forgot your password?
+                </a>
+              </div>
+              <button
+                type="submit"
+                className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center "
+              >
+                Log In
+              </button>
+              <p className="text-base font-normal text-[#161642] font-rubik leading-7">
+                Don’t have an account?{" "}
+                <a
+                  href="#"
+                  className="text-base font-bold text-[#161642] font-rubik leading-7"
+                >
+                  Sign Up
+                </a>
+              </p>
+            </form>
+          </div>
+        
+      </div>
+      <div className="flex flex-col  	items-center justify-center bg-[#fafafa] py-8   rounded-l-lg">
+        <div className="text-center">
+          <div className="w-2/3 mx-auto mb-8 mt-4">
+            <h2 className="text-[#000] font-bold font-rubik leading-9 text-3xl mb-6">
+              The simplest way to manage your workspace.
+            </h2>
+            <p className="text-[#000] font-rubik font-normal leading-6 text-base">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint velit officia consequat duis.
+            </p>
+          </div>
+          <div className="pl-12 pt-8">
+            <img
+            className="w-full h-full"
+            src={DashboardSideImg}
+            alt="DashboardSideImg"
+          />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default login;
