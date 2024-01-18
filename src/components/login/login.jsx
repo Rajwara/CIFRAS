@@ -6,6 +6,8 @@ import AppleIcon from "../../assets/images/loginandsignup/apple-icon.svg";
 import LineDivider from "../../assets/images/loginandsignup/line-divider.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from 'yup'
 
 const Login = () => {
   const [password, setPassword] = useState(false);
@@ -13,13 +15,40 @@ const Login = () => {
     setPassword(!password);
   };
 
+
+  const initialValues = {
+    email : '',
+    password : '',
+    remember : false,
+  }
+
+  const validationSchema = Yup.object().shape(
+    {
+      email : Yup.string().email('Please Enter Valid Email').required('Email is required'),
+      password : Yup.string().min( 8 , 'Password too Short use Character 8-14').max(15 , 'Password too Long use Character 8-14').required('password is required'),
+
+
+    }
+  );
+
+const onSubmit = (values, props) =>
+{
+console.log('Value',values);
+
+
+setTimeout(()=>{
+  props.resetForm();
+  props.setSubmitting(false);
+}, 2000);
+}
+
   return (
     <section className=" grid grid-cols-1 lg:grid-cols-2 py-12  ">
       <div className="flex flex-col justify-center items-center  w-4/5 pl-32 py-4">
         <div className=" ">
           <div>
             <a
-              href="#"
+              href="/"
               class="flex  mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
             >
               <img className="w-[290px] h-[110px] mr-2" src={Logo} alt="logo" />
@@ -56,100 +85,107 @@ const Login = () => {
               <img className="w-[220px]" src={LineDivider} alt="" />
             </div>
           </div>
-          <form className="space-y-4 md:space-y-6" action="#">
-            <div>
-              <label
-                for="email"
-                className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
-                placeholder="johnsmith@example.com"
+        <Formik 
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+        >
+      {
+        (props) => (
+          <Form className="space-y-4 md:space-y-6" action="#">
+          <div>
+            <label
+              for="email"
+              className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+            >
+              Email
+            </label>
+            <Field
+              type="email"
+              name="email"
+              id="email"
+              className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+              placeholder="johnsmith@example.com"
+              required=""
+            />
+              <ErrorMessage name="email" component="div" className="text-red-500 text-xs font-rubik" />
+
+          </div>
+          <div>
+            <label
+              for="password"
+              className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+            >
+              Password
+            </label>
+         
+
+            <div className="relative">
+              <Field
+                type={password ? "text" : "password"}
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                className="border border-[#C0C0C0] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
                 required=""
               />
-            </div>
-            <div>
-              <label
-                for="password"
-                className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+              <ErrorMessage name="password" component="div" className="text-red-500 text-xs font-rubik" />
+              <button
+                type="button"
+                onClick={toggleShowPassword}
+                className="absolute inset-y-0 right-0 flex items-center pr-2 focus:outline-none text-[#404040]"
               >
-                Password
-              </label>
-              {/* <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="•••••••••••"
-                  className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"  
-               required=""
-                /> */}
-
-              <div className="relative">
+                <FontAwesomeIcon icon={password ? faEye : faEyeSlash} />
+              </button>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-start">
+              <div className="flex items-center h-5">
                 <input
-                  type={password ? "text" : "password"}
-                  name="password"
-                  id="password"
-                  placeholder="Enter your password"
-                  className="border border-[#C0C0C0] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+                  id="remember"
+                  aria-describedby="remember"
+                  type="checkbox"
+                  className="w-4 h-4 border border-[#c0c0c0] rounded "
                   required=""
                 />
-                <button
-                  type="button"
-                  onClick={toggleShowPassword}
-                  className="absolute inset-y-0 right-0 flex items-center pr-2 focus:outline-none text-[#404040]"
+              </div>
+              <div class="ml-3 text-sm">
+                <label
+                  for="remember"
+                  className="text-base font-normal text-[#818181] font-rubik leading-7"
                 >
-                  <FontAwesomeIcon icon={password ? faEye : faEyeSlash} />
-                </button>
+                  Remember me
+                </label>
               </div>
             </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-start">
-                <div className="flex items-center h-5">
-                  <input
-                    id="remember"
-                    aria-describedby="remember"
-                    type="checkbox"
-                    className="w-4 h-4 border border-[#c0c0c0] rounded "
-                    required=""
-                  />
-                </div>
-                <div class="ml-3 text-sm">
-                  <label
-                    for="remember"
-                    className="text-base font-normal text-[#818181] font-rubik leading-7"
-                  >
-                    Remember me
-                  </label>
-                </div>
-              </div>
-              <a
-                href="#"
-                className="text-sm font-normal text-[#634AF9] font-rubik leading-7 underline "
-              >
-                Forgot your password?
-              </a>
-            </div>
-            <button
-              type="submit"
-              className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-rubik"
+            <a
+              href="#"
+              className="text-sm font-normal text-[#634AF9] font-rubik leading-7 underline "
             >
-              Log In
-            </button>
-            <p className="text-base font-normal text-[#161642] font-rubik leading-7">
-              Don’t have an account?{" "}
-              <a
-                href="#"
-                className="text-base font-bold text-[#161642] font-rubik leading-7"
-              >
-                Sign Up
-              </a>
-            </p>
-          </form>
+              Forgot your password?
+            </a>
+          </div>
+          <button
+            type="submit"
+            disabled = {props.isSubmitting}
+            className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-rubik"
+          >
+            Log In
+          </button>
+          <p className="text-base font-normal text-[#161642] font-rubik leading-7">
+            Don’t have an account?{" "}
+            <a
+              href="/signup"
+              className="text-base font-bold text-[#161642] font-rubik leading-7"
+            >
+              Sign Up
+            </a>
+          </p>
+        </Form>
+        )
+      }
+        </Formik>
         </div>
       </div>
       <div className="flex flex-col  	items-center justify-center bg-[#fafafa] py-8   rounded-l-lg">
