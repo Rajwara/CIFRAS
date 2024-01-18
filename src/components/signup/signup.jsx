@@ -240,7 +240,7 @@ const onSubmit = (values, props)=>{
                   </div>
                 </div>
                 <a
-                  href="#"
+                  href="/forgetpassword"
                   className="text-sm font-normal text-[#634AF9] font-rubik leading-7 underline "
                 >
                   Forgot your password?
