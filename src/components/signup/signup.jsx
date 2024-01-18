@@ -1,11 +1,25 @@
-import React from "react";
+import React,{useState} from "react";
 import Logo from "../../assets/images/site-logo.svg";
 import DashboardSideImg from "../../assets/images/loginandsignup/dashboard-side.svg";
 import GoogleIcon from "../../assets/images/loginandsignup/google-icon.svg";
 import AppleIcon from "../../assets/images/loginandsignup/apple-icon.svg";
 import LineDivider from "../../assets/images/loginandsignup/line-divider.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 const Signup = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const toggleShowConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
+
   return (
     <section className=" grid grid-cols-1 lg:grid-cols-2 py-12  ">
       <div className="flex flex-col justify-center items-center  w-4/5 pl-32 py-4">
@@ -79,7 +93,8 @@ const Signup = () => {
                   type="text"
                   name="lastname"
                   id="lastname"
-                  className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"  placeholder="Enter your last name"
+                  className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+                  placeholder="Enter your last name"
                   required=""
                 />
               </div>
@@ -95,7 +110,8 @@ const Signup = () => {
                 type="email"
                 name="email"
                 id="email"
-                className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"  placeholder="johnsmith@example.com"
+                className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+                placeholder="johnsmith@example.com"
                 required=""
               />
             </div>
@@ -108,14 +124,25 @@ const Signup = () => {
                 >
                   Password
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Enter your password"
-                  className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5" required=""
-                />
-                
+               <div className="relative">
+               <input
+          type={showPassword ? 'text' : 'password'}
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          className="border border-[#C0C0C0] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+          required=""
+        />
+        <button
+          type="button"
+          onClick={toggleShowPassword}
+          className="absolute inset-y-0 right-0 flex items-center pr-2 focus:outline-none text-[#404040]"
+        >
+          <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash } />
+        </button>
+               </div>
+
+
               </div>
               <div className="w-full">
                 <label
@@ -124,13 +151,26 @@ const Signup = () => {
                 >
                   Confirm Password
                 </label>
+
+                <div className="relative">
                 <input
-                  type="password"
-                  name="confirmpassword"
-                  id="conirmpassword"
-                  placeholder="Enter your confirm pa...."
-                  className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"  required=""
+                  type={showConfirmPassword ? "text" : "password"}
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  placeholder="Enter your confirm password"
+                  className="border border-[#C0C0C0] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+                  required=""
                 />
+                <button
+                  type="button"
+                  onClick={toggleShowConfirmPassword}
+                  className="absolute inset-y-0 right-0 flex items-center pr-2 focus:outline-none text-[#404040]"
+                >
+                  <FontAwesomeIcon
+                    icon={showConfirmPassword ? faEye : faEyeSlash}
+                  />
+                </button>
+                </div>
               </div>
             </div>
             <div className="flex items-center justify-between">
@@ -162,7 +202,7 @@ const Signup = () => {
             </div>
             <button
               type="submit"
-              className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center "
+              className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-rubik "
             >
               Sign up
             </button>
