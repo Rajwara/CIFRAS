@@ -14,6 +14,7 @@ function App() {
        <Route path='/forgetpassword' element= {<Forgetpassword/>}/> */}
        <Route path='/' element= {<Navandsidebar/>}/>
   </Routes>
+  
     </div>
   );
 }
