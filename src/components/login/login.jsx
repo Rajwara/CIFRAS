@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Logo from "../../assets/images/site-logo.svg";
-import DashboardSideImg from "../../assets/images/loginandsignup/dashboard-side.svg";
+import Logo from "../../assets/images/sitelogo.svg";
+import DashboardSideImg from "../../assets/images/loginandsignup/dashboardside.svg";
 import GoogleIcon from "../../assets/images/loginandsignup/google-icon.svg";
 import AppleIcon from "../../assets/images/loginandsignup/apple-icon.svg";
 import LineDivider from "../../assets/images/loginandsignup/line-divider.svg";
+import MainBg from "../../assets/images/loginandsignup/main_screen_bg.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -43,34 +44,35 @@ setTimeout(()=>{
 }
 
   return (
-    <section className=" grid grid-cols-1 lg:grid-cols-2 py-12  ">
-      <div className="flex flex-col justify-center items-center  w-4/5 pl-32 py-4">
+    <section className=" grid grid-cols-1 lg:grid-cols-2 py-12 bg-no-repeat bg-cover	" style={{backgroundImage: `url(${MainBg})`}}>
+      <div className="flex flex-col justify-center items-center  w-4/5 ml-32   ">
         <div className=" ">
           <div>
             <a
               href="/"
               class="flex  mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
             >
-              <img className="w-[290px] h-[110px] mr-2" src={Logo} alt="logo" />
+              <img className="w-[290px] h-[110px] mr-2 " src={Logo} alt="logo" />
             </a>
           </div>
 
           <div>
-            <h1 className="font-rubik text-4xl font-bold leading-tight text[#000] mb-8 ">
+            <h1 className="font-rubik text-4xl mt-[-25px] font-bold leading-tight text-[#fff] mb-3 ">
               Welcome back! Please log in to continue.
             </h1>
-            <p className="text-[#000] font-rubik font-normal leading-6 text-base mb-8">
+            <p className="text-[#fff] font-rubik font-normal leading-6 text-base mb-7">
               By signing up, you will gain access to exclusive content, special
               offers, and be the first to hear about exciting news and updates.
             </p>
-            <div className="grid grid-cols-2 gap-4 ">
-              <div className="flex gap-2 border border-[#C0C0C0] rounded-md px-2 py-2  align-middle items-center ">
+           <div className="bg-white py-10 rounded shadow px-8">
+           <div className="grid grid-cols-2 gap-4 ">
+              <div className="flex gap-2 border border-[#634AF9] rounded-md px-2 py-2  align-middle items-center ">
                 <img className="h-5 w-5" src={AppleIcon} alt="" />
                 <p className="font-rubik font-normal text-lg text-[#404040] leading-7">
                   Log in With Apple
                 </p>
               </div>
-              <div className="flex gap-2 border border-[#C0C0C0] rounded-md px-2 py-2 align-middle items-center ">
+              <div className="flex gap-2 border border-[#634AF9] rounded-md px-2 py-2 align-middle items-center ">
                 <img className="h-5 w-5 " src={GoogleIcon} alt="" />
                 <p className="font-rubik font-normal text-lg text-[#404040] leading-7">
                   Log in With Google
@@ -84,8 +86,7 @@ setTimeout(()=>{
               </h6>
               <img className="w-[220px]" src={LineDivider} alt="" />
             </div>
-          </div>
-        <Formik 
+            <Formik 
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
@@ -104,7 +105,7 @@ setTimeout(()=>{
               type="email"
               name="email"
               id="email"
-              className=" border border-[#c0c0c0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+              className=" border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
               placeholder="johnsmith@example.com"
               required=""
             />
@@ -114,7 +115,7 @@ setTimeout(()=>{
           <div>
             <label
               for="password"
-              className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+              className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7  "
             >
               Password
             </label>
@@ -126,7 +127,7 @@ setTimeout(()=>{
                 name="password"
                 id="password"
                 placeholder="Enter your password"
-                className="border border-[#C0C0C0] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+                className="border-1 border-[#634AF9]  text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
                 required=""
               />
               <ErrorMessage name="password" component="div" className="text-red-500 text-xs font-rubik" />
@@ -186,15 +187,18 @@ setTimeout(()=>{
         )
       }
         </Formik>
+          </div>
+       
+           </div>
         </div>
       </div>
-      <div className="flex flex-col  	items-center justify-center bg-[#fafafa] py-8   rounded-l-lg">
+      <div className="flex flex-col 	items-center justify-center  py-8   rounded-l-lg">
         <div className="text-center">
           <div className="w-2/3 mx-auto mb-8 mt-4">
-            <h2 className="text-[#000] font-bold font-rubik leading-9 text-3xl mb-6">
+            <h2 className="text-[#fff] font-bold font-rubik leading-9 text-3xl mb-6">
               The simplest way to manage your workspace.
             </h2>
-            <p className="text-[#000] font-rubik font-normal leading-6 text-base">
+            <p className="text-[#fff] font-rubik font-normal leading-6 text-base">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint velit officia consequat duis.
             </p>
