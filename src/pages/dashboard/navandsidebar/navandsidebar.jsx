@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../../assets/images/site-logo.svg";
+import Logo from "../../../assets/images/sitelogocolored.png";
 import profileImg from "../../../assets/images/dashboard/john.svg";
 import DashboardSideIcon from "../../../assets/images/dashboard/dashboard.svg";
 import ProductManagementIcon from "../../../assets/images/dashboard/productManagement.svg";
@@ -54,7 +54,7 @@ const Navandsidebar = () => {
                 </svg>
               </button>
               <a href="/" class="flex ms-2 md:me-24">
-                <img src={Logo} class="w-[50%]" alt="Logo" />
+                <img src={Logo} class="w-[25%]" alt="Logo" />
               </a>
             </div>
 
@@ -198,56 +198,57 @@ const Navandsidebar = () => {
 
       <aside
         id="logo-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        class=" min-h-screen w-[3.85rem] overflow-hidden  hover:w-1/6 hover:bg-white hover:shadow-lg  fixed top-0 left-0 z-40 h-screen pt-24 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
-        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div class=" h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
           <ul class="space-y-2 font-medium">
             <li>
               <a href="#" class="flex items-center p-2 mt-5 group">
-                <img src={DashboardSideIcon} alt="DashboardSideIcon" />
-                <span class="ms-3 font-rubik text-base font-normal leading-5	">
+                <img src={DashboardSideIcon} alt="DashboardSideIcon" className="w-7 h-7" />
+                <span class="ms-5 font-rubik text-base font-normal leading-5">
                   Dashboard
                 </span>
               </a>
             </li>
             <li>
               <a href="#" class="flex items-center p-2 mt-5 group">
-                <img src={ProductManagementIcon} alt="" />
-                <span class="flex-1 ms-3 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <img src={ProductManagementIcon} alt="" className="w-7 h-7"/>
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Product Management
                 </span>
               </a>
             </li>
             <li>
               <a href="#" class="flex items-center p-2 group mt-5">
-                <img src={QuotesGenerationIcon} alt="" />
-                <span class="flex-1 ms-3 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <img src={QuotesGenerationIcon} alt="" className="w-7 h-7"/>
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Quotes Generation
                 </span>
               </a>
             </li>
             <li>
               <a href="#" class="flex items-center p-2 group mt-5">
-                <img src={InvoiceGenerationIcon} alt="" />
-                <span class="flex-1 ms-3 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <img src={InvoiceGenerationIcon} alt="" className="w-7 h-7"/>
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Invoice Generation
                 </span>
               </a>
             </li>
             <li>
               <a href="#" class="flex items-center p-2 group mt-5">
-                <img src={ElectronicBillingIcon} alt="" />
-                <span class="flex-1 ms-3 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <img src={ElectronicBillingIcon} alt="" className="w-7 h-7"/>
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Electronic Billing
                 </span>
               </a>
             </li>
           </ul>
         </div>
+
       </aside>
 
-      <div class="p-4 sm:ml-64 mt-4 bg-[#ebebeb]">
+      <div class="p-4 sm:ml-14 mt-4 bg-[#ebebeb]">
         <div class=" border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
           <div class="mb-4">
             <p class="text-2xl text-gray-400 dark:text-gray-500">
