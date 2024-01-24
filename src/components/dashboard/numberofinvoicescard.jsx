@@ -9,7 +9,7 @@ const Numberofinvoicescard = () => {
   return (
     <div className=' bg-white py-6 px-16 rounded'>
     <div className='top flex justify-between mb-4'>
-        <div className='left flex flex items-center gap-4'>
+        <div className='left  flex items-center gap-4'>
           <div className=''>
           <img src={Icons} className='' alt='' />
         </div>
