@@ -210,7 +210,7 @@ const Navandsidebar = () => {
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center p-2 group mt-5">
+              <a href="/invoice" class="flex items-center p-2 group mt-5">
                 <img src={InvoiceGenerationIcon} alt="" className="w-7 h-7"/>
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Invoice Generation

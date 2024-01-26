@@ -5,6 +5,7 @@ import Signup from './components/signup/signup';
 import Forgetpassword from './components/forgetpassword/forgetpassword';
 import Navandsidebar from './pages/dashboard/navandsidebar/navandsidebar'
 import Maindashbaord from './pages/dashboard/maindashboard/maindashbaord';
+import Invoice from './pages/dashboard/Invoice/Invoice';
 
 
 function App() {
@@ -13,12 +14,15 @@ function App() {
       <Navandsidebar/>
       
   <Routes>
-        {/* <Route path='/' element= {<Login/>} />
+        <Route path='/' element= {<Login/>} />
         <Route path='/signup' element= {<Signup/>}/>
-        <Route path='/forgetpassword' element= {<Forgetpassword/>}/> */}
+        <Route path='/forgetpassword' element= {<Forgetpassword/>}/>
       <Route path='/dashbaord' element={<Maindashbaord/>}/>
+      <Route path='/invoice' element={<Invoice/>}/>
 
 
+
+      
   </Routes>
   
     </div>
