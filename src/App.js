@@ -5,7 +5,7 @@ import Signup from './components/signup/signup';
 import Forgetpassword from './components/forgetpassword/forgetpassword';
 import Navandsidebar from './pages/dashboard/navandsidebar/navandsidebar'
 import Maindashbaord from './pages/dashboard/maindashboard/maindashbaord';
-import Invoice from './pages/dashboard/Invoice/Invoice';
+import Invoicelist from './pages/dashboard/Invoice/invoicelist';
 
 
 function App() {
@@ -18,7 +18,10 @@ function App() {
         <Route path='/signup' element= {<Signup/>}/>
         <Route path='/forgetpassword' element= {<Forgetpassword/>}/>
       <Route path='/dashbaord' element={<Maindashbaord/>}/>
-      <Route path='/invoice' element={<Invoice/>}/>
+      {/* <Route path='/createinvoice' element={<Createinvoice/>}/> */}
+      {/* <Route path='/editinvoice' element={<Editinvoice/>}/> */}
+
+      <Route path='/invoicelist' element={<Invoicelist/>}/>
 
 
 

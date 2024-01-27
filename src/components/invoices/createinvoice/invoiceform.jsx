@@ -1,6 +1,6 @@
 import React from "react";
-import RemoveIcon from "../../assets/images/invoice/removeicon.svg";
-import PlusIcongray from "../../assets/images/invoice/plusicongray.svg";
+import RemoveIcon from "../../../assets/images/invoice/removeicon.svg";
+import PlusIcongray from "../../../assets/images/invoice/plusicongray.svg";
 
 const Invoiceform = () => {
   // const [isDropdownOpen, setDropdownOpen] = useState(false);

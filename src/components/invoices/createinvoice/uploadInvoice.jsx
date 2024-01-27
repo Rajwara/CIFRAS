@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ImportIcon from '../../../src/assets/images/invoice/ImportIcon.svg'
+import ImportIcon from '../../../../src/assets/images/invoice/ImportIcon.svg'
 const UploadInvoice = () => {
   return (
     <div className='flex justify-between border border-[#ebebeb] bg-white  rounded py-6 px-8 items-center'>
