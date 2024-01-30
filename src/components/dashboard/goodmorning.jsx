@@ -13,10 +13,12 @@ const Goodmorning = () => {
 </div>
         </div>
         <div className='right'>
+<a href="/productform">
 <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
     <img src={Plus} className='w-6 h-6  ' alt=''/>
     Add Product
 </button>
+</a>
         </div>
     </div>
   )

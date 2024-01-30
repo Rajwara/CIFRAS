@@ -17,10 +17,12 @@ const invoicelistbtnbar = () => {
           <img src={ImportIcon} className="w-6 h-6  " alt="" />
           Import
         </button>
-        <button className="flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2">
+       <a href="/createinvoice">
+       <button className="flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2">
           <img src={Plus} className="w-6 h-6  " alt="" />
           Add Invoice
         </button>
+       </a>
       </div>
     </div>
   );

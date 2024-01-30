@@ -96,7 +96,7 @@ const Navandsidebar = () => {
                   2*
                 </span>
               </div>
-              <div class="flex items-center ms-3 w-[40%]">
+              <div class="flex items-center ms-3 w-[60%]">
                 <div className="flex gap-2 items-center">
                   <button
                     type="button"
@@ -180,7 +180,8 @@ const Navandsidebar = () => {
 
       <aside
         id="logo-sidebar"
-        class=" min-h-screen w-[3.85rem] overflow-hidden  hover:w-1/6 hover:bg-white hover:shadow-lg  fixed top-0 left-0 z-40 h-screen pt-24 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        class=" min-h-screen w-[3.85rem] overflow-hidden hover:w-[50%] md:hover:w-[32%] lg:hover:w-[25%]  xl:hover:w-1/6 hover:bg-white hover:shadow-lg  fixed top-0 left-0 z-40 h-full pt-24 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700
+  "
         aria-label="Sidebar"
       >
         <div class=" h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
@@ -194,7 +195,7 @@ const Navandsidebar = () => {
               </a>
             </li>
             <li>
-              <a href="/productmanger" class="flex items-center p-2 mt-5 group">
+              <a href="/products" class="flex items-center p-2 mt-5 group">
                 <img src={ProductManagementIcon} alt="" className="w-7 h-7"/>
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Product Management
@@ -202,7 +203,7 @@ const Navandsidebar = () => {
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center p-2 group mt-5">
+              <a href="/quote" class="flex items-center p-2 group mt-5">
                 <img src={QuotesGenerationIcon} alt="" className="w-7 h-7"/>
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Quotes Generation
@@ -218,10 +219,10 @@ const Navandsidebar = () => {
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center p-2 group mt-5">
+              <a href="/clients" class="flex items-center p-2 group mt-5">
                 <img src={ElectronicBillingIcon} alt="" className="w-7 h-7"/>
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
-                  Electronic Billing
+                Clients
                 </span>
               </a>
             </li>
