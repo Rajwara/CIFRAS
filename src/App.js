@@ -14,8 +14,8 @@ import Clientform from './components/clients/clientform/clientform'
 import Quoteform1 from './components/quote/quoteform1';
 import Createinvoice from './pages/dashboard/Invoice/createinvoice';
 import Invoicelist from './pages/dashboard/Invoice/invoicelist'
-
-
+import Profile from './pages/dashboard/profile/profile';
+import Settings from './components/profile/settings/settings';
 
 function App() {
   return (
@@ -27,7 +27,6 @@ function App() {
         <Route path='/signup' element= {<Signup/>}/>
         <Route path='/forgetpassword' element= {<Forgetpassword/>}/>
       <Route path='/dashbaord' element={<Maindashbaord/>}/>
-      {/* <Route path='/invoice' element={<Invoice/>}/> */}
 
       <Route path='/products' element={<Products/>}/>
       <Route path='/productform' element={<Productform/>}/>
@@ -40,6 +39,10 @@ function App() {
 
       <Route path='/createinvoice' element={<Createinvoice/>}/>
       <Route path='/invoicelist' element={<Invoicelist/>}/>
+
+      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/settings' element={<Settings/>}/>
+
 
 
 
