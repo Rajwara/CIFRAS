@@ -2,11 +2,22 @@ import React from "react";
 import Logo from "../../../assets/images/sitelogocolored.png";
 import profileImg from "../../../assets/images/dashboard/john.svg";
 import DashboardSideIcon from "../../../assets/images/dashboard/dashboard.svg";
-import ProductManagementIcon from "../../../assets/images/dashboard/productManagement.svg";
 import QuotesGenerationIcon from "../../../assets/images/dashboard/quotesgeneration.svg";
 import InvoiceGenerationIcon from "../../../assets/images/dashboard/invoicegeneration.svg";
-import ElectronicBillingIcon from "../../../assets/images/dashboard/electronicbilling.svg";
 import NotificationIcon from "../../../assets/images/dashboard/notification_icon.svg";
+import FacturaElectroncia from "../../../assets/images/dashboard/FacturaElectroncia.svg";
+import dropdownIcon from "../../../assets/images/dashboard/dropdownIcon.svg";
+import ProductsidebarIcon from "../../../assets/images/dashboard/ProductsidebarIcon.svg";
+import SupplierIcon from "../../../assets/images/dashboard/SupplierIcon.svg";
+import ReportsIcon from "../../../assets/images/dashboard/ReportsIcon.svg";
+import InventoryIcon from "../../../assets/images/dashboard/InventoryIcon.svg";
+import ClientIcon from "../../../assets/images/dashboard/ClientIconside.svg";
+import OrderIcon from "../../../assets/images/dashboard/OrderIcon.svg";
+import OptionsIcon from "../../../assets/images/dashboard/OptionsIcon.svg";
+
+
+
+
 
 
 const Navandsidebar = () => {
@@ -51,8 +62,6 @@ const Navandsidebar = () => {
                 <img src={Logo} class="w-[25%]" alt="Logo" />
               </a>
             </div>
-
-
 
             <div class="flex items-center w-[30%] gap-6 ">
               <div className="w-full mr-10">
@@ -134,7 +143,7 @@ const Navandsidebar = () => {
                     </p>
                   </div>
                   <ul class="py-1" role="none">
-                  <li>
+                    <li>
                       <a
                         href="/profile"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-rubik"
@@ -197,50 +206,178 @@ const Navandsidebar = () => {
           <ul class="space-y-2 font-medium">
             <li>
               <a href="/dashbaord" class="flex items-center p-2 mt-5 group">
-                <img src={DashboardSideIcon} alt="DashboardSideIcon" className="w-7 h-7" />
+                <img
+                  src={DashboardSideIcon}
+                  alt="DashboardSideIcon"
+                  className="w-7 h-7"
+                />
                 <span class="ms-5 font-rubik text-base font-normal leading-5">
                   Dashboard
                 </span>
               </a>
             </li>
+
+
+            <li>
+            <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-75 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+
+                  <img src={FacturaElectroncia} alt="" />
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Factura Electroncia</span>
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+            </button>
+            <ul id="dropdown-example" class="hidden py-2 space-y-2">
+
+
+
+
+                  <li className="flex hover:bg-gray-100 ml-12">
+                <img src={dropdownIcon} alt="" />
+                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Electronic Biling</a>
+                  </li>
+               
+            </ul>
+         </li>
+
+
+         
+
             <li>
               <a href="/products" class="flex items-center p-2 mt-5 group">
-                <img src={ProductManagementIcon} alt="" className="w-7 h-7"/>
+                <img src={ProductsidebarIcon} alt="" className="w-7 h-7" />
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
-                  Product Management
+                  Products
                 </span>
               </a>
             </li>
-            <li>
-              <a href="/quote" class="flex items-center p-2 group mt-5">
-                <img src={QuotesGenerationIcon} alt="" className="w-7 h-7"/>
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
-                  Quotes Generation
-                </span>
-              </a>
-            </li>
+
             <li>
               <a href="/invoicelist" class="flex items-center p-2 group mt-5">
-                <img src={InvoiceGenerationIcon} alt="" className="w-7 h-7"/>
+                <img src={InvoiceGenerationIcon} alt="" className="w-7 h-7" />
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
-                  Invoice Generation
+                  Invoice 
                 </span>
               </a>
             </li>
+
+            
+
+         
+            
             <li>
-              <a href="/clients" class="flex items-center p-2 group mt-5">
-                <img src={ElectronicBillingIcon} alt="" className="w-7 h-7"/>
+            <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-100 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-examp" data-collapse-toggle="dropdown-examp">
+
+                  <img src={SupplierIcon} alt="" />
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Suppliers</span>
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+            </button>
+            <ul id="dropdown-examp" class="hidden py-2 space-y-2">
+
+
+
+
+                  <li className="flex hover:bg-gray-100 ml-12">
+                <img src={dropdownIcon} alt="" />
+                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Purchase Orders</a>
+                  </li>
+
+                  <li className="flex hover:bg-gray-100 ml-12">
+                <img src={dropdownIcon} alt="" />
+                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Quotes</a>
+                  </li>
+               
+            </ul>
+         </li>
+       
+
+
+          <li>
+              <a href="/quote" class="flex items-center p-2 group mt-5">
+                <img src={ReportsIcon} alt="" className="w-7 h-7" />
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                Reports
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/quote" class="flex items-center p-2 group mt-5">
+                <img src={InventoryIcon} alt="" className="w-7 h-7" />
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                Inventory
+                </span>
+              </a>
+            </li>
+
+
+
+            <li>
+              <a href="/quote" class="flex items-center p-2 group mt-5">
+                <img src={ClientIcon} alt="" className="w-7 h-7" />
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                 Clients
                 </span>
               </a>
             </li>
+
+            
+            <li>
+              <a href="/clients" class="flex items-center p-2 group mt-5">
+                <img src={OrderIcon} alt="" className="w-7 h-7" />
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                  Orders
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/clients" class="flex items-center p-2 group mt-5">
+                <img src={QuotesGenerationIcon} alt="" className="w-7 h-7" />
+                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                Quotes
+                </span>
+              </a>
+            </li>
+
+       
+
+
+            <li>
+            <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-75 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-ex" data-collapse-toggle="dropdown-ex">
+
+                  <img src={OptionsIcon} alt="" />
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Options</span>
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+            </button>
+            <ul id="dropdown-ex" class="hidden py-2 space-y-2">
+
+
+
+
+                  <li className="flex hover:bg-gray-100 ml-12">
+                <img src={dropdownIcon} alt="" />
+                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Vendor</a>
+                  </li>
+
+                  <li className="flex hover:bg-gray-100 ml-12">
+                <img src={dropdownIcon} alt="" />
+                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Company Data</a>
+                  </li>
+               
+            </ul>
+         </li>
+
+
+            
+            
           </ul>
         </div>
-
       </aside>
-
-     
     </div>
   );
 };
