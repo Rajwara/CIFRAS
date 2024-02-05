@@ -70,7 +70,7 @@ const MyProfile = () => {
       </div>
 
 
-      <div className='px-8 font-rubik'>
+      <div className='px-8 font-rubik ml-6'>
      <Tabs aria-label="Default tabs" style="default">
       <Tabs.Item  active title="Posts"  icon={HiUserCircle}
       
