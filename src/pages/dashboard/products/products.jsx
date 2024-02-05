@@ -10,9 +10,9 @@ const Products = () => {
     <Addproduct/>
         </p>
       </div>
-       <div class="p-4 sm:ml-[62px] bg-[#ebebeb]">
+       <div class="p-4 sm:ml-[62px] bg-white">
 
-    <div class=" border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+    <div class="  mt-14">
      
       <div class="grid grid-cols-1 -mt-10 mb-4">
         <div class=" rounded ">

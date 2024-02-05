@@ -30,8 +30,8 @@ const Productform = () => {
   };
 
   return (
-    <div className='bg-[#ebebeb] p-4'>
-      <div className='grid grid-cols-1 mt-[100px] ml-[60px] bg-[#fff] px-8 py-16 rounded'>
+    <div className=' p-4'>
+      <div className='grid grid-cols-1 mt-[100px] ml-[60px] bg-white border border-[#ebebeb] py-10 px-10 rounded'>
         <div className=''>
           <h1 className="font-rubik text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 ">
             Create Products
