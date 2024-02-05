@@ -10,9 +10,9 @@ const Invoicelist = () => {
     <div>
        <div>
       {" "}
-      <div class=" sm:ml-14 mt-4 bg-[#ebebeb]">
+      <div class=" sm:ml-14 mt-4 bg-white">
         
-        <div class=" border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-20 ">
+        <div class=" mt-20 ">
         <div class="mb-4">
             <p class="text-2xl text-gray-400 dark:text-gray-500">
               <Invoicelistbtnbar/>
