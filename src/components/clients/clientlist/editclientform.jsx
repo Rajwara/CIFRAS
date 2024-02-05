@@ -26,8 +26,8 @@ const Editclientform = () => {
   };
 
   return (
-    <div className='bg-[#ebebeb]  px-4 pt-4 pb-[300px]'>
-      <div className='grid grid-cols-1 mt-[100px] ml-[60px] bg-[#fff] px-8 py-16 rounded'>
+    <div className='bg-white px-4 pt-4 pb-[300px]'>
+      <div className='grid grid-cols-1 mt-[100px] ml-[60px]  border border-[#ebebeb] px-8 py-16 rounded'>
         <div className=''>
           <h1 className="font-rubik text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 ">
             Add Client
