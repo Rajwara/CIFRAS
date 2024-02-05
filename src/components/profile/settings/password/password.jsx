@@ -2,9 +2,7 @@ import React,{ useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import UploadIcon from "../../../../assets/images/profile/uploadicon.svg";
-import NameFieldIcon from "../../../../assets/images/profile/namefieldicon.svg";
-import EmailFieldIcon from "../../../../assets/images/profile/emailfieldicon.svg";
-import { Dropdown } from "flowbite-react";
+
 import ProfileBanner from "../../../..//assets/images/profile/profilebanner.svg";
 import MainProfileImg from "../../../../assets/images/profile/mainprofileimg.svg";
 
