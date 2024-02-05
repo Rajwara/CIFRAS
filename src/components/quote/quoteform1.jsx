@@ -193,7 +193,7 @@ const Quoteform1 = () => {
 
     const Quotesidebar = ({ onClose }) => {
         return (
-          <div className="sidebar">
+          <div className="sidebar border border-[#ebebeb] rounded">
              <div className='quotesidebar flex flex-col gap-4 px-6 pt-[150px] pb-[600px]    bg-white'>
                 <h2 className='font-rubik font-bold text-[#634AF9] text-2xl leading-9'>Quote Summary</h2>
             <div className='flex gap-2'>
@@ -233,8 +233,8 @@ const Quoteform1 = () => {
       ];
 
   return (
-    <div className='bg-[#ebebeb] pl-4 py-4 pb-[130px] flex  flex-row flex-wrap '>
-    <div className={`form flex flex-col bg-white py-8 px-10 mt-[90px] ml-[60px] rounded w-[78%]`}>
+    <div className='bg-white pl-4 py-4 pb-[130px] flex  flex-row flex-wrap '>
+    <div className={`form flex flex-col bg-white py-8 px-10 border border-[#ebebeb] mt-[90px] ml-[60px] rounded w-[78%]`}>
             <div className='flex justify-between  bg-white   items-center'>
                 <div className='left flex flex-col gap-2 relative'>
                     <h2 className='font-rubik font-bold text-[#404040] text-xl leading-9'>Quote Information</h2>

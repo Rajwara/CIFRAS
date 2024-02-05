@@ -234,7 +234,7 @@ const Navandsidebar = () => {
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Electronic Biling</a>
+                     <a href="/invoicedetails" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Electronic Biling</a>
                   </li>
                
             </ul>
@@ -266,14 +266,16 @@ const Navandsidebar = () => {
          
             
             <li>
-            <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-100 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-examp" data-collapse-toggle="dropdown-examp">
+           <a href="/suppliers">
+           <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-100 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-examp" data-collapse-toggle="dropdown-examp">
 
-                  <img src={SupplierIcon} alt="" />
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Suppliers</span>
-                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                  </svg>
-            </button>
+<img src={SupplierIcon} alt="" />
+<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Suppliers</span>
+<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+</svg>
+</button>
+           </a>
             <ul id="dropdown-examp" class="hidden py-2 space-y-2">
 
 
@@ -295,7 +297,7 @@ const Navandsidebar = () => {
 
 
           <li>
-              <a href="/quote" class="flex items-center p-2 group mt-5">
+              <a href="/reports" class="flex items-center p-2 group mt-5">
                 <img src={ReportsIcon} alt="" className="w-7 h-7" />
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                 Reports
@@ -315,7 +317,7 @@ const Navandsidebar = () => {
 
 
             <li>
-              <a href="/quote" class="flex items-center p-2 group mt-5">
+              <a href="/clients" class="flex items-center p-2 group mt-5">
                 <img src={ClientIcon} alt="" className="w-7 h-7" />
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                 Clients
@@ -325,7 +327,7 @@ const Navandsidebar = () => {
 
             
             <li>
-              <a href="/clients" class="flex items-center p-2 group mt-5">
+              <a href="/orders" class="flex items-center p-2 group mt-5">
                 <img src={OrderIcon} alt="" className="w-7 h-7" />
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                   Orders
@@ -334,7 +336,7 @@ const Navandsidebar = () => {
             </li>
 
             <li>
-              <a href="/clients" class="flex items-center p-2 group mt-5">
+              <a href="/quotes" class="flex items-center p-2 group mt-5">
                 <img src={QuotesGenerationIcon} alt="" className="w-7 h-7" />
                 <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
                 Quotes
@@ -361,12 +363,12 @@ const Navandsidebar = () => {
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Vendor</a>
+                     <a href="/vendor" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Vendor</a>
                   </li>
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Company Data</a>
+                     <a href="/companydata" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Company Data</a>
                   </li>
                
             </ul>
