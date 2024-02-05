@@ -48,7 +48,7 @@ const Orderdetial = () => {
         <div className='upperform flex flex-row gap-6 w-full'>
           <div className='left w-3/4'>
             <div class="relative overflow-x-auto border-b border-[#ebebeb]">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                     <thead class="text-base font-rubik font-normal leading-5  text-[#404040] uppercase bg-[#ebebeb] ">
                         <tr>
                             <th scope="col" class="px-6 py-4">
@@ -66,8 +66,8 @@ const Orderdetial = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <tr class="bg-white border-b ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                 Apple MacBook Pro 17"
                             </th>
                             <td class="px-6 py-4">
@@ -80,8 +80,8 @@ const Orderdetial = () => {
                                 $2999
                             </td>
                         </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <tr class="bg-white border-b ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                 Microsoft Surface Pro
                             </th>
                             <td class="px-6 py-4">
@@ -94,8 +94,8 @@ const Orderdetial = () => {
                                 $1999
                             </td>
                         </tr>
-                        <tr class="bg-white dark:bg-gray-800">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <tr class="bg-white ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                 Magic Mouse 2
                             </th>
                             <td class="px-6 py-4">
@@ -115,7 +115,7 @@ const Orderdetial = () => {
           <div className='right w-1/4 border border-[#ebebeb] rounded-md px-10 py-8'>
             <ol class="relative text-gray-500 border-s">                  
                 <li class="mb-10 ms-6 flex flex-row items-center">            
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white ">
                         <svg class="w-3.5 h-3.5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                         </svg>
@@ -123,7 +123,7 @@ const Orderdetial = () => {
                     <h3 class="font-medium leading-tight">Order Pending</h3>
                 </li>
                 <li class="mb-10 ms-6 flex flex-row items-center">
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white ">
                         <svg class="w-3.5 h-3.5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                         </svg>
@@ -131,7 +131,7 @@ const Orderdetial = () => {
                     <h3 class="font-medium leading-tight">Order Processing</h3>
                 </li>
                 <li class="mb-10 ms-6 flex flex-row items-center">
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white ">
                         <svg class="w-3.5 h-3.5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                         </svg>
@@ -139,7 +139,7 @@ const Orderdetial = () => {
                     <h3 class="font-medium leading-tight">Order At Local Facility</h3>
                 </li>
                 <li class="mb-10 ms-6 flex flex-row items-center">
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#634AF9] rounded-full -start-4 ring-4 ring-white ">
                         <svg class="w-3.5 h-3.5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                         </svg>
@@ -147,8 +147,8 @@ const Orderdetial = () => {
                     <h3 class="font-medium leading-tight">Order Out For Delivery</h3>
                 </li>
                 <li class="ms-6 flex flex-row items-center">
-                    <span class="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700">
-                        <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -start-4 ring-4 ring-white ">
+                        <svg class="w-3.5 h-3.5 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                             <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2ZM7 2h4v3H7V2Zm5.7 8.289-3.975 3.857a1 1 0 0 1-1.393 0L5.3 12.182a1.002 1.002 0 1 1 1.4-1.436l1.328 1.289 3.28-3.181a1 1 0 1 1 1.392 1.435Z"/>
                         </svg>
                     </span>

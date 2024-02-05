@@ -243,10 +243,10 @@ const Invoiceform = () => {
 
                   <div
                     id="dropdownHover"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
                   >
                     <ul
-                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      class="py-2 text-sm text-gray-700 "
                       aria-labelledby="dropdownHoverButton"
                     >
                       <li>
@@ -320,10 +320,10 @@ const Invoiceform = () => {
                         type="button"
                         id="decrement-button"
                         data-input-counter-decrement="bedrooms-input"
-                        class="bg-gray-100  hover:bg-gray-200 border border-gray-300 rounded-s-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        class="bg-gray-100  hover:bg-gray-200 border border-gray-300 rounded-s-lg p-3 h-11 focus:ring-gray-100  focus:ring-2 focus:outline-none"
                       >
                         <svg
-                          class="w-3 h-3 text-gray-900 dark:text-white"
+                          class="w-3 h-3 text-gray-900 "
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -355,10 +355,10 @@ const Invoiceform = () => {
                         type="button"
                         id="increment-button"
                         data-input-counter-increment="bedrooms-input"
-                        class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        class="bg-gray-100  hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11 focus:ring-gray-100  focus:ring-2 focus:outline-none"
                       >
                         <svg
-                          class="w-3 h-3 text-gray-900 dark:text-white"
+                          class="w-3 h-3 text-gray-900 "
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"

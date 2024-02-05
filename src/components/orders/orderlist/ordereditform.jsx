@@ -117,7 +117,7 @@ const Ordereditform = () => {
                 </div>
                 <div className='w-full mt-4 mb-2'>
                   <div className="flex items-center gap-4">
-                    <input id="checkbox-table-search-3" type="checkbox" className="w-4 h-4 text-[#634AF9] bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                    <input id="checkbox-table-search-3" type="checkbox" className="w-4 h-4 text-[#634AF9] bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 " />
                     <label for="checkbox-table-search-3" className=" font-rubik font-normal text-[#404040] text-base leading-7">Shipping Address is the same as Billing Address</label>
                   </div>
                 </div>

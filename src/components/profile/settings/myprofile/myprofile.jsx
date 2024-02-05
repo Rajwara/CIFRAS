@@ -29,7 +29,7 @@ const Myprofile = () => {
 
                 <label
                   for="dropzone-file"
-                  class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300  rounded-full cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                  class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300  rounded-full cursor-pointer bg-gray-50  hover:bg-gray-100 "
                 >
                   <div class="z-10 h-2">
                     <img src={UploadIcon} alt="" />
@@ -81,12 +81,12 @@ const Myprofile = () => {
                 <div>
                 
                   <div class="flex">
-    <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+    <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md ">
    
         <p className="font-normal font-rubik text-[#404040] text-base leading-9"> https://redq.io/</p>
             
             </span>
-            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Giselle"/>
+            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  " placeholder="Giselle"/>
         </div>
                 </div>
               </form>
@@ -105,12 +105,12 @@ const Myprofile = () => {
                 <div>
                 
                   <div class="flex">
-    <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+    <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md ">
    
         <p className="font-normal font-rubik text-[#404040] text-base leading-9"> https://</p>
             
             </span>
-            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Giselle"/>
+            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  " placeholder="Giselle"/>
         </div>
                 </div>
               </form>
@@ -130,13 +130,13 @@ const Myprofile = () => {
             </div>
             <div className="w-[60%]">
               <form>
-                <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                  <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
-                    <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600">
+                <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 ">
+                  <div class="flex items-center justify-between px-3 py-2 border-b ">
+                    <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse ">
                       <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -156,7 +156,7 @@ const Myprofile = () => {
                         </button>
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -171,7 +171,7 @@ const Myprofile = () => {
                         </button>
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -187,7 +187,7 @@ const Myprofile = () => {
                         </button>
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -203,7 +203,7 @@ const Myprofile = () => {
                         </button>
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -220,7 +220,7 @@ const Myprofile = () => {
                       <div class="flex flex-wrap items-center space-x-1 rtl:space-x-reverse sm:ps-4">
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -241,7 +241,7 @@ const Myprofile = () => {
                         </button>
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -256,7 +256,7 @@ const Myprofile = () => {
                         </button>
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -272,7 +272,7 @@ const Myprofile = () => {
                         </button>
                         <button
                           type="button"
-                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                          class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
                         >
                           <svg
                             class="w-4 h-4"
@@ -291,7 +291,7 @@ const Myprofile = () => {
                     <button
                       type="button"
                       data-tooltip-target="tooltip-fullscreen"
-                      class="p-2 text-gray-500 rounded cursor-pointer sm:ms-auto hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                      class="p-2 text-gray-500 rounded cursor-pointer sm:ms-auto hover:text-gray-900 hover:bg-gray-100 "
                     >
                       <svg
                         class="w-4 h-4"
@@ -313,20 +313,20 @@ const Myprofile = () => {
                     <div
                       id="tooltip-fullscreen"
                       role="tooltip"
-                      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip "
                     >
                       Show full screen
                       <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                   </div>
-                  <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+                  <div class="px-4 py-2 bg-white rounded-b-lg ">
                     <label for="editor" class="sr-only">
                       Publish post
                     </label>
                     <textarea
                       id="editor"
                       rows="8"
-                      class="font-rubik block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                      class="font-rubik block w-full px-0 text-sm text-gray-800 bg-white border-0 "
                       placeholder="Write an article..."
                       required
                     ></textarea>
@@ -377,16 +377,16 @@ const Myprofile = () => {
 
                       <div
                         id="dropdownDell"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-96 dark:bg-gray-700 "
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-96  "
                       >
                         <ul
-                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          class="py-2 text-sm text-gray-700 "
                           aria-labelledby="dropdownDelayButtt"
                         >
                           <li>
                             <a
                               href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              class="block px-4 py-2 hover:bg-gray-100 "
                             >
                               OnSite
                             </a>
@@ -394,7 +394,7 @@ const Myprofile = () => {
                           <li>
                             <a
                               href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              class="block px-4 py-2 hover:bg-gray-100 "
                             >
                               Remote
                             </a>
@@ -402,7 +402,7 @@ const Myprofile = () => {
                           <li>
                             <a
                               href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              class="block px-4 py-2 hover:bg-gray-100 "
                             >
                               Hybird
                             </a>
@@ -412,8 +412,8 @@ const Myprofile = () => {
                       </div>
                     </div>
                     <div class="flex items-center">
-    <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label for="link-checkbox" class="ms-2 text-sm font-rubik font-normal text-gray-900 dark:text-gray-300">Show my job title in my profile</label>
+    <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "/>
+    <label for="link-checkbox" class="ms-2 text-sm font-rubik font-normal text-gray-900 ">Show my job title in my profile</label>
 </div>
                   </div>
                 </div>
@@ -446,7 +446,7 @@ const Myprofile = () => {
                             <input
                               type="text"
                               id="email-address-icon"
-                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  "
                               placeholder="johnsmith@example.com"
                             />
                           </div>
@@ -474,11 +474,11 @@ const Myprofile = () => {
               <div class="flex items-center justify-center w-full">
                 <label
                   for="dropzone-file"
-                  class="flex flex-col items-center justify-center w-full h-56 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                  class="flex flex-col items-center justify-center w-full h-56 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 "
                 >
                   <div class="flex flex-col items-center justify-center pt-5 pb-6">
                     <svg
-                      class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                      class="w-8 h-8 mb-4 text-gray-500 "
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -492,11 +492,11 @@ const Myprofile = () => {
                         d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                       />
                     </svg>
-                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                    <p class="mb-2 text-sm text-gray-500 ">
                       <span class="font-semibold">Click to upload</span> or drag
                       and drop
                     </p>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                    <p class="text-xs text-gray-500 ">
                       SVG, PNG, JPG or GIF (MAX. 800x400px)
                     </p>
                   </div>

@@ -61,7 +61,7 @@ const onSubmit = (values, props)=>{
           <div>
             <a
               href="/"
-              className="flex  mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+              className="flex  mb-6 text-2xl font-semibold text-gray-900 "
             >
               <img className="w-[290px] h-[110px] mr-2" src={Logo} alt="logo" />
             </a>

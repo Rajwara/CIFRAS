@@ -50,7 +50,7 @@ setTimeout(()=>{
           <div>
             <a
               href="/"
-              class="flex  mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+              class="flex  mb-6 text-2xl font-semibold text-gray-900 "
             >
               <img className="w-[290px] h-[110px] mr-2 " src={Logo} alt="logo" />
             </a>

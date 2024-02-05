@@ -72,10 +72,10 @@ const Forminvoice = () => {
                 </thead>
                 <tbody>
                     <tr className="bg-white border-b ">
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                             1
                         </th>
-                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                             Apple MacBook Pro 17"
                         </th>
                         <td className="px-6 py-4">
@@ -88,11 +88,11 @@ const Forminvoice = () => {
                             $2999
                         </td>
                     </tr>
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <tr className="bg-white border-b ">
+                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                             2
                         </th>
-                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                             Microsoft Surface Pro
                         </th>
                         <td className="px-6 py-4">
@@ -105,11 +105,11 @@ const Forminvoice = () => {
                             $1999
                         </td>
                     </tr>
-                    <tr className="bg-white dark:bg-gray-800">
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <tr className="bg-white ">
+                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                             3
                         </th>
-                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                             Magic Mouse 2
                         </th>
                         <td className="px-6 py-4">

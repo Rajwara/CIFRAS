@@ -6,12 +6,12 @@ import Prev from "../../../assets/images/prevbuttonfortable.svg";
 const Invoicelisttable = () => {
   return (
     <div className=" relative overflow-x-auto shadow-md border border-[#ebebeb] rounded p-5 bg-white">
-      <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+      <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white ">
         <div>
           <button
             id="dropdownActionButton"
             data-dropdown-toggle="dropdownAction"
-            class="font-rubik inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            class="font-rubik inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5"
             type="button"
           >
             <span class="sr-only">Action button</span>
@@ -34,16 +34,16 @@ const Invoicelisttable = () => {
           </button>
           <div
             id="dropdownAction"
-            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
           >
             <ul
-              class="py-1 text-sm text-gray-700 dark:text-gray-200"
+              class="py-1 text-sm text-gray-700 "
               aria-labelledby="dropdownActionButton"
             >
               <li>
                 <a
                   href="#"
-                  class="font-rubik block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class="font-rubik block px-4 py-2 hover:bg-gray-100 "
                 >
                   Reward
                 </a>
@@ -51,7 +51,7 @@ const Invoicelisttable = () => {
               <li>
                 <a
                   href="#"
-                  class="font-rubik block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class="font-rubik block px-4 py-2 hover:bg-gray-100 "
                 >
                   Promote
                 </a>
@@ -59,7 +59,7 @@ const Invoicelisttable = () => {
               <li>
                 <a
                   href="#"
-                  class="font-rubik block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class="font-rubik block px-4 py-2 hover:bg-gray-100 "
                 >
                   Activate account
                 </a>
@@ -68,7 +68,7 @@ const Invoicelisttable = () => {
             <div class="py-1">
               <a
                 href="#"
-                class="font-rubik block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                class="font-rubik block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
               >
                 Delete User
               </a>
@@ -81,7 +81,7 @@ const Invoicelisttable = () => {
         <div class="relative">
           <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
-              class="w-4 h-4 text-gray-500 dark:text-gray-400"
+              class="w-4 h-4 text-gray-500 "
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -99,20 +99,20 @@ const Invoicelisttable = () => {
           <input
             type="text"
             id="table-search-users"
-            class="font-rubik block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="font-rubik block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
             placeholder="Search for users"
           />
         </div>
       </div>
-      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
           <tr>
             <th scope="col" class="p-4">
               <div class="flex items-center">
                 <input
                   id="checkbox-all-search"
                   type="checkbox"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  "
                 />
                 <label for="checkbox-all-search" class="sr-only">
                   checkbox
@@ -143,13 +143,13 @@ const Invoicelisttable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr class="bg-white border-b  hover:bg-gray-50 ">
             <td class="w-4 p-4">
               <div class="flex items-center">
                 <input
                   id="checkbox-table-search-1"
                   type="checkbox"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "
                 />
                 <label for="checkbox-table-search-1" class="sr-only">
                   checkbox
@@ -158,7 +158,7 @@ const Invoicelisttable = () => {
             </td>
             <th
               scope="row"
-              class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+              class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap "
             >
               <img
                 class="w-10 h-10 rounded-full"
@@ -202,19 +202,19 @@ const Invoicelisttable = () => {
             <td class="px-6 py-4">
               <a
                 href="#"
-                class="font-rubik font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                class="font-rubik font-medium text-blue-600  hover:underline"
               >
                 Edit user
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr class="bg-white border-b  hover:bg-gray-50 ">
             <td class="w-4 p-4">
               <div class="flex items-center">
                 <input
                   id="checkbox-table-search-2"
                   type="checkbox"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2"
                 />
                 <label for="checkbox-table-search-2" class="sr-only">
                   checkbox
@@ -223,7 +223,7 @@ const Invoicelisttable = () => {
             </td>
             <th
               scope="row"
-              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              class="flex items-center px-6 py-4 font-medium text-[#404040] whitespace-nowrap "
             >
               <img
                 class="w-10 h-10 rounded-full"
@@ -270,19 +270,19 @@ const Invoicelisttable = () => {
             <td class="px-6 py-4">
               <a
                 href="#"
-                class="font-rubik font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                class="font-rubik font-medium text-blue-600  hover:underline"
               >
                 Edit user
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr class="bg-white border-b  hover:bg-gray-50 ">
             <td class="w-4 p-4">
               <div class="flex items-center">
                 <input
                   id="checkbox-table-search-2"
                   type="checkbox"
-                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500   focus:ring-2 "
                 />
                 <label
                   for="checkbox-table-search-2"
@@ -294,7 +294,7 @@ const Invoicelisttable = () => {
             </td>
             <th
               scope="row"
-              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               <img
                 class="w-10 h-10 rounded-full"
@@ -337,19 +337,19 @@ const Invoicelisttable = () => {
             <td class="px-6 py-4">
               <a
                 href="#"
-                class="font-rubik font-medium text-blue-600 dark:text-blue-500 hover:underline font-rubik "
+                class="font-rubik font-medium text-blue-600  hover:underline font-rubik "
               >
                 Edit user
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr class="bg-white border-b  hover:bg-gray-50 ">
             <td class="w-4 p-4">
               <div class="flex items-center">
                 <input
                   id="checkbox-table-search-2"
                   type="checkbox"
-                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "
                 />
                 <label
                   for="checkbox-table-search-2"
@@ -361,7 +361,7 @@ const Invoicelisttable = () => {
             </td>
             <th
               scope="row"
-              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               <img
                 class="w-10 h-10 rounded-full"
@@ -405,19 +405,19 @@ const Invoicelisttable = () => {
             <td class="px-6 py-4">
               <a
                 href="#"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline font-rubik "
+                class="font-medium text-blue-600  hover:underline font-rubik "
               >
                 Edit user
               </a>
             </td>
           </tr>
-          <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <tr class="bg-white  hover:bg-gray-50 0">
             <td class="w-4 p-4">
               <div class="flex items-center">
                 <input
                   id="checkbox-table-search-3"
                   type="checkbox"
-                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500   focus:ring-2 "
                 />
                 <label
                   for="checkbox-table-search-3 font-rubik "
@@ -429,7 +429,7 @@ const Invoicelisttable = () => {
             </td>
             <th
               scope="row"
-              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               <img
                 class="w-10 h-10 rounded-full"
@@ -473,7 +473,7 @@ const Invoicelisttable = () => {
             <td class="px-6 py-4">
               <a
                 href="#"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline font-rubik "
+                class="font-medium text-blue-600  hover:underline font-rubik "
               >
                 Edit user
               </a>
@@ -485,13 +485,13 @@ const Invoicelisttable = () => {
         class="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4 px-4"
         aria-label="Table navigation"
       >
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto font-rubik">
+        <span class="text-sm font-normal text-gray-500  mb-4 md:mb-0 block w-full md:inline md:w-auto font-rubik">
           Showing{" "}
-          <span class="font-semibold text-gray-900 dark:text-white font-rubik">
+          <span class="font-semibold text-gray-900 e font-rubik">
             1-10
           </span>{" "}
           of{" "}
-          <span class="font-semibold text-gray-900 dark:text-white font-rubik">
+          <span class="font-semibold text-gray-900  font-rubik">
             1000
           </span>
         </span>
@@ -499,7 +499,7 @@ const Invoicelisttable = () => {
           <li>
             <a
               href="#"
-              class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font-rubik"
+              class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700   font-rubik"
             >
              <img src={Prev} alt="" />
             </a>
@@ -507,7 +507,7 @@ const Invoicelisttable = () => {
           <li>
             <a
               href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
             >
               1
             </a>
@@ -515,7 +515,7 @@ const Invoicelisttable = () => {
           <li>
             <a
               href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
             >
               2
             </a>
@@ -524,7 +524,7 @@ const Invoicelisttable = () => {
             <a
               href="#"
               aria-current="page"
-              class="font-rubik flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+              class="font-rubik flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 "
             >
               3
             </a>
@@ -532,7 +532,7 @@ const Invoicelisttable = () => {
           <li>
             <a
               href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
             >
               4
             </a>
@@ -540,7 +540,7 @@ const Invoicelisttable = () => {
           <li>
             <a
               href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
             >
               5
             </a>
@@ -548,7 +548,7 @@ const Invoicelisttable = () => {
           <li>
             <a
               href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 "
             >
               <img src={Next} alt="" />
             </a>
