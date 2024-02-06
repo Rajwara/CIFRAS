@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <div>
     <div class=" mt-20 ml-[60px]">
-     <p class="text-2xl text-gray-400 dark:text-gray-500">
+     <p class="text-2xl text-gray-400 ">
         <MyProfile/>
      </p>
    </div>

@@ -32,7 +32,7 @@ const Navandsidebar = () => {
 
   return (
     <div>
-      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 ">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
@@ -41,7 +41,7 @@ const Navandsidebar = () => {
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
                 type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
               >
                 <span class="sr-only">Open sidebar</span>
                 <svg
@@ -67,14 +67,14 @@ const Navandsidebar = () => {
               <div className="w-full mr-10">
                 <label
                   for="default-search"
-                  class="leading-4 text-base font-medium text-gray-900 sr-only dark:text-white font-rubik"
+                  class="leading-4 text-base font-medium text-gray-900 sr-only  font-rubik"
                 >
                   Search
                 </label>
                 <div class="relative">
                   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg
-                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      class="w-4 h-4 text-gray-500 "
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -92,11 +92,10 @@ const Navandsidebar = () => {
                   <input
                     type="search"
                     id="default-search"
-                    class="font-rubik font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="font-rubik font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
                     placeholder="Search Your Page..."
                     required
                   />
-                  {/* <button type="submit" class=" leading-4 text-base font-medium text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg px-4 py-2  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> */}
                 </div>
               </div>
               <div className="flex ">
@@ -113,7 +112,6 @@ const Navandsidebar = () => {
                     aria-expanded="false"
                     data-dropdown-toggle="dropdown-user"
                   >
-                    {/* <span class="sr-only font-rubik">Open user menu</span> */}
                     <img
                       class="w-full h-[100%]   rounded-full"
                       src={profileImg}
@@ -125,18 +123,18 @@ const Navandsidebar = () => {
                   </h1>
                 </div>
                 <div
-                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow "
                   id="dropdown-user"
                 >
                   <div class="px-4 py-3" role="none">
                     <p
-                      class="text-sm text-gray-900 dark:text-white font-rubik"
+                      class="text-sm text-gray-900  font-rubik"
                       role="none"
                     >
                       Neil Sims
                     </p>
                     <p
-                      class="text-sm font-medium text-gray-900 truncate dark:text-gray-300 font-rubik"
+                      class="text-sm font-medium text-gray-900 truncate  font-rubik"
                       role="none"
                     >
                       neil.sims@flowbite.com
@@ -146,7 +144,7 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="/profile"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
                         role="menuitem"
                       >
                         Profile
@@ -155,7 +153,7 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="/dashbaord"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
                         role="menuitem"
                       >
                         Dashboard
@@ -164,7 +162,7 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="/settings"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
                         role="menuitem"
                       >
                         Settings
@@ -173,7 +171,7 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="#"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
                         role="menuitem"
                       >
                         Earnings
@@ -182,7 +180,7 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="#"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
                         role="menuitem"
                       >
                         Sign out
@@ -198,11 +196,10 @@ const Navandsidebar = () => {
 
       <aside
         id="logo-sidebar"
-        class=" min-h-screen w-[3.85rem] overflow-hidden hover:w-[50%] md:hover:w-[32%] lg:hover:w-[25%]  xl:hover:w-1/6 hover:bg-white hover:shadow-lg  fixed top-0 left-0 z-40 h-full pt-24 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700
-  "
+        class=" min-h-screen w-[3.85rem] overflow-hidden hover:w-[50%] md:hover:w-[32%] lg:hover:w-[25%]  xl:hover:w-1/6 hover:bg-white hover:shadow-lg  fixed top-0 left-0 z-40 h-full pt-24 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 "
         aria-label="Sidebar"
       >
-        <div class=" h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div class=" h-full px-3 pb-4 overflow-y-auto bg-white ">
           <ul class="space-y-2 font-medium">
             <li>
               <a href="/dashbaord" class="flex items-center p-2 mt-5 group">

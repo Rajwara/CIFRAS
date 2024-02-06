@@ -14,28 +14,16 @@ const Invoicelist = () => {
         
         <div class=" mt-20 ">
         <div class="mb-4">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <p class="text-2xl text-gray-400 ">
               <Invoicelistbtnbar/>
             </p>
           </div>
           <div class="mb-4 px-4">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <p class="text-2xl text-gray-400 ">
               <Invoicelisttable/>
             </p>
           </div>
-          {/* <div class="grid grid-cols-1 gap-4 mb-4 px-4">
-          
-            <div class="rounded">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
-                <Invoiceform />
-              </p>
-            </div>
-          </div>
-          <div class="mb-4">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-              <Submitinvoice />
-            </p>
-          </div> */}
+     
         
         </div>
       </div>
