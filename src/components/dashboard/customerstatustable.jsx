@@ -2,6 +2,66 @@ import React from "react";
 import Profile from '../../assets/images/dashboard/john.svg'
 
 const Customerstatustable = () => {
+
+    const tabledata = [
+        {
+        id : 1,
+        name : "Neil Sims",
+        email : "neil.sims@flowbite.com",
+        position : "React Developer",
+        status : "Online",
+        profileimage : Profile,
+        role : "Edit User"
+
+    },  {
+        id : 2,
+        name : "Neil Sims",
+        email : "neil.sims@flowbite.com",
+        position : "React Developer",
+        status : "Online",
+        profileimage : Profile,
+        role : "Edit User"
+
+    },  {
+        id : 3,
+        name : "Neil Sims",
+        email : "neil.sims@flowbite.com",
+        position : "React Developer",
+        status : "Online",
+        profileimage : Profile,
+        role : "Edit User"
+
+    },  {
+        id : 4,
+        name : "Neil Sims",
+        email : "neil.sims@flowbite.com",
+        position : "React Developer",
+        status : "Online",
+        profileimage : Profile,
+        role : "Edit User"
+
+    },  {
+        id : 5,
+        name : "Neil Sims",
+        email : "neil.sims@flowbite.com",
+        position : "React Developer",
+        status : "Online",
+        profileimage : Profile,
+        role : "Edit User"
+
+    },  {
+        id : 6,
+        name : "Neil Sims",
+        email : "neil.sims@flowbite.com",
+        position : "React Developer",
+        status : "Online",
+        profileimage : Profile,
+        role : "Edit User"
+
+    },
+    ]
+
+
   return (
     <div className=" relative overflow-x-auto shadow-md sm:rounded-lg p-5 bg-white">
     <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white ">
@@ -64,7 +124,9 @@ const Customerstatustable = () => {
         </tr>
     </thead>
     <tbody>
-        <tr class="bg-white border-b  hover:bg-gray-50 ">
+     {
+        tabledata.map((data)=>(
+            <tr class="bg-white border-b  hover:bg-gray-50 " key={data.id}>
             <td class="w-4 p-4">
                 <div class="flex items-center">
                     <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "/>
@@ -74,126 +136,25 @@ const Customerstatustable = () => {
             <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
                 <img class="w-10 h-10 rounded-full" src={Profile} alt="Jese image"/>
                 <div class="ps-3">
-                    <div class="text-base font-semibold font-rubik">Neil Sims</div>
-                    <div class="font-normal text-gray-500 font-rubik">neil.sims@flowbite.com</div>
-                </div>  
-            </th>
-            <td class="px-6 py-4 font-rubik">
-                React Developer
-            </td>
-            <td class="px-6 py-4">
-                <div class="flex items-center">
-                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div> Online
-                </div>
-            </td>
-            <td class="px-6 py-4">
-                <a href="#" class="font-rubik font-medium text-blue-600  hover:underline">Edit user</a>
-            </td>
-        </tr>
-        <tr class="bg-white border-b  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-                <div class="flex items-center">
-                    <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "/>
-                    <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                </div>
-            </td>
-            <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                <img class="w-10 h-10 rounded-full" src={Profile} alt="Jese image"/>
-                <div class="ps-3">
-                    <div class="text-base font-semibold font-rubik">Bonnie Green</div>
-                    <div class="font-normal text-gray-500 font-rubik">bonnie@flowbite.com</div>
+                    <div class="text-base font-semibold font-rubik">{data.name}</div>
+                    <div class="font-normal text-gray-500 font-rubik">{data.email}</div>
                 </div>
             </th>
             <td class="px-6 py-4 font-rubik">
-                Designer
+                {data.position}
             </td>
             <td class="px-6 py-4">
                 <div class="flex items-center">
-                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div> Online
+                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div> {data.status}
                 </div>
             </td>
             <td class="px-6 py-4">
-                <a href="#" class="font-rubik font-medium text-blue-600  hover:underline">Edit user</a>
+                <a href="#" class="font-rubik font-medium text-blue-600  hover:underline">{data.role}</a>
             </td>
         </tr>
-        <tr class="bg-white border-b  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-                <div class="flex items-center">
-                    <input id="checkbox-table-search-2" type="checkbox" class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "/>
-                    <label for="checkbox-table-search-2" class="sr-only font-rubik ">checkbox</label>
-                </div>
-            </td>
-            <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                <img class="w-10 h-10 rounded-full" src={Profile} alt="Jese image"/>
-                <div class="ps-3">
-                    <div class="text-base font-semibold font-rubik ">Jese Leos</div>
-                    <div class="font-normal text-gray-500 font-rubik ">jese@flowbite.com</div>
-                </div>
-            </th>
-            <td class="px-6 py-4 font-rubik ">
-                Vue JS Developer
-            </td>
-            <td class="px-6 py-4">
-                <div class="flex items-center">
-                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div> Online
-                </div>
-            </td>
-            <td class="px-6 py-4">
-                <a href="#" class="font-rubik font-medium text-blue-600  hover:underline font-rubik ">Edit user</a>
-            </td>
-        </tr>
-        <tr class="bg-white border-b  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-                <div class="flex items-center">
-                    <input id="checkbox-table-search-2" type="checkbox" class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "/>
-                    <label for="checkbox-table-search-2" class="sr-only font-rubik ">checkbox</label>
-                </div>
-            </td>
-            <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                <img class="w-10 h-10 rounded-full" src={Profile} alt="Jese image"/>
-                <div class="ps-3">
-                    <div class="text-base font-semibold font-rubik ">Thomas Lean</div>
-                    <div class="font-normal text-gray-500c font-rubik ">thomes@flowbite.com</div>
-                </div>
-            </th>
-            <td class="px-6 py-4 font-rubik ">
-                UI/UX Engineer
-            </td>
-            <td class="px-6 py-4">
-                <div class="flex items-center">
-                    <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div> Online
-                </div>
-            </td>
-            <td class="px-6 py-4">
-                <a href="#" class="font-medium text-blue-600 hover:underline font-rubik ">Edit user</a>
-            </td>
-        </tr>
-        <tr class="bg-white  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-                <div class="flex items-center">
-                    <input id="checkbox-table-search-3" type="checkbox" class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "/>
-                    <label for="checkbox-table-search-3 font-rubik " class="sr-only">checkbox</label>
-                </div>
-            </td>
-            <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                <img class="w-10 h-10 rounded-full" src={Profile} alt="Jese image"/>
-                <div class="ps-3">
-                    <div class="text-base font-semibold font-rubik ">Leslie Livingston</div>
-                    <div class="font-normal text-gray-500 font-rubik ">leslie@flowbite.com</div>
-                </div>
-            </th>
-            <td class="px-6 py-4 font-rubik ">
-                SEO Specialist
-            </td>
-            <td class="px-6 py-4">
-                <div class="flex items-center">
-                    <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2 font-rubik "></div> Offline
-                </div>
-            </td>
-            <td class="px-6 py-4">
-                <a href="#" class="font-medium text-blue-600  hover:underline font-rubik ">Edit user</a>
-            </td>
-        </tr>
+        ))
+     }
+     
     </tbody>
 </table>
 </div>
