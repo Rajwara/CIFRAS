@@ -6,9 +6,9 @@ const Goodmorning = () => {
   return (
     <div className='flex justify-between border border-[#ebebeb] bg-white  rounded py-6 px-8 items-center'>
         <div className='left flex flex-col gap-2 relative'>
-<h2 className='font-rubik font-bold text-[#634AF9] text-4xl leading-9'>Good Morning</h2>
+<h2 className='font-lexend font-bold text-[#634AF9] text-4xl leading-9'>Good Morning</h2>
 <div className='flex gap-2'>
-<h4 className='font-rubik font-normal text-[#404040] text-4xl leading-9'>John Deo</h4>
+<h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>John Deo</h4>
 <img src={Hand} className='w-8 h-8' alt='' />
 </div>
         </div>

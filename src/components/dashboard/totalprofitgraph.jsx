@@ -17,7 +17,7 @@ const TotalProfitGraph = () => {
       labels: {
         show: true,
         style: {
-          fontFamily: "rubik, sans-serif",
+          fontFamily: "inter, sans-serif",
           cssClass: "text-xs font-normal fill-gray-500 ",
         },
       },
@@ -33,7 +33,7 @@ const TotalProfitGraph = () => {
       labels: {
         show: true,
         style: {
-          fontFamily: "rubik, sans-serif",
+          fontFamily: "inter, sans-serif",
           cssClass: "text-xs font-normal fill-gray-500",
         },
         formatter: function (value) {
@@ -110,17 +110,17 @@ const TotalProfitGraph = () => {
       <div className="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
         <div>
           <div className=" justify-between items-center grid grid-cols-2">
-            <h5 className="leading-none text-3xl font-bold text-gray-900  pb-2 font-rubik">
+            <h5 className="leading-none text-3xl font-bold text-gray-900  pb-2 font-lexend">
               $12,423
             </h5>
-            <h5 className="leading-none text-xl font-bold  pb-2 font-rubik text-[#000] m">
+            <h5 className="leading-none text-xl font-bold  pb-2 font-lexend text-[#000] m">
          Total profit without tax included.
             </h5>
               <button
               id="dropdownDefaultButton"
               data-dropdown-toggle="lastDaysdropdown"
               data-dropdown-placement="bottom"
-              class="text-sm font-medium text-gray-500  hover:text-gray-900 text-center inline-flex items-center  font-rubik"
+              class="text-sm font-medium text-gray-500  hover:text-gray-900 text-center inline-flex items-center  font-inter"
               type="button"
             >
               Last 7 days

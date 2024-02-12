@@ -13,8 +13,8 @@ const Mostsoldproductscard = () => {
           <img src={Icons} className='' alt='' />
         </div>
             <div className=''>
-                <h6 className='font-normal font-rubik text-[#000000] text-xl leading-9'>Most Sold Products</h6>
-                <h6 className='font-bold font-rubik text-[#f092ff] text-xl leading-9'>1,200</h6>
+                <h6 className='font-normal font-lexend text-[#000000] text-xl leading-9'>Most Sold Products</h6>
+                <h6 className='font-bold font-lexend text-[#f092ff] text-xl leading-9'>1,200</h6>
 
             </div>
         </div>
@@ -25,8 +25,8 @@ const Mostsoldproductscard = () => {
     <img src={UnderLine} className='items-center justify-center mx-auto' alt='' />
     <div className='down flex items-center mt-6 gap-2' >
       <img src={Arrow} className='h-4 w-4' alt='' />
-      <p className='font-medium font-rubik text-[#ff3d00] text-xl leading-7'>-15.20%</p>
-      <p className='font-normal font-rubik text-[#404040] text-xl leading-7'>Decreased last month</p>
+      <p className='font-medium font-inter text-[#ff3d00] text-xl leading-7'>-15.20%</p>
+      <p className='font-normal font-inter text-[#404040] text-xl leading-7'>Decreased last month</p>
     </div>
 
 </div>

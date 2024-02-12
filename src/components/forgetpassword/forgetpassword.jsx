@@ -55,7 +55,7 @@ const Forgetpassword = () => {
           </div>
 
           <div>
-            <h1 className="font-rubik text-4xl font-bold leading-tight text-[#fff] mb-8 ">
+            <h1 className="font-lexend text-4xl font-bold leading-tight text-[#fff] mb-8 ">
             Reset your password!
 
             </h1>
@@ -75,7 +75,7 @@ const Forgetpassword = () => {
           <div>
             <label
               for="email"
-              className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+              className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
             >
               Email
             </label>
@@ -83,17 +83,17 @@ const Forgetpassword = () => {
               type="email"
               name="email"
               id="email"
-              className=" border border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+              className=" border border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5"
               placeholder="johnsmith@example.com"
               required=""
             />
-              <ErrorMessage name="email" component="div" className="text-red-500 text-xs font-rubik" />
+              <ErrorMessage name="email" component="div" className="text-red-500 text-xs font-inter" />
 
           </div>
           <div>
             {/* <label
               for="password"
-              className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+              className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
             >
               Password
             </label> */}
@@ -103,7 +103,7 @@ const Forgetpassword = () => {
                   {" "}
                   <label
                     htmlFor="password"
-                    className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                    className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
                   >
                     Password
                   </label>
@@ -113,10 +113,10 @@ const Forgetpassword = () => {
             name="password"
             id="password"
             placeholder="Enter your password"
-            className="border border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+            className="border border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5"
             required=""
           />
-                  <ErrorMessage name="password" component="div" className="text-red-500 text-xs font-rubik"/>
+                  <ErrorMessage name="password" component="div" className="text-red-500 text-xs font-inter"/>
 
           <button
             type="button"
@@ -132,7 +132,7 @@ const Forgetpassword = () => {
                 <div className="w-full">
                   <label
                     htmlFor="confirmPassword"
-                    className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                    className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
                   >
                     Confirm Password
                   </label>
@@ -143,10 +143,10 @@ const Forgetpassword = () => {
                     name="confirmPassword"
                     id="confirmPassword"
                     placeholder="Enter your confirm password"
-                    className="border border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+                    className="border border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5"
                     required=""
                   />
-                  <ErrorMessage name="confirmPassword" component="div" className="text-red-500 text-xs font-rubik"/>
+                  <ErrorMessage name="confirmPassword" component="div" className="text-red-500 text-xs font-inter"/>
 
                   <button
                     type="button"
@@ -175,7 +175,7 @@ const Forgetpassword = () => {
               <div class="ml-3 text-sm">
                 <label
                   for="remember"
-                  className="text-base font-normal text-[#818181] font-rubik leading-7"
+                  className="text-base font-normal text-[#818181] font-inter leading-7"
                 >
                   Remember me
                 </label>
@@ -183,7 +183,7 @@ const Forgetpassword = () => {
             </div>
             <a
               href="#"
-              className="text-sm font-normal text-[#634AF9] font-rubik leading-7 underline "
+              className="text-sm font-normal text-[#634AF9] font-inter leading-7 underline "
             >
               Forgot your password?
             </a>
@@ -191,15 +191,15 @@ const Forgetpassword = () => {
           <button
             type="submit"
             disabled = {props.isSubmitting}
-            className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-rubik"
+            className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-inter"
           >
             Log In
           </button>
-          <p className="text-base font-normal text-[#161642] font-rubik leading-7">
+          <p className="text-base font-normal text-[#161642] font-inter leading-7">
             Don’t have an account?{" "}
             <a
               href="/signup"
-              className="text-base font-bold text-[#161642] font-rubik leading-7"
+              className="text-base font-bold text-[#161642] font-inter leading-7"
             >
               Sign Up
             </a>
@@ -214,10 +214,10 @@ const Forgetpassword = () => {
       <div className="flex flex-col  	items-center justify-center  py-8   rounded-l-lg">
         <div className="text-center">
           <div className="w-2/3 mx-auto mb-8 mt-4">
-            <h2 className="text-[#fff] font-bold font-rubik leading-9 text-3xl mb-6">
+            <h2 className="text-[#fff] font-bold font-lexend leading-9 text-3xl mb-6">
               The simplest way to manage your workspace.
             </h2>
-            <p className="text-[#fff] font-rubik font-normal leading-6 text-base">
+            <p className="text-[#fff] font-inter font-normal leading-6 text-base">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint velit officia consequat duis.
             </p>
