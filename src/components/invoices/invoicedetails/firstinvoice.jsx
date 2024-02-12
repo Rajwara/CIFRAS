@@ -6,7 +6,7 @@ const Firstinvoice = () => {
   return (
     <div className='flex justify-between border border-[#ebebeb] bg-white   py-8 px-10 items-center'>
     <div className='left flex flex-col gap-2 relative'>
-        <h2 className='font-rubik font-bold text-[#404040] text-4xl leading-9'>Invoice Details</h2>
+        <h2 className='font-lexend font-bold text-[#404040] text-4xl leading-9'>Invoice Details</h2>
     </div>
     <div className='right flex gap-4'>
      

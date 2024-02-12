@@ -1,17 +1,151 @@
-import React from "react";
+import React,{useRef, useState} from "react";
 import Profile from "../../../assets/images/dashboard/john.svg";
 import Next from "../../../assets/images/nextbuttonfortable.svg";
 import Prev from "../../../assets/images/prevbuttonfortable.svg";
+import { saveAs } from 'file-saver';
+import * as XLSX from 'xlsx';
+
+
 
 const Invoicelisttable = () => {
+
+  const allData = [
+    {
+      id: 1,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 2,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 3,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 4,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 5,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 6,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 7,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 8,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 9,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 10,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    {
+      id: 11,
+      name: "Neil Sims",
+      email: "neil.sims@flowbite.com",
+      created: "Jan 01, 2024 1:11 PM",
+      dueDate: "Jan 01, 2024 1:11 PM",
+      amount: "$111.00",
+      status: "Online",
+    },
+    // Add more data as needed
+  ];
+
+  const itemsPerPage = 8;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentData = allData.slice(indexOfFirstItem, indexOfLastItem);
+
+
+  const tableRef = useRef(null);
+
+  const generateExcel = () => {
+    const input = tableRef.current;
+
+    const ws = XLSX.utils.table_to_sheet(input);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet 1");
+
+    XLSX.writeFile(wb, 'table.xlsx', { bookType: "xlsx", mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+  };
+
+ 
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div className=" relative overflow-x-auto shadow-md border border-[#ebebeb] rounded p-5 bg-white">
-      <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white ">
-        <div>
+      <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+        <div className="flex flex-row gap-6">
           <button
             id="dropdownActionButton"
             data-dropdown-toggle="dropdownAction"
-            class="font-rubik inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5"
+            class="font-inter inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             type="button"
           >
             <span class="sr-only">Action button</span>
@@ -34,16 +168,16 @@ const Invoicelisttable = () => {
           </button>
           <div
             id="dropdownAction"
-            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
           >
             <ul
-              class="py-1 text-sm text-gray-700 "
+              class="py-1 text-sm text-gray-700 dark:text-gray-200"
               aria-labelledby="dropdownActionButton"
             >
               <li>
                 <a
                   href="#"
-                  class="font-rubik block px-4 py-2 hover:bg-gray-100 "
+                  class="font-inter block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >
                   Reward
                 </a>
@@ -51,7 +185,7 @@ const Invoicelisttable = () => {
               <li>
                 <a
                   href="#"
-                  class="font-rubik block px-4 py-2 hover:bg-gray-100 "
+                  class="font-inter block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >
                   Promote
                 </a>
@@ -59,7 +193,7 @@ const Invoicelisttable = () => {
               <li>
                 <a
                   href="#"
-                  class="font-rubik block px-4 py-2 hover:bg-gray-100 "
+                  class="font-inter block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >
                   Activate account
                 </a>
@@ -68,20 +202,25 @@ const Invoicelisttable = () => {
             <div class="py-1">
               <a
                 href="#"
-                class="font-rubik block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                class="font-inter block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
               >
                 Delete User
               </a>
             </div>
           </div>
+          <div className="">
+          <button  onClick={generateExcel} className="text-[#404040] font-normal font-inter text-xl leading-7 border border-[#ebebeb] rounded-md px-4 py-2">
+     Export to Excel
+          </button>
+          </div>
         </div>
-        <label for="table-search" class="sr-only font-rubik ">
+        <label for="table-search" class="sr-only font-inter ">
           Search
         </label>
         <div class="relative">
           <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
-              class="w-4 h-4 text-gray-500 "
+              class="w-4 h-4 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -99,462 +238,160 @@ const Invoicelisttable = () => {
           <input
             type="text"
             id="table-search-users"
-            class="font-rubik block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
+            class="font-inter block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search for users"
           />
         </div>
       </div>
-      <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+      <table ref={tableRef} className="w-full text-sm text-left rtl:text-right text-[#404040] ">
+        <thead className="text-xs text-[#404040] uppercase bg-gray-50">
           <tr>
-            <th scope="col" class="p-4">
-              <div class="flex items-center">
+            <th scope="col" className="p-4">
+              <div className="flex items-center">
                 <input
                   id="checkbox-all-search"
                   type="checkbox"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  "
+                  className="w-4 h-4  bg-[#ebebeb]-100 border-[#ebebeb]-300 rounded focus:ring-blue-500  focus:ring-2"
                 />
-                <label for="checkbox-all-search" class="sr-only">
+                <label htmlFor="checkbox-all-search" className="sr-only">
                   checkbox
                 </label>
               </div>
             </th>
-            <th scope="col" class="px-6 py-3 font-rubik ">
+            <th scope="col" className="px-6 py-3 font-inter">
               CUSTOMER
             </th>
-            <th scope="col" class="px-6 py-3 font-rubik ">
+            <th scope="col" className="px-6 py-3 font-inter">
               EMAIL
             </th>
-            <th scope="col" class="px-6 py-3 font-rubik ">
+            <th scope="col" className="px-6 py-3 font-inter">
               CREATED
             </th>
-            <th scope="col" class="px-6 py-3 font-rubik ">
+            <th scope="col" className="px-6 py-3 font-inter">
               DUE DATE
             </th>
-            <th scope="col" class="px-6 py-3 font-rubik ">
+            <th scope="col" className="px-6 py-3 font-inter">
               Amount
             </th>
-            <th scope="col" class="px-6 py-3 font-rubik ">
+            <th scope="col" className="px-6 py-3 font-inter">
               Status
             </th>
-            <th scope="col" class="px-6 py-3 font-rubik ">
+            <th scope="col" className="px-6 py-3 font-inter">
               Action
             </th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="bg-white border-b  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-              <div class="flex items-center">
-                <input
-                  id="checkbox-table-search-1"
-                  type="checkbox"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "
-                />
-                <label for="checkbox-table-search-1" class="sr-only">
-                  checkbox
-                </label>
-              </div>
-            </td>
-            <th
-              scope="row"
-              class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap "
+        <tbody className="text-[#404040]">
+          {currentData.map((item) => (
+            <tr
+              key={item.id}
+              className="bg-white border-b  hover:bg-gray-50"
             >
-              <img
-                class="w-10 h-10 rounded-full"
-                src={Profile}
-                alt="Jese image"
-              />
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">Neil Sims</div>
-                <div class="font-normal text-gray-500 font-rubik">
-                  INV-00001
+              <td className="w-4 p-4">
+                <div className="flex items-center">
+                  <input
+                    id={`checkbox-table-${item.id}`}
+                    type="checkbox"
+                    className="w-4 h-4  bg-[#ebebeb]-100 border-[#ebebeb]-300 rounded focus:ring-blue-500 "
+                  />
+                  <label htmlFor={`checkbox-table-${item.id}`} className="sr-only">
+                    checkbox
+                  </label>
                 </div>
-              </div>
-            </th>
-            <td class="px-6 py-4 font-rubik">neil.sims@flowbite.com</td>
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-
-            <td class="px-6 py-4 font-rubik">$ 111.00</td>
-
-            <td class="px-6 py-4">
-              <div class="flex items-center">
-                <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div>{" "}
-                Online
-              </div>
-            </td>
-            <td class="px-6 py-4">
-              <a
-                href="#"
-                class="font-rubik font-medium text-blue-600  hover:underline"
+              </td>
+              <th
+                scope="row"
+                className="flex items-center px-6 py-4  whitespace-nowrap "
               >
-                Edit user
-              </a>
-            </td>
-          </tr>
-          <tr class="bg-white border-b  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-              <div class="flex items-center">
-                <input
-                  id="checkbox-table-search-2"
-                  type="checkbox"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2"
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={Profile}
+                  alt={`${item.name} image`}
                 />
-                <label for="checkbox-table-search-2" class="sr-only">
-                  checkbox
-                </label>
-              </div>
-            </td>
-            <th
-              scope="row"
-              class="flex items-center px-6 py-4 font-medium text-[#404040] whitespace-nowrap "
-            >
-              <img
-                class="w-10 h-10 rounded-full"
-                src={Profile}
-                alt="Jese image"
-              />
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Bonnie Green
+                <div className="ps-3">
+                  <div className="text-base font-semibold font-inter">{item.name}</div>
+                  <div className="font-normal  font-inter">{item.email}</div>
                 </div>
-                <div class="font-normal text-gray-500 font-rubik">
-                  INV-00001
+              </th>
+              <td className="px-6 py-4 font-inter">{item.email}</td>
+              <td>
+                <div className="ps-3">
+                  <div className="text-base font-medium font-inter">{item.created}</div>
+                  <div className="font-medium font-inter">{item.createdTime}</div>
                 </div>
-              </div>
-            </th>
-            <td class="px-6 py-4 font-rubik">neil.sims@flowbite.com</td>
+              </td>
 
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
+              <td>
+                <div className="ps-3">
+                  <div className="text-base font-medium font-inter">{item.dueDate}</div>
+                  <div className="font-medium  font-inter">{item.dueDateTime}</div>
                 </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
+              </td>
 
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
+              <td className="px-6 py-4 font-inter">{item.amount}</td>
+
+              <td className="px-6 py-4">
+                <div className="flex items-center">
+                  <div className={`h-2.5 w-2.5 rounded-full bg-${item.status.toLowerCase()}-500 me-2 font-inter`}></div>{" "}
+                  {item.status}
                 </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-
-            <td class="px-6 py-4 font-rubik">$ 111.00</td>
-
-            <td class="px-6 py-4">
-              <div class="flex items-center">
-                <div class="h-2.5 w-2.5 rounded-full bg-yellow-500 me-2 font-rubik "></div>{" "}
-                Pending
-              </div>
-            </td>
-            <td class="px-6 py-4">
-              <a
-                href="#"
-                class="font-rubik font-medium text-blue-600  hover:underline"
-              >
-                Edit user
-              </a>
-            </td>
-          </tr>
-          <tr class="bg-white border-b  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-              <div class="flex items-center">
-                <input
-                  id="checkbox-table-search-2"
-                  type="checkbox"
-                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500   focus:ring-2 "
-                />
-                <label
-                  for="checkbox-table-search-2"
-                  class="sr-only font-rubik "
+              </td>
+              <td className="px-6 py-4">
+                <a
+                  href="#"
+                  className="font-inter font-medium text-[#634AF9]  hover:underline"
                 >
-                  checkbox
-                </label>
-              </div>
-            </td>
-            <th
-              scope="row"
-              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-            >
-              <img
-                class="w-10 h-10 rounded-full"
-                src={Profile}
-                alt="Jese image"
-              />
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik ">Jese Leos</div>
-                <div class="font-normal text-gray-500 font-rubik ">
-                  INV-00001
-                </div>
-              </div>
-            </th>
-            <td class="px-6 py-4 font-rubik ">neil.sims@flowbite.com</td>
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-
-            <td class="px-6 py-4 font-rubik">$ 111.00</td>
-
-            <td class="px-6 py-4">
-              <div class="flex items-center">
-                <div class="h-2.5 w-2.5 rounded-full bg-yellow-500 me-2 font-rubik "></div>{" "}
-                Pending
-              </div>
-            </td>
-            <td class="px-6 py-4">
-              <a
-                href="#"
-                class="font-rubik font-medium text-blue-600  hover:underline font-rubik "
-              >
-                Edit user
-              </a>
-            </td>
-          </tr>
-          <tr class="bg-white border-b  hover:bg-gray-50 ">
-            <td class="w-4 p-4">
-              <div class="flex items-center">
-                <input
-                  id="checkbox-table-search-2"
-                  type="checkbox"
-                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "
-                />
-                <label
-                  for="checkbox-table-search-2"
-                  class="sr-only font-rubik "
-                >
-                  checkbox
-                </label>
-              </div>
-            </td>
-            <th
-              scope="row"
-              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-            >
-              <img
-                class="w-10 h-10 rounded-full"
-                src={Profile}
-                alt="Jese image"
-              />
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik ">
-                  Thomas Lean
-                </div>
-                <div class="font-normal text-gray-500c font-rubik ">
-                  INV-00001
-                </div>
-              </div>
-            </th>
-            <td class="px-6 py-4 font-rubik ">neil.sims@flowbite.com</td>
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-            <td class="px-6 py-4 font-rubik">$ 111.00</td>
-
-            <td class="px-6 py-4">
-              <div class="flex items-center">
-                <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div>{" "}
-                Online
-              </div>
-            </td>
-            <td class="px-6 py-4">
-              <a
-                href="#"
-                class="font-medium text-blue-600  hover:underline font-rubik "
-              >
-                Edit user
-              </a>
-            </td>
-          </tr>
-          <tr class="bg-white  hover:bg-gray-50 0">
-            <td class="w-4 p-4">
-              <div class="flex items-center">
-                <input
-                  id="checkbox-table-search-3"
-                  type="checkbox"
-                  class="font-rubik w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500   focus:ring-2 "
-                />
-                <label
-                  for="checkbox-table-search-3 font-rubik "
-                  class="sr-only"
-                >
-                  checkbox
-                </label>
-              </div>
-            </td>
-            <th
-              scope="row"
-              class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-            >
-              <img
-                class="w-10 h-10 rounded-full"
-                src={Profile}
-                alt="Jese image"
-              />
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik ">
-                  Leslie Livingston
-                </div>
-                <div class="font-normal text-gray-500 font-rubik ">
-                  INV-00001
-                </div>
-              </div>
-            </th>
-            <td class="px-6 py-4 font-rubik ">neil.sims@flowbite.com</td>
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-            <td>
-              <div class="ps-3">
-                <div class="text-base font-semibold font-rubik">
-                  Jan 01, 2024
-                </div>
-                <div class="font-normal text-gray-500 font-rubik">1:11 PM</div>
-              </div>
-            </td>
-            <td class="px-6 py-4 font-rubik ">$ 111.00</td>
-
-            <td class="px-6 py-4">
-              <div class="flex items-center">
-                <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2 font-rubik "></div>{" "}
-                Offline
-              </div>
-            </td>
-            <td class="px-6 py-4">
-              <a
-                href="#"
-                class="font-medium text-blue-600  hover:underline font-rubik "
-              >
-                Edit user
-              </a>
-            </td>
-          </tr>
+                  Edit user
+                </a>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-      <nav
-        class="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4 px-4"
-        aria-label="Table navigation"
-      >
-        <span class="text-sm font-normal text-gray-500  mb-4 md:mb-0 block w-full md:inline md:w-auto font-rubik">
+      <nav className="flex items-center justify-between pt-4 px-4" aria-label="Table navigation">
+        {/* Show pagination */}
+        <span className="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto font-inter">
           Showing{" "}
-          <span class="font-semibold text-gray-900 e font-rubik">
-            1-10
+          <span className="font-semibold text-gray-900 dark:text-white font-inter">
+            {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, allData.length)}
           </span>{" "}
           of{" "}
-          <span class="font-semibold text-gray-900  font-rubik">
-            1000
-          </span>
+          <span className="font-semibold text-gray-900 dark:text-white font-inter">{allData.length}</span>
         </span>
-        <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8 font-rubik">
+        <ul className="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8 font-inter">
           <li>
-            <a
-              href="#"
-              class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700   font-rubik"
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font-inter"
             >
-             <img src={Prev} alt="" />
-            </a>
+              <img src={Prev} alt="" />
+            </button>
           </li>
+          {Array.from({ length: Math.ceil(allData.length / itemsPerPage) }, (_, index) => (
+            <li key={index}>
+              <button
+                onClick={() => paginate(index + 1)}
+                className={`font-inter flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 ${
+                  currentPage === index + 1 ? "text-blue-600 bg-blue-50" : "hover:bg-gray-100 hover:text-gray-700"
+                } dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
+              >
+                {index + 1}
+              </button>
+            </li>
+          ))}
           <li>
-            <a
-              href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-            >
-              1
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-            >
-              2
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              aria-current="page"
-              class="font-rubik flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 "
-            >
-              3
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-            >
-              4
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
-            >
-              5
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="font-rubik flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 "
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === Math.ceil(allData.length / itemsPerPage)}
+              className="font-inter flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font-inter"
             >
               <img src={Next} alt="" />
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
+   
     </div>
   );
 };

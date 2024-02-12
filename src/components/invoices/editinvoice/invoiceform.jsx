@@ -22,10 +22,10 @@ const Invoiceform = () => {
       {/* From form start  */}
       <div className="flex  justify-between">
         <div className="w-[30%]">
-          <h4 className="font-rubik font-normal text-[#404040] text-4xl leading-9">
+          <h4 className="font-lexend font-normal text-[#404040] text-4xl leading-9">
             From:
           </h4>
-          <p className="font-normal font-rubik text-[#404040] text-xl leading-9">
+          <p className="font-normal font-inter text-[#404040] text-xl leading-9">
             From he who sending this invoice
           </p>
         </div>
@@ -36,7 +36,7 @@ const Invoiceform = () => {
                 <div class="mb-5">
                   <label
                     for="name"
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Name
                   </label>
@@ -44,14 +44,14 @@ const Invoiceform = () => {
                     type="text"
                     id="name"
                     placeholder="Enter your name"
-                    class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                 </div>
 
                 <div class="mb-5">
                   <label
                     for="phone"
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Phone Number
                   </label>
@@ -59,7 +59,7 @@ const Invoiceform = () => {
                     type="tel"
                     id="phone"
                     placeholder="Phone Number"
-                    class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                 </div>
               </div>
@@ -67,14 +67,14 @@ const Invoiceform = () => {
               <div>
                 <label
                   for="message"
-                  class="block mb-2 font-rubik text-[#404040] text-xl leading-9"
+                  class="block mb-2 font-inter text-[#404040] text-xl leading-9"
                 >
                   Address
                 </label>
                 <textarea
                   id="message"
                   rows="2"
-                  class="block p-2.5 w-full text-sm font-rubik text-[#C0C0C0]  leading-9 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                  class="block p-2.5 w-full text-sm font-inter text-[#C0C0C0]  leading-9 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                   placeholder="Enter your address"
                 ></textarea>
               </div>
@@ -87,10 +87,10 @@ const Invoiceform = () => {
       {/* to form start  */}
       <div className="flex  justify-between mt-6">
         <div className="w-[30%]">
-          <h4 className="font-rubik font-normal text-[#404040] text-4xl leading-9">
+          <h4 className="font-lexend font-normal text-[#404040] text-4xl leading-9">
             To:
           </h4>
-          <p className="font-normal font-rubik text-[#404040] text-xl leading-9">
+          <p className="font-normal font-inter text-[#404040] text-xl leading-9">
             To he who will receive this invoice
           </p>
         </div>
@@ -101,7 +101,7 @@ const Invoiceform = () => {
                 <div class="mb-5">
                   <label
                     for="name"
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Name
                   </label>
@@ -109,14 +109,14 @@ const Invoiceform = () => {
                     type="text"
                     id="name"
                     placeholder="Enter your name"
-                    class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                 </div>
 
                 <div class="mb-5">
                   <label
                     for="phone"
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Phone Number
                   </label>
@@ -124,7 +124,7 @@ const Invoiceform = () => {
                     type="tel"
                     id="phone"
                     placeholder="Phone Number"
-                    class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                 </div>
               </div>
@@ -132,14 +132,14 @@ const Invoiceform = () => {
               <div>
                 <label
                   for="message"
-                  class="block mb-2 font-rubik text-[#404040] text-xl leading-9"
+                  class="block mb-2 font-inter text-[#404040] text-xl leading-9"
                 >
                   Address
                 </label>
                 <textarea
                   id="message"
                   rows="2 "
-                  class="block p-2.5 w-full text-sm font-rubik text-[#C0C0C0]  leading-9 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                  class="block p-2.5 w-full text-sm font-inter text-[#C0C0C0]  leading-9 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                   placeholder="Enter your address"
                 ></textarea>
               </div>
@@ -152,10 +152,10 @@ const Invoiceform = () => {
       {/* Schedule form start  */}
       <div className="flex  justify-between mt-6">
         <div className="w-[30%]">
-          <h4 className="font-rubik font-normal text-[#404040] text-4xl leading-9">
+          <h4 className="font-lexend font-normal text-[#404040] text-4xl leading-9">
             Schedule:
           </h4>
-          <p className="font-normal font-rubik text-[#404040] text-xl leading-9">
+          <p className="font-normal font-inter text-[#404040] text-xl leading-9">
             To he who will receive this invoice
           </p>
         </div>
@@ -167,7 +167,7 @@ const Invoiceform = () => {
                   <label
                     for="Invoicenumber
                     "
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Invoice Number
                   </label>
@@ -175,14 +175,14 @@ const Invoiceform = () => {
                     type="number"
                     id="base-input"
                     placeholder="INV-0071"
-                    class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                 </div>
 
                 <div class="mb-5 date-create">
                   <label
                     for="base-input"
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Date Create
                   </label>
@@ -190,14 +190,14 @@ const Invoiceform = () => {
                     name="start"
                     type="date"
                     id="startdate"
-                    class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                 </div>
 
                 <div class="mb-5 due-date">
                   <label
                     for="due date"
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Due Date
                   </label>
@@ -205,14 +205,14 @@ const Invoiceform = () => {
                     name="start"
                     type="date"
                     id="startdate"
-                    class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   />
                 </div>
 
                 <div class="mb-5">
                   <label
                     for="base-input"
-                    class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                    class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                   >
                     Status
                   </label>
@@ -220,7 +220,7 @@ const Invoiceform = () => {
                     id="dropdownHoverButton"
                     data-dropdown-toggle="dropdownHover"
                     data-dropdown-trigger="hover"
-                    className="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-normal px-5 py-2.5 text-center inline-flex items-center w-full"
+                    className="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  font-normal px-5 py-2.5 text-center inline-flex items-center w-full"
                     type="button"
                   >
                     Select...{" "}
@@ -251,8 +251,8 @@ const Invoiceform = () => {
                     >
                       <li>
                         <div className="flex items-center ml-2">
-                          <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-rubik "></div>
-                          <a href="#" class="block  py-2 font-rubik">
+                          <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-inter "></div>
+                          <a href="#" class="block  py-2 font-inter">
                             Online
                           </a>
                         </div>
@@ -260,8 +260,8 @@ const Invoiceform = () => {
 
                       <li>
                         <div className="flex items-center ml-2">
-                          <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2 font-rubik "></div>
-                          <a href="#" class="block  py-2 font-rubik">
+                          <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2 font-inter "></div>
+                          <a href="#" class="block  py-2 font-inter">
                             Offline
                           </a>
                         </div>
@@ -280,10 +280,10 @@ const Invoiceform = () => {
 
       <div className="flex  justify-between mt-6 items-center">
         <div className="w-[30%]">
-          <h4 className="font-rubik font-normal text-[#404040] text-4xl leading-9">
+          <h4 className="font-lexend font-normal text-[#404040] text-4xl leading-9">
             Item Details:
           </h4>
-          <p className="font-normal font-rubik text-[#404040] text-xl leading-9">
+          <p className="font-normal font-inter text-[#404040] text-xl leading-9">
             Add one or multiple item
           </p>
         </div>
@@ -296,7 +296,7 @@ const Invoiceform = () => {
                     <label
                       for="Itemname
                     "
-                      class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                      class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                     >
                       Item
                     </label>
@@ -304,14 +304,14 @@ const Invoiceform = () => {
                       type="text"
                       id="Itemname"
                       placeholder="Enter item name"
-                      class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     />
                   </div>
 
                   <div class="mb-5 date-create">
                     <label
                       for="bedrooms-input"
-                      class="block mb-2 text-sm font-medium text-[#404040] font-rubik"
+                      class="block mb-2 text-sm font-medium text-[#404040] font-inter"
                     >
                       Quantity
                     </label>
@@ -345,7 +345,7 @@ const Invoiceform = () => {
                         data-input-counter-min="1"
                         data-input-counter-max="50"
                         aria-describedby="helper-text-explanation"
-                        class="align-middle justify-center bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full font-rubik"
+                        class="align-middle justify-center bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full font-inter"
                         placeholder=""
                         value="1"
                         required
@@ -380,7 +380,7 @@ const Invoiceform = () => {
                     <div>
                       <label
                         for="base-input"
-                        class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                        class="font-inter block mb-2 text-sm font-medium text-[#404040]"
                       >
                         Price
                       </label>
@@ -388,11 +388,11 @@ const Invoiceform = () => {
                         type="text"
                         id="base-input"
                         placeholder="$"
-                        class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                       />
                     </div>
                     <div className="justify-center items-center">
-                      <p className="font-rubik text-[#404040] text-sm mt-0">
+                      <p className="font-inter text-[#404040] text-sm mt-0">
                         Total $800
                       </p>
                     </div>
@@ -401,14 +401,14 @@ const Invoiceform = () => {
                 <div>
                   <label
                     for="message"
-                    class="block mb-2 font-rubik text-[#404040] text-xl leading-9"
+                    class="block mb-2 font-inter text-[#404040] text-xl leading-9"
                   >
                     Description
                   </label>
                   <textarea
                     id="description"
                     rows="2"
-                    class="block p-2.5 w-full text-sm font-rubik text-[#C0C0C0]  leading-9 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                    class="block p-2.5 w-full text-sm font-inter text-[#C0C0C0]  leading-9 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                     placeholder="Please describe..."
                   ></textarea>
                 </div>
@@ -418,7 +418,7 @@ const Invoiceform = () => {
               "
                 >
                   <img src={RemoveIcon} alt="" />
-                  <p className="font-rubik text-[#FF3D00] font-normal text-[16px]">
+                  <p className="font-inter text-[#FF3D00] font-normal text-[16px]">
                     Remove
                   </p>
                 </div>
@@ -429,7 +429,7 @@ const Invoiceform = () => {
             <button className="bg-[#CCCCCC] w-full p-3 text-center justify-center align-middle mt-5 rounded">
               <span className="flex gap-2 justify-center">
                 <img src={PlusIcongray} alt="" />
-                <p className="text-[#404040] font-rubik font-normal text-[16px]">
+                <p className="text-[#404040] font-inter font-normal text-[16px]">
                   Add Item
                 </p>
               </span>
@@ -439,7 +439,7 @@ const Invoiceform = () => {
             <div class="mb-5  ">
               <label
                 for="base-input"
-                class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                class="font-inter block mb-2 text-sm font-medium text-[#404040]"
               >
                 Shipping
               </label>
@@ -447,13 +447,13 @@ const Invoiceform = () => {
                 type="text"
                 id="base-input"
                 placeholder="$"
-                class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
             </div>
             <div class="mb-5  ">
               <label
                 for="base-input"
-                class="font-rubik block mb-2 text-sm font-medium text-[#404040]"
+                class="font-inter block mb-2 text-sm font-medium text-[#404040]"
               >
                 Discount
               </label>
@@ -461,13 +461,13 @@ const Invoiceform = () => {
                 type="text"
                 id="base-input"
                 placeholder="$"
-                class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
             </div>
             <div class="mb-5  ">
               <label
                 for="base-input"
-                class="font-rubik block mb-2 text-sm font-medium text-[#404040] "
+                class="font-inter block mb-2 text-sm font-medium text-[#404040] "
               >
                 Taxes
               </label>
@@ -475,7 +475,7 @@ const Invoiceform = () => {
                 type="text"
                 id="base-input"
                 placeholder="%  "
-                class="font-rubik bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-end"
+                class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-end"
               />
             </div>
           </div>
@@ -484,37 +484,37 @@ const Invoiceform = () => {
             <div className="flex justify-end mb-5 gap-10"></div>
             <div className="flex justify-between mb-5 ">
               <div className="justify-start">
-                <p className="font-rubik font-normal text-[16px] text-[#404040]">
+                <p className="font-inter font-normal text-[16px] text-[#404040]">
                   Subtotal:
                 </p>
-                <p className="font-rubik font-normal text-[16px] text-[#404040]">
+                <p className="font-inter font-normal text-[16px] text-[#404040]">
                   Shipping:
                 </p>
-                <p className="font-rubik font-normal text-[16px] text-[#404040]">
+                <p className="font-inter font-normal text-[16px] text-[#404040]">
                   {" "}
                   Discount:
                 </p>
-                <p className="font-rubik font-normal text-[16px] text-[#404040]">
+                <p className="font-inter font-normal text-[16px] text-[#404040]">
                   Taxes:
                 </p>
-                <p className="font-rubik font-bold text-[16px] text-[#404040]">
+                <p className="font-inter font-bold text-[16px] text-[#404040]">
                   Total:{" "}
                 </p>
               </div>
               <div className="">
-                <p className="font-rubik font-normal text-[16px] text-[#404040]">
+                <p className="font-inter font-normal text-[16px] text-[#404040]">
                   $800
                 </p>
-                <p className="font-rubik font-normal text-[16px] text-[#FF3D00]">
+                <p className="font-inter font-normal text-[16px] text-[#FF3D00]">
                   $10
                 </p>
-                <p className="font-rubik font-normal text-[16px] text-[#404040]">
+                <p className="font-inter font-normal text-[16px] text-[#404040]">
                   $20
                 </p>
-                <p className="font-rubik font-normal text-[16px] text-[#FF3D00]">
+                <p className="font-inter font-normal text-[16px] text-[#FF3D00]">
                   30%
                 </p>
-                <p className="font-rubik font-normal text-[16px] text-[#404040]">
+                <p className="font-inter font-normal text-[16px] text-[#404040]">
                   $840.3
                 </p>
               </div>
