@@ -45,7 +45,7 @@ const Quotetabledata = () => {
         </div>
     </div>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
-        <table class="w-full text-sm text-left text-[#404040] font-rubik font-normal ">
+        <table class="w-full text-sm text-left text-[#404040] font-inter font-normal ">
             <thead class="text-xs  uppercase text-[#404040] bg-[#ECECEC]">
                 <tr className=''>
                 <th scope="col" class="px-6 py-4">
