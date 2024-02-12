@@ -18,6 +18,7 @@ const Invoicelist = () => {
               <Invoicelistbtnbar/>
             </p>
           </div>
+          
           <div class="mb-4 px-4">
             <p class="text-2xl text-gray-400 ">
               <Invoicelisttable/>
