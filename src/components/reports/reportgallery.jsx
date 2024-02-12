@@ -214,7 +214,7 @@ const Reportgallery = () => {
             <div className="w-full mr-10">
               <label
                 htmlFor="default-search"
-                className="leading-4 text-base font-medium text-gray-900 sr-only  font-rubik"
+                className="leading-4 text-base font-medium text-gray-900 sr-only  font-inter"
               >
                 Search
               </label>
@@ -239,7 +239,7 @@ const Reportgallery = () => {
                 <input
                   type="search"
                   id="default-search"
-                  className="font-rubik font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
+                  className="font-inter font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
                   placeholder="Search Your Page..."
                   required
                 />
@@ -255,7 +255,7 @@ const Reportgallery = () => {
                 <img src={data.star} alt="" className="relative -top-[30px] left-[320px] " />
                 <div className="flex flex-row gap-6 items-center px-4 py-8" >
                   <img src={data.icon} className="p-2 rounded" style={{ backgroundColor: data.bg }} alt="" />
-                  <p className="text-[#404040] text-xl font-rubik font-normal leading-7">{data.name}</p>
+                  <p className="text-[#404040] text-xl font-inter font-normal leading-7">{data.name}</p>
                 </div>
                 
               </div>
@@ -270,7 +270,7 @@ const Reportgallery = () => {
                 <img src={data.star} alt="" className="relative -top-[30px] left-[320px] " />
                 <div className="flex flex-row gap-6 items-center px-4 py-8" >
                   <img src={data.icon} className="p-2 rounded" style={{ backgroundColor: data.bg }} alt="" />
-                  <p className="text-[#404040] text-xl font-rubik font-normal leading-7">{data.name}</p>
+                  <p className="text-[#404040] text-xl font-inter font-normal leading-7">{data.name}</p>
                 </div>
                 
               </div>
@@ -285,7 +285,7 @@ const Reportgallery = () => {
                 <img src={data.star} alt="" className="relative -top-[30px] left-[320px] " />
                 <div className="flex flex-row gap-6 items-center px-4 py-8" >
                   <img src={data.icon} className="p-2 rounded" style={{ backgroundColor: data.bg }} alt="" />
-                  <p className="text-[#404040] text-xl font-rubik font-normal leading-7">{data.name}</p>
+                  <p className="text-[#404040] text-xl font-inter font-normal leading-7">{data.name}</p>
                 </div>
                 
               </div>
@@ -300,7 +300,7 @@ const Reportgallery = () => {
                 <img src={data.star} alt="" className="relative -top-[30px] left-[320px] " />
                 <div className="flex flex-row gap-6 items-center px-4 py-8" >
                   <img src={data.icon} className="p-2 rounded" style={{ backgroundColor: data.bg }} alt="" />
-                  <p className="text-[#404040] text-xl font-rubik font-normal leading-7">{data.name}</p>
+                  <p className="text-[#404040] text-xl font-inter font-normal leading-7">{data.name}</p>
                 </div>
                 
               </div>
