@@ -20,17 +20,17 @@ const Clienttabledata = () => {
               <div id="dropdownAction" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
                   <ul className="py-1 text-sm text-[#404040] " aria-labelledby="dropdownActionButton">
                       <li>
-                          <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-rubik text-[#404040]">Reward</a>
+                          <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-inter text-[#404040]">Reward</a>
                       </li>
                       <li>
-                          <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-rubik text-[#404040]">Promote</a>
+                          <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-inter text-[#404040]">Promote</a>
                       </li>
                       <li>
-                          <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-rubik text-[#404040]">Activate account</a>
+                          <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-inter text-[#404040]">Activate account</a>
                       </li>
                   </ul>
                   <div className="py-1">
-                      <a href="#" className="block px-4 py-2 text-sm text-[#404040] hover:bg-gray-100 font-rubik">Delete User</a>
+                      <a href="#" className="block px-4 py-2 text-sm text-[#404040] hover:bg-gray-100 font-inter">Delete User</a>
                   </div>
               </div>
           </div>
@@ -45,8 +45,8 @@ const Clienttabledata = () => {
           </div>
       </div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg ">
-          <table className="w-full text-sm text-left  text-[#404040] font-rubik font-normal">
-              <thead className="text-xs text-gray-700 uppercase text-[#404040] bg-[#ECECEC]">
+          <table className="w-full text-sm text-left  text-[#404040] font-inter font-normal">
+              <thead className="text-xs uppercase text-[#404040] bg-[#ECECEC]">
                   <tr>
                       <th scope="col" className="p-4">
                           <div className="flex items-center">
