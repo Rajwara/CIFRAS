@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Logo from "../../../assets/images/sitelogocolored.png";
 import profileImg from "../../../assets/images/dashboard/john.svg";
 import DashboardSideIcon from "../../../assets/images/dashboard/dashboard.svg";
@@ -14,6 +14,11 @@ import InventoryIcon from "../../../assets/images/dashboard/InventoryIcon.svg";
 import ClientIcon from "../../../assets/images/dashboard/ClientIconside.svg";
 import OrderIcon from "../../../assets/images/dashboard/OrderIcon.svg";
 import OptionsIcon from "../../../assets/images/dashboard/OptionsIcon.svg";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../../redux/reducers/UserSlice";
+import Searchbar from "../../../components/searchbar/searchbar"
+
 
 
 
@@ -21,18 +26,56 @@ import OptionsIcon from "../../../assets/images/dashboard/OptionsIcon.svg";
 
 
 const Navandsidebar = () => {
-  document.addEventListener("DOMContentLoaded", function () {
-    const dropdownToggle = document.querySelector("[data-dropdown-toggle]");
-    const dropdownTarget = document.querySelector("[data-drawer-target]");
 
-    dropdownToggle.addEventListener("click", function () {
-      dropdownTarget.classList.toggle("hidden");
-    });
-  });
+  const [isSearchVisible, setSearchVisible] = useState(false);
+
+  const toggleSearch = () => {
+    setSearchVisible(!isSearchVisible);
+  };
+ 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isLogin = useSelector((state) => state.auth.isLogin);
+  const user = useSelector((state) => state.auth.user);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
+  const logouthandle = () => {
+    navigate("/");
+    dispatch(logout());
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Close dropdown if clicked outside
+      const dropdown = document.getElementById("menu-button");
+      if (dropdown && !dropdown.contains(event.target)) {
+        closeDropdown();
+      }
+    };
+
+    // Attach the event listener
+    document.addEventListener("click", handleClickOutside);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+
+  
 
   return (
     <div>
-      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 ">
+      <nav class="fixed top-0 left-0  z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
@@ -41,7 +84,7 @@ const Navandsidebar = () => {
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
                 type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span class="sr-only">Open sidebar</span>
                 <svg
@@ -58,23 +101,21 @@ const Navandsidebar = () => {
                   ></path>
                 </svg>
               </button>
-              <a href="/" class="flex ms-2 md:me-24">
-                <img src={Logo} class="w-[25%]" alt="Logo" />
-              </a>
+          
             </div>
 
             <div class="flex items-center w-[30%] gap-6 ">
               <div className="w-full mr-10">
                 <label
                   for="default-search"
-                  class="leading-4 text-base font-medium text-gray-900 sr-only  font-rubik"
+                  class="leading-4 text-base font-medium text-gray-900 sr-only dark:text-white font-inter"
                 >
                   Search
                 </label>
                 <div class="relative">
-                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 mb-5 ml-2 pointer-events-none">
                     <svg
-                      class="w-4 h-4 text-gray-500 "
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -89,62 +130,76 @@ const Navandsidebar = () => {
                       />
                     </svg>
                   </div>
-                  <input
+                  {/* <input
                     type="search"
                     id="default-search"
-                    class="font-rubik font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
+                    class="font-inter font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Search Your Page..."
                     required
-                  />
+                    onClick={toggleSearch}
+                  /> */}
+
+{/* <input
+                    type="search"
+                    id="default-search"
+                    class="font-inter font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search Your Page..."
+                    required
+                    onClick={toggleSearch}
+                  /> */}
+
+                        {/* <input
+              type="text"
+              name
+              id
+              placeholder="Search"
+              className="focus:outline-none"
+              onClick={toggleSearch}
+            /> */}
+                  <Searchbar/>
+
                 </div>
               </div>
               <div className="flex ">
                 <img src={NotificationIcon} alt="NotificationIcon" />
-                <span class="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-normal text-[#FF3D00] font-rubik ">
+                <span class="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-normal text-[#FF3D00] font-inter ">
                   2*
                 </span>
               </div>
-              <div class="flex items-center ms-3 w-[60%]">
-                <div className="flex gap-2 items-center">
-                  <button
+              <div class="flex items-center ms-3 w-[80%]">
+             
+                <div class="relative inline-block text-left">
+                <button
                     type="button"
-                    class="flex text-sm rounded-full focus:ring-4 "
-                    aria-expanded="false"
-                    data-dropdown-toggle="dropdown-user"
+                    class="inline-flex w-full justify-center  rounded-md bg-white  items-center px-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 "
+                    id="menu-button"
+                    aria-expanded={isDropdownOpen}
+                    aria-haspopup="true"
+                    onClick={toggleDropdown}
+
                   >
-                    <img
-                      class="w-full h-[100%]   rounded-full"
+                      <img
+                      class="w-[50%] h-[100%]   rounded-full"
                       src={profileImg}
                       alt="user photo"
                     />
-                  </button>
-                  <h1 class=" font-rubik font-normal text-base text-[#404040]">
+                   <h1 class="w- font-lexend font-normal text-base text-[#404040]">
                     John Doe
                   </h1>
-                </div>
-                <div
-                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow "
-                  id="dropdown-user"
-                >
-                  <div class="px-4 py-3" role="none">
-                    <p
-                      class="text-sm text-gray-900  font-rubik"
-                      role="none"
+                  </button>
+                  {isDropdownOpen && (
+                    <div
+                      class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="menu-button"
+                      tabindex="-1"
                     >
-                      Neil Sims
-                    </p>
-                    <p
-                      class="text-sm font-medium text-gray-900 truncate  font-rubik"
-                      role="none"
-                    >
-                      neil.sims@flowbite.com
-                    </p>
-                  </div>
                   <ul class="py-1" role="none">
                     <li>
                       <a
                         href="/profile"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-inter"
                         role="menuitem"
                       >
                         Profile
@@ -153,7 +208,7 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="/dashbaord"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-inter"
                         role="menuitem"
                       >
                         Dashboard
@@ -162,7 +217,7 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="/settings"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-inter"
                         role="menuitem"
                       >
                         Settings
@@ -171,23 +226,35 @@ const Navandsidebar = () => {
                     <li>
                       <a
                         href="#"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-inter"
                         role="menuitem"
                       >
                         Earnings
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  font-rubik"
-                        role="menuitem"
-                      >
-                        Sign out
-                      </a>
+                      {console.log("Login ", isLogin)}
+                      {isLogin ? (
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white font-inter"
+                          role="menuitem"
+                          onClick={logouthandle}
+                        >
+                          Sign out
+                        </a>
+                      ) : null}
                     </li>
-                  </ul>
-                </div>
+
+                    </ul>
+    
+  </div>
+      )}
+</div>
+
+
+
+
               </div>
             </div>
           </div>
@@ -196,11 +263,17 @@ const Navandsidebar = () => {
 
       <aside
         id="logo-sidebar"
-        class=" min-h-screen w-[3.85rem] overflow-hidden hover:w-[50%] md:hover:w-[32%] lg:hover:w-[25%]  xl:hover:w-1/6 hover:bg-white hover:shadow-lg  fixed top-0 left-0 z-40 h-full pt-24 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 "
+        class=" min-h-screen w-[4rem] z-50 overflow-hidden hover:w-[50%] md:hover:w-[32%] lg:hover:w-[25%]  xl:hover:w-1/6 hover:bg-white hover:shadow-lg  fixed top-0 left-0 h-full pt-0 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700
+  "
         aria-label="Sidebar"
       >
-        <div class=" h-full px-3 pb-4 overflow-y-auto bg-white ">
-          <ul class="space-y-2 font-medium">
+        <div class=" h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+          <ul class="space-y-2 font-medium mt-10">
+            <li>
+            <a href="/" class=" ">
+                <img src={Logo} className="w-full h-full" alt="Logo" />
+              </a>
+            </li>
             <li>
               <a href="/dashbaord" class="flex items-center p-2 mt-5 group">
                 <img
@@ -208,7 +281,7 @@ const Navandsidebar = () => {
                   alt="DashboardSideIcon"
                   className="w-7 h-7"
                 />
-                <span class="ms-5 font-rubik text-base font-normal leading-5">
+                <span class="ms-5 font-inter text-base font-normal leading-5">
                   Dashboard
                 </span>
               </a>
@@ -216,10 +289,10 @@ const Navandsidebar = () => {
 
 
             <li>
-            <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-75 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <button type="button" class="flex font-inter items-center w-full p-2 text-base text-[#404040] transition duration-75 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
 
                   <img src={FacturaElectroncia} alt="" />
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Factura Electroncia</span>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-base text-[#404040] font-normal">Factura Electroncia</span>
                   <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                   </svg>
@@ -231,7 +304,7 @@ const Navandsidebar = () => {
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="/invoicedetails" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Electronic Biling</a>
+                     <a href="/invoicedetails" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Electronic Biling</a>
                   </li>
                
             </ul>
@@ -243,7 +316,7 @@ const Navandsidebar = () => {
             <li>
               <a href="/products" class="flex items-center p-2 mt-5 group">
                 <img src={ProductsidebarIcon} alt="" className="w-7 h-7" />
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <span class="flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5">
                   Products
                 </span>
               </a>
@@ -252,7 +325,7 @@ const Navandsidebar = () => {
             <li>
               <a href="/invoicelist" class="flex items-center p-2 group mt-5">
                 <img src={InvoiceGenerationIcon} alt="" className="w-7 h-7" />
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <span class="flex-1 ms-6 whitespace-nowrap font-inter text-base font-normal leading-5">
                   Invoice 
                 </span>
               </a>
@@ -264,10 +337,10 @@ const Navandsidebar = () => {
             
             <li>
            <a href="/suppliers">
-           <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-100 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-examp" data-collapse-toggle="dropdown-examp">
+           <button type="button" class="flex font-inter items-center w-full p-2 text-base text-[#404040] transition duration-100 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-examp" data-collapse-toggle="dropdown-examp">
 
 <img src={SupplierIcon} alt="" />
-<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Suppliers</span>
+<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-base text-[#404040] font-normal">Suppliers</span>
 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
 </svg>
@@ -280,12 +353,12 @@ const Navandsidebar = () => {
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Purchase Orders</a>
+                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Purchase Orders</a>
                   </li>
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Quotes</a>
+                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Quotes</a>
                   </li>
                
             </ul>
@@ -296,16 +369,16 @@ const Navandsidebar = () => {
           <li>
               <a href="/reports" class="flex items-center p-2 group mt-5">
                 <img src={ReportsIcon} alt="" className="w-7 h-7" />
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <span class="flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5">
                 Reports
                 </span>
               </a>
             </li>
 
             <li>
-              <a href="/quote" class="flex items-center p-2 group mt-5">
+              <a href="/inventory" class="flex items-center p-2 group mt-5">
                 <img src={InventoryIcon} alt="" className="w-7 h-7" />
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <span class="flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5">
                 Inventory
                 </span>
               </a>
@@ -316,7 +389,7 @@ const Navandsidebar = () => {
             <li>
               <a href="/clients" class="flex items-center p-2 group mt-5">
                 <img src={ClientIcon} alt="" className="w-7 h-7" />
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <span class="flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5">
                 Clients
                 </span>
               </a>
@@ -326,7 +399,7 @@ const Navandsidebar = () => {
             <li>
               <a href="/orders" class="flex items-center p-2 group mt-5">
                 <img src={OrderIcon} alt="" className="w-7 h-7" />
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <span class="flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5">
                   Orders
                 </span>
               </a>
@@ -335,7 +408,7 @@ const Navandsidebar = () => {
             <li>
               <a href="/quotes" class="flex items-center p-2 group mt-5">
                 <img src={QuotesGenerationIcon} alt="" className="w-7 h-7" />
-                <span class="flex-1 ms-5 whitespace-nowrap font-rubik text-base font-normal leading-5">
+                <span class="flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5">
                 Quotes
                 </span>
               </a>
@@ -345,10 +418,10 @@ const Navandsidebar = () => {
 
 
             <li>
-            <button type="button" class="flex font-rubik items-center w-full p-2 text-base text-[#404040] transition duration-75 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-ex" data-collapse-toggle="dropdown-ex">
+            <button type="button" class="flex font-inter items-center w-full p-2 text-base text-[#404040] transition duration-75 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-ex" data-collapse-toggle="dropdown-ex">
 
                   <img src={OptionsIcon} alt="" />
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-rubik items-center w-full p-2 text-base text-[#404040] font-normal">Options</span>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-base text-[#404040] font-normal">Options</span>
                   <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                   </svg>
@@ -360,12 +433,12 @@ const Navandsidebar = () => {
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="/vendor" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Vendor</a>
+                     <a href="/vendor" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Vendor</a>
                   </li>
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="/companydata" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-rubik font-normal">Company Data</a>
+                     <a href="/companydata" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Company Data</a>
                   </li>
                
             </ul>

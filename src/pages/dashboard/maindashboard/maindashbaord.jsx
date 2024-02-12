@@ -8,6 +8,7 @@ import Totalprofitgraph from "../../../components/dashboard/totalprofitgraph";
 import Promotionalsalesgraph from "../../../components/dashboard/promotionalsalesgraph";
 import Customerstatustable from "../../../components/dashboard/customerstatustable";
 
+
 const Maindashbaord = () => {
   return (
     <div>
