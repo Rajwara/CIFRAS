@@ -5,12 +5,12 @@ const Companydata = () => {
     <div className='main flex flex-col bg-white ml-[60px] mt-20'>
       <div className='p-8'>
         <div className='flex flex-col gap-2 '>
-            <h2 className='text-[#404040] text-2xl font-bold font=rubik leading-9'>Company Data</h2>
-            <p className='text-[#404040] text-lg font-normal font-rubik leading-7'>Know the information that you have registered in Alegra about your company.</p>
+            <h2 className='text-[#404040] text-2xl font-bold font=lexend leading-9'>Company Data</h2>
+            <p className='text-[#404040] text-lg font-normal font-inter leading-7'>Know the information that you have registered in Alegra about your company.</p>
         </div>
         <div className='upper border border-[#ebebeb] rounded-md mt-10'>
           <div className='border border-[#ebebeb] p-8'>
-            <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>General Data</h6>
+            <h6 className='font-inter font-bold text-[#404040] text-xl leading-7'>General Data</h6>
           </div>  
             <div className='table w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
               <div className='w-[40%] '>
@@ -26,39 +26,39 @@ const Companydata = () => {
                           </div>
                           <input id="dropzone-file" type="file" class="hidden" />
                       </label>
-                      <p className='text-[#404040] mt-4 text-lg font-rubik font-normal leading-7'>If you need help adding the logo,</p>
-                      <a href="#" className='text-[#634AF9] text-lg font-normal font-rubik leading-7'>click here</a>
+                      <p className='text-[#404040] mt-4 text-lg font-inter font-normal leading-7'>If you need help adding the logo,</p>
+                      <a href="#" className='text-[#634AF9] text-lg font-normal font-inter leading-7'>click here</a>
                   </div> 
                 </div>
               </div>
               <div className='w-[60%] flex flex-col gap-4'>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Name</h6>
-                  <p className='font-rubik font-normal text-[#404040] text-base leading-7'>John Doe</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Name</h6>
+                  <p className='font-inter font-normal text-[#404040] text-base leading-7'>John Doe</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>ID number</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>ID number</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Address</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Address</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>City</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>City</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Email</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Email</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Phone</h6>
-                  <p className='font-rubik font-normal text-[#404040] text-base leading-7'>null</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Phone</h6>
+                  <p className='font-inter font-normal text-[#404040] text-base leading-7'>null</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Website</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Website</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Registered</p>
                 </div>
               </div>
              
@@ -67,29 +67,29 @@ const Companydata = () => {
         <div className='down'>
         <div className='upper border border-[#ebebeb] rounded-md mt-10'>
           <div className='border border-[#ebebeb] p-8'>
-            <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Basic Settings</h6>
+            <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Basic Settings</h6>
           </div>  
             <div className='table w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
               <div className='w-[80%] flex flex-col gap-4'>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Currency</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Selected</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Currency</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Selected</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Sector</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Selected</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Sector</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Selected</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Employees Number</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>Not Selected</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Employees Number</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>Not Selected</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Decimal Precision</h6>
-                  <p className='font-rubik font-normal text-[#404040] text-base leading-7'>2</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Decimal Precision</h6>
+                  <p className='font-inter font-normal text-[#404040] text-base leading-7'>2</p>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                  <h6 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Decimal Separator</h6>
-                  <p className='font-rubik font-normal text-[#c0c0c0] text-base leading-7'>...</p>
+                  <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Decimal Separator</h6>
+                  <p className='font-inter font-normal text-[#c0c0c0] text-base leading-7'>...</p>
                 </div>
               </div>
               <div className='w-[20%] '></div>
