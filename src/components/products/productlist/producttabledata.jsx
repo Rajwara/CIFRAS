@@ -45,8 +45,8 @@ const Producttabledata = () => {
         </div>
     </div>
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg ">
-        <table className="w-full text-sm text-left text-[#404040] font-rubik font-normal">
-            <thead className="text-xs text-gray-700 uppercase text-[#404040] bg-[#ECECEC]">
+        <table className="w-full text-sm text-left text-[#404040] font-inter font-normal">
+            <thead className="text-xs uppercase text-[#404040] bg-[#ECECEC]">
                 <tr>
                     <th scope="col" className="p-4">
                         <div className="flex items-center">
