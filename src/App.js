@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { useState, useEffect } from 'react'
 import './App.css';
 import Login from './components/login/login';
 import Signup from './components/signup/signup';
@@ -26,14 +27,27 @@ import OrderForm from './components/orders/orderform/orderform'
 import Vendor from "./pages/dashboard/vendors/vendors"
 import VendorForm from "./components/vendors/vendorform/vendorform"
 import CompanyData from './components/companydata/companydata'
+import { useSelector } from 'react-redux';
+import ScrollToTop from './components/ScrollForTop/ScrollForTop';
+import Inventory from './pages/dashboard/inventory/inventory';
+
 
 
 
 function App() {
+  const [currPath, setCurrPath] = useState(window.location.pathname)
+
+  useEffect(() => {
+    setCurrPath(window.location.pathname)
+}, [])
+
+  const {isLogin , user } = useSelector((state) => state.auth) || {} ;
+  console.log("userLogined :", user);
   return (
     <div className="App">
-      <Navandsidebar/>
-      
+      <ScrollToTop/>
+     {isLogin  && <Navandsidebar/>}
+     {/* {currPath !== '/' &&  <Navandsidebar/>} */}
   <Routes>
         <Route path='/' element= {<Login/>} />
         <Route path='/signup' element= {<Signup/>}/>
@@ -72,6 +86,7 @@ function App() {
 
       <Route path='/companydata' element={<CompanyData/>}/>
 
+      <Route path='/inventory' element={<Inventory/>}/>
       
 
 
