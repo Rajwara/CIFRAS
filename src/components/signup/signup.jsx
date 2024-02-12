@@ -68,10 +68,10 @@ const onSubmit = (values, props)=>{
           </div>
 
           <div>
-            <h1 className="font-rubik text-4xl font-bold leading-tight text-[#fff] mb-8 ">
+            <h1 className="font-lexend text-4xl font-bold leading-tight text-[#fff] mb-8 ">
               Join us and never miss a thing - SIGN UP!
             </h1>
-            <p className="text-[#fff] font-rubik font-normal leading-6 text-base mb-8">
+            <p className="text-[#fff] font-inter font-normal leading-6 text-base mb-8">
               By signing up, you will gain access to exclusive content, special
               offers, and be the first to hear about exciting news and updates.
             </p>
@@ -80,20 +80,20 @@ const onSubmit = (values, props)=>{
             <div className="grid grid-cols-2 gap-4 ">
               <div className="flex gap-2 border border-[#634AF9] rounded-md px-2 py-2  align-middle items-center ">
                 <img className="h-5 w-5" src={AppleIcon} alt="" />
-                <p className="font-rubik font-normal text-lg text-[#404040] leading-7">
+                <p className="font-inter font-normal text-lg text-[#404040] leading-7">
                   Log in With Apple
                 </p>
               </div>
               <div className="flex gap-2 border border-[#634AF9] rounded-md px-2 py-2 align-middle items-center ">
                 <img className="h-5 w-5 " src={GoogleIcon} alt="" />
-                <p className="font-rubik font-normal text-lg text-[#404040] leading-7">
+                <p className="font-inter font-normal text-lg text-[#404040] leading-7">
                   Log in With Google
                 </p>
               </div>
             </div>
             <div className="flex mt-8 mb-8 items-center justify-center">
               <img className="w-[220px]" src={LineDivider} alt="" />
-              <h6 className="text-lg font-rubik text-[#161642] font-bold leading-7 px-4">
+              <h6 className="text-lg font-lexend text-[#161642] font-bold leading-7 px-4">
                 OR
               </h6>
               <img className="w-[220px]" src={LineDivider} alt="" />
@@ -108,7 +108,7 @@ const onSubmit = (values, props)=>{
                 <div className=" w-full">
                   <label
                     for="firstname"
-                    className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                    className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
                   >
                     First Name
                   </label>
@@ -116,17 +116,17 @@ const onSubmit = (values, props)=>{
                     type="text"
                     name="firstname"
                     id="firstname"
-                    className="border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+                    className="border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5"
                     placeholder="Enter your first name"
                     required=""
                   />
-                  <ErrorMessage name="firstname" component="div" className="text-red-500 text-xs font-rubik"/>
+                  <ErrorMessage name="firstname" component="div" className="text-red-500 text-xs font-inter"/>
                 </div>
                 <div className="w-full">
                   {" "}
                   <label
                     htmlFor="lastname"
-                    className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                    className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
                   >
                     Last Name
                   </label>
@@ -134,18 +134,18 @@ const onSubmit = (values, props)=>{
                     type="text"
                     name="lastname"
                     id="lastname"
-                    className=" border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+                    className=" border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5"
                     placeholder="Enter your last name"
                     required=""
                   />
-                  <ErrorMessage name="lastname" component="div" className="text-red-500 text-xs font-rubik"/>
+                  <ErrorMessage name="lastname" component="div" className="text-red-500 text-xs font-inter"/>
 
                 </div>
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                  className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
                 >
                   Email
                 </label>
@@ -153,11 +153,11 @@ const onSubmit = (values, props)=>{
                   type="email"
                   name="email"
                   id="email"
-                  className=" border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-rubik  block w-full p-2.5"
+                  className=" border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5"
                   placeholder="johnsmith@example.com"
                   required=""
                 />
-                  <ErrorMessage name="email" component="div" className="text-red-500 text-xs font-rubik"/>
+                  <ErrorMessage name="email" component="div" className="text-red-500 text-xs font-inter"/>
 
               </div>
               <div className="flex gap-4">
@@ -165,7 +165,7 @@ const onSubmit = (values, props)=>{
                   {" "}
                   <label
                     htmlFor="password"
-                    className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                    className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
                   >
                     Password
                   </label>
@@ -175,10 +175,10 @@ const onSubmit = (values, props)=>{
             name="password"
             id="password"
             placeholder="Enter your password"
-            className="border-1 border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+            className="border-1 border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5"
             required=""
           />
-                  <ErrorMessage name="password" component="div" className="text-red-500 text-xs font-rubik"/>
+                  <ErrorMessage name="password" component="div" className="text-red-500 text-xs font-inter"/>
 
           <button
             type="button"
@@ -194,7 +194,7 @@ const onSubmit = (values, props)=>{
                 <div className="w-full">
                   <label
                     htmlFor="confirmPassword"
-                    className="block mb-2 text-base font-normal text-[#404040] font-rubik leading-7"
+                    className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7"
                   >
                     Confirm Password
                   </label>
@@ -205,10 +205,10 @@ const onSubmit = (values, props)=>{
                     name="confirmPassword"
                     id="confirmPassword"
                     placeholder="Enter your confirm password"
-                    className="border-1 border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-rubik block w-full p-2.5"
+                    className="border-1 border-[#634AF9] text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5"
                     required=""
                   />
-                  <ErrorMessage name="confirmPassword" component="div" className="text-red-500 text-xs font-rubik"/>
+                  <ErrorMessage name="confirmPassword" component="div" className="text-red-500 text-xs font-inter"/>
 
                   <button
                     type="button"
@@ -236,7 +236,7 @@ const onSubmit = (values, props)=>{
                   <div className="ml-3 text-sm">
                     <label
                       htmlFor="remember"
-                      className="text-base font-normal text-[#818181] font-rubik leading-7"
+                      className="text-base font-normal text-[#818181] font-inter leading-7"
                     >
                       Remember me
                     </label>
@@ -244,7 +244,7 @@ const onSubmit = (values, props)=>{
                 </div>
                 <a
                   href="/forgetpassword"
-                  className="text-sm font-normal text-[#634AF9] font-rubik leading-7 underline "
+                  className="text-sm font-normal text-[#634AF9] font-inter leading-7 underline "
                 >
                   Forgot your password?
                 </a>
@@ -252,15 +252,15 @@ const onSubmit = (values, props)=>{
               <button
               disabled = {props.isSubmitting}
                 type="submit"
-                className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-rubik "
+                className="w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-inter "
               >
                 Sign up
               </button>
-              <p className="text-base font-normal text-[#161642] font-rubik leading-7">
+              <p className="text-base font-normal text-[#161642] font-inter leading-7">
                 Don’t have an account?{" "}
                 <a
                   href="/"
-                  className="text-base font-bold text-[#161642] font-rubik leading-7"
+                  className="text-base font-bold text-[#161642] font-inter leading-7"
                 >
                   Log in
                 </a>
@@ -277,10 +277,10 @@ const onSubmit = (values, props)=>{
       <div class="flex flex-col  	items-center justify-center  py-8   rounded-l-lg">
         <div className="text-center">
           <div className="w-2/3 mx-auto mb-8 mt-4">
-            <h2 className="text-[#fff] font-bold font-rubik leading-9 text-3xl mb-6">
+            <h2 className="text-[#fff] font-bold font-lexend leading-9 text-3xl mb-6">
               The simplest way to manage your workspace.
             </h2>
-            <p className="text-[#fff] font-rubik font-normal leading-6 text-base">
+            <p className="text-[#fff] font-inter font-normal leading-6 text-base">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint velit officia consequat duis.
             </p>
