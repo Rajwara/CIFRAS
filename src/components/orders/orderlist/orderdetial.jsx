@@ -18,10 +18,10 @@ const Orderdetial = () => {
       <div className='upper'>
       <div className='flex justify-between border border-[#ebebeb] bg-white   py-8 px-10 items-center'>
       <div className='left flex flex-col gap-2 relative'>
-          <h2 className='font-rubik font-bold text-[#404040] text-4xl leading-9'>Order #FC67698089043890</h2>
+          <h2 className='font-lexend font-bold text-[#404040] text-4xl leading-9'>Order #FC67698089043890</h2>
       </div>
       <div className='right flex flex-row gap-4'>
-            <button className='flex py-[10px] px-[16px] bg-[#634af9] text-xl font-rubik text-white rounded items-center gap-2'>
+            <button className='flex py-[10px] px-[16px] bg-[#634af9] text-xl font-inter text-white rounded items-center gap-2'>
             Edit Order 
             </button>
       </div>
@@ -31,13 +31,13 @@ const Orderdetial = () => {
       <div className='form px-10 pt-[50px] pb-[50px] flex flex-col w-full border-2 border-[#ebebeb] rounded-md'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
         <div className='flex flex-row items-center'>
-            <h6 className='font-rubik mt-3 font-normal text-[#404040] text-xl leading-7'>January 30, 2024 at 12:33 AM</h6>
+            <h6 className='font-lexend mt-3 font-normal text-[#404040] text-xl leading-7'>January 30, 2024 at 12:33 AM</h6>
             <img src={StarightLine} className=' mx-auto h-8 mt-4' alt="" />
-            <h6 className='font-rubik mt-3 font-normal text-[#404040] text-xl leading-7'>0 Items</h6>
+            <h6 className='font-lexend mt-3 font-normal text-[#404040] text-xl leading-7'>0 Items</h6>
             <img src={StarightLine} className=' mx-auto h-8 mt-4' alt="" />
-            <h6 className='font-rubik mt-3 font-normal text-[#404040] text-xl leading-7'>Total $0.00</h6>
+            <h6 className='font-lexend mt-3 font-normal text-[#404040] text-xl leading-7'>Total $0.00</h6>
             <img src={StarightLine} className=' mx-auto h-8 mt-4' alt="" />
-            <button className='text-[#04B076] mt-3 text-xl leading-7 font-rubik font-normal rounded-full bg-[#B1FFBC] py-[6px] px-[15px]'>Paid</button>
+            <button className='text-[#04B076] mt-3 text-xl leading-7 font-inter font-normal rounded-full bg-[#B1FFBC] py-[6px] px-[15px]'>Paid</button>
 
         </div>
         <div className=''></div>
@@ -49,7 +49,7 @@ const Orderdetial = () => {
           <div className='left w-3/4'>
             <div class="relative overflow-x-auto border-b border-[#ebebeb]">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                    <thead class="text-base font-rubik font-normal leading-5  text-[#404040] uppercase bg-[#ebebeb] ">
+                    <thead class="text-base font-inter font-normal leading-5  text-[#404040] uppercase bg-[#ebebeb] ">
                         <tr>
                             <th scope="col" class="px-6 py-4">
                                 Product
@@ -161,101 +161,101 @@ const Orderdetial = () => {
             <div className='w-3/4 grid grid-cols-1 lg:grid-cols-2'>
             <div className='left w-full'></div>
             <div className='right w-full flex flex-col justify-end'>
-            <div className='flex flex-row justify-between font-rubik font-normal text-[#404040] text-lg leading-7'>
+            <div className='flex flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
               <p>Subtotal</p>
               <p>$0.00</p>
             </div>
-            <div className='flex mt-4 flex-row justify-between font-rubik font-normal text-[#404040] text-lg leading-7'>
+            <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
               <p>Store Credit</p>
               <p>$0.00</p>
             </div>
-            <div className='flex mt-4 flex-row justify-between font-rubik font-normal text-[#404040] text-lg leading-7'>
+            <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
               <p>Subtotal</p>
               <p>$0.00</p>
             </div>
             <img src={UnderLine} className='w-full mx-auto h-[2px] mt-4' alt="" />
-            <div className='flex mt-4 flex-row justify-between font-rubik font-normal text-[#404040] text-lg leading-7'>
+            <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
               <p className='font-bold'>Total</p>
               <p>$0.00</p>
             </div>
             </div>
             </div>
             <div className='right w-1/4'>
-            <h4 className='font-rubik font-bold text-[#404040] text-xl leading-7 mb-4'>Customer Detials</h4>
+            <h4 className='font-lexend font-bold text-[#404040] text-xl leading-7 mb-4'>Customer Detials</h4>
             <div className='flex gap-4 mt-6 border border-[#ebebeb] p-6 rounded-md'>
              <img src={Profile} alt="" className='w-[50px] h-[50px]' />
               <div className='flex flex-col '>
-              <h6 className='font-rubik font-normal text-[#404040] text-lg leading-5'>Mr. Irvin Farrell</h6>
-              <p className='font-rubik font-normal text-[#404040] text-sm leading-5'>johnsmith@example.com</p>
-              <p className='font-rubik font-normal text-[#404040] text-sm leading-5'>(316) 555-0116</p>
+              <h6 className='font-lexend font-normal text-[#404040] text-lg leading-5'>Mr. Irvin Farrell</h6>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-5'>johnsmith@example.com</p>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-5'>(316) 555-0116</p>
               </div>
             </div>
             </div>
         </div>
         <div className='downform flex flex-row justify-between gap-6 mt-8'>
           <div className='left w-3/4'>
-            <h4 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Transactions</h4>
+            <h4 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Transactions</h4>
             <div className='mt-6 border border-[#ebebeb] rounded-md flex flex-row items-center flex-wrap justify-between p-6'>
                 <div className='cards flex items-center gap-4'>
                     <img src={MasterCard} alt="" className='h-[40px] w-[67.78px]' />
                     <div className='flex flex-col '>
-                        <h6 className='text-[#000000] text-lg leading-7 font-rubik font-normal'>Payment</h6>
-                        <p className='text-[#404040] text-[14px] leading-7 font-rubik font-normal'>Via MasterCard</p>
+                        <h6 className='text-[#000000] text-lg leading-7 font-lexend font-normal'>Payment</h6>
+                        <p className='text-[#404040] text-[14px] leading-7 font-inter font-normal'>Via MasterCard</p>
                     </div>
                 </div>
-                <p className='text-[#404040] text-lg font-normal font-rubik leading-7'>$000.00</p>
+                <p className='text-[#404040] text-lg font-normal font-inter leading-7'>$000.00</p>
             </div>
             <div className='mt-6 border border-[#ebebeb] rounded-md flex flex-row items-center flex-wrap justify-between p-6'>
                 <div className='cards flex items-center gap-4'>
                     <img src={Paypal} alt="" className='h-[40px] w-[67.78px]' />
                     <div className='flex flex-col '>
-                        <h6 className='text-[#000000] text-lg leading-7 font-rubik font-normal'>Payment</h6>
-                        <p className='text-[#404040] text-[14px] leading-7 font-rubik font-normal'>Via PayPal</p>
+                        <h6 className='text-[#000000] text-lg leading-7 font-lexend font-normal'>Payment</h6>
+                        <p className='text-[#404040] text-[14px] leading-7 font-inter font-normal'>Via PayPal</p>
                     </div>
                 </div>
-                <p className='text-[#404040] text-lg font-normal font-rubik leading-7'>$000.00</p>
+                <p className='text-[#404040] text-lg font-normal font-inter leading-7'>$000.00</p>
             </div>
             <div className='mt-6 border border-[#ebebeb] rounded-md flex flex-row items-center flex-wrap justify-between p-6'>
                 <div className='cards flex items-center gap-4'>
                     <img src={Stripe} alt="" className='h-[40px] w-[67.78px]' />
                     <div className='flex flex-col '>
-                        <h6 className='text-[#000000] text-lg leading-7 font-rubik font-normal'>Payment</h6>
-                        <p className='text-[#404040] text-[14px] leading-7 font-rubik font-normal'>Via Stripe</p>
+                        <h6 className='text-[#000000] text-lg leading-7 font-lexend font-normal'>Payment</h6>
+                        <p className='text-[#404040] text-[14px] leading-7 font-inter font-normal'>Via Stripe</p>
                     </div>
                 </div>
-                <p className='text-[#404040] text-lg font-normal font-rubik leading-7'>$000.00</p>
+                <p className='text-[#404040] text-lg font-normal font-inter leading-7'>$000.00</p>
             </div>
           </div>
           <div className='right w-1/4 '>
-          <h4 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Shipping Address</h4>
+          <h4 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Shipping Address</h4>
             <div className='flex flex-row justify-between p-6 mt-6 rounded-md border border-[#ebebeb]'>
-           <p className='font-rubik font-normal text-[#404040] text-base leading-7'>1111 Armstrong Tunnel Apt.</p>
+           <p className='font-inter font-normal text-[#404040] text-base leading-7'>1111 Armstrong Tunnel Apt.</p>
             </div>
           </div>
         </div>
         <div className='flex flex-row justify-between gap-6 mt-8'>
             <div className='left w-3/4'>
-            <h4 className='font-rubik font-bold text-[#404040] text-xl leading-7'>Balance</h4>
+            <h4 className='font-inter font-bold text-[#404040] text-xl leading-7'>Balance</h4>
             <div className='border border-[#ebebeb] rounded-md p-6 flex flex-col gap-3 mt-6'>
                 <div className='flex flex-row flex-wrap justify-between items-center'>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>Total Order</p>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>$0.00</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>Total Order</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>$0.00</p>
                 </div>
                 <div className='flex flex-row flex-wrap justify-between items-center'>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>Total Return</p>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>$0.00</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>Total Return</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>$0.00</p>
                 </div>
                 <div className='flex flex-row flex-wrap justify-between items-center'>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>Paid By Customer</p>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>$0.00</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>Paid By Customer</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>$0.00</p>
                 </div>
                 <div className='flex flex-row flex-wrap justify-between items-center'>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>Refunded</p>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>$0.00</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>Refunded</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>$0.00</p>
                 </div>
                 <div className='flex flex-row flex-wrap justify-between items-center'>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>Balance</p>
-                    <p className='font-rubik font-normal text-[#404040] text-lg leading-7'>$0.00</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>Balance</p>
+                    <p className='font-inter font-normal text-[#404040] text-lg leading-7'>$0.00</p>
                 </div>
             </div>
                 

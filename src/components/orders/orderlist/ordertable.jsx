@@ -45,7 +45,7 @@ const Ordertable = () => {
           </div>
       </div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg ">
-          <table className="w-full text-sm text-left text-[#404040] font-rubik font-normal">
+          <table className="w-full text-sm text-left text-[#404040] font-inter font-normal">
               <thead className="text-xs  uppercase text-[#404040] bg-[#ECECEC]">
                   <tr>
                       <th scope="col" className="p-4">
