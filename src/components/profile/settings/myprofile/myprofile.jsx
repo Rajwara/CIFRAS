@@ -41,10 +41,10 @@ const Myprofile = () => {
                 </label>
               </div>
               <div className="my-40">
-                <h4 className="font-rubik font-bold text-[#404040] text-2xl	 leading-9">
+                <h4 className="font-lexend font-bold text-[#404040] text-2xl	 leading-9">
                 Olivia Rhye
                 </h4>
-                <p className="font-normal font-rubik text-[#404040] text-lg leading-9">
+                <p className="font-normal font-inter text-[#404040] text-lg leading-9">
                 Update your photo and personal details.
                 </p>
 
@@ -53,13 +53,13 @@ const Myprofile = () => {
             </div>
             <div className="items-center justify-end flex gap-5">
               <a href="/" className="">
-                <button className="font-rubik flex py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
+                <button className="font-inter flex py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
                  
                 Cancel
                 </button>
               </a>
               <a href="/">
-                <button className="font-rubik  flex py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
+                <button className="font-inter  flex py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
                   
                 Save
                 </button>
@@ -72,7 +72,7 @@ const Myprofile = () => {
           {/* Username form  */}
           <div className="flex  justify-between  mb-10">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
               Username
               </h4>
             </div>
@@ -83,10 +83,10 @@ const Myprofile = () => {
                   <div class="flex">
     <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md ">
    
-        <p className="font-normal font-rubik text-[#404040] text-base leading-9"> https://redq.io/</p>
+        <p className="font-normal font-inter text-[#404040] text-base leading-9"> https://redq.io/</p>
             
             </span>
-            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  " placeholder="Giselle"/>
+            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-inter text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  " placeholder="Giselle"/>
         </div>
                 </div>
               </form>
@@ -96,7 +96,7 @@ const Myprofile = () => {
 
           <div className="flex  justify-between  mb-10">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
               Website
               </h4>
             </div>
@@ -107,10 +107,10 @@ const Myprofile = () => {
                   <div class="flex">
     <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md ">
    
-        <p className="font-normal font-rubik text-[#404040] text-base leading-9"> https://</p>
+        <p className="font-normal font-inter text-[#404040] text-base leading-9"> https://</p>
             
             </span>
-            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  " placeholder="Giselle"/>
+            <input type="text" id="website-admin" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-inter text-[#404040]  focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-base p-2.5  " placeholder="Giselle"/>
         </div>
                 </div>
               </form>
@@ -124,7 +124,7 @@ const Myprofile = () => {
 
               <div className="flex justify-between my-20">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                 Bio
               </h4>
             </div>
@@ -326,7 +326,7 @@ const Myprofile = () => {
                     <textarea
                       id="editor"
                       rows="8"
-                      class="font-rubik block w-full px-0 text-sm text-gray-800 bg-white border-0 "
+                      class="font-inter block w-full px-0 text-sm text-gray-800 bg-white border-0 "
                       placeholder="Write an article..."
                       required
                     ></textarea>
@@ -340,7 +340,7 @@ const Myprofile = () => {
 
           <div className="flex justify-between my-20">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
               Job Title
               </h4>
             </div>
@@ -354,7 +354,7 @@ const Myprofile = () => {
                         data-dropdown-toggle="dropdownDell"
                         data-dropdown-delay="500"
                         data-dropdown-trigger="hover"
-                        class="text-[#404040] font-rubik font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
+                        class="text-[#404040] font-inter font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
                         type="button"
                       >
                         Select Role{" "}
@@ -413,7 +413,7 @@ const Myprofile = () => {
                     </div>
                     <div class="flex items-center">
     <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 "/>
-    <label for="link-checkbox" class="ms-2 text-sm font-rubik font-normal text-gray-900 ">Show my job title in my profile</label>
+    <label for="link-checkbox" class="ms-2 text-sm font-inter font-normal text-gray-900 ">Show my job title in my profile</label>
 </div>
                   </div>
                 </div>
@@ -425,10 +425,10 @@ const Myprofile = () => {
 
        <div className="flex justify-between my-20">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                   Alternative Contact Email
                   </h4>
-                  <p className="font-normal font-rubik text-[#404040] text-lg leading-9">
+                  <p className="font-normal font-inter text-[#404040] text-lg leading-9">
                     Enter an alternative email if you’d like to be
                     contacted via a different email.
                 </p>
@@ -463,10 +463,10 @@ const Myprofile = () => {
 
           <div className="flex justify-between my-20">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                 Portfolio Projects
               </h4>
-              <p className="font-normal font-rubik text-[#404040] text-base leading-9">
+              <p className="font-normal font-inter text-[#404040] text-base leading-9">
                 Share a few snippets of your work
               </p>
             </div>

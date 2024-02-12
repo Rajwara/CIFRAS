@@ -26,27 +26,27 @@ const MyProfile = () => {
             />
           </div>
           <div className="my-20">
-            <h4 className="font-rubik font-bold text-[#404040] text-2xl	 leading-9">
+            <h4 className="font-lexend font-bold text-[#404040] text-2xl	 leading-9">
               John Doe
             </h4>
-            <p className="font-normal font-rubik text-[#404040] text-lg leading-9">
+            <p className="font-normal font-inter text-[#404040] text-lg leading-9">
               @john.doe
             </p>
 
             <div className=" grid grid-cols-2 gap-5 mt-16 ">
               <div className="gap-5 flex ">
-                <h4 className="font-rubik font-normal text-[#000] text-xl leading-9">
+                <h4 className="font-lexend font-normal text-[#000] text-xl leading-9">
                   1.52k
                 </h4>
-                <p className="font-normal font-rubik text-[#404040] text-xl leading-9">
+                <p className="font-normal font-inter text-[#404040] text-xl leading-9">
                   Followers
                 </p>
               </div>
               <div className="flex gap-5">
-                <h4 className="font-rubik font-normal text-[#000] text-xl leading-9">
+                <h4 className="font-lexend font-normal text-[#000] text-xl leading-9">
                   205
                 </h4>
-                <p className="font-normal font-rubik text-[#404040] text-xl leading-9">
+                <p className="font-normal font-inter text-[#404040] text-xl leading-9">
                   Following
                 </p>
               </div>
@@ -55,13 +55,13 @@ const MyProfile = () => {
         </div>
         <div className="items-center justify-end flex gap-5">
           <a href="/" className="">
-            <button className="font-rubik flex py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
+            <button className="font-inter flex py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
               <img src={MsgIcon} className="w-6 h-6  " alt="" />
               Message
             </button>
           </a>
           <a href="/">
-            <button className="font-rubik  flex py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
+            <button className="font-inter  flex py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
               <img src={FollowIcon} className="w-6 h-6  " alt="" />
               Follow
             </button>
@@ -70,7 +70,7 @@ const MyProfile = () => {
       </div>
 
 
-      <div className='px-8 font-rubik ml-6'>
+      <div className='px-8 font-inter ml-6'>
      <Tabs aria-label="Default tabs" style="default">
       <Tabs.Item  active title="Posts"  icon={HiUserCircle}
       
@@ -126,21 +126,21 @@ const MyProfile = () => {
 
       </Tabs.Item>
       <Tabs.Item title="Dashboard"  icon={MdDashboard}>
-      <h1 className='font-rubik text-xl font-medium text-gray-800 mt-20'>
+      <h1 className='font-lexend text-xl font-medium text-gray-800 mt-20'>
        Those is Profile tab's associated content.
         Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
         control the content visibility and styling.
        </h1>
       </Tabs.Item>
       <Tabs.Item title="Settings" icon={HiAdjustments}>
-      <h1 className='font-rubik text-xl font-medium text-gray-800 mt-20'>
+      <h1 className='font-lexend text-xl font-medium text-gray-800 mt-20'>
        I is Profile tab's associated content.
         Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
         control the content visibility and styling.
        </h1>
       </Tabs.Item>
       <Tabs.Item title="Contacts" icon={HiClipboardList}>
-      <h1 className='font-rubik text-xl font-medium text-gray-800 mt-20'>
+      <h1 className='font-lexend text-xl font-medium text-gray-800 mt-20'>
        Thas is Profile tab's associated content.
         Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
         control the content visibility and styling.

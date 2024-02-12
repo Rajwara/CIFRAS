@@ -19,10 +19,10 @@ const Mydetails = () => {
                 <div className="w-[30%]">
                   <div className="flex  justify-between w-full ">
                     <div className="">
-                      <h3 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                      <h3 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                         Personal Info
                       </h3>
-                      <p className="font-normal font-rubik text-[#404040] text-base leading-9">
+                      <p className="font-normal font-inter text-[#404040] text-base leading-9">
                         Update your photo and personal details here
                       </p>
                       <div className="mx-auto  text-center justify-center my-10">
@@ -57,12 +57,12 @@ const Mydetails = () => {
                 <div className="w-[70%]">
                   <div className="items-center justify-end flex gap-5">
                     <a href="/" className="">
-                      <button className="font-rubik  py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
+                      <button className="font-inter  py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
                         Cancel
                       </button>
                     </a>
                     <a href="/">
-                      <button className="font-rubik   py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
+                      <button className="font-inter   py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
                         Save
                       </button>
                     </a>
@@ -73,7 +73,7 @@ const Mydetails = () => {
               {/* name form  */}
               <div className="flex  justify-between  mb-10">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                     Name
                   </h4>
                 </div>
@@ -117,7 +117,7 @@ const Mydetails = () => {
 
               <div className="flex justify-between my-20">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                     Email Address
                   </h4>
                 </div>
@@ -148,7 +148,7 @@ const Mydetails = () => {
 
               <div className="flex justify-between my-20">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                     Role
                   </h4>
                 </div>
@@ -162,7 +162,7 @@ const Mydetails = () => {
                             data-dropdown-toggle="dropdownDel"
                             data-dropdown-delay="500"
                             data-dropdown-trigger="hover"
-                            class="text-[#404040] font-rubik font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
+                            class="text-[#404040] font-inter font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
                             type="button"
                           >
                             Select Role{" "}
@@ -244,7 +244,7 @@ const Mydetails = () => {
               {/* Country form  */}
               <div className="flex justify-between my-20">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                     Country
                   </h4>
                 </div>
@@ -258,7 +258,7 @@ const Mydetails = () => {
                             data-dropdown-toggle="dropdownDelay"
                             data-dropdown-delay="500"
                             data-dropdown-trigger="hover"
-                            class="text-[#404040] font-rubik font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
+                            class="text-[#404040] font-inter font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
                             type="button"
                           >
                             Select Country{" "}
@@ -341,7 +341,7 @@ const Mydetails = () => {
 
               <div className="flex justify-between my-20">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                     Timezone
                   </h4>
                 </div>
@@ -355,7 +355,7 @@ const Mydetails = () => {
                             data-dropdown-toggle="dropdownDela"
                             data-dropdown-delay="500"
                             data-dropdown-trigger="hover"
-                            class="text-[#404040] font-rubik font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
+                            class="text-[#404040] font-inter font-normal bg-gray-50 border border-gray-300  focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
                             type="button"
                           >
                             Select Timezone{" "}
@@ -423,7 +423,7 @@ const Mydetails = () => {
 
               <div className="flex justify-between my-20">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                     Bio
                   </h4>
                 </div>
@@ -522,10 +522,10 @@ const Mydetails = () => {
 
               <div className="flex justify-between my-20">
                 <div className="w-[30%]">
-                  <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+                  <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
                   Portfolio Projects
                   </h4>
-                  <p className="font-normal font-rubik text-[#404040] text-base leading-9">
+                  <p className="font-normal font-inter text-[#404040] text-base leading-9">
                   Share a few snippets of your work
                       </p>
                 </div>

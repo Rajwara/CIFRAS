@@ -47,10 +47,10 @@ const Password = () => {
                 </label>
               </div>
               <div className="my-40">
-                <h4 className="font-rubik font-bold text-[#404040] text-2xl	 leading-9">
+                <h4 className="font-lexend font-bold text-[#404040] text-2xl	 leading-9">
                 Olivia Rhye
                 </h4>
-                <p className="font-normal font-rubik text-[#404040] text-lg leading-9">
+                <p className="font-normal font-inter text-[#404040] text-lg leading-9">
                 Update your photo and personal details.
                 </p>
 
@@ -59,13 +59,13 @@ const Password = () => {
             </div>
             <div className="items-center justify-end flex gap-5">
               <a href="/" className="">
-                <button className="font-rubik flex py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
+                <button className="font-inter flex py-[10px] px-[16px] bg-white border-[#C0C0C0] border-2 text-[#404040] rounded items-center gap-5 text-xl">
                  
                 Cancel
                 </button>
               </a>
               <a href="/">
-                <button className="font-rubik  flex py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
+                <button className="font-inter  flex py-[10px] px-[16px] bg-[#634af9] border-[#634af9] border-2 text-white rounded items-center gap-5 text-xl">
                   
                 Update Password
                 </button>
@@ -78,7 +78,7 @@ const Password = () => {
           {/* Current Password form  */}
           <div className="flex  justify-between  mb-10">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
               Current Password
               </h4>
             </div>
@@ -93,7 +93,7 @@ const Password = () => {
                 name="password"
                 id="password"
                 placeholder="Enter your Current Password"
-                className=" rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500  flex-1 min-w-0  text-base  border-1  sm:text-sm rounded-md leading-5  block w-full p-2.5"
+                className=" rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-inter text-[#404040]  focus:ring-blue-500 focus:border-blue-500  flex-1 min-w-0  text-base  border-1  sm:text-sm rounded-md leading-5  block w-full p-2.5"
                 required=""
               />
               <button
@@ -112,7 +112,7 @@ const Password = () => {
   {/* New Password form  */}
   <div className="flex  justify-between  mb-10">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
               New Password
               </h4>
             </div>
@@ -127,7 +127,7 @@ const Password = () => {
                 name="password"
                 id="password"
                 placeholder="Enter your New Password"
-                className=" rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500  flex-1 min-w-0  text-base  border-1  sm:text-sm rounded-md leading-5  block w-full p-2.5"
+                className=" rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-inter text-[#404040]  focus:ring-blue-500 focus:border-blue-500  flex-1 min-w-0  text-base  border-1  sm:text-sm rounded-md leading-5  block w-full p-2.5"
                 required=""
               />
               <button
@@ -148,7 +148,7 @@ const Password = () => {
   {/* Confirm Password form  */}
   <div className="flex  justify-between  mb-10">
             <div className="w-[30%]">
-              <h4 className="font-rubik font-bold text-[#404040] text-xl leading-9">
+              <h4 className="font-lexend font-bold text-[#404040] text-xl leading-9">
               Confirm New Password 
               </h4>
             </div>
@@ -163,7 +163,7 @@ const Password = () => {
                 name="password"
                 id="password"
                 placeholder="Confirm New Password "
-                className=" rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-rubik text-[#404040]  focus:ring-blue-500 focus:border-blue-500  flex-1 min-w-0  text-base  border-1  sm:text-sm rounded-md leading-5  block w-full p-2.5"
+                className=" rounded-e-lg bg-gray-50 border border-gray-300 font-normal font-inter text-[#404040]  focus:ring-blue-500 focus:border-blue-500  flex-1 min-w-0  text-base  border-1  sm:text-sm rounded-md leading-5  block w-full p-2.5"
                 required=""
               />
               <button
