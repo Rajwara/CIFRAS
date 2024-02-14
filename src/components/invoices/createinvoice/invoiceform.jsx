@@ -1,6 +1,8 @@
 import React from "react";
 import RemoveIcon from "../../../assets/images/invoice/removeicon.svg";
 import PlusIcongray from "../../../assets/images/invoice/plusicongray.svg";
+import Phonefield from "../../phonefield/phonefield";
+
 
 const Invoiceform = () => {
   // const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -55,12 +57,13 @@ const Invoiceform = () => {
                   >
                     Phone Number
                   </label>
-                  <input
+                  {/* <input
                     type="tel"
                     id="phone"
                     placeholder="Phone Number"
                     class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  />
+                  /> */}
+                  <Phonefield/>     
                 </div>
               </div>
 
@@ -120,12 +123,15 @@ const Invoiceform = () => {
                   >
                     Phone Number
                   </label>
-                  <input
+                  {/* <input
                     type="tel"
                     id="phone"
                     placeholder="Phone Number"
                     class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  />
+                  /> */}
+
+                <Phonefield/>     
+
                 </div>
               </div>
 
@@ -523,6 +529,10 @@ const Invoiceform = () => {
         </div>
       </div>
       {/* Item Details form end  */}
+
+      {/* deatils history tabs */}
+
+     
     </div>
   );
 };

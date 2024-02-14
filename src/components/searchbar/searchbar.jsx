@@ -1,4 +1,8 @@
 import React, { useEffect,useState  } from "react";
+import Arrow from '../../assets/images/Arrow.svg'
+import Document from '../../assets/images/File.svg'
+import SearchtheDocs from '../../assets/images/Searchthedocument.svg'
+
 
 function Index() {
     const [isSearchVisible, setSearchVisible] = useState(false);
@@ -35,15 +39,15 @@ function Index() {
     <>
       <div className="py-0 px-0">
         <div>
-        <div className="flex justify-between px-3 pb-5 border-b border-gray-100">
-            <div className="flex items-center gap-2">
+        <div className="flex justify-between items-center align-middle  px-3   ">
+            <div className="flex items-center align-middle  gap-2">
               
               <input
         type="text"
         name
         id
         placeholder="Search"
-        className="font-inter font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="font-inter align-middle font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500  "
 
         onClick={toggleSearch}
       />
@@ -58,9 +62,6 @@ function Index() {
                   className=""
                   id="div1_search_4"
                 >
-                
-                  
-                
                 </div>
               </div>
             </div>
@@ -71,10 +72,135 @@ function Index() {
           <div className="overflow-y-scroll h-[500px] hidden absolute w-[400px] bg-white p-4 rounded shadow-sm" style={{ display: isSearchVisible ? "block" : "none" }}>
            
           <div className="px-3 pt-4">
+
+
               <div>
-                <p className="text-sm font-medium text-gray-800 font-inter">Users</p>
+              <a href="/reports" className="flex gap-2 my-2 items-center ">
+                  <img src={SearchtheDocs} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Dashboard</p>
+                </a>
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Products</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Add Products</p>
+                </a>
+              </div>
+
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Invoice</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Add Invoice</p>
+                </a>
+              </div>
+
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Suppliers</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Add Invoice</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Purchase Orders</p>
+                </a>
+              </div>
+
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Reports</p>
+                </a>
+
+               
+              </div>
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Inventory</p>
+                </a>
+
+               
+              </div>
+
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Clients</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Add Clients</p>
+                </a>
+
+              
+              </div>
+
+
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Orders</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Add Orders</p>
+                </a>
+              </div>
+
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Quotes</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Add Quotes</p>
+                </a>
+              </div>
+
+              <div>
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Options</p>
+                </a>
+
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Vendor</p>
+                </a>
+                <a href="/reports" className="flex gap-2 items-center my-2 ml-4">
+                  <img src={Arrow} className="h-5 w-7  rounded  p-1 mt-1" alt="" />
+                <p className="text-sm  text-[#404040] font-inter font-medium">Company data</p>
+                </a>
+              </div>
+
+              <a href="/reports" className="flex gap-2 items-center my-2">
+                  <img src={Document} className="h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1" alt="" />
+                <p className="text-md  text-[#404040] font-inter font-bold">Profile</p>
+                </a>
                 <div className="flex pt-5 gap-3">
-                  <div className>
+
+              
+                  
+                  <div className="items-center">
                     <img
                       src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Mask%20Group.png"
                       alt
@@ -82,10 +208,10 @@ function Index() {
                   </div>
                   <div>
                     <p className="text-xs font-medium text-gray-800 font-inter">
-                      CNN News Report
+                     Anglisa
                     </p>
                     <p className="text-xs text-gray-600 pt-0.5 w-[150px] font-inter">
-                      News and communications
+                      anglisa@cirfas.com
                     </p>
                   </div>
                 </div>
@@ -105,54 +231,9 @@ function Index() {
                     </p>
                   </div>
                 </div>
-                <div className="flex pt-5 gap-3">
-                  <div className>
-                    <img
-                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/4.png"
-                      alt
-                    />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-gray-800 font-inter">
-                      Jenny Wilson
-                    </p>
-                    <p className="text-xs text-gray-600 pt-0.5  w-[150px] font-inter">
-                      Lead Quality Analyst
-                    </p>
-                  </div>
-                </div>
-                <div className="flex pt-5 gap-3">
-                  <div className>
-                    <img
-                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/5.png"
-                      alt
-                    />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-gray-800 font-inter" >
-                      Arlene McCoy
-                    </p>
-                    <p className="text-xs text-gray-600 pt-0.5  w-[150px] font-inter">
-                      Legacy Group Officer
-                    </p>
-                  </div>
-                </div>
-                <div className="flex pt-5 gap-3">
-                  <div className>
-                    <img
-                      src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3.png"
-                      alt
-                    />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-gray-800 font-inter">
-                      Sherri Gottlieb
-                    </p>
-                    <p className="text-xs text-gray-600 pt-0.5  w-[150px] font-inter">
-                      Product Operations Manager
-                    </p>
-                  </div>
-                </div>
+                
+             
+               
               </div>
             </div>
           </div>

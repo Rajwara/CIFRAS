@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Yup from 'yup';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import Detailsandhistorytabs from '../../detailsandhistorytabs/detailsandhistorytabs';
 
 const Productform = () => {
   const initialValues = {
@@ -108,7 +109,11 @@ const Productform = () => {
             )}
           </Formik>
         </div>
+        <div className='font-inter mt-14'>
+        <Detailsandhistorytabs/>
       </div>
+      </div>
+      
     </div>
   );
 };

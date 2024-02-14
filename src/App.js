@@ -31,6 +31,8 @@ import { useSelector } from 'react-redux';
 import ScrollToTop from './components/ScrollForTop/ScrollForTop';
 import Inventory from './pages/dashboard/inventory/inventory';
 
+import Errorpage from './components/errorpage/errorpage';
+
 
 
 
@@ -88,6 +90,7 @@ function App() {
 
       <Route path='/inventory' element={<Inventory/>}/>
       
+      <Route path='*' element={<Errorpage/>}/>
 
 
 

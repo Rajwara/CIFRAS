@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import Line from "../../../assets/images/vendorformlineblack.svg";
+import Detailsandhistorytabs from '../../detailsandhistorytabs/detailsandhistorytabs';
+import PhoneField from '../../../components/phonefield/phonefield'
 
 
 const Supplierform = () => {
@@ -61,7 +63,8 @@ const Supplierform = () => {
                   </div>
                   <div className='w-full'>
                     <label htmlFor="phonenumber" className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7">Phone Number</label>
-                    <Field type="number" id="phonenumber" name="phonenumber"  placeholder=' +1 ' className="border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5" />
+                    {/* <Field type="number" id="phonenumber" name="phonenumber"  placeholder=' +1 ' className="border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5" /> */}
+                    <PhoneField/>
                     <ErrorMessage name="phonenumber" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
                   <div className='w-full'>
@@ -98,6 +101,9 @@ const Supplierform = () => {
               </Form>
             )}
           </Formik>
+          <div>
+            <Detailsandhistorytabs/>
+          </div>
         </div>
       </div>
     </div>

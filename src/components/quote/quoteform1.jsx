@@ -193,6 +193,8 @@ const Quoteform1 = () => {
 
     const Quotesidebar = ({ onClose }) => {
         return (
+
+          // side bar start
           <div className="sidebar border border-[#ebebeb] rounded">
              <div className='quotesidebar flex flex-col gap-4 px-6 pt-[150px] pb-[600px]    bg-white'>
                 <h2 className='font-lexend font-bold text-[#634AF9] text-2xl leading-9'>Quote Summary</h2>
@@ -222,6 +224,8 @@ const Quoteform1 = () => {
         </div>
            
           </div>
+          // side end start
+
         );
       };
       

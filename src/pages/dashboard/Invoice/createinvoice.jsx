@@ -3,6 +3,7 @@ import React from 'react'
 import UploadInvoice from '../../../components/invoices/createinvoice/uploadInvoice';
 import Invoiceform from '../../../components/invoices/createinvoice/invoiceform';
 import Submitinvoice from '../../../components/invoices/createinvoice/submitinvoice';
+import Detailsandhistorytabs from '../../../components/detailsandhistorytabs/detailsandhistorytabs';
 
 
 
@@ -33,7 +34,16 @@ const Createinvoice = () => {
             <p class="text-2xl text-gray-400 ">
               <Submitinvoice />
             </p>
+            
+          <div className='font-inter justify-between border border-[#ebebeb] bg-white  rounded py-6 px-8 items-center mx-3 '>
+        <Detailsandhistorytabs/>
+      </div>
           </div>
+
+
+
+
+      
         
         </div>
       </div>

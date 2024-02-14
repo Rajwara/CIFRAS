@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import Profile from '../../assets/images/dashboard/john.svg'
+import Next from "../../assets/images/nextbuttonfortable.svg";
+import Prev from "../../assets/images/prevbuttonfortable.svg";
+import Edit from "../../assets/images/edittablebutton.svg";
+import Delete from "../../assets/images/deletetablebutton.svg";
 
 const Customerstatustable = () => {
+  
 
     const tabledata = [
         {
@@ -60,10 +65,18 @@ const Customerstatustable = () => {
 
     },
     ]
+    const itemsPerPage = 8;
+    const [currentPage, setCurrentPage] = useState(1);
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentData = tabledata.slice(indexOfFirstItem, indexOfLastItem);
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+      };
 
 
   return (
-    <div className=" relative overflow-x-auto shadow-md sm:rounded-lg p-5 bg-white">
+    <div className=" relative overflow-x-auto border border-[#ebebeb] sm:rounded-lg p-5 bg-white">
     <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white ">
     <div>
         <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="font-inter inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 " type="button">
@@ -125,7 +138,7 @@ const Customerstatustable = () => {
     </thead>
     <tbody>
      {
-        tabledata.map((data)=>(
+        currentData.map((data)=>(
             <tr class="bg-white border-b  hover:bg-gray-50 " key={data.id}>
             <td class="w-4 p-4">
                 <div class="flex items-center">
@@ -148,15 +161,62 @@ const Customerstatustable = () => {
                     <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-inter "></div> {data.status}
                 </div>
             </td>
-            <td class="px-6 py-4">
+            {/* <td class="px-6 py-4">
                 <a href="#" class="font-inter font-medium text-blue-600  hover:underline">{data.role}</a>
-            </td>
+            </td> */}
+            <td className="px-6 py-4 flex gap-4">
+                        <a href="#" className="font-medium text-blue-600  hover:underline"><img src={Edit} alt=""  classNameName='w-6 h-6'/></a>
+                        <a href="#" className="font-medium text-blue-600  hover:underline"><img src={Delete} alt="" classNameName='w-6 h-6' /></a>
+                  </td>
         </tr>
         ))
      }
      
     </tbody>
 </table>
+<nav className="flex items-center justify-between pt-4 px-4 pb-4" aria-label="Table navigation">
+        {/* Show pagination */}
+        <span className="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto font-inter">
+          Showing{" "}
+          <span className="font-semibold text-gray-900 dark:text-white font-inter">
+            {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, tabledata.length)}
+          </span>{" "}
+          of{" "}
+          <span className="font-semibold text-gray-900 dark:text-white font-inter">{tabledata.length}</span>
+        </span>
+        <ul className="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8 font-inter">
+          <li>
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font-inter"
+            >
+              <img src={Prev} alt="" />
+            </button>
+          </li>
+          {Array.from({ length: Math.ceil(tabledata.length / itemsPerPage) }, (_, index) => (
+            <li key={index}>
+              <button
+                onClick={() => paginate(index + 1)}
+                className={`font-inter flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 ${
+                  currentPage === index + 1 ? "text-blue-600 bg-blue-50" : "hover:bg-gray-100 hover:text-gray-700"
+                } dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
+              >
+                {index + 1}
+              </button>
+            </li>
+          ))}
+          <li>
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === Math.ceil(tabledata.length / itemsPerPage)}
+              className=" flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font-inter"
+            >
+              <img src={Next} alt="" />
+            </button>
+          </li>
+        </ul>
+      </nav>
 </div>
   );
 };

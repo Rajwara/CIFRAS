@@ -13,32 +13,32 @@ const Maindashbaord = () => {
   return (
     <div>
       {" "}
-      <div class="p-4 sm:ml-[60px] mt-6 bg-[#ebebeb]">
-        <div class=" border-2 border-gray-200 border-dashed rounded-lg mt-14">
+      <div class="p-4 sm:ml-[60px] mt-24 bg-white">
+        <div class=" ">
           <div class="mb-4">
             <p class="text-2xl text-gray-400 ">
               <Goodmorning />
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class=" rounded ">
+          <div class="grid grid-cols-2 gap-4 mb-4  ">
+            <div class="  rounded border border-[#ebebeb]">
               <p class="text-2xl text-gray-400 ">
                 <Numberofordercards />
               </p>
             </div>
-            <div class="rounded">
+            <div class=" rounded border border-[#ebebeb]">
               <p class="text-2xl text-gray-400 ">
                 <Mostsoldproductscard />
               </p>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="rounded">
+            <div class="rounded border border-[#ebebeb]">
               <p class="text-2xl text-gray-400 ">
                 <Numberofinvoicescard />
               </p>
             </div>
-            <div class="rounded">
+            <div class="rounded border border-[#ebebeb]">
               <p class="text-2xl text-gray-400 ">
                 <Totalrevenuecard />
               </p>

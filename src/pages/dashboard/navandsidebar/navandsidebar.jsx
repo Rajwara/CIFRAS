@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../redux/reducers/UserSlice";
 import Searchbar from "../../../components/searchbar/searchbar"
-
+import LogoOnly from "../../../assets/images/logoonly.png"
 
 
 
@@ -26,7 +26,6 @@ import Searchbar from "../../../components/searchbar/searchbar"
 
 
 const Navandsidebar = () => {
-
   const [isSearchVisible, setSearchVisible] = useState(false);
 
   const toggleSearch = () => {
@@ -38,6 +37,29 @@ const Navandsidebar = () => {
   const dispatch = useDispatch();
   const isLogin = useSelector((state) => state.auth.isLogin);
   const user = useSelector((state) => state.auth.user);
+
+  //for side logo code
+  const [isHovered, setIsHovered] = useState(false);
+  useEffect(() => {
+    const handleHover = () => {
+      setIsHovered(true);
+    };
+    const handleLeave = () => {
+      setIsHovered(false);
+    };
+    const logoSidebar = document.getElementById("logo-sidebar");
+    if (logoSidebar) {
+      logoSidebar.addEventListener("mouseenter", handleHover);
+      logoSidebar.addEventListener("mouseleave", handleLeave);
+    }
+    return () => {
+      if (logoSidebar) {
+        logoSidebar.removeEventListener("mouseenter", handleHover);
+        logoSidebar.removeEventListener("mouseleave", handleLeave);
+      }
+    };
+  }, []);
+
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -75,7 +97,7 @@ const Navandsidebar = () => {
 
   return (
     <div>
-      <nav class="fixed top-0 left-0  z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+      <nav class="fixed top-0 left-0  z-[100] w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
@@ -101,10 +123,6 @@ const Navandsidebar = () => {
                   ></path>
                 </svg>
               </button>
-          
-            </div>
-
-            <div class="flex items-center w-[30%] gap-6 ">
               <div className="w-full mr-10">
                 <label
                   for="default-search"
@@ -160,18 +178,22 @@ const Navandsidebar = () => {
 
                 </div>
               </div>
+            </div>
+
+            <div class="flex items-center  gap-6 ">
+             
               <div className="flex ">
                 <img src={NotificationIcon} alt="NotificationIcon" />
                 <span class="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-normal text-[#FF3D00] font-inter ">
                   2*
                 </span>
               </div>
-              <div class="flex items-center ms-3 w-[80%]">
+              <div class="flex items-center ms-3 ">
              
-                <div class="relative inline-block text-left">
+              <div class="relative inline-block text-left ">
                 <button
                     type="button"
-                    class="inline-flex w-full justify-center  rounded-md bg-white  items-center px-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 "
+                    class="inline-flex w-[180px] justify-center   items-center px-4 text-sm font-semibold text-gray-900 shadow-sm gap-4  "
                     id="menu-button"
                     aria-expanded={isDropdownOpen}
                     aria-haspopup="true"
@@ -179,7 +201,7 @@ const Navandsidebar = () => {
 
                   >
                       <img
-                      class="w-[50%] h-[100%]   rounded-full"
+                      class="w-[30%] h-[80%]   rounded-full"
                       src={profileImg}
                       alt="user photo"
                     />
@@ -267,12 +289,14 @@ const Navandsidebar = () => {
   "
         aria-label="Sidebar"
       >
-        <div class=" h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div class=" h-full px-3 pb-4 overflow-y-auto bg-white  mt-20">
           <ul class="space-y-2 font-medium mt-10">
             <li>
-            <a href="/" class=" ">
-                <img src={Logo} className="w-full h-full" alt="Logo" />
-              </a>
+     {isHovered ? (
+            <img src={Logo} className="w-full h-full" alt="Logo" />
+          ) : (
+            <img src={LogoOnly} className="w-full h-full" alt="LogoOnly" />
+          )}
             </li>
             <li>
               <a href="/dashbaord" class="flex items-center p-2 mt-5 group">

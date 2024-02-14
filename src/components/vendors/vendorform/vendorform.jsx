@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import Line from "../../../assets/images/vendorformlineblack.svg";
+import Detailsandhistorytabs from '../../detailsandhistorytabs/detailsandhistorytabs';
 
 
 const Vendorform = () => {
@@ -99,6 +100,7 @@ const Vendorform = () => {
             )}
           </Formik>
         </div>
+        <Detailsandhistorytabs/>
       </div>
     </div>
   );
