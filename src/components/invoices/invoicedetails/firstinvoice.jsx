@@ -10,11 +10,11 @@ const Firstinvoice = () => {
     </div>
     <div className='right flex gap-4'>
      
-          <button className='flex py-[10px] px-[16px] bg-white text-[#404040] border border-[#c0c0c0] rounded items-center gap-2'>
+          <button className='flex py-[10px] text-[20px] px-[16px] bg-white text-[#404040] border border-[#c0c0c0] rounded items-center gap-2 font-lexend'>
           <img src={Print} className='w-6 h-6  ' alt=''/>
           Print
           </button>
-          <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
+          <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2 text-[20px] font-lexend'>
           <img src={Download} className='w-6 h-6  ' alt=''/>
           Download
           </button>
