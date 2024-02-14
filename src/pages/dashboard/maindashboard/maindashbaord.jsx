@@ -13,7 +13,7 @@ const Maindashbaord = () => {
   return (
     <div>
       {" "}
-      <div class="p-4 sm:ml-[60px] mt-24 bg-white">
+      <div class="p-4 sm:ml-[60px] mt-20 bg-white">
         <div class=" ">
           <div class="mb-4">
             <p class="text-2xl text-gray-400 ">

@@ -4,7 +4,9 @@ import profileImg from "../../../assets/images/dashboard/john.svg";
 import DashboardSideIcon from "../../../assets/images/dashboard/dashboard.svg";
 import QuotesGenerationIcon from "../../../assets/images/dashboard/quotesgeneration.svg";
 import InvoiceGenerationIcon from "../../../assets/images/dashboard/invoicegeneration.svg";
-import NotificationIcon from "../../../assets/images/dashboard/notification_icon.svg";
+import NotificationIcon from "../../../assets/images/notificationicon.svg";
+import DownArrow from "../../../assets/images/downarrow.svg";
+
 import FacturaElectroncia from "../../../assets/images/dashboard/FacturaElectroncia.svg";
 import dropdownIcon from "../../../assets/images/dashboard/dropdownIcon.svg";
 import ProductsidebarIcon from "../../../assets/images/dashboard/ProductsidebarIcon.svg";
@@ -19,6 +21,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../redux/reducers/UserSlice";
 import Searchbar from "../../../components/searchbar/searchbar"
 import LogoOnly from "../../../assets/images/logoonly.png"
+
 
 
 
@@ -130,8 +133,8 @@ const Navandsidebar = () => {
                 >
                   Search
                 </label>
-                <div class="relative">
-                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 mb-5 ml-2 pointer-events-none">
+                <div class="relative items-center">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 ml-2 pointer-events-none">
                     <svg
                       class="w-4 h-4 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
@@ -182,18 +185,18 @@ const Navandsidebar = () => {
 
             <div class="flex items-center  gap-6 ">
              
-              <div className="flex ">
+              <div className=" ">
                 <img src={NotificationIcon} alt="NotificationIcon" />
-                <span class="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-normal text-[#FF3D00] font-inter ">
+                {/* <span class="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-normal text-[#FF3D00] font-inter ">
                   2*
-                </span>
+                </span> */}
               </div>
               <div class="flex items-center ms-3 ">
              
               <div class="relative inline-block text-left ">
                 <button
                     type="button"
-                    class="inline-flex w-[180px] justify-center   items-center px-4 text-sm font-semibold text-gray-900 shadow-sm gap-4  "
+                    class="inline-flex w-[220px] justify-center   items-center px-4 text-sm font-semibold text-[#404040]  gap-4  "
                     id="menu-button"
                     aria-expanded={isDropdownOpen}
                     aria-haspopup="true"
@@ -208,6 +211,8 @@ const Navandsidebar = () => {
                    <h1 class="w- font-lexend font-normal text-base text-[#404040]">
                     John Doe
                   </h1>
+                  <img src={DownArrow} alt="" />
+
                   </button>
                   {isDropdownOpen && (
                     <div
