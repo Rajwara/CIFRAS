@@ -14,7 +14,7 @@ const Numberofinvoicescard = () => {
           <img src={Icons} className='' alt='' />
         </div>
             <div className=''>
-                <h6 className='font-normal font-lexend text-[#000000] text-xl leading-9'>Number of Invoices</h6>
+                <h6 className='font-normal font-lexend text-[#404040] text-xl leading-9'>Number of Invoices</h6>
                 <h6 className='font-bold font-lexend text-[#ffb300] text-xl leading-9'>1,200</h6>
 
             </div>

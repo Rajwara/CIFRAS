@@ -4,9 +4,9 @@ import Plus from "../../assets/images/dashboard/plusgoodmorning.svg";
 
 const Goodmorning = () => {
   return (
-    <div className='flex justify-between border border-[#ebebeb] bg-white  rounded py-6 px-8 items-center'>
+    <div className='flex justify-between font-inter border border-[#ebebeb] bg-white  rounded py-6 px-8 items-center'>
         <div className='left flex flex-col gap-2 relative'>
-<h2 className='font-lexend font-bold text-[#634AF9] text-4xl leading-9'>Good Morning</h2>
+<h2 className='font-lexend font-bold text-[#634AF9] text-4xl leading-9'>Good Morning,</h2>
 <div className='flex gap-2'>
 <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>John Deo</h4>
 <img src={Hand} className='w-8 h-8' alt='' />
@@ -14,7 +14,7 @@ const Goodmorning = () => {
         </div>
         <div className='right'>
 <a href="/productform">
-<button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
+<button className='font-lexend flex py-[10px] px-[16px] bg-[#634af9] text-xl font-normal leading-7 text-white rounded items-center gap-2'>
     <img src={Plus} className='w-6 h-6  ' alt=''/>
     Add Product
 </button>

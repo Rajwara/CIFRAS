@@ -106,21 +106,21 @@ const TotalProfitGraph = () => {
   }, []);
 
   return (
-    <div className="w-full bg-white rounded-lg shadow ">
+    <div className="w-full bg-white font-inter rounded-lg shadow ">
       <div className="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
         <div>
           <div className=" justify-between items-center grid grid-cols-2">
-            <h5 className="leading-none text-3xl font-bold text-gray-900  pb-2 font-lexend">
+            <h5 className="leading-none text-3xl font-bold text-[#404040]  pb-2 font-lexend">
               $12,423
             </h5>
-            <h5 className="leading-none text-xl font-bold  pb-2 font-lexend text-[#000] m">
+            <h5 className="leading-none text-xl font-bold  pb-2 font-lexend text-[#404040] ">
          Total profit without tax included.
             </h5>
               <button
               id="dropdownDefaultButton"
               data-dropdown-toggle="lastDaysdropdown"
               data-dropdown-placement="bottom"
-              class="text-sm font-medium text-gray-500  hover:text-gray-900 text-center inline-flex items-center  font-inter"
+              class="text-sm font-medium text-gray-500  hover:text-[#404040] text-center inline-flex items-center  font-inter"
               type="button"
             >
               Last 7 days
@@ -156,7 +156,7 @@ const TotalProfitGraph = () => {
           height="350"
         />
       </div>
-      <div className="grid grid-cols-1 items-center border-gray-200 border-t  justify-between mt-14 p-4 md:p-6 pt-0 md:pt-0">
+      <div className="grid grid-cols-1 items-center border-[#ebebeb] border-t  justify-between mt-14 p-4 md:p-6 pt-0 md:pt-0">
        
       </div>
     </div>
