@@ -147,7 +147,7 @@ const Producttabledata = () => {
             </button>
             {/* <!-- Dropdown menu --> */}
             <div id="dropdownAction" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
-                <ul className="py-1 text-sm text-gray-700 " aria-labelledby="dropdownActionButton">
+                <ul className="py-1 text-sm text-[#404040] " aria-labelledby="dropdownActionButton">
                     <li>
                         <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Reward</a>
                     </li>
