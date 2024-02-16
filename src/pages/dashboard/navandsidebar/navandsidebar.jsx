@@ -126,6 +126,10 @@ const Navandsidebar = () => {
                   ></path>
                 </svg>
               </button>
+              <div className="flex gap-10 items-center ">
+                
+                <img src={Logo} className="w-[20%] h-full" alt="Only" />
+           
               <div className="w-full mr-10">
                 <label
                   for="default-search"
@@ -181,6 +185,8 @@ const Navandsidebar = () => {
 
                 </div>
               </div>
+                </div>
+          
             </div>
 
             <div class="flex items-center  gap-6 ">
@@ -296,13 +302,13 @@ const Navandsidebar = () => {
       >
         <div class=" h-full px-3 pb-4 overflow-y-auto bg-white  mt-20">
           <ul class="space-y-2 font-medium mt-10">
-            <li>
+            {/* <li>
      {isHovered ? (
             <img src={Logo} className="w-full h-full" alt="Logo" />
           ) : (
             <img src={LogoOnly} className="w-full h-full" alt="LogoOnly" />
           )}
-            </li>
+            </li> */}
             <li>
               <a href="/dashbaord" class="flex items-center p-2 mt-5 group">
                 <img
