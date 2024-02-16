@@ -40,6 +40,7 @@ function App() {
   useEffect(() => {
     setCurrPath(window.location.pathname);
   }, []);
+  
 
   const { isLogin, user } = useSelector((state) => state.auth) || {};
   console.log("userLogined :", user);
