@@ -4,6 +4,8 @@ import Prev from "../../../assets/images/prevbuttonfortable.svg";
 import Edit from "../../../assets/images/edittablebutton.svg";
 import Delete from "../../../assets/images/deletetablebutton.svg";
 import * as XLSX from 'xlsx';
+import ExportXcelIcon from "../../../assets/images/exportexcelicon.svg"
+import FilterIcon from "../../../assets/images/filtericon.svg"
 
 const Producttabledata = () => {
 
@@ -133,17 +135,17 @@ const Producttabledata = () => {
             <input type="text" id="table-search-users" className="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search for users" />
         </div>
         <div className="flex flex-row gap-6">
-        <div className="">
-          <button  onClick={generateExcel} className="text-[#404040] font-normal font-inter text-xl leading-7 border border-[#ebebeb] rounded-md px-4 py-2">
-     Export to Excel
+        <div className="flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center">
+          <img src={ExportXcelIcon} alt="" />
+          <button  onClick={generateExcel} className="text-[#404040] font-normal font-inter text-base leading-7 ">
+         Export to Excel
           </button>
           </div>
-            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 " type="button">
+            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  " type="button">
+              <img src={FilterIcon} alt="" />
                 <span className="sr-only">Action button</span>
                 Action
-                <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                </svg>
+               
             </button>
             {/* <!-- Dropdown menu --> */}
             <div id="dropdownAction" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
@@ -164,7 +166,7 @@ const Producttabledata = () => {
             </div>
         </div>
     </div>
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg ">
+    <div className="relative overflow-x-auto shadow-md ">
         <table  ref={tableRef} className="w-full text-sm text-left text-[#404040] font-inter font-normal">
             <thead className="text-xs uppercase text-[#404040] bg-[#ECECEC]">
                 <tr>

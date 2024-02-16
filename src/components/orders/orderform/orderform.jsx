@@ -50,14 +50,14 @@ const Orderform = () => {
           <h2 className='font-lexend font-bold text-[#404040] text-4xl leading-9'>Order</h2>
       </div>
       <div className='right flex flex-row gap-4'>
-            <button className='flex py-[10px] px-[16px] border border-[#ebebeb]  bg-white text-xl font-inter text-[#404040] rounded items-center gap-2'>
+            <button className='flex py-[10px] px-[16px] bg-[#634af9] text-xl font-inter text-white rounded items-center gap-2'>
             {/* <img src={Import} className='w-6 h-6  ' alt=''/> */}
             Save
             </button>
-            <button className='flex py-[10px] px-[16px] bg-[#634af9] text-xl font-inter text-white rounded items-center gap-2'>
+            {/* <button className='flex py-[10px] px-[16px] bg-[#634af9] text-xl font-inter text-white rounded items-center gap-2'>
             <img src={Import} className='w-6 h-6  ' alt=''/>
             Import 
-            </button>
+            </button> */}
       </div>
     </div>
       </div>

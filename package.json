@@ -17,6 +17,8 @@
     "flowbite-datepicker": "^1.2.6",
     "flowbite-react": "^0.7.2",
     "formik": "^2.4.5",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",

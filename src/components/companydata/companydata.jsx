@@ -2,7 +2,7 @@ import React from 'react'
 
 const Companydata = () => {
   return (
-    <div className='main flex flex-col bg-white ml-[60px] mt-20'>
+    <div className='main flex flex-col bg-white ml-[60px] mt-20 '  >
       <div className='p-8'>
         <div className='flex flex-col gap-2 '>
             <h2 className='text-[#404040] text-2xl font-bold font=lexend leading-9'>Company Data</h2>
@@ -12,7 +12,7 @@ const Companydata = () => {
           <div className='border border-[#ebebeb] p-8'>
             <h6 className='font-inter font-bold text-[#404040] text-xl leading-7'>General Data</h6>
           </div>  
-            <div className='table w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div className=' w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
               <div className='w-[40%] '>
                 <div>            
                   <div class="flex flex-col text-center items-center justify-center w-full">
@@ -69,7 +69,7 @@ const Companydata = () => {
           <div className='border border-[#ebebeb] p-8'>
             <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Basic Settings</h6>
           </div>  
-            <div className='table w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div className=' w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
               <div className='w-[80%] flex flex-col gap-4'>
                 <div className='flex flex-row items-center justify-between'>
                   <h6 className='font-lexend font-bold text-[#404040] text-xl leading-7'>Currency</h6>

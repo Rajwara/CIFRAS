@@ -1,22 +1,23 @@
 import React from "react";
 import ImportIcon from "../../../../src/assets/images/invoice/ImportIcon.svg";
 import Plus from "../../../assets/images/dashboard/plusgoodmorning.svg";
-import Totalrevenuecardforotherpage from "../../../components/cards/totalrevenuecard";
-import Numberofordercardsforotherpage from '../../../components/cards/numberofordercard';
+
+import Numberofinvoices from "../../cards/invoicecards/numberofinvoices";
+import Totalrevenuecardforotherpage from '../../cards/totalrevenuecard';
 
 const invoicelistbtnbar = () => {
   return (
-    <div className="flex justify-between border border-[#ebebeb] bg-white  rounded py-6 px-8 items-center">
+    <div className="flex justify-between  bg-white  rounded py-6 px-8 items-center">
       <div className="left flex flex-col gap-2 relative">
         <div className="flex gap-2">
-          <h4 className="font-lexend font-normal text-[#404040] text-4xl leading-9">
+          <h4 className="Font-lexend text-4xl mt-[-25px] font-extrabold leading-tight text-[#404040] ">
             Create Invoice
           </h4>
         </div>
       </div>
 
       <div className='middle flex flex-row gap-6 justify-center'>
-        <Numberofordercardsforotherpage/>
+        <Numberofinvoices/>
         <Totalrevenuecardforotherpage/>
       </div>
 

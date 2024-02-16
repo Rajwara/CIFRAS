@@ -7,7 +7,7 @@ const UploadInvoice = () => {
     <div className='left flex flex-col gap-2 relative'>
 
 <div className='flex gap-2'>
-<h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>Create Invoice</h4>
+<h4 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8'>Create Invoice</h4>
 </div>
     </div>
     <div className='right'>

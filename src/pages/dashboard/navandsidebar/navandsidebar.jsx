@@ -365,7 +365,7 @@ const Navandsidebar = () => {
          
             
             <li>
-           <a href="/suppliers">
+           <a href="#">
            <button type="button" class="flex font-inter items-center w-full p-2 text-base text-[#404040] transition duration-100 rounded-lg group hover:bg-gray-100 " aria-controls="dropdown-examp" data-collapse-toggle="dropdown-examp">
 
 <img src={SupplierIcon} alt="" />
@@ -382,12 +382,12 @@ const Navandsidebar = () => {
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Purchase Orders</a>
+                     <a href="/purchaseorder" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Purchase Orders</a>
                   </li>
 
                   <li className="flex hover:bg-gray-100 ml-12">
                 <img src={dropdownIcon} alt="" />
-                     <a href="#" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Quotes</a>
+                     <a href="/suppliers" class="flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal">Suppliers</a>
                   </li>
                
             </ul>

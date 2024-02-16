@@ -5,10 +5,13 @@ import Logo from "../../../assets/images/sitelogo.svg";
 import Download from "../../../assets/images/downloadarrow.svg";
 import Whattsup from "../../../assets/images/qrcodeforwhattsup.svg";
 
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+
 class ComponentToPrint extends React.Component {
   render() {
     return (
-      <div className="w-full bg-white px-8 py-10   mx-auto rounded border border-[#ebebeb] ">
+      <div className="w-full bg-white px-8 py-10   mx-auto rounded border border-[#ebebeb] " id="pdf-content">
         <div className="grid grid-cols-1 md:grid-cols-2  justify-between  px-20">
           <div className="left">
             <div className="logo">
@@ -223,6 +226,38 @@ class ComponentToPrint extends React.Component {
   }
 }
 
+
+
+
+
+
+  const handleDownloadPDF = () => {
+    const input = document.getElementById('pdf-content'); 
+    // Specify the id of the element you want to convert to PDF
+    html2canvas(input, {
+      scrollY: -window.scrollY,
+      windowWidth: document.documentElement.offsetWidth,
+      windowHeight: document.documentElement.offsetHeight
+    }).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const imgWidth = 210;
+      const imgHeight = canvas.height * imgWidth / canvas.width;
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      pdf.save('downloaded-file.pdf'); 
+      // Specify the name of the downloaded PDF file
+    });
+  };
+ 
+
+
+
+
+
+
+
+
+
 class Example extends React.Component {
   render() {
     return (
@@ -246,7 +281,7 @@ class Example extends React.Component {
               />
             </div>
 
-            <button className="flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2 text-[20px] font-lexend">
+            <button onClick={handleDownloadPDF} className="flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2 text-[20px] font-lexend">
               <img src={Download} className="w-6 h-6  " alt="" />
               Download
             </button>

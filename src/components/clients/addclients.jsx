@@ -1,7 +1,7 @@
 import React from 'react';
 import Plus from "../../assets/images/dashboard/plusgoodmorning.svg";
 import Totalrevenuecardforotherpage from "../cards/totalrevenuecard";
-import Numberofordercardsforotherpage from '../cards/numberofordercard';
+import Numberofclients from '../cards/clients/numberofclients';
 const Addclients = () => {
   return (
     <div className='flex justify-between border border-[#ebebeb] bg-white   py-8 px-10 items-center'>
@@ -10,7 +10,7 @@ const Addclients = () => {
     </div>
 
     <div className='middle flex flex-row gap-6 justify-center'>
-        <Numberofordercardsforotherpage/>
+        <Numberofclients/>
         <Totalrevenuecardforotherpage/>
       </div>
 

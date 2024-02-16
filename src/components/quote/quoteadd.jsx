@@ -1,7 +1,7 @@
 import React from 'react'
 import Plus from "../../assets/images/dashboard/plusgoodmorning.svg";
 import Totalrevenuecardforotherpage from "../cards/totalrevenuecard";
-import Numberofordercardsforotherpage from '../cards/numberofordercard';
+import Numberofquotes from '../cards/quotes/numberofquotes';
 
 
 const Quoteadd = () => {
@@ -12,7 +12,7 @@ const Quoteadd = () => {
     </div>
 
     <div className='middle flex flex-row gap-6 justify-center'>
-        <Numberofordercardsforotherpage/>
+        <Numberofquotes/>
         <Totalrevenuecardforotherpage/>
       </div>
 

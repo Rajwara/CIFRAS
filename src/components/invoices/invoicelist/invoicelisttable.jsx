@@ -4,10 +4,20 @@ import Next from "../../../assets/images/nextbuttonfortable.svg";
 import Prev from "../../../assets/images/prevbuttonfortable.svg";
 import { saveAs } from 'file-saver';
 import * as XLSX from 'xlsx';
+import Edit from "../../../assets/images/edittablebutton.svg";
+import Delete from "../../../assets/images/deletetablebutton.svg";
 
+import ExportXcelIcon from "../../../assets/images/exportexcelicon.svg"
+import FilterIcon from "../../../assets/images/filtericon.svg"
 
 
 const Invoicelisttable = () => {
+
+
+  
+
+ 
+ 
 
   const allData = [
     {
@@ -137,8 +147,8 @@ const Invoicelisttable = () => {
   };
 
   return (
-    <div className=" relative overflow-x-auto shadow-md border border-[#ebebeb] rounded p-5 bg-white">
-      <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+    <div  className=" relative overflow-x-auto shadow-md border border-[#ebebeb] rounded bg-white pb-4">
+      <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900  p-5">
        
         <label for="table-search" class="sr-only font-inter ">
           Search
@@ -169,81 +179,39 @@ const Invoicelisttable = () => {
           />
         </div>
         <div className="flex flex-row gap-6">
-        <div className="">
-          <button  onClick={generateExcel} className="text-[#404040] font-normal font-inter text-xl leading-7 border border-[#ebebeb] rounded-md px-4 py-2">
-     Export to Excel
+        <div className="flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center">
+          <img src={ExportXcelIcon} alt="" />
+          <button  onClick={generateExcel} className="text-[#404040] font-normal font-inter text-base leading-7 ">
+         Export to Excel
           </button>
           </div>
-          <button
-            id="dropdownActionButton"
-            data-dropdown-toggle="dropdownAction"
-            class="font-inter inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-            type="button"
-          >
-            <span class="sr-only">Action button</span>
-            Action
-            <svg
-              class="w-2.5 h-2.5 ms-2.5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 4 4 4-4"
-              />
-            </svg>
-          </button>
-          <div
-            id="dropdownAction"
-            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-          >
-            <ul
-              class="py-1 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownActionButton"
-            >
-              <li>
-                <a
-                  href="#"
-                  class="font-inter block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Reward
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="font-inter block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Promote
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="font-inter block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Activate account
-                </a>
-              </li>
-            </ul>
-            <div class="py-1">
-              <a
-                href="#"
-                class="font-inter block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-              >
-                Delete User
-              </a>
+            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  " type="button">
+              <img src={FilterIcon} alt="" />
+                <span className="sr-only">Action button</span>
+                Action
+               
+            </button>
+            {/* <!-- Dropdown menu --> */}
+            <div id="dropdownAction" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                <ul className="py-1 text-sm text-[#404040] " aria-labelledby="dropdownActionButton">
+                    <li>
+                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Reward</a>
+                    </li>
+                    <li>
+                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Promote</a>
+                    </li>
+                    <li>
+                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Activate account</a>
+                    </li>
+                </ul>
+                <div className="py-1">
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">Delete User</a>
+                </div>
             </div>
-          </div>
         </div>
       </div>
       <table ref={tableRef} className="w-full text-sm text-left rtl:text-right text-[#404040] ">
-        <thead className="text-xs text-[#404040] uppercase bg-gray-50">
+        <thead className="text-xs text-[#404040] uppercase bg-[#ececec]">
           <tr>
             <th scope="col" className="p-4">
               <div className="flex items-center">
@@ -330,19 +298,15 @@ const Invoicelisttable = () => {
               <td className="px-6 py-4 font-inter">{item.amount}</td>
 
               <td className="px-6 py-4">
-                <div className="flex items-center">
-                  <div className={`h-2.5 w-2.5 rounded-full bg-${item.status.toLowerCase()}-500 me-2 font-inter`}></div>{" "}
+                <div className="flex items-center bg-[#B1FFBC] font-inter rounded-full px-4 py-2 border  p-5">
+                  <div className="h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-inter "></div>{" "}
                   {item.status}
                 </div>
               </td>
-              <td className="px-6 py-4">
-                <a
-                  href="#"
-                  className="font-inter font-medium text-[#634AF9]  hover:underline"
-                >
-                  Edit user
-                </a>
-              </td>
+              <td className="px-6 py-4 flex gap-4">
+                        <a href="#" className="font-medium text-blue-600  hover:underline"><img src={Edit} alt=""  classNameName='w-6 h-6'/></a>
+                        <a href="#" className="font-medium text-blue-600  hover:underline"><img src={Delete} alt="" classNameName='w-6 h-6' /></a>
+                  </td>
             </tr>
           ))}
         </tbody>
