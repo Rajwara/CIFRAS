@@ -12,7 +12,6 @@ import Client from "./pages/dashboard/clients/clients";
 import Productform from "./components/products/productform/productform";
 import Clientform from "./components/clients/clientform/clientform";
 import Quoteform1 from "./components/quote/quoteform1";
-import Createinvoice from "./pages/dashboard/Invoice/createinvoice";
 import Invoicelist from "./pages/dashboard/Invoice/invoicelist";
 import Invoicedetails from "./components/invoices/invoicedetails/invoicedetails";
 import Profile from "./pages/dashboard/profile/profile";
@@ -33,6 +32,7 @@ import Purchaseorder from './pages/dashboard/purchaseorder/purchaseorder';
 import Purchaseorderform from './components/purchaseorder/purchaseorderform';
 
 import Errorpage from "./components/errorpage/errorpage";
+import Invoiceform from "./components/invoices/createinvoice/invoiceform";
 
 function App() {
   const [currPath, setCurrPath] = useState(window.location.pathname);
@@ -57,7 +57,7 @@ function App() {
         <Route path="/quoteform" element={<Quoteform1 />} />{" "}
         <Route path="/clients" element={<Client />} />{" "}
         <Route path="/clientform" element={<Clientform />} />{" "}
-        <Route path="/createinvoice" element={<Createinvoice />} />{" "}
+        <Route path="/createinvoiceform" element={<Invoiceform/>} />{" "}
         <Route path="/invoicelist" element={<Invoicelist />} />{" "}
         <Route path="/invoicedetails" element={<Invoicedetails />} />{" "}
         <Route path="/profile" element={<Profile />} />{" "}
