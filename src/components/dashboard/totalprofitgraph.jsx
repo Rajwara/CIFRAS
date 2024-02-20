@@ -110,7 +110,7 @@ const TotalProfitGraph = () => {
       <div className='flex justify-between p-4 md:p-6 pb-0 md:pb-0'>
         <div>
           <div className=' justify-between items-center grid grid-cols-2'>
-            <h5 className='leading-none text-3xl font-bold text-[#404040]  pb-2 font-lexend'>
+            <h5 className='leading-none text-2xl font-bold text-[#404040]  pb-2 font-lexend'>
               $12,423
             </h5>
             <h5 className='leading-none text-xl font-bold  pb-2 font-lexend text-[#404040] '>

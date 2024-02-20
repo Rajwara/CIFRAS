@@ -74,7 +74,7 @@ const Signup = () => {
           </div>
 
           <div>
-            <h1 className='font-lexend text-4xl font-bold leading-tight text-[#fff] mb-8 '>
+            <h1 className='font-lexend text-3xl font-bold leading-tight text-[#fff] mb-8 '>
               Join us and never miss a thing - SIGN UP!
             </h1>
             <p className='text-[#fff] font-inter font-normal leading-6 text-base mb-8'>
@@ -299,7 +299,7 @@ const Signup = () => {
       <div class='flex flex-col  	items-center justify-center  py-8   rounded-l-lg'>
         <div className='text-center'>
           <div className='w-2/3 mx-auto mb-8 mt-4'>
-            <h2 className='text-[#fff] font-bold font-lexend leading-9 text-3xl mb-6'>
+            <h2 className='text-[#fff] font-bold font-lexend leading-9 text-2xl mb-6'>
               The simplest way to manage your workspace.
             </h2>
             <p className='text-[#fff] font-inter font-normal leading-6 text-base'>

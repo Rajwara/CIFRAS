@@ -11,13 +11,13 @@ const Salesreportgraph = () => {
         id: 'revenue-chart',
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',"Jul","Aug","Sep","Oct","Nov","Dec"],
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       },
     },
     series: [
       {
         name: 'Revenue',
-        data:  [0, 3000, 3000, 2000,2000, 1000,300,100,1500,2500,1200,200],
+        data: [0, 3000, 3000, 2000, 2000, 1000, 300, 100, 1500, 2500, 1200, 200],
       },
     ],
   };
@@ -28,13 +28,13 @@ const Salesreportgraph = () => {
         id: 'expense-chart',
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',"Jul","Aug","Sep","Oct","Nov","Dec"],
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       },
     },
     series: [
       {
         name: 'Expense',
-        data: [0, 3000, 3000, 2000,2000, 1000,300,100,1500,2500,1200,200],
+        data: [0, 3000, 3000, 2000, 2000, 1000, 300, 100, 1500, 2500, 1200, 200],
       },
     ],
   };
@@ -47,7 +47,7 @@ const Salesreportgraph = () => {
         {/* <div className="flex justify-between border-gray-200 border-b dark:border-gray-700 pb-3">
           <dl>
             <dt className="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Profit</dt>
-            <dd className="leading-none text-3xl font-bold text-gray-900 dark:text-white">$5,405</dd>
+            <dd className="leading-none text-2xl font-bold text-gray-900 dark:text-white">$5,405</dd>
           </dl>
           <div>
             <span className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
@@ -63,21 +63,21 @@ const Salesreportgraph = () => {
           {/* Toggle between Revenue and Expense labels */}
           <h2 className='font-inter font-bold text-[#404040] text-xl leading-9'>Sales Report</h2>
           <div className='flex flex-row gap-6'>
-          <button
-            onClick={() => setChartType('revenue')}
-            className={`flex items-center font-inter text-lg cursor-pointer focus:outline-none ${chartType === 'revenue' ? 'text-green-500 font-bold' : 'text-[#404040] '}`}
-          >
-            <img src={Circle} alt='' className='h-4 w-4 mr-2' />
-            Revenue
-          </button>
-          <button
-            onClick={() => setChartType('expense')}
-            className={`flex items-center font-inter text-lg  cursor-pointer focus:outline-none ${chartType === 'expense' ? 'text-red-600 font-bold' : 'text-[#404040]'}`}
-          >
-            <img src={Circle} alt='' className='h-4 w-4 mr-2' />
-            Expense
-          </button>
-          
+            <button
+              onClick={() => setChartType('revenue')}
+              className={`flex items-center font-inter text-lg cursor-pointer focus:outline-none ${chartType === 'revenue' ? 'text-green-500 font-bold' : 'text-[#404040] '}`}
+            >
+              <img src={Circle} alt='' className='h-4 w-4 mr-2' />
+              Revenue
+            </button>
+            <button
+              onClick={() => setChartType('expense')}
+              className={`flex items-center font-inter text-lg  cursor-pointer focus:outline-none ${chartType === 'expense' ? 'text-red-600 font-bold' : 'text-[#404040]'}`}
+            >
+              <img src={Circle} alt='' className='h-4 w-4 mr-2' />
+              Expense
+            </button>
+
           </div>
         </div>
 

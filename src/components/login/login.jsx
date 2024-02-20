@@ -73,7 +73,7 @@ const Login = () => {
             </a>
           </div>
           <div>
-            <h1 className='font-lexend text-4xl mt-[-25px] font-bold leading-tight text-[#fff] mb-3 '>
+            <h1 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#fff] mb-3 '>
               Welcome back! Please log in to continue.
             </h1>
             <p className='text-[#fff] font-inter font-normal leading-6 text-base mb-7'>
@@ -123,10 +123,10 @@ const Login = () => {
                         className=' border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                         placeholder='johnsmith@example.com'
                         required=''
-                        // value={email}
-                        // onChange={(e) => {
-                        //   setEmail(e.target.value);
-                        // }}
+                      // value={email}
+                      // onChange={(e) => {
+                      //   setEmail(e.target.value);
+                      // }}
                       />
                       <ErrorMessage
                         name='email'
@@ -150,10 +150,10 @@ const Login = () => {
                           placeholder='Enter your password'
                           className='border-1 border-[#634AF9]  text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
                           required=''
-                          // value={showpassword}
-                          // onChange={(e) => {
-                          //   setShowpassword(e.target.value);
-                          // }}
+                        // value={showpassword}
+                        // onChange={(e) => {
+                        //   setShowpassword(e.target.value);
+                        // }}
                         />
                         <ErrorMessage
                           name='password'
@@ -224,7 +224,7 @@ const Login = () => {
       <div className='flex flex-col 	items-center justify-center  py-8   rounded-l-lg'>
         <div className='text-center'>
           <div className='w-2/3 mx-auto mb-8 mt-4'>
-            <h2 className='text-[#fff] font-bold font-lexend leading-9 text-3xl mb-6'>
+            <h2 className='text-[#fff] font-bold font-lexend leading-9 text-2xl mb-6'>
               The simplest way to manage your workspace.
             </h2>
             <p className='text-[#fff] font-inter font-normal leading-6 text-base'>
