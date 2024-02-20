@@ -87,122 +87,122 @@ class ComponentToPrint extends React.Component {
             </div>
           </div>
         </div>
-     
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg md:ml-[60px] mt-12">
-    <table class="w-full text-sm text-left rtl:text-right text-[#404040] font-inter">
-        <thead class="text-xs text-[#404040]  uppercase bg-[#ececec] ">
-            <tr>
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg md:ml-[60px] mt-12">
+          <table class="w-full text-sm text-left rtl:text-right text-[#404040] font-inter">
+            <thead class="text-xs text-[#404040]  uppercase bg-[#ececec] ">
+              <tr>
                 <th scope="col" class="px-6 py-4">
-                    #
+                  #
                 </th>
                 <th scope="col" class="px-6 py-4">
                   Item
                 </th>
                 <th scope="col" class="px-6 py-4">
-                    Quantity
+                  Quantity
                 </th>
                 <th scope="col" class="px-6 py-4">
-                   Unit Price
+                  Unit Price
                 </th>
                 <th scope="col" class="px-6 py-4">
                   Total
                 </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
                 <th scope="row" class="px-6 py-4 font-medium text-[#404040] whitespace-nowrap ">
-                    1
+                  1
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
                   <span className="">
-                ChawkBazar Laravel Flutter Mobile App
-                </span>
-                <span className="text-[#a3a3a3]">
-                Along With Wordpress Themes & Plug...
-                </span>
+                    ChawkBazar Laravel Flutter Mobile App
+                  </span>
+                  <span className="text-[#a3a3a3]">
+                    Along With Wordpress Themes & Plug...
+                  </span>
                 </td>
                 <td class="px-6 py-4">
-                    2
+                  2
                 </td>
                 <td class="px-6 py-4">
-                    $2999
+                  $2999
                 </td>
                 <td class="px-6 py-4">
-                    $20000
+                  $20000
                 </td>
-            </tr>
-            <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
+              </tr>
+              <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
                 <th scope="row" class="px-6 py-4 font-medium text-[#404040] whitespace-nowrap ">
-                    1
+                  1
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
                   <span className="">
-                ChawkBazar Laravel Flutter Mobile App
-                </span>
-                <span className="text-[#a3a3a3]">
-                Along With Wordpress Themes & Plug...
-                </span>
+                    ChawkBazar Laravel Flutter Mobile App
+                  </span>
+                  <span className="text-[#a3a3a3]">
+                    Along With Wordpress Themes & Plug...
+                  </span>
                 </td>
                 <td class="px-6 py-4">
-                    2
+                  2
                 </td>
                 <td class="px-6 py-4">
-                    $2999
+                  $2999
                 </td>
                 <td class="px-6 py-4">
-                    $20000
+                  $20000
                 </td>
-            </tr>
-            <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
+              </tr>
+              <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
                 <th scope="row" class="px-6 py-4 font-medium text-[#404040] whitespace-nowrap ">
-                    1
+                  1
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
                   <span className="">
-                ChawkBazar Laravel Flutter Mobile App
-                </span>
-                <span className="text-[#a3a3a3]">
-                Along With Wordpress Themes & Plug...
-                </span>
+                    ChawkBazar Laravel Flutter Mobile App
+                  </span>
+                  <span className="text-[#a3a3a3]">
+                    Along With Wordpress Themes & Plug...
+                  </span>
                 </td>
                 <td class="px-6 py-4">
-                    2
+                  2
                 </td>
                 <td class="px-6 py-4">
-                    $2999
+                  $2999
                 </td>
                 <td class="px-6 py-4">
-                    $20000
+                  $20000
                 </td>
-            </tr>
-            <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
+              </tr>
+              <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
                 <th scope="row" class="px-6 py-4 font-medium text-[#404040] whitespace-nowrap ">
-                    1
+                  1
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
                   <span className="">
-                ChawkBazar Laravel Flutter Mobile App
-                </span>
-                <span className="text-[#a3a3a3]">
-                Along With Wordpress Themes & Plug...
-                </span>
+                    ChawkBazar Laravel Flutter Mobile App
+                  </span>
+                  <span className="text-[#a3a3a3]">
+                    Along With Wordpress Themes & Plug...
+                  </span>
                 </td>
                 <td class="px-6 py-4">
-                    2
+                  2
                 </td>
                 <td class="px-6 py-4">
-                    $2999
+                  $2999
                 </td>
                 <td class="px-6 py-4">
-                    $20000
+                  $20000
                 </td>
-            </tr>
+              </tr>
 
-        </tbody>
-    </table>
-</div>
+            </tbody>
+          </table>
+        </div>
 
         <div className='notes flex  md:ml-[60px]  flex-col md:flex-row justify-between mt-20'>
           <div className='left'>
@@ -291,7 +291,7 @@ class Example extends React.Component {
       <div>
         <div className=' flex flex-col md:flex-row justify-between  bg-white mt-20 md:ml-[60px]   py-8 px-10 items-center'>
           <div className='left flex flex-col gap-2 relative'>
-            <h2 className='font-lexend font-bold text-[#404040] text-4xl leading-9'>
+            <h2 className='font-lexend font-bold text-[#404040] text-3xl leading-9'>
               Invoice Details
             </h2>
           </div>

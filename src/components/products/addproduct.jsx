@@ -7,7 +7,7 @@ const Addproduct = () => {
   return (
     <div className='flex flex-col lg:flex-row  justify-between  bg-white   py-8 px-10 items-center'>
       <div className='left flex flex-col gap-2 relative'>
-        <h2 className='font-lexend font-bold text-[#404040] text-4xl leading-9'>
+        <h2 className='font-lexend font-bold text-[#404040] text-3xl leading-9'>
           Products
         </h2>
       </div>

@@ -88,7 +88,7 @@ const Promotionalsalesgraph = () => {
           <div class='flex items-center'>
             <div class='block justify-center items-center '>
               <div className='flex justify-center items-center'>
-                <h5 class='text-3xl font-bold leading-none text-[#404040]  pe-1 font-lexend'>
+                <h5 class='text-2xl font-bold leading-none text-[#404040]  pe-1 font-lexend'>
                   Promotional Sales
                 </h5>
               </div>

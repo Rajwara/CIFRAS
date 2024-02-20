@@ -52,7 +52,7 @@ const Supplierform = () => {
     <div className='bg-white px-4 pt-4 '>
       <div className='grid grid-cols-1 mt-[100px] md:ml-[60px] border border-[#ebebeb] bg-[#fff] px-8 py-16 rounded'>
         <div className=''>
-          <h1 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
+          <h1 className='font-lexend text-2xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
             Add Supplier
           </h1>
           <Formik

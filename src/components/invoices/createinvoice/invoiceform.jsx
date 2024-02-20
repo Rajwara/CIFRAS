@@ -27,7 +27,7 @@ const Invoiceform = () => {
       <div className='  border border-[#ebebeb] bg-white   rounded py-6 px-8 items-center'>
         <div className='flex flex-col md:flex-row justify-between  bg-white  rounded py-6   '>
           <div className='flex gap-2'>
-            <h4 className='font-lexend text-3xl  font-bold leading-tight text-[#404040] mb-8'>
+            <h4 className='font-lexend text-2xl  font-bold leading-tight text-[#404040] mb-8'>
               Create Invoice
             </h4>
           </div>
@@ -42,7 +42,7 @@ const Invoiceform = () => {
 
         <div className='flex flex-col md:flex-row  justify-between'>
           <div className='md:w-[30%] mb-6 md:mb-0'>
-            <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
+            <h4 className='font-lexend font-normal text-[#404040] text-3xl leading-9'>
               From:
             </h4>
             <p className='font-normal font-inter text-[#404040] text-xl leading-9'>
@@ -108,7 +108,7 @@ const Invoiceform = () => {
         {/* to form start  */}
         <div className='flex flex-col md:flex-row  justify-between mt-6'>
           <div className='md:w-[30%] mb-6 md:mb-0'>
-            <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
+            <h4 className='font-lexend font-normal text-[#404040] text-3xl leading-9'>
               To:
             </h4>
             <p className='font-normal font-inter text-[#404040] text-xl leading-9'>
@@ -175,7 +175,7 @@ const Invoiceform = () => {
         {/* Schedule form start  */}
         <div className='flex flex-col lg:flex-row  justify-between mt-6'>
           <div className='md:w-[30%] mb-6 lg:mb-0'>
-            <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
+            <h4 className='font-lexend font-normal text-[#404040] text-3xl leading-9'>
               Schedule:
             </h4>
             <p className='font-normal font-inter text-[#404040] text-xl leading-9'>
@@ -303,7 +303,7 @@ const Invoiceform = () => {
 
         <div className='flex flex-col lg:flex-row  justify-between mt-6 items-center'>
           <div className='lg:w-[30%]'>
-            <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
+            <h4 className='font-lexend font-normal text-[#404040] text-3xl leading-9'>
               Item Details:
             </h4>
             <p className='font-normal font-inter text-[#404040] text-xl leading-9'>
