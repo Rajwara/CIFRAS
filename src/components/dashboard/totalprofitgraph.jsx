@@ -106,59 +106,53 @@ const TotalProfitGraph = () => {
   }, []);
 
   return (
-    <div className="w-full bg-white font-inter rounded-lg shadow ">
-      <div className="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
+    <div className='w-full bg-white font-inter rounded-lg shadow '>
+      <div className='flex justify-between p-4 md:p-6 pb-0 md:pb-0'>
         <div>
-          <div className=" justify-between items-center grid grid-cols-2">
-            <h5 className="leading-none text-3xl font-bold text-[#404040]  pb-2 font-lexend">
+          <div className=' justify-between items-center grid grid-cols-2'>
+            <h5 className='leading-none text-3xl font-bold text-[#404040]  pb-2 font-lexend'>
               $12,423
             </h5>
-            <h5 className="leading-none text-xl font-bold  pb-2 font-lexend text-[#404040] ">
-         Total profit without tax included.
+            <h5 className='leading-none text-xl font-bold  pb-2 font-lexend text-[#404040] '>
+              Total profit without tax included.
             </h5>
-              <button
-              id="dropdownDefaultButton"
-              data-dropdown-toggle="lastDaysdropdown"
-              data-dropdown-placement="bottom"
-              class="text-sm font-medium text-gray-500  hover:text-[#404040] text-center inline-flex items-center  font-inter"
-              type="button"
+            <button
+              id='dropdownDefaultButton'
+              data-dropdown-toggle='lastDaysdropdown'
+              data-dropdown-placement='bottom'
+              class='text-sm font-medium text-gray-500  hover:text-[#404040] text-center inline-flex items-center  font-inter'
+              type='button'
             >
               Last 7 days
               <svg
-                class="w-2.5 m-2.5 ms-1.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
+                class='w-2.5 m-2.5 ms-1.5'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 10 6'
               >
                 <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
+                  stroke='currentColor'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='m1 1 4 4 4-4'
                 />
               </svg>
             </button>
           </div>
-          <div>
-            {/* <!-- Button --> */}
-          
-          </div>
+          <div>{/* <!-- Button --> */}</div>
         </div>
-      
       </div>
-      <div id="labels-chart" class="px-2.5">
+      <div id='labels-chart' class='px-2.5'>
         <ApexCharts
           options={chartOptions}
           series={chartOptions.series}
-          type="area"
-          height="350"
+          type='area'
+          height='350'
         />
       </div>
-      <div className="grid grid-cols-1 items-center border-[#ebebeb] border-t  justify-between mt-14 p-4 md:p-6 pt-0 md:pt-0">
-       
-      </div>
+      <div className='grid grid-cols-1 items-center border-[#ebebeb] border-t  justify-between mt-14 p-4 md:p-6 pt-0 md:pt-0'></div>
     </div>
   );
 };

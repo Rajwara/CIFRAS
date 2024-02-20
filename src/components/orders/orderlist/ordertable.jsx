@@ -140,16 +140,16 @@ const Ordertable = () => {
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                 </svg>
             </div>
-            <input type="text" id="table-search-users" className="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search for users" />
+            <input type="text" id="table-search-users" className="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search for users" />
         </div>
-        <div className="flex flex-row gap-6">
-        <div className="flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center">
+        <div className="flex flex-col md:flex-row gap-6 mt-4 md:mt-0">
+        <div className="flex border mt-0 md:mt-6 lg:mt-0 border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center">
           <img src={ExportXcelIcon} alt="" />
           <button  onClick={generateExcel} className="text-[#404040] font-normal font-inter text-base leading-7 ">
          Export to Excel
           </button>
           </div>
-            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  " type="button">
+            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  " type="button">
               <img src={FilterIcon} alt="" />
                 <span className="sr-only">Action button</span>
                 Action

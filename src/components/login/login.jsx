@@ -14,7 +14,6 @@ import { useDispatch } from "react-redux";
 import { login } from "../../redux/reducers/UserSlice";
 
 const Login = () => {
-
   const [password, setPassword] = useState(false);
   const toggleShowPassword = () => {
     setPassword(!password);
@@ -40,7 +39,6 @@ const Login = () => {
 
   const onSubmit = (values, props) => {
     console.log("Value", values);
-   
 
     dispatch(
       login({

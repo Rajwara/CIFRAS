@@ -1,19 +1,19 @@
-import React, { useRef,useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Next from "../../assets/images/nextbuttonfortable.svg";
 import Prev from "../../assets/images/prevbuttonfortable.svg";
 import Edit from "../../assets/images/edittablebutton.svg";
 import Delete from "../../assets/images/deletetablebutton.svg";
 import Image from "../../assets/images/inventoryimagefortable.svg";
-import * as XLSX from 'xlsx';
-import ExportXcelIcon from "../../assets/images/exportexcelicon.svg"
-import FilterIcon from "../../assets/images/filtericon.svg"
+import * as XLSX from "xlsx";
+import ExportXcelIcon from "../../assets/images/exportexcelicon.svg";
+import FilterIcon from "../../assets/images/filtericon.svg";
 
 const Purchaseordertable = () => {
-    // Define a separate ProgressBar component
-const ProgressBar = ({ percentage }) => (
-    <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+  // Define a separate ProgressBar component
+  const ProgressBar = ({ percentage }) => (
+    <div className='w-full bg-gray-200 rounded-full dark:bg-gray-700'>
       <div
-        className="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+        className='bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full'
         style={{ width: `${percentage}%` }}
       >
         {percentage}%
@@ -28,7 +28,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -37,7 +37,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -46,7 +46,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -55,7 +55,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -64,7 +64,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -73,7 +73,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -82,7 +82,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -91,7 +91,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -100,7 +100,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
     {
@@ -109,7 +109,7 @@ const ProgressBar = ({ percentage }) => (
       image: Image,
       vendor: "undefined",
       unitprice: "$0.00",
-      stock:<ProgressBar percentage={45} />,
+      stock: <ProgressBar percentage={45} />,
       status: "undefined",
     },
   ];
@@ -124,7 +124,6 @@ const ProgressBar = ({ percentage }) => (
     setCurrentPage(pageNumber);
   };
 
-  
   const tableRef = useRef(null);
 
   const generateExcel = () => {
@@ -132,67 +131,117 @@ const ProgressBar = ({ percentage }) => (
     const ws = XLSX.utils.json_to_sheet(allData);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Sheet 1");
-    XLSX.writeFile(wb, 'table.xlsx', { bookType: "xlsx", mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+    XLSX.writeFile(wb, "table.xlsx", {
+      bookType: "xlsx",
+      mimeType:
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    });
   };
 
   useEffect(() => {
     // Handle any side effects related to products or pagination
   }, [allData, currentPage]);
-//stock for code 
-//   const renderStock = (stockData) => {
-//     if (typeof stockData === 'string' && stockData.includes('bg-blue-600')) {
-//       return <div dangerouslySetInnerHTML={{ __html: stockData }} />;
-//     } else {
-//       return <span>{stockData}</span>;
-//     }
-//   };
+  //stock for code
+  //   const renderStock = (stockData) => {
+  //     if (typeof stockData === 'string' && stockData.includes('bg-blue-600')) {
+  //       return <div dangerouslySetInnerHTML={{ __html: stockData }} />;
+  //     } else {
+  //       return <span>{stockData}</span>;
+  //     }
+  //   };
 
   return (
     <div className='border border-[#ebebeb] rounded'>
-    <div className="flex items-center justify-between rounded flex-column p-8 flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white ">
-        <label for="table-search" className="sr-only">Search</label>
-        <div className="relative">
-            <div className="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg className="w-4 h-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
-            </div>
-            <input type="text" id="table-search-users" className="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search for users" />
-        </div>
-        <div className="flex flex-row gap-6">
-        <div className="flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center">
-          <img src={ExportXcelIcon} alt="" />
-          <button  onClick={generateExcel} className="text-[#404040] font-normal font-inter text-base leading-7 ">
-         Export to Excel
-          </button>
+      <div className='flex items-center justify-between rounded flex-column p-8 flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white '>
+        <label for='table-search' className='sr-only'>
+          Search
+        </label>
+        <div className='relative'>
+          <div className='absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none'>
+            <svg
+              className='w-4 h-4 text-gray-500 '
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 20 20'
+            >
+              <path
+                stroke='currentColor'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
+              />
+            </svg>
           </div>
-            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  " type="button">
-              <img src={FilterIcon} alt="" />
-                <span className="sr-only">Action button</span>
-                Action
-               
-            </button>
-            {/* <!-- Dropdown menu --> */}
-            <div id="dropdownAction" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
-                <ul className="py-1 text-sm text-[#404040] " aria-labelledby="dropdownActionButton">
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Reward</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Promote</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Activate account</a>
-                    </li>
-                </ul>
-                <div className="py-1">
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">Delete User</a>
-                </div>
-            </div>
+          <input
+            type='text'
+            id='table-search-users'
+            className='block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
+            placeholder='Search for users'
+          />
         </div>
-    </div>
+        <div className='flex flex-col md:flex-row gap-6'>
+          <div className='flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center'>
+            <img src={ExportXcelIcon} alt='' />
+            <button
+              onClick={generateExcel}
+              className='text-[#404040] font-normal font-inter text-base leading-7 '
+            >
+              Export to Excel
+            </button>
+          </div>
+          <button
+            id='dropdownActionButton'
+            data-dropdown-toggle='dropdownAction'
+            className='inline-flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  '
+            type='button'
+          >
+            <img src={FilterIcon} alt='' />
+            <span className='sr-only'>Action button</span>
+            Action
+          </button>
+          {/* <!-- Dropdown menu --> */}
+          <div
+            id='dropdownAction'
+            className='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '
+          >
+            <ul
+              className='py-1 text-sm text-[#404040] '
+              aria-labelledby='dropdownActionButton'
+            >
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+                  Reward
+                </a>
+              </li>
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+                  Promote
+                </a>
+              </li>
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+                  Activate account
+                </a>
+              </li>
+            </ul>
+            <div className='py-1'>
+              <a
+                href='#'
+                className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '
+              >
+                Delete User
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className='relative overflow-x-auto shadow-md sm:rounded-lg '>
-        <table ref={tableRef} className='w-full text-sm text-left text-[#404040] font-inter font-normal'>
+        <table
+          ref={tableRef}
+          className='w-full text-sm text-left text-[#404040] font-inter font-normal'
+        >
           <thead className='text-xs text-gray-700 uppercase text-[#404040] bg-[#ECECEC]'>
             <tr>
               <th scope='col' className='p-4'>
@@ -232,10 +281,7 @@ const ProgressBar = ({ percentage }) => (
           </thead>
           <tbody>
             {currentData.map((data) => (
-              <tr
-                key={data.id}
-                className='bg-white border-b  hover:bg-gray-50'
-              >
+              <tr key={data.id} className='bg-white border-b  hover:bg-gray-50'>
                 <td className='w-4 p-4'>
                   <div className='flex items-center'>
                     <input
@@ -255,7 +301,7 @@ const ProgressBar = ({ percentage }) => (
                   {data.purchaseorderid}
                 </th>
                 <td className='px-6 py-4'>
-                    <img src={data.image} alt="" className="" />
+                  <img src={data.image} alt='' className='' />
                 </td>
                 <td className='px-6 py-4'>{data.vendor}</td>
                 <td className='px-6 py-4'>{data.unitprice}</td>
@@ -267,12 +313,8 @@ const ProgressBar = ({ percentage }) => (
                     className='font-medium text-blue-600  hover:underline'
                   >
                     {/* Trigger Button */}
-                    <button  className=''>
-                      <img
-                        src={Edit}
-                        alt=''
-                        classNameName='w-6 h-6'
-                      />
+                    <button className=''>
+                      <img src={Edit} alt='' classNameName='w-6 h-6' />
                     </button>
                   </a>
                   <a
@@ -294,8 +336,7 @@ const ProgressBar = ({ percentage }) => (
           <span className='text-sm font-normal text-[#404040] mb-4 md:mb-0 block w-full md:inline md:w-auto font-inter'>
             Showing{" "}
             <span className='font-semibold text-gray-900  font-inter'>
-              {indexOfFirstItem + 1}-
-              {Math.min(indexOfLastItem, allData.length)}
+              {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, allData.length)}
             </span>{" "}
             of{" "}
             <span className='font-semibold text-[#404040] font-inter'>
@@ -342,9 +383,8 @@ const ProgressBar = ({ percentage }) => (
             </li>
           </ul>
         </nav>
-        
       </div>
-      
+
       <div></div>
     </div>
   );

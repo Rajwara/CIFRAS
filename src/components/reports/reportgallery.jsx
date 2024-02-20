@@ -341,7 +341,7 @@ useEffect(() => {
 
   return (
     <div className='flex flex-col px-6 py-10 border border-[#ebebeb] rounded'>
-      <ul className='flex flex-row justify-between text-sm font-medium text-[#ffffff] md:me-4 mb-4 md:mb-0'>
+      <ul className='flex flex-col md:flex-row justify-between text-sm font-medium text-[#ffffff] md:me-4 mb-4 md:mb-0'>
         <div className='flex flex-row gap-6'>
           <li className='mb-4'>
             <a

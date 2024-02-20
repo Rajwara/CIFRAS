@@ -4,6 +4,8 @@ import PlusIcongray from "../../../assets/images/invoice/plusicongray.svg";
 import Phonefield from "../../phonefield/phonefield";
 import ImportIcon from "../../../../src/assets/images/invoice/ImportIcon.svg";
 import Detailsandhistorytabs from "../../detailsandhistorytabs/detailsandhistorytabs";
+import * as Yup from "yup";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 
 const Invoiceform = () => {
   // const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -21,24 +23,25 @@ const Invoiceform = () => {
   // };
 
   return (
-    <div className='bg-white  rounded py-6 px-8 items-center ml-[60px] mt-20'>
+    <div className='bg-white  rounded py-6 px-8 items-center md:ml-[60px] mt-20'>
       <div className='  border border-[#ebebeb] bg-white   rounded py-6 px-8 items-center'>
-        <div className='flex flex-row justify-between  bg-white  rounded py-6   '>
-            <div className='flex gap-2'>
-              <h4 className='font-lexend text-3xl  font-bold leading-tight text-[#404040] mb-8'>
-                Create Invoice
-              </h4>
-            </div>
+        <div className='flex flex-col md:flex-row justify-between  bg-white  rounded py-6   '>
+          <div className='flex gap-2'>
+            <h4 className='font-lexend text-3xl  font-bold leading-tight text-[#404040] mb-8'>
+              Create Invoice
+            </h4>
+          </div>
           <div className='right'>
             <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-4'>
               <img src={ImportIcon} className='w-6 h-6  ' alt='' />
               Import
             </button>
-            </div>
+          </div>
         </div>
         {/* From form start  */}
-        <div className='flex  justify-between'>
-          <div className='w-[30%]'>
+
+        <div className='flex flex-col md:flex-row  justify-between'>
+          <div className='md:w-[30%] mb-6 md:mb-0'>
             <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
               From:
             </h4>
@@ -46,10 +49,10 @@ const Invoiceform = () => {
               From he who sending this invoice
             </p>
           </div>
-          <div className='w-[60%]'>
+          <div className='md:w-[60%]'>
             <form class=''>
               <div>
-                <div className='grid grid-cols-2 gap-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                   <div class='mb-5'>
                     <label
                       for='name'
@@ -103,8 +106,8 @@ const Invoiceform = () => {
         {/* From form ENd  */}
 
         {/* to form start  */}
-        <div className='flex  justify-between mt-6'>
-          <div className='w-[30%]'>
+        <div className='flex flex-col md:flex-row  justify-between mt-6'>
+          <div className='md:w-[30%] mb-6 md:mb-0'>
             <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
               To:
             </h4>
@@ -112,10 +115,10 @@ const Invoiceform = () => {
               To he who will receive this invoice
             </p>
           </div>
-          <div className='w-[60%]'>
+          <div className='md:w-[60%]'>
             <form class=''>
               <div>
-                <div className='grid grid-cols-2 gap-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                   <div class='mb-5'>
                     <label
                       for='name'
@@ -170,8 +173,8 @@ const Invoiceform = () => {
         {/* to form ENd  */}
 
         {/* Schedule form start  */}
-        <div className='flex  justify-between mt-6'>
-          <div className='w-[30%]'>
+        <div className='flex flex-col lg:flex-row  justify-between mt-6'>
+          <div className='md:w-[30%] mb-6 lg:mb-0'>
             <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
               Schedule:
             </h4>
@@ -179,10 +182,10 @@ const Invoiceform = () => {
               To he who will receive this invoice
             </p>
           </div>
-          <div className='w-[60%]'>
+          <div className='md:w-[60%]'>
             <form class=''>
               <div>
-                <div className='grid grid-cols-4 gap-4 justify-center items-center'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center'>
                   <div class='mb-5'>
                     <label
                       for='Invoicenumber
@@ -298,8 +301,8 @@ const Invoiceform = () => {
 
         {/* Item Details form start  */}
 
-        <div className='flex  justify-between mt-6 items-center'>
-          <div className='w-[30%]'>
+        <div className='flex flex-col lg:flex-row  justify-between mt-6 items-center'>
+          <div className='lg:w-[30%]'>
             <h4 className='font-lexend font-normal text-[#404040] text-4xl leading-9'>
               Item Details:
             </h4>
@@ -307,11 +310,11 @@ const Invoiceform = () => {
               Add one or multiple item
             </p>
           </div>
-          <div className='w-[60%] '>
+          <div className='lg:w-[60%] '>
             <div className='border rounded-sm border-[EBEBEB] bg-white p-5'>
               <form class=''>
                 <div>
-                  <div className='grid grid-cols-3 gap-4 justify-center items-center'>
+                  <div className='grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center'>
                     <div class='mb-5'>
                       <label
                         for='Itemname
@@ -455,7 +458,7 @@ const Invoiceform = () => {
                 </span>
               </button>
             </div>
-            <div className='grid grid-cols-3 justify-center items-center gap-6 mt-5'>
+            <div className='grid  grid-cols-1 md:grid-cols-3 justify-center items-center gap-6 mt-5'>
               <div class='mb-5  '>
                 <label
                   for='base-input'
@@ -499,7 +502,7 @@ const Invoiceform = () => {
                 />
               </div>
             </div>
-            <div className='grid grid-cols-3 justify-center items-center gap-6 mt-5'>
+            <div className='grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-6 mt-5'>
               <div className='flex justify-end mb-5 gap-10'></div>
               <div className='flex justify-end mb-5 gap-10'></div>
               <div className='flex justify-between mb-5 '>
@@ -542,20 +545,21 @@ const Invoiceform = () => {
             </div>
           </div>
         </div>
-       
+
         {/* Item Details form end  */}
 
         {/* deatils history tabs */}
       </div>
-        <div className='flex gap-6  justify-end mt-8 py-6 px-8'>
-          <button className=' font-normal text-xl bg-[#fff] text-[#404040] border border-[#ebebeb] rounded-md font-inter py-3 px-5'>
-            Save as Draft
-          </button>
-          <button className='font-normal text-xl bg-[#634AF9] text-[#fff] rounded-md font-inter py-3 px-5'>
-            Create Invoice
-          </button>
-        </div>
-        <Detailsandhistorytabs/>
+      <div className='flex flex-col md:flex-row gap-6  justify-end mt-8 py-6 px-8'>
+        <button className=' font-normal text-xl bg-[#fff] text-[#404040] border border-[#ebebeb] rounded-md font-inter py-3 px-5'>
+          Save as Draft
+        </button>
+        <button className='font-normal text-xl bg-[#634AF9] text-[#fff] rounded-md font-inter py-3 px-5'>
+          Create Invoice
+        </button>
+      </div>
+
+      <Detailsandhistorytabs />
     </div>
   );
 };

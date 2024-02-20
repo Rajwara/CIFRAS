@@ -12,7 +12,7 @@ const Invoicelist = () => {
       {" "}
       <div class=" sm:ml-14 mt-4 bg-white">
         
-        <div class=" mt-20 ">
+        <div class=" mt-24 ">
         <div class="mb-4">
             <p class="text-2xl text-gray-400 ">
               <Invoicelistbtnbar/>

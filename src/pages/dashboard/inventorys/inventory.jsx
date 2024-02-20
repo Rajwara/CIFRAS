@@ -7,7 +7,7 @@ import Inventorytable from '../../../components/inventorys/inventorytable'
 const Inventory = () => {
   return (
     <div className=''>
-    <div class=" mt-[75px] ml-[60px]">
+    <div class=" mt-[75px] md:ml-[60px]">
      <p class="text-2xl text-gray-400 dark:text-gray-500">
  <Inventoryadd/>
      </p>

@@ -39,7 +39,7 @@ const Inventoryform = () => {
 
   return (
     <div className=' p-4'>
-      <div className='grid grid-cols-1 mt-[100px] ml-[60px] bg-white border border-[#ebebeb] py-10 px-10 rounded'>
+      <div className='grid grid-cols-1 mt-[100px] md:ml-[60px] bg-white border border-[#ebebeb] py-10 px-10 rounded'>
         <div className=''>
           <h1 className="font-inter text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 ">
             Create Products
@@ -143,7 +143,7 @@ const Inventoryform = () => {
                 </div>
                   <ErrorMessage name="description" component="div" className="text-red-500 text-sm mt-1" />
                 </div>
-                  <div className='flex flex-row gap-4 w-full mb-4'>
+                  <div className='flex flex-col md:flex-row gap-4 w-full mb-4'>
                       <div className='w-full'>
                           <label htmlFor="unitprice"  className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7">Unit Price </label>
                           <Field type="number" name="unitprice" id="small-input" placeholder='$0.00' className="border border-[#ebebeb] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5" />
@@ -185,7 +185,7 @@ const Inventoryform = () => {
                 </div>
                 <div className='inventory w-full border border-[#ebebeb] rounded p-8'>
                     <h6 className='text-[#634AF9] mb-2 text-lg font-inter font-bold leading-7'>Inventory Detail</h6>
-                <div className='flex flex-row gap-4 w-full mb-4'>
+                <div className='flex flex-col md:flex-row gap-4 w-full mb-4'>
                       <div className='w-full'>
                           <label htmlFor="onhandQty"  className="block mb-2 text-base font-normal text-[#404040] font-inter leading-7">On Hand Qty </label>
                           <Field type="number" name="onhandQty" id="small-input" placeholder='00' className="border border-[#ebebeb] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5" />

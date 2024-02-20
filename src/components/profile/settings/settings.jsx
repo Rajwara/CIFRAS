@@ -21,12 +21,12 @@ const Settings = () => {
 
 
   return (
-    <div className="  border border-[#ebebeb] bg-white  rounded py-28 pr-24 pl-6 items-center">
-      <h2 className="font-lexend font-bold text-[#404040] text-2xl leading-9 ml-16">
+    <div className="  border border-[#ebebeb] bg-white  rounded mt-[86px]  md:pl-6 items-center">
+      <h2 className="font-lexend font-bold text-[#404040] text-2xl leading-9 ml-[60px]">
         Account Settings
       </h2>
 
-      <div className="mt-10 px-8 font-inter">
+      <div className="mt-10 md:pl-[40px] font-inter">
         <Tabs aria-label="Default tabs" style="default">
           <Tabs.Item active title="My Details">
            <Mydetails/>

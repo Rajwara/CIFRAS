@@ -6,7 +6,7 @@ import UnderLine from "../../../assets/images/dashboard/underlinecards.svg";
 
 const Numberofclients = () => {
   return (
-    <div className=' bg-white py-4 px-2 w-1/3 rounded border border-[#ebebeb]'>
+    <div className=' bg-white  py-4 px-2 mt-4 lg:mt-0 w-full lg:w-1/3 rounded border border-[#ebebeb]'>
     <div className='top flex justify-between '>
         <div className='lefts flex items-center gap-4'>
           <div className=''>
