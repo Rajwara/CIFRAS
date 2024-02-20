@@ -15,7 +15,7 @@ const Vendoradd = () => {
         <Totalrevenuecardforotherpage/>
       </div>
 
-      <div className='right mt-6 lg:mt-0 w-full lg:w-[24%] xl:w-full items-center justify-center flex'>
+      <div className='right mt-6 lg:mt-0  items-center justify-center flex'>
         <a href='/vendorform'>
             <button className='flex py-[10px] px-[16px] bg-[#634af9] text-xl font-inter text-white rounded items-center gap-2'>
             <img src={Plus} className='w-6 h-6  ' alt=''/>
