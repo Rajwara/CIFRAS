@@ -30,12 +30,14 @@ const Numberofpurchaseorder = () => {
         className='items-center justify-center mx-auto'
         alt=''
       />
-      <div className='down flex items-center mt-2 gap-2'>
+      <div className='down flex lg:flex-col xl:flex-row items-center mt-2 gap-2'>
+      <div className="flex gap-2 items-center">
         <img src={Arrow} className='h-4 w-4' alt='' />
         <p className='font-medium font-inter text-[#04B076] text-xl leading-7'>
           +25.45%
         </p>
-        <p className='font-normal font-inter text-[#404040] text-xl leading-7'>
+        </div>
+        <p className='font-normal text-start lg:text-center xl:text-start  font-inter text-[#404040] text-xl leading-7'>
           Increased last month
         </p>
       </div>

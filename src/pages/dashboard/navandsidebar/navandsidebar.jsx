@@ -6,7 +6,6 @@ import QuotesGenerationIcon from "../../../assets/images/dashboard/quotesgenerat
 import InvoiceGenerationIcon from "../../../assets/images/dashboard/invoicegeneration.svg";
 import NotificationIcon from "../../../assets/images/notificationicon.svg";
 import DownArrow from "../../../assets/images/downarrow.svg";
-
 import FacturaElectroncia from "../../../assets/images/dashboard/FacturaElectroncia.svg";
 import dropdownIcon from "../../../assets/images/dashboard/dropdownIcon.svg";
 import ProductsidebarIcon from "../../../assets/images/dashboard/ProductsidebarIcon.svg";
@@ -21,9 +20,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../redux/reducers/UserSlice";
 import Searchbar from "../../../components/searchbar/searchbar";
 import LogoOnly from "../../../assets/images/logoonly.png";
+import { MdClose } from "react-icons/md";
 
 const Navandsidebar = () => {
   const [isSearchVisible, setSearchVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   const toggleSearch = () => {
     setSearchVisible(!isSearchVisible);
@@ -91,7 +100,7 @@ const Navandsidebar = () => {
   return (
     <div>
       <nav class='fixed top-0 left-0  z-[100] w-full bg-white border-b border-gray-200 '>
-        <div class='px-3 py-3 lg:px-5 lg:pl-3'>
+        <div class='px-3 py-3 flex  lg:px-5 lg:pl-3'>
           <div class='flex items-center justify-between'>
             <div class='flex items-center justify-start rtl:justify-end'>
               <button
@@ -118,39 +127,62 @@ const Navandsidebar = () => {
               </button>
               <div className='flex gap-10 items-center '>
                 <img src={Logo} className='w-[20%] h-full' alt='Only' />
+                <div className='w-full'>
+                  <div>
+                      {/* Trigger Button */}
+                      <button onClick={openModal} className=''>
+                      <label for='table-search' className='sr-only'>
+                          Search
+                        </label>
+                        <div className='relative'>
+                          <div className='absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none'>
+                            <svg
+                              className='w-4 h-4 text-gray-500 '
+                              aria-hidden='true'
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 20 20'
+                            >
+                              <path
+                                stroke='currentColor'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                stroke-width='2'
+                                d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            type='text'
+                            id='table-search-users'
+                            className='block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
+                            placeholder='Search your page...'
+                          />
+                        </div>
+                      </button>
 
-                <div className='w-full mr-10'>
-                  <label
-                    for='default-search'
-                    class='leading-4 text-base font-medium text-gray-900 sr-only'
-                  >
-                    Search
-                  </label>
-                  <div class='relative items-center'>
-                    <div class='absolute inset-y-0 start-0 flex items-center ps-3 ml-2 pointer-events-none'>
-                      <svg
-                        class='w-4 h-4 text-gray-500'
-                        aria-hidden='true'
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 20 20'
-                      >
-                        <path
-                          stroke='currentColor'
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          stroke-width='2'
-                          d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
-                        />
-                      </svg>
-                    </div>
-
-                    <Searchbar />
+                      {/* Modal Background */}
+                      {isOpen && (
+                        <div className='fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50 flex justify-center items-center'>
+                          {/* Modal Container */}
+                         <div className="bg-white flex rounded-md w-[25.2%] py-2">
+                            {/* Modal Content */}
+                            <Searchbar />
+                            {/* Close Button */}
+                            <button
+                              onClick={closeModal}
+                              className='text-[#404040]  text-3xl '
+                            >
+                             <MdClose />
+                            </button>
+                         </div>
+                        </div>
+                      )}
                   </div>
                 </div>
               </div>
+              </div>
             </div>
-
             <div class='flex items-center  gap-6 '>
               <div className=' '>
                 <img src={NotificationIcon} alt='NotificationIcon' />
@@ -158,6 +190,7 @@ const Navandsidebar = () => {
                   2*
                 </span> */}
               </div>
+              <div></div>
               <div class='flex items-center ms-3 '>
                 <div class='relative inline-block text-left '>
                   <button
@@ -242,7 +275,6 @@ const Navandsidebar = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </nav>
 

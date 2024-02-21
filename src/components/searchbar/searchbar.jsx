@@ -4,7 +4,7 @@ import Document from "../../assets/images/File.svg";
 import SearchtheDocs from "../../assets/images/Searchthedocument.svg";
 
 function Index() {
-  const [isSearchVisible, setSearchVisible] = useState(false);
+  const [isSearchVisible, setSearchVisible] = useState(true);
 
   const toggleSearch = () => {
     setSearchVisible(!isSearchVisible);
@@ -43,7 +43,7 @@ function Index() {
                 type='text'
                 name
                 id
-                placeholder='Search'
+                placeholder='Search page here'
                 className='font-inter align-middle font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500  '
                 onClick={toggleSearch}
               />
@@ -65,7 +65,7 @@ function Index() {
           >
             <div className='px-3 pt-4'>
               <div>
-                <a href='/reports' className='flex gap-2 my-2 items-center '>
+                <a href='/dashbaord' className='flex gap-2 my-2 items-center '>
                   <img
                     src={SearchtheDocs}
                     className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -76,7 +76,7 @@ function Index() {
                   </p>
                 </a>
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='/products' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -88,7 +88,7 @@ function Index() {
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/productform'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -103,7 +103,7 @@ function Index() {
                 </div>
 
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='/invoicelist' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -115,7 +115,7 @@ function Index() {
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/createinvoiceform'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -130,7 +130,7 @@ function Index() {
                 </div>
 
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='/suppliers' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -142,7 +142,7 @@ function Index() {
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/supplierform'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -151,12 +151,12 @@ function Index() {
                       alt=''
                     />
                     <p className='text-sm  text-[#404040] font-inter font-medium'>
-                      Add Invoice
+                      Add Supplier
                     </p>
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/purchaseorder'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -183,7 +183,7 @@ function Index() {
                   </a>
                 </div>
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='/inventory' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -193,10 +193,23 @@ function Index() {
                       Inventory
                     </p>
                   </a>
+                  <a
+                    href='/inventoryform'
+                    className='flex gap-2 items-center my-2 ml-4'
+                  >
+                    <img
+                      src={Arrow}
+                      className='h-5 w-7  rounded  p-1 mt-1'
+                      alt=''
+                    />
+                    <p className='text-sm  text-[#404040] font-inter font-medium'>
+                      Add Inventory
+                    </p>
+                  </a>
                 </div>
 
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='/clients' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -208,7 +221,7 @@ function Index() {
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/clientform'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -223,7 +236,7 @@ function Index() {
                 </div>
 
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='/orders' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -235,7 +248,7 @@ function Index() {
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/orderform'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -250,7 +263,7 @@ function Index() {
                 </div>
 
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='/quotes' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -262,7 +275,7 @@ function Index() {
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/quoteform'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -277,7 +290,7 @@ function Index() {
                 </div>
 
                 <div>
-                  <a href='/reports' className='flex gap-2 items-center my-2'>
+                  <a href='#' className='flex gap-2 items-center my-2'>
                     <img
                       src={Document}
                       className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
@@ -289,7 +302,7 @@ function Index() {
                   </a>
 
                   <a
-                    href='/reports'
+                    href='/vendor'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -302,7 +315,7 @@ function Index() {
                     </p>
                   </a>
                   <a
-                    href='/reports'
+                    href='/companydata'
                     className='flex gap-2 items-center my-2 ml-4'
                   >
                     <img
@@ -316,7 +329,7 @@ function Index() {
                   </a>
                 </div>
 
-                <a href='/reports' className='flex gap-2 items-center my-2'>
+                <a href='/profile' className='flex gap-2 items-center my-2'>
                   <img
                     src={Document}
                     className='h-8 w-8 bg-[#B9F9CF] rounded  p-2 mt-1'
