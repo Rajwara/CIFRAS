@@ -83,18 +83,17 @@ const Promotionalsalesgraph = () => {
   }, []);
   return (
     <div>
-      <div class=' w-full bg-white rounded-lg shadow font-inter  p-4 md:p-6'>
-        <div class='flex justify-between mb-3'>
-          <div class='flex items-center'>
-            <div class='block justify-center items-center '>
-              <div className='flex justify-center items-center'>
-                <h5 class='text-3xl font-bold leading-none text-[#404040]  pe-1 font-lexend'>
-                  Promotional Sales
-                </h5>
-              </div>
-              <div>
-                {/* <!-- Button --> */}
-                <button
+      <div className=' w-full bg-white rounded-lg shadow font-inter  p-4  md:p-6 md:pb-14'>
+
+
+      <div className='flex justify-between p-4 md:p-6 pb-0 md:pb-0'>
+      <h5 className='leading-none text-[18px] font-bold text-[#404040]  pb-2 font-lexend'>
+              Total profit without tax included.
+            </h5>
+          
+          
+           
+     <button
                   id='dropdownDefaultButton'
                   data-dropdown-toggle='lastDaysdropdown'
                   data-dropdown-placement='bottom'
@@ -118,62 +117,13 @@ const Promotionalsalesgraph = () => {
                     />
                   </svg>
                 </button>
-              </div>
-              <div
-                data-popover
-                id='chart-info'
-                role='tooltip'
-                class='absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 '
-              >
-                <div class=' p-3 space-y-2'>
-                  <h3 class='font-semibold text-[#404040] '>
-                    Activity growth - Incremental
-                  </h3>
-                  <p>
-                    Report helps navigate cumulative growth of community
-                    activities. Ideally, the chart should have a growing trend,
-                    as stagnating chart signifies a significant decrease of
-                    community activity.
-                  </p>
-                  <h3 class='font-semibold text-[#404040] '>Calculation</h3>
-                  <p>
-                    For each date bucket, the all-time volume of activities is
-                    calculated. This means that activities in period n contain
-                    all activities up to period n, plus the activities generated
-                    by your community in period.
-                  </p>
-                  <a
-                    href='#'
-                    class='flex items-center font-medium text-blue-600  hover:text-blue-700 hover:underline'
-                  >
-                    Read more{" "}
-                    <svg
-                      class='w-2 h-2 ms-1.5 rtl:rotate-180'
-                      aria-hidden='true'
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 6 10'
-                    >
-                      <path
-                        stroke='currentColor'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='2'
-                        d='m1 9 4-4-4-4'
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div data-popper-arrow></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+   
 
         <div class=' '>
           <div
             id='more-details'
-            class='border-gray-200 border-t  pt-3 mt-3 space-y-2 hidden'
+            className='border-gray-200 border-t   pt-3 mt-3 space-y-2 hidden'
           >
             <dl class='flex items-center justify-between'>
               <dt class='text-[#404040]  text-sm font-normal'>

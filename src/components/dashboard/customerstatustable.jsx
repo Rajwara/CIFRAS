@@ -118,7 +118,7 @@ const Customerstatustable = () => {
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
         </button> */}
-          <h3 className='font-lexend text-[#404040] font-bold'>Recent Order</h3>
+          <h3 className='font-lexend text-[18px] text-[#404040] font-bold'>Recent Order</h3>
           <div
             id='dropdownAction'
             class='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '
@@ -130,7 +130,7 @@ const Customerstatustable = () => {
               <li>
                 <a
                   href='#'
-                  class='font-inter block px-4 py-2 hover:bg-gray-100 '
+                  class='font-inter  block px-4 py-2 hover:bg-gray-100 '
                 >
                   Reward
                 </a>
@@ -187,7 +187,7 @@ const Customerstatustable = () => {
             type='text'
             id='table-search-users'
             class='font-inter block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500   '
-            placeholder='Search for users'
+            placeholder='Search for Orders'
           />
         </div>
       </div>
@@ -251,7 +251,7 @@ const Customerstatustable = () => {
                 </div>
               </td>
               <th className='px-6 py-4 text-[#404040]'>
-                <div class='text-base font-normal  font-inter'>
+                <div class='text-[14px] font-normal  font-inter'>
                   {data.OrderNum}
                 </div>
               </th>
@@ -266,21 +266,21 @@ const Customerstatustable = () => {
                 />
 
                 <div class='ps-3'>
-                  <div class='text-base font-semibold font-inter'>
+                  <div class='text-[14px] font-semibold font-inter'>
                     {data.name}
                   </div>
-                  <div class='font-normal text-[#404040] font-inter'>
+                  <div class='text-[13px] font-medium text-[#404040] font-inter'>
                     {data.email}
                   </div>
                 </div>
               </th>
               <th className='px-6 py-4 text-[#404040]'>
-                <div class='text-base font-normal  font-inter'>
+                <div class='text-[14px] font-normal  font-inter'>
                   {data.itemsnum}
                 </div>
               </th>
               <th className='px-6 py-4 text-[#404040]'>
-                <div class='text-base font-normal  font-inter'>
+                <div class='text-[14px] font-normal  font-inter'>
                   {data.price}
                 </div>
               </th>
@@ -289,26 +289,26 @@ const Customerstatustable = () => {
                 class='flex items-center px-6 py-4 text-[#404040] whitespace-nowrap '
               >
                 <div class='ps-3'>
-                  <div class='text-base font-semibold font-inter'>
+                  <div class='text-[14px] font-semibold font-inter'>
                     {data.CreateDate}
                   </div>
-                  <div class='font-normal text-[#404040] font-inter'>
+                  <div class='text-[13px] font-normal text-[#404040] font-inter'>
                     {data.CreateTime}
                   </div>
                 </div>
               </th>
 
               <td class='px-6 py-4 font-inter'>
-                <div class='text-base font-semibold font-inter'>
+                <div class='text-[14px] font-semibold font-inter'>
                   {data.CreateDate}
                 </div>
-                <div class='font-normal text-[#404040] font-inter'>
+                <div class='text-[13px] font-normal text-[#404040] font-inter'>
                   {data.CreateTime}
                 </div>
               </td>
               <td class='px-6 py-4 '>
                 <div class='flex items-center bg-[#B1FFBC] font-inter rounded-full px-4 py-2 border  p-5'>
-                  <div class='h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-inter '></div>{" "}
+                  <div class='h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-inter  text-[14px]'></div>{" "}
                   {data.status}
                 </div>
               </td>
@@ -338,13 +338,13 @@ const Customerstatustable = () => {
         aria-label='Table navigation'
       >
         {/* Show pagination */}
-        <span className='text-sm font-normal text-[#404040] mb-4 md:mb-0 block w-full md:inline md:w-auto font-inter'>
+        <span className='text-[14px] font-normal text-[#404040] mb-4 md:mb-0 block w-full md:inline md:w-auto font-inter'>
           Showing{" "}
-          <span className='font-semibold text-[#404040]  font-inter'>
+          <span className='font-semibold text-[#404040] text-[14px] font-inter'>
             {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, tabledata.length)}
           </span>{" "}
           of{" "}
-          <span className='font-semibold text-[#404040]  font-inter'>
+          <span className='font-semibold text-[#404040] text-[14px]  font-inter'>
             {tabledata.length}
           </span>
         </span>
@@ -389,6 +389,7 @@ const Customerstatustable = () => {
         </ul>
       </nav>
     </div>
+    
   );
 };
 

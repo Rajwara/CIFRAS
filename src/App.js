@@ -33,6 +33,7 @@ import Purchaseorderform from './components/purchaseorder/purchaseorderform';
 import Errorpage from "./components/errorpage/errorpage";
 import Invoiceform from "./components/invoices/createinvoice/invoiceform";
 
+
 function App() {
   const [currPath, setCurrPath] = useState(window.location.pathname);
 
@@ -80,6 +81,9 @@ function App() {
       <Route path='/inventoryform' element={<Inventoryform/>} />
     <Route path="/purchaseorder" element={<Purchaseorder/>} />
     <Route path="/purchaseform" element={<Purchaseorderform/>} />
+
+
+    
       </Routes>{" "}
     </div>
   );

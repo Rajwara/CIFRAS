@@ -15,36 +15,36 @@ const Phonefield = () => {
   const { name, flags, countryCallingCode } = countries[country];
   return (
     <div>
-      <div className='relative flex w-full  font-inter bg-gray-50'>
+      <div className='relative flex w-full font-normal text-sm  border border-gray-300 rounded-lg  font-inter bg-gray-50'>
         <Menu placement='bottom-start'>
           <MenuHandler>
             <Button
               ripple={false}
               variant='text'
               color='blue-gray'
-              className='flex h-10 items-center gap-2 rounded-r-none border border-r-0 border-blue-gray-200 bg-blue-gray-500/10 pl-3'
+              className='flex h-10 items-center font-inter font-medium text-[12px] gap-2 rounded-r-none border border-r-0 border-blue-gray-200 bg-blue-gray-500/10 pl-3'
             >
               <img
                 src={flags.svg}
                 alt={name}
-                className='h-4 w-4  object-cover'
+                className='h-3.5 w-3.5  object-cover'
               />
               {countryCallingCode}
             </Button>
           </MenuHandler>
-          <MenuList className='max-h-[20rem] max-w-[18rem]'>
+          <MenuList className='max-h-[20rem] max-w-[18rem] font-lexend font-normal text-sm'>
             {countries.map(({ name, flags, countryCallingCode }, index) => {
               return (
                 <MenuItem
                   key={name}
                   value={name}
-                  className='flex items-center gap-2'
+                  className='flex items-center gap-2 font-lexend font-normal text-sm'
                   onClick={() => setCountry(index)}
                 >
                   <img
                     src={flags.svg}
                     alt={name}
-                    className='h-5 w-5 rounded-full object-cover'
+                    className='h-5 w-5 rounded-full object-cover font-lexend font-normal text-sm'
                   />
                   {name} <span className='ml-auto'>{countryCallingCode}</span>
                 </MenuItem>
@@ -55,7 +55,7 @@ const Phonefield = () => {
         <Input
           type='tel'
           placeholder='Mobile Number'
-          className='rounded-l-none font-inter bg-gray-50 text-[#C0C0C0] text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+          className=' bg-gray-50  border-gray-300 rounded-l-none font-inter  font-normal  text-[#C0C0C0] text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
           labelProps={{
             className: "before:content-none after:content-none",
           }}

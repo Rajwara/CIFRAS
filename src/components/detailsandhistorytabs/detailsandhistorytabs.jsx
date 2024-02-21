@@ -8,17 +8,17 @@ import Delete from "../../assets/images/quote/quotedeleteiconforform.svg";
 
 const Detailsandhistorytabs = () => {
   return (
-    <div className='font-inter'>
+    <div className='font-inter text-sm'>
       <Tabs aria-label='Default tabs' style='default'>
         <Tabs.Item active title='Details'>
           <form className='grid grid-cols-1 '>
             <div className='flex flex-row flex-wrap justify-between'>
-              <div className='left rounded-full border border-[#04B076] px-4 py-2 text-[#04B076] font-normal font-inter '>
-                <span className='rounded-r-lg border h-4 w-4 px-2 mr-2 border-[#04B076]'></span>
+              <div className='left rounded-full border border-[#04B076] px-4 py-3 text-[#04B076] font-normal font-inter '>
+                <span className='rounded-r-lg border h-3 w-3 px-2 mr-2 border-[#04B076]'></span>
                 <span className='font-bold text-sm leading-5'># 1</span>
               </div>
               <div className='right mt-4 md:mt-0'>
-                <button className='text-[#04b076] font-inter rounded-full px-4 py-2 font-bold text-xl leading-7 border border-[#04B076] bg-[#B9F9CF]'>
+                <button className='text-[#04b076] font-inter rounded-full px-4 py-2 font-semibold text-sm leading-7 border border-[#04B076] bg-[#B9F9CF]'>
                   Total $ 0.00
                 </button>
               </div>
@@ -28,7 +28,7 @@ const Detailsandhistorytabs = () => {
                 <div className='w-full '>
                   <label
                     htmlFor='item'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Item
                   </label>
@@ -37,13 +37,13 @@ const Detailsandhistorytabs = () => {
                     name='item'
                     id='small-input'
                     placeholder='item'
-                    className='border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='text-sm border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                 </div>
                 <div className='w-full '>
                   <label
                     htmlFor='Quantity'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Quantity
                   </label>
@@ -52,13 +52,13 @@ const Detailsandhistorytabs = () => {
                     name='quantity'
                     id='small-input'
                     placeholder='0'
-                    className='border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border text-sm border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                 </div>
                 <div className='w-full '>
                   <label
                     htmlFor='price'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Price
                   </label>
@@ -67,7 +67,7 @@ const Detailsandhistorytabs = () => {
                     name='price'
                     id='small-input'
                     placeholder='$ 0.00'
-                    className='border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border text-sm border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Detailsandhistorytabs = () => {
                 <div className='w-full '>
                   <label
                     htmlFor='commission'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Commission
                   </label>
@@ -84,13 +84,13 @@ const Detailsandhistorytabs = () => {
                     name='commission'
                     id='small-input'
                     placeholder='$ 0.00'
-                    className='border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border text-sm border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                 </div>
                 <div className='w-full '>
                   <label
                     htmlFor='rate'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Rate
                   </label>
@@ -99,13 +99,13 @@ const Detailsandhistorytabs = () => {
                     name='rate'
                     id='small-input'
                     placeholder='% 0.00'
-                    className='border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border text-sm border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                 </div>
                 <div className='w-full '>
                   <label
                     htmlFor='discount'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Discount
                   </label>
@@ -114,7 +114,7 @@ const Detailsandhistorytabs = () => {
                     name='discount'
                     id='small-input'
                     placeholder='$ 0.00'
-                    className='border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border text-sm border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                 </div>
               </div>
@@ -122,7 +122,7 @@ const Detailsandhistorytabs = () => {
                 <div className=' w-[32.5%]'>
                   <label
                     htmlFor='rate'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Rate
                   </label>
@@ -131,12 +131,12 @@ const Detailsandhistorytabs = () => {
                     name='rate'
                     id='small-input'
                     placeholder='% 0.00'
-                    className='border border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border text-sm border-[#EBEBEB] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                 </div>
                 <div className=' '>
-                  <button className='flex py-[10px] px-[16px]  text-[#FF3D00] text-base rounded items-center gap-2'>
-                    <img src={Delete} className='w-6 h-6  ' alt='' />
+                  <button className='flex py-[10px] px-[16px]  text-[#FF3D00] text-sm rounded items-center gap-2'>
+                    <img src={Delete} className='w-3.5 h-3.5  ' alt='' />
                     Remove
                   </button>
                 </div>
@@ -152,7 +152,7 @@ const Detailsandhistorytabs = () => {
                   <th scope='col' class='px-6 py-3'>
                     User
                   </th>
-                  <th scope='col' class='px-6 py-3'>
+                  <th scope='col' className='px-6 text-[12px] py-3'>
                     Type
                   </th>
                   <th scope='col' class='px-6 py-3'>
@@ -174,12 +174,12 @@ const Detailsandhistorytabs = () => {
         </Tabs.Item>
       </Tabs>
       <div className='buttons flex flex-row flex-wrap gap-4 mt-6'>
-        <button className='flex py-[10px] px-[16px] bg-[#B9F9CF] text-[#04b076] rounded border border-[#04B076] items-center gap-2'>
-          <img src={Green} className='w-6 h-6 ' alt='' />
+        <button className='flex text-sm font-lexend py-[10px] px-[16px] bg-[#B9F9CF] text-[#04b076] rounded border border-[#04B076] items-center gap-2'>
+          <img src={Green} className='w-3 h-3 ' alt='' />
           Add Notes
         </button>
-        <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
-          <img src={Plus} className='w-6 h-6  ' alt='' />
+        <button className='flex text-sm font-lexend py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
+          <img src={Plus} className='w-3 h-3  ' alt='' />
           Add Quote
         </button>
       </div>

@@ -13,10 +13,10 @@ const Totalrevenuecardforotherpage = () => {
             <img src={Icons} className='' alt='' />
           </div>
           <div className=''>
-            <h6 className='font-normal font-lexend text-[#000000] text-xl leading-9'>
+            <h6 className='font-medium font-lexend text-[#000000] text-sm leading-9'>
               Total Revenue
             </h6>
-            <h6 className='font-bold font-lexend text-[#04b076] text-xl leading-9'>
+            <h6 className='font-semibold font-lexend text-[#04b076] text-xl leading-9'>
               13,200
             </h6>
           </div>
@@ -33,12 +33,12 @@ const Totalrevenuecardforotherpage = () => {
       <div className='down flex lg:flex-col xl:flex-row items-center mt-2 gap-2'>
       <div className="flex gap-2 items-center">
         <img src={Arrow} className='h-4 w-4' alt='' />
-        <p className='font-medium font-inter text-[#04B076] text-xl leading-7'>
+        <p className='font-medium font-inter text-[#04B076] text-sm leading-7'>
           +55.45%
         </p>
         </div>
         <div>
-        <p className='font-normal text-start lg:text-center xl:text-start font-inter text-[#404040] text-xl leading-7'>
+        <p className='font-normal text-start lg:text-center xl:text-start font-inter text-[#404040] text-sm leading-7'>
           Increased last month
         </p>
         </div>

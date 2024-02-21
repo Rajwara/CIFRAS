@@ -46,7 +46,7 @@ const Productform = () => {
     <div className=' p-4'>
       <div className='grid grid-cols-1 mt-[100px] md:ml-[60px] bg-white border border-[#ebebeb] py-10 px-10 rounded'>
         <div className=''>
-          <h1 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
+          <h1 className='font-lexend text-2xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
             Create Products
           </h1>
           <Formik
@@ -59,7 +59,7 @@ const Productform = () => {
                 <div className='w-full mb-4'>
                   <label
                     htmlFor='itemnumber'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Item Number
                   </label>
@@ -68,18 +68,18 @@ const Productform = () => {
                     name='itemnumber'
                     id='small-input'
                     placeholder='Item Number'
-                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter text-sm  block w-full p-2.5'
                   />
                   <ErrorMessage
                     name='itemnumber'
                     component='div'
-                    className='text-red-500 text-sm mt-1'
+                    className='text-red-500 text-sm mt-1 font-inter'
                   />
                 </div>
                 <div className='w-full mb-4'>
                   <label
                     htmlFor='description'
-                    className='block mb-2 sm:text-sm  font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2  sm:text-sm text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Description
                   </label>
@@ -292,14 +292,14 @@ const Productform = () => {
                   <ErrorMessage
                     name='description'
                     component='div'
-                    className='text-red-500 text-sm mt-1'
+                    className='text-red-500 text-sm mt-1 font-inter'
                   />
                 </div>
                 <div className='flex flex-col md:flex-row gap-4 w-full mb-4'>
                   <div className='w-full'>
                     <label
                       htmlFor='unitprice'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Unit Price{" "}
                     </label>
@@ -308,18 +308,18 @@ const Productform = () => {
                       name='unitprice'
                       id='small-input'
                       placeholder='$0.00'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='unitprice'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 text-sm mt-1 font-inter'
                     />
                   </div>
                   <div className='w-full'>
                     <label
                       htmlFor='unitofmeasure'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Unit of Measure
                     </label>
@@ -328,19 +328,19 @@ const Productform = () => {
                       name='unitofmeasure'
                       id='small-input'
                       placeholder='Unit of Measure'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border text-sm border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='unitofmeasure'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 text-sm mt-1 font-inter'
                     />
                   </div>
                 </div>
                 <div className='w-full mb-4'>
                   <label
                     htmlFor='vendor'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Vendor
                   </label>
@@ -349,18 +349,18 @@ const Productform = () => {
                     name='vendor'
                     id='small-input'
                     placeholder='Vendor'
-                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm text-sm rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                   <ErrorMessage
                     name='vendor'
                     component='div'
-                    className='text-red-500 text-sm mt-1'
+                    className='text-red-500 text-sm mt-1 font-inter'
                   />
                 </div>
                 <div className='mt-6 w-full'>
                   <label
                     htmlFor='file'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7 '
                   >
                     Upload Product Images
                   </label>
@@ -408,7 +408,7 @@ const Productform = () => {
                   <ErrorMessage
                     name='file'
                     component='div'
-                    className='text-red-500 text-sm mt-1'
+                    className='text-red-500 text-sm mt-1 font-inter'
                   />
                 </div>
                 <div className='mt-6'>
@@ -417,7 +417,7 @@ const Productform = () => {
                     type='submit'
                     name='submit'
                     value='submit'
-                    className='bg-[#634af9] text-[#ffffff] rounded font-inter font-normal text-lg leading-7 px-10 py-2'
+                    className='bg-[#634af9] text-[#ffffff] rounded font-inter font-normal text-sm leading-7 px-10 py-2'
                   >
                     {props.isSubmitting ? "Submitting..." : "Submit"}
                   </button>

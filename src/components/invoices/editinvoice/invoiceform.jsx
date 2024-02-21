@@ -27,7 +27,7 @@ const Invoiceform = () => {
       <div className='  border border-[#ebebeb] bg-white   rounded py-6 px-8 items-center'>
         <div className='flex flex-col md:flex-row justify-between  bg-white  rounded py-6   '>
           <div className='flex gap-2'>
-            <h4 className='font-lexend text-3xl  font-bold leading-tight text-[#404040] mb-8'>
+            <h4 className='font-lexend text-2xl  font-bold leading-tight text-[#404040] mb-8'>
               Create Invoice
             </h4>
           </div>

@@ -8,9 +8,9 @@ import Totalrevenuecardforotherpage from "../../cards/totalrevenuecard";
 const invoicelistbtnbar = () => {
   return (
     <div className='flex flex-col lg:flex-row justify-between  bg-white  rounded py-6 px-8 items-center'>
-      <div className='left flex lg:w-[10%] xl:w-16 flex-col gap-2 relative'>
+      <div className=' flex lg:w-[18%]  flex-col gap-2 relative'>
         <div className='flex gap-2'>
-          <h4 className='Font-lexend text-4xl mt-[-25px] font-extrabold leading-tight text-[#404040] '>
+          <h4 className='Font-lexend text-2xl mt-[-25px] font-extrabold leading-tight text-[#404040] '>
             Create Invoice
           </h4>
         </div>
@@ -21,14 +21,14 @@ const invoicelistbtnbar = () => {
         <Totalrevenuecardforotherpage />
       </div>
 
-      <div className='right flex flex-col xl:flex-row gap-8 mt-4 lg:mt-0 lg:w-[20%] xl:w-[39%]'>
-        <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-4'>
-          <img src={ImportIcon} className='w-6 h-6  ' alt='' />
+      <div className='right flex flex-col xl:flex-row gap-8 mt-4 lg:mt-0 lg:w-[20%] xl:w-[25%]'>
+        <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-4 text-sm font-semibold'>
+          <img src={ImportIcon} className='w-3.5 h-3.5  ' alt='' />
           Import
         </button>
         <a href='/createinvoiceform'>
-          <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
-            <img src={Plus} className='w-6 h-6  ' alt='' />
+          <button className='flex py-[10px] px-[16px] bg-[#634af9] text-sm text-white rounded items-center gap-2 font-semibold'>
+            <img src={Plus} className='w-3.5 h-3.5  ' alt='' />
             Add Invoice
           </button>
         </a>

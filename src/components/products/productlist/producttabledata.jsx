@@ -127,7 +127,7 @@ const Producttabledata = () => {
   return (
     <div className='border border-[#ebebeb] rounded'>
       <div className='flex items-center justify-between rounded flex-column p-8 flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white '>
-        <label for='table-search' className='sr-only'>
+        <label for='table-search' className='sr-only '>
           Search
         </label>
         <div className='relative'>
@@ -151,16 +151,16 @@ const Producttabledata = () => {
           <input
             type='text'
             id='table-search-users'
-            className='block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
-            placeholder='Search for users'
+            className='block p-2 ps-10 text-sm font-medium text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
+            placeholder='Search for Products'
           />
         </div>
         <div className='flex flex-col md:flex-row gap-6'>
-          <div className='flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center'>
-            <img src={ExportXcelIcon} alt='' />
+          <div className='flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-2 py-2 gap-2 items-center'>
+            <img src={ExportXcelIcon} className="h-4 w-4" alt='' />
             <button
               onClick={generateExcel}
-              className='text-[#404040] font-normal font-inter text-base leading-7 '
+              className='text-[#404040] font-normal font-inter text-sm leading-7 '
             >
               Export to Excel
             </button>
@@ -168,10 +168,10 @@ const Producttabledata = () => {
           <button
             id='dropdownActionButton'
             data-dropdown-toggle='dropdownAction'
-            className='inline-flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  '
+            className='inline-flex text-sm mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-2 py-2 gap-2 items-center text-[#404040] font-normal font-inter  bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  '
             type='button'
           >
-            <img src={FilterIcon} alt='' />
+            <img src={FilterIcon} className="h-4 w-4" alt='' />
             <span className='sr-only'>Action button</span>
             Action
           </button>
@@ -181,7 +181,7 @@ const Producttabledata = () => {
             className='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '
           >
             <ul
-              className='py-1 text-sm text-[#404040] '
+              className='py-1  text-[#404040] font-inter text-[12px]'
               aria-labelledby='dropdownActionButton'
             >
               <li>

@@ -76,7 +76,7 @@ const Login = () => {
             <h1 className='font-lexend text-4xl mt-[-25px] font-bold leading-tight text-[#fff] mb-3 '>
               Welcome back! Please log in to continue.
             </h1>
-            <p className='text-[#fff] font-inter font-normal leading-6 text-base mb-7'>
+            <p className='text-[#fff] font-inter font-normal leading-6 text-[14px] mb-7'>
               By signing up, you will gain access to exclusive content, special
               offers, and be the first to hear about exciting news and updates.
             </p>
@@ -84,13 +84,13 @@ const Login = () => {
               <div className='grid grid-cols-2 gap-4 '>
                 <div className='flex gap-2 border border-[#634AF9] rounded-md px-2 py-2  align-middle items-center '>
                   <img className='h-5 w-5' src={AppleIcon} alt='' />
-                  <p className='font-inter font-normal text-lg text-[#404040] leading-7'>
+                  <p className='font-inter font-normal text-[14px] text-[#404040] leading-7'>
                     Log in With Apple
                   </p>
                 </div>
                 <div className='flex gap-2 border border-[#634AF9] rounded-md px-2 py-2 align-middle items-center '>
                   <img className='h-5 w-5 ' src={GoogleIcon} alt='' />
-                  <p className='font-inter font-normal text-lg text-[#404040] leading-7'>
+                  <p className='font-inter font-normal text-[14px] text-[#404040] leading-7'>
                     Log in With Google
                   </p>
                 </div>
@@ -112,7 +112,7 @@ const Login = () => {
                     <div>
                       <label
                         for='email'
-                        className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                        className='block mb-2 text-[14px] font-medium text-[#404040] font-inter leading-7'
                       >
                         Email
                       </label>
@@ -120,7 +120,7 @@ const Login = () => {
                         type='email'
                         name='email'
                         id='email'
-                        className=' border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                        className=' border-1 border-[#634AF9] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 text-[14px] font-medium font-inter   block w-full p-2.5'
                         placeholder='johnsmith@example.com'
                         required=''
                         // value={email}
@@ -131,13 +131,13 @@ const Login = () => {
                       <ErrorMessage
                         name='email'
                         component='div'
-                        className='text-red-500 text-xs font-inter'
+                        className='text-red-500 text-xs font-inter text-[14px] '
                       />
                     </div>
                     <div>
                       <label
                         for='password'
-                        className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7  '
+                        className='block mb-2 text-[14px] font-medium text-[#404040] font-inter leading-7  '
                       >
                         Password
                       </label>
@@ -148,7 +148,7 @@ const Login = () => {
                           name='password'
                           id='password'
                           placeholder='Enter your password'
-                          className='border-1 border-[#634AF9]  text-[#C0C0C0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
+                          className='border-1 border-[#634AF9]  text-[#C0C0C0] sm:text-sm rounded-md leading-5  font-inter block w-full p-2.5 text-[14px] font-medium'
                           required=''
                           // value={showpassword}
                           // onChange={(e) => {
@@ -158,7 +158,7 @@ const Login = () => {
                         <ErrorMessage
                           name='password'
                           component='div'
-                          className='text-red-500 text-xs font-inter'
+                          className='text-red-500 text-xs font-inter text-[14px] '
                         />
                         <button
                           type='button'
@@ -185,7 +185,7 @@ const Login = () => {
                         <div class='ml-3 text-sm'>
                           <label
                             for='remember'
-                            className='text-base font-normal text-[#818181] font-inter leading-7'
+                            className='text-[14px] font-medium text-[#818181] font-inter leading-7'
                           >
                             Remember me
                           </label>
@@ -193,7 +193,7 @@ const Login = () => {
                       </div>
                       <a
                         href='/forgetpassword'
-                        className='text-sm font-normal text-[#634AF9] font-inter leading-7 underline '
+                        className='text-[14px] font-medium text-[#634AF9] font-inter leading-7 underline '
                       >
                         Forgot your password?
                       </a>
@@ -201,15 +201,15 @@ const Login = () => {
                     <button
                       type='submit'
                       disabled={props.isSubmitting}
-                      className='w-full text-white bg-[#634AF9] font-medium rounded-md text-sm px-5 py-2.5 text-center font-inter'
+                      className='w-full text-white bg-[#634AF9]  rounded-md text-[16px] font-medium px-5 py-2.5 text-center font-inter'
                     >
                       Log In
                     </button>
-                    <p className='text-base font-normal text-[#161642] font-inter leading-7'>
+                    <p className='text-[14px]  font-normal text-[#161642] font-inter leading-7'>
                       Don’t have an account?{" "}
                       <a
                         href='/signup'
-                        className='text-base font-bold text-[#161642] font-inter leading-7'
+                        className='text-[14px] font-semibold text-[#161642] font-inter leading-7'
                       >
                         Sign Up
                       </a>
@@ -224,10 +224,10 @@ const Login = () => {
       <div className='flex flex-col 	items-center justify-center  py-8   rounded-l-lg'>
         <div className='text-center'>
           <div className='w-2/3 mx-auto mb-8 mt-4'>
-            <h2 className='text-[#fff] font-bold font-lexend leading-9 text-3xl mb-6'>
+            <h2 className='text-[#fff] font-bold font-lexend leading-9 text-[32px] mb-6'>
               The simplest way to manage your workspace.
             </h2>
-            <p className='text-[#fff] font-inter font-normal leading-6 text-base'>
+            <p className='text-[#fff] font-inter text-[14px] font-normal leading-6 '>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint velit officia consequat duis.
             </p>

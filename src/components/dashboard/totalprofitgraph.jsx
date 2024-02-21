@@ -6,19 +6,20 @@ const TotalProfitGraph = () => {
     xaxis: {
       show: true,
       categories: [
-        "01 Feb",
-        "02 Feb",
-        "03 Feb",
-        "04 Feb",
-        "05 Feb",
-        "06 Feb",
-        "07 Feb",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        
       ],
       labels: {
         show: true,
         style: {
           fontFamily: "inter, sans-serif",
-          cssClass: "text-xs font-normal fill-gray-500 ",
+          cssClass: "text-[14px] font-normal fill-gray-500 ",
         },
       },
       axisBorder: {
@@ -34,7 +35,7 @@ const TotalProfitGraph = () => {
         show: true,
         style: {
           fontFamily: "inter, sans-serif",
-          cssClass: "text-xs font-normal fill-gray-500",
+          cssClass: "text-[14px] font-normal fill-gray-500 ",
         },
         formatter: function (value) {
           return "$" + value;
@@ -108,19 +109,16 @@ const TotalProfitGraph = () => {
   return (
     <div className='w-full bg-white font-inter rounded-lg shadow '>
       <div className='flex justify-between p-4 md:p-6 pb-0 md:pb-0'>
-        <div>
-          <div className=' justify-between items-center grid grid-cols-2'>
-            <h5 className='leading-none text-3xl font-bold text-[#404040]  pb-2 font-lexend'>
-              $12,423
-            </h5>
-            <h5 className='leading-none text-xl font-bold  pb-2 font-lexend text-[#404040] '>
+      <h5 className='leading-none text-[18px] font-bold text-[#404040]  pb-2 font-lexend'>
               Total profit without tax included.
             </h5>
+          
+          
             <button
               id='dropdownDefaultButton'
               data-dropdown-toggle='lastDaysdropdown'
               data-dropdown-placement='bottom'
-              class='text-sm font-medium text-gray-500  hover:text-[#404040] text-center inline-flex items-center  font-inter'
+              class='text-[14px]   font-medium text-gray-500  hover:text-[#404040] text-center inline-flex items-center  font-inter'
               type='button'
             >
               Last 7 days
@@ -140,11 +138,18 @@ const TotalProfitGraph = () => {
                 />
               </svg>
             </button>
-          </div>
-          <div>{/* <!-- Button --> */}</div>
-        </div>
       </div>
-      <div id='labels-chart' class='px-2.5'>
+      <div class='flex p-1 pl-6 gap-3'>
+                <div class='flex  items-center font-lexend   text-[14px] font-normal '>
+                  <div class='h-2 w-2 rounded-full bg-[#7e3bf2] me-2 font-inter '></div>{" "}
+                  Revenue
+                </div>
+                <div class='flex items-center font-lexend  text-[14px] font-normal'>
+                  <div class='h-2 w-2 rounded-full bg-[#7c88b2] me-2 font-inter '></div>{" "}
+                  Expense
+                </div>
+              </div>
+      <div id='labels-chart' class='px-2.5 '>
         <ApexCharts
           options={chartOptions}
           series={chartOptions.series}
@@ -152,7 +157,7 @@ const TotalProfitGraph = () => {
           height='350'
         />
       </div>
-      <div className='grid grid-cols-1 items-center border-[#ebebeb] border-t  justify-between mt-14 p-4 md:p-6 pt-0 md:pt-0'></div>
+      <div className='grid grid-cols-1 items-center border-[#ebebeb] border-t  justify-between mt-14 p-4 md:p-6 pt-0 md:pt-0 font-inter '></div>
     </div>
   );
 };
