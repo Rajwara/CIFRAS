@@ -17,7 +17,7 @@ const Addorder = () => {
         <Totalrevenuecardforotherpage />
       </div>
 
-      <div className='right flex lg:w-[20%] xl:w-[38%] flex-col items-center xl:flex-row gap-4 lg:w-[21%] xl:w-[22%] mt-4 lg:mt-0'>
+      <div className='right flex lg:w-[20%] xl:w-[29%] flex-col items-center xl:flex-row gap-4 lg:w-[21%] xl:w-[22%] mt-4 lg:mt-0'>
         <a href='/vendorform'>
           <button className='flex py-[10px] px-[16px] bg-white text-sm font-lexend text-[#404040] border border-[#c0c0c0] rounded items-center gap-2'>
             <img src={Export} className='w-4 h-4  ' alt='' />

@@ -17,7 +17,7 @@ const Addclients = () => {
         <Totalrevenuecardforotherpage />
       </div>
 
-      <div className='right mt-4 lg:mt-0 lg:w-[22%] xl:w-[20%]'>
+      <div className='right mt-4 lg:mt-0 lg:w-[22%] xl:w-[14%]'>
         <a href='/clientform'>
           <button className='flex  py-[10px] px-[16px] bg-[#634af9] text-sm font-inter text-white rounded items-center gap-2'>
             <img src={Plus} className='w-3.5 h-3.5  ' alt='' />

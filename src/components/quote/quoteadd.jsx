@@ -19,7 +19,7 @@ const Quoteadd = () => {
         <Totalrevenuecardforotherpage />
       </div>
 
-      <div className='right lg:w-[20%] xl:w-[23%] mt-6 lg:mt-0'>
+      <div className='right lg:w-[20%] xl:w-[15%] mt-6 lg:mt-0'>
         <a href='/quoteform'>
           <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded text-sm font-lexend items-center gap-2'>
             <img src={Plus} className='w-3.5 h-3.5  ' alt='' />

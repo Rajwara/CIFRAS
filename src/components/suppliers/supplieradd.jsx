@@ -15,7 +15,7 @@ const Supplieradd = () => {
         <Totalrevenuecardforotherpage />
       </div>
 
-      <div className='right lg:w-[20%] xl:w-[18%] mt-6 lg:mt-0'>
+      <div className='right lg:w-[20%] xl:w-[15%] mt-6 lg:mt-0'>
         <a href='/supplierform'>
           <button className='flex py-[10px] px-[16px] bg-[#634af9] text-sm font-lexend text-white rounded items-center gap-2'>
             <img src={Plus} className='w-3.5 h-3.5  ' alt='' />

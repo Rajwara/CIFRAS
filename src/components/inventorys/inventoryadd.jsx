@@ -15,7 +15,7 @@ const Inventoryadd = () => {
         <Numberofinventory />
         <Totalrevenuecardforotherpage />
       </div>
-      <div className='right lg:w-[20%] xl:w-[22%] mt-4 lg:mt-0  lg:w-[25%] xl:w-[14%]'>
+      <div className='right lg:w-[20%] xl:w-[20%] mt-4 lg:mt-0  lg:w-[25%] xl:w-[14%]'>
         <a href='/inventoryform'>
           <button className='flex py-[10px] px-4 bg-[#634af9]  text-sm font-lexend text-white rounded items-center gap-2'>
             <img src={Plus} className='w-3.5 h-3.5' alt='' />
