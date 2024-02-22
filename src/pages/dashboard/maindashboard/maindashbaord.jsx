@@ -7,6 +7,8 @@ import Totalrevenuecard from "../../../components/dashboard/totalrevenuecard";
 import Totalprofitgraph from "../../../components/dashboard/totalprofitgraph";
 import Promotionalsalesgraph from "../../../components/dashboard/promotionalsalesgraph";
 import Customerstatustable from "../../../components/dashboard/customerstatustable";
+import Salesreportgraph from "../../../components/dashboard/salesreportgraph";
+import Repeatcustomerratechart from "../../../components/dashboard/repeatcustomerratechart";
 
 const Maindashbaord = () => {
   return (
@@ -67,7 +69,21 @@ const Maindashbaord = () => {
           <div class='grid grid-cols-1 mt-10'>
             <div class=' w-full'>
               <p class='text-2xl text-gray-400 '>
+                <Salesreportgraph />
+              </p>
+            </div>
+          </div>
+          <div class='grid grid-cols-1 mt-10'>
+            <div class=' w-full'>
+              <p class='text-2xl text-gray-400 '>
                 <Customerstatustable />
+              </p>
+            </div>
+          </div>
+          <div class='grid grid-cols-1 mt-10'>
+            <div class=' w-full'>
+              <p class='text-2xl text-gray-400 '>
+                <Repeatcustomerratechart />
               </p>
             </div>
           </div>
