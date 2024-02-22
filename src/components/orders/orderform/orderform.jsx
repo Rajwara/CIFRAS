@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Edit from "../../../assets/images/orders/orderformedit.svg";
 import Import from "../../../assets/images/orders/orderformimporticon.svg";
 import Profile from "../../../assets/images/orders/orderprofileimg.svg";
@@ -6,6 +6,8 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import UnderLine from "../../../assets/images/orders/orderunderline.svg";
 import OrderItems from "../../../assets/images/orders/orderitems.svg";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 
 const Orderform = () => {
   const initialValues = {
@@ -57,6 +59,17 @@ const Orderform = () => {
       props.setSubmitting(false);
     }, 2000);
   };
+
+  useEffect(() => {
+    const orderDateInput = document.querySelector("#orderDate");
+
+    if (orderDateInput) {
+      flatpickr(orderDateInput, {
+        dateFormat: "Y-m-d",
+        // Add other options or customization as needed
+      });
+    }
+  }, []);
 
   return (
     <div className='flex flex-col mt-20 md:ml-[60px]'>
@@ -278,6 +291,7 @@ const Orderform = () => {
                 )}
               </Formik>
             </div>
+            
             <div className='right lg:w-1/4 border border-[#ebebeb] rounded-md p-4'>
               <div className='flex flex-row justify-between'>
                 <h4 className='font-lexend font-bold text-[#404040] text-xl leading-7'>
@@ -367,17 +381,32 @@ const Orderform = () => {
               </div>
               <div className='w-full mt-4 flex flex-col gap-2'>
                 <label
-                  htmlFor='selectOption'
+                  htmlFor='orderDate'
                   className='font-inter font-normal text-[#404040] text-lg leading-5 '
                 >
                   Order date
                 </label>
-                <input
-                  type='date'
-                  placeholder='Select Date'
-                  name='date'
-                  className='w-full rounded-md border border-[#ebebeb]'
-                />
+                <div class='relative max-w-sm'>
+                  <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                    <svg
+                      class='w-4 h-4 text-[#404040] '
+                      aria-hidden='true'
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='currentColor'
+                      viewBox='0 0 20 20'
+                    >
+                      <path d='M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z' />
+                    </svg>
+                  </div>
+                  <input
+                    datepicker
+                    datepicker-autohide
+                    type='text'
+                    id='orderDate'
+                    class=' font-inter border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5'
+                    placeholder='Select date'
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -163,9 +163,9 @@ const Navandsidebar = () => {
 
                       {/* Modal Background */}
                       {isOpen && (
-                        <div className='fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50 flex justify-center items-center'>
+                        <div className='fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50 flex justify-center items-center -mt-[430px]'>
                           {/* Modal Container */}
-                         <div className="bg-white flex rounded-md w-[25.2%] py-2">
+                         <div className="bg-white flex rounded-md w-[300px] md:w-[450px] py-2">
                             {/* Modal Content */}
                             <Searchbar />
                             {/* Close Button */}

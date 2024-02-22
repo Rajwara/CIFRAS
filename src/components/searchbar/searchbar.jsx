@@ -3,12 +3,16 @@ import Arrow from "../../assets/images/Arrow.svg";
 import Document from "../../assets/images/File.svg";
 import SearchtheDocs from "../../assets/images/Searchthedocument.svg";
 
+
 function Index() {
   const [isSearchVisible, setSearchVisible] = useState(true);
+
 
   const toggleSearch = () => {
     setSearchVisible(!isSearchVisible);
   };
+
+ 
 
   useEffect(() => {});
   const show_search_4 = (el) => {
@@ -35,16 +39,16 @@ function Index() {
   };
   return (
     <>
-      <div className='py-0 px-0'>
+      <div className='py-0 px-0 '>
         <div>
-          <div className='flex justify-between items-center align-middle  px-3   '>
+          <div className='flex bg-white w-full md:w-[400px] justify-between items-center align-middle  px-3   '>
             <div className='flex items-center align-middle  gap-2'>
               <input
                 type='text'
                 name
                 id
                 placeholder='Search page here'
-                className='font-inter align-middle font-normal block w-full p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500  '
+                className='font-inter align-middle mb-4 mt-2 font-normal block w-full md:w-[380px] p-3 ps-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500  '
                 onClick={toggleSearch}
               />
             </div>
@@ -60,7 +64,7 @@ function Index() {
 
           {/* marked */}
           <div
-            className='overflow-y-scroll h-[500px] hidden absolute w-[400px] bg-white p-4 rounded shadow-sm'
+            className='overflow-y-scroll h-[500px] hidden absolute w-[300px] md:w-[450px] bg-white p-4 rounded border-t boder-[#ebebeb]'
             style={{ display: isSearchVisible ? "block" : "none" }}
           >
             <div className='px-3 pt-4'>

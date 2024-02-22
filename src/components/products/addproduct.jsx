@@ -15,7 +15,7 @@ const Addproduct = () => {
         <Numberofproductcard />
         <Totalrevenuecardforotherpage />
       </div>
-      <div className='right lg:w-[20%]  mt-4 lg:mt-0'>
+      <div className='right lg:w-[20%] xl:w-[16%]  mt-4 lg:mt-0'>
         <a href='/productform'>
           <button className='flex text-sm py-[10px] px-[16px] bg-[#634af9]  font-inter text-white rounded items-center gap-2'>
             <img src={Plus} className='w-3 h-3  ' alt='' />

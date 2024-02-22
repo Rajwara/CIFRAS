@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import RemoveIcon from "../../../assets/images/invoice/removeicon.svg";
 import PlusIcongray from "../../../assets/images/invoice/plusicongray.svg";
 import Phonefield from "../../phonefield/phonefield";
@@ -6,21 +6,27 @@ import ImportIcon from "../../../../src/assets/images/invoice/ImportIcon.svg";
 import Detailsandhistorytabs from "../../detailsandhistorytabs/detailsandhistorytabs";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
+import "./invoice.css";
 
 const Invoiceform = () => {
-  // const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  // const handleHover = () => {
-  //   setDropdownOpen(true);
-  // };
-
-  // const handleLeave = () => {
-  //   setDropdownOpen(false);
-  // };
-
-  // const handleClick = () => {
-  //   setDropdownOpen(!isDropdownOpen);
-  // };
+  useEffect(() => {
+    const createDateInput = document.querySelector(".date-create input");
+    const dueDateInput = document.querySelector(".due-date input");
+    if (createDateInput) {
+      flatpickr(createDateInput, {
+        dateFormat: "Y-m-d",
+        // Add other options or customization as needed
+      });
+    }
+    if (dueDateInput) {
+      flatpickr(dueDateInput, {
+        dateFormat: "Y-m-d",
+        // Add other options or customization as needed
+      });
+    }
+  }, []);
 
   return (
     <div className='bg-white  rounded py-6 px-8 items-center md:ml-[60px] mt-20'>
@@ -81,7 +87,7 @@ const Invoiceform = () => {
                     placeholder="Phone Number"
                     class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   /> */}
-                    <Phonefield  />
+                    <Phonefield />
                   </div>
                 </div>
 
@@ -209,12 +215,26 @@ const Invoiceform = () => {
                     >
                       Date Create
                     </label>
-                    <input
-                      name='start'
-                      type='date'
-                      id='startdate'
-                      class='font-inter font-medium border-gray-300 text-[#404040] text-sm bg-gray-50 rounded-lg border-2  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
-                    />
+                    <div class='relative max-w-sm'>
+                      <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                        <svg
+                          class='w-4 h-4 text-[#404040] '
+                          aria-hidden='true'
+                          xmlns='http://www.w3.org/2000/svg'
+                          fill='currentColor'
+                          viewBox='0 0 20 20'
+                        >
+                          <path d='M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z' />
+                        </svg>
+                      </div>
+                      <input
+                        datepicker
+                        datepicker-autohide
+                        type='text'
+                        class=' font-inter border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5'
+                        placeholder='Select date'
+                      />
+                    </div>
                   </div>
 
                   <div class='mb-5 due-date'>
@@ -224,12 +244,26 @@ const Invoiceform = () => {
                     >
                       Due Date
                     </label>
-                    <input
-                      name='start'
-                      type='date'
-                      id='startdate'
-                      class='font-inter  bg-gray-50 border-2 font-semibold border-gray-300 text-[#404040] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
-                    />
+                    <div class='relative max-w-sm'>
+                      <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                        <svg
+                          class='w-4 h-4 text-[#404040]'
+                          aria-hidden='true'
+                          xmlns='http://www.w3.org/2000/svg'
+                          fill='currentColor'
+                          viewBox='0 0 20 20'
+                        >
+                          <path d='M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z' />
+                        </svg>
+                      </div>
+                      <input
+                        datepicker
+                        datepicker-autohide
+                        type='text'
+                        class=' font-inter border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 '
+                        placeholder='Select date'
+                      />
+                    </div>
                   </div>
 
                   <div class='mb-5'>
@@ -275,7 +309,10 @@ const Invoiceform = () => {
                         <li>
                           <div className='flex items-center ml-2'>
                             <div class='h-2.5 w-2.5 rounded-full bg-green-500 me-2 font-inter '></div>
-                            <a href='#' className='block text-sm  py-2 font-inter'>
+                            <a
+                              href='#'
+                              className='block text-sm  py-2 font-inter'
+                            >
                               Online
                             </a>
                           </div>
@@ -284,7 +321,10 @@ const Invoiceform = () => {
                         <li>
                           <div className='flex items-center ml-2'>
                             <div class='h-2.5 w-2.5 rounded-full bg-red-500 me-2 font-inter '></div>
-                            <a href='#' className='block text-sm  py-2 font-inter'>
+                            <a
+                              href='#'
+                              className='block text-sm  py-2 font-inter'
+                            >
                               Offline
                             </a>
                           </div>
@@ -400,7 +440,7 @@ const Invoiceform = () => {
                     </div>
 
                     <div class='mb-5 grid grid-cols-2 justify-center items-center gap-2 '>
-                      <div className="items-center">
+                      <div className='items-center'>
                         <label
                           for='base-input'
                           class='font-inter block mb-2 text-sm font-medium text-[#404040]'
@@ -440,7 +480,7 @@ const Invoiceform = () => {
               
               '
                   >
-                    <img src={RemoveIcon} alt='' className="w-3.5 h-3.5"/>
+                    <img src={RemoveIcon} alt='' className='w-3.5 h-3.5' />
                     <p className='font-inter text-[#FF3D00] font-normal text-sm'>
                       Remove
                     </p>
@@ -451,7 +491,7 @@ const Invoiceform = () => {
             <div className=''>
               <button className='bg-[#CCCCCC] w-full p-3 text-center justify-center align-middle mt-5 rounded'>
                 <span className='flex gap-2 justify-center items-center'>
-                  <img src={PlusIcongray} alt='' className="w-3.5 h-3.5" />
+                  <img src={PlusIcongray} alt='' className='w-3.5 h-3.5' />
                   <p className='text-[#404040] font-inter font-normal text-sm'>
                     Add Item
                   </p>
