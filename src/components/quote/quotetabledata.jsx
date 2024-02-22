@@ -7,6 +7,7 @@ import * as XLSX from "xlsx";
 import ExportXcelIcon from "../../assets/images/exportexcelicon.svg";
 import FilterIcon from "../../assets/images/filtericon.svg";
 
+
 const Quotetabledata = () => {
   const allData = [
     {
@@ -176,10 +177,10 @@ const Quotetabledata = () => {
         </div>
         <div className='flex flex-col md:flex-row  gap-6'>
           <div className='flex border mt-0 md:mt-6 lg:mt-0 border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center'>
-            <img src={ExportXcelIcon} alt='' />
+            <img src={ExportXcelIcon} className="h-4 w-4" alt='' />
             <button
               onClick={generateExcel}
-              className='text-[#404040] font-normal font-inter text-base leading-7 '
+              className='text-[#404040] font-normal font-inter text-sm leading-7'
             >
               Export to Excel
             </button>
@@ -187,10 +188,10 @@ const Quotetabledata = () => {
           <button
             id='dropdownActionButton'
             data-dropdown-toggle='dropdownAction'
-            className='inline-flex mt-0 md:mt-6 lg:mt-0  border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter text-base bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  '
+            className='inline-flex mt-0 md:mt-6 lg:mt-0 text-sm  border border-[#ebebeb] rounded-md px-4 py-2 gap-2 items-center text-[#404040] font-normal font-inter  bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  '
             type='button'
           >
-            <img src={FilterIcon} alt='' />
+            <img src={FilterIcon} className="h-4 w-4" alt='' />
             <span className='sr-only'>Action button</span>
             Action
           </button>
@@ -200,7 +201,7 @@ const Quotetabledata = () => {
             className='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '
           >
             <ul
-              className='py-1 text-sm text-[#404040] '
+              className='py-1  text-[#404040] font-inter text-[12px] '
               aria-labelledby='dropdownActionButton'
             >
               <li>

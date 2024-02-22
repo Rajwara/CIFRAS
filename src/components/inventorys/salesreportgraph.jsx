@@ -42,8 +42,8 @@ const Salesreportgraph = () => {
   const chartData = chartType === 'revenue' ? revenueData : expenseData;
 
   return (
-    <div>
-      <div className=" w-full bg-white font-inter rounded-lg shadow p-4 md:p-6">
+    <div className='font-inter text-sm'>
+      <div className=" w-full bg-white font-inter rounded-lg shadow p-4 md:p-6 ">
         {/* <div className="flex justify-between border-gray-200 border-b dark:border-gray-700 pb-3">
           <dl>
             <dt className="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Profit</dt>
@@ -61,20 +61,20 @@ const Salesreportgraph = () => {
 
         <div className="flex flex-col gap-4 py-3">
           {/* Toggle between Revenue and Expense labels */}
-          <h2 className='font-inter font-bold text-[#404040] text-xl leading-9'>Sales Report</h2>
+          <h2 className='font-lexend font-semibold text-[#404040] text-lg leading-9'>Sales Report</h2>
           <div className='flex flex-row gap-6'>
           <button
             onClick={() => setChartType('revenue')}
-            className={`flex items-center font-inter text-lg cursor-pointer focus:outline-none ${chartType === 'revenue' ? 'text-green-500 font-bold' : 'text-[#404040] '}`}
+            className={`flex items-center font-lexend text-sm cursor-pointer focus:outline-none ${chartType === 'revenue' ? 'text-green-500 font-bold' : 'text-[#404040] '}`}
           >
-            <img src={Circle} alt='' className='h-4 w-4 mr-2' />
+            <img src={Circle} alt='' className='h-2 w-2 mr-2' />
             Revenue
           </button>
           <button
             onClick={() => setChartType('expense')}
-            className={`flex items-center font-inter text-lg  cursor-pointer focus:outline-none ${chartType === 'expense' ? 'text-red-600 font-bold' : 'text-[#404040]'}`}
+            className={`flex items-center font-lexend text-sm  font-semibold cursor-pointer focus:outline-none ${chartType === 'expense' ? 'text-red-600 font-bold' : 'text-[#404040]'}`}
           >
-            <img src={Circle} alt='' className='h-4 w-4 mr-2' />
+            <img src={Circle} alt='' className='h-2 w-2 mr-2' />
             Expense
           </button>
           
@@ -82,13 +82,13 @@ const Salesreportgraph = () => {
         </div>
 
         {/* Display the ApexCharts bar chart */}
-        <div className="py-3">
+        <div className="py-3 font-inter ">
           <Chart
             options={chartData.options}
             series={chartData.series}
             type="bar"
             height={350}
-            className="text-[#2591FA]"
+            className="text-[#2591FA] font-inter "
           />
         </div>
       </div>

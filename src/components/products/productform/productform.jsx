@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import Detailsandhistorytabs from "../../detailsandhistorytabs/detailsandhistorytabs";
 
+
 const Productform = () => {
   const initialValues = {
     itemnumber: "",
@@ -68,7 +69,7 @@ const Productform = () => {
                     name='itemnumber'
                     id='small-input'
                     placeholder='Item Number'
-                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter text-sm  block w-full p-2.5'
+                    className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter text-sm  block w-full p-2.5'
                   />
                   <ErrorMessage
                     name='itemnumber'
@@ -84,7 +85,7 @@ const Productform = () => {
                     Description
                   </label>
                   {/* <Field as="textarea" id="description" name="description" rows="4" placeholder="Description" className="border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5" /> */}
-                  <div class='w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 '>
+                  <div class='w-full mb-4 border-2 border-gray-200 rounded-lg bg-gray-50 '>
                     <div class='flex items-center justify-between px-3 py-2 border-b '>
                       <div class='flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse '>
                         <div class='flex items-center space-x-1 rtl:space-x-reverse sm:pe-4'>
@@ -308,7 +309,7 @@ const Productform = () => {
                       name='unitprice'
                       id='small-input'
                       placeholder='$0.00'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='unitprice'
@@ -328,7 +329,7 @@ const Productform = () => {
                       name='unitofmeasure'
                       id='small-input'
                       placeholder='Unit of Measure'
-                      className='border text-sm border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 text-sm border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='unitofmeasure'
@@ -349,7 +350,7 @@ const Productform = () => {
                     name='vendor'
                     id='small-input'
                     placeholder='Vendor'
-                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm text-sm rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                    className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm text-sm rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                   />
                   <ErrorMessage
                     name='vendor'
@@ -367,7 +368,7 @@ const Productform = () => {
                   <div className='flex items-center justify-center w-full'>
                     <label
                       htmlFor='file'
-                      className='border  justify-center items-center border-[#C0C0C0] text-[#c0c0c0] sm:text-sm h-40 rounded-md leading-5 font-normal font-inter block w-full p-2.5'
+                      className='border-2  justify-center items-center border-[#C0C0C0] text-[#c0c0c0] sm:text-sm h-40 rounded-md leading-5 font-normal font-inter block w-full p-2.5'
                     >
                       <div className='flex flex-row gap-4 items-center justify-center align-middle'>
                         <svg
@@ -385,7 +386,7 @@ const Productform = () => {
                             d='M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2'
                           />
                         </svg>
-                        <p className='mb-2 text-sm text-gray-500 '>
+                        <p className='mb-2 text-sm text-[#404040] font-inter '>
                           {props.values.file
                             ? props.values.file.name
                             : "Drop or Select File"}

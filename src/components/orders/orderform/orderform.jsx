@@ -8,6 +8,7 @@ import UnderLine from "../../../assets/images/orders/orderunderline.svg";
 import OrderItems from "../../../assets/images/orders/orderitems.svg";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import Phonefield from "../../phonefield/phonefield";
 
 const Orderform = () => {
   const initialValues = {
@@ -76,12 +77,12 @@ const Orderform = () => {
       <div className='upper'>
         <div className='flex justify-between border border-[#ebebeb] bg-white   py-10 px-10 items-center'>
           <div className='left flex flex-col gap-2 relative'>
-            <h2 className='font-lexend font-bold text-[#404040] text-4xl leading-9'>
+            <h2 className='font-lexend font-bold text-[#404040] text-2xl leading-9'>
               Order
             </h2>
           </div>
           <div className='right flex flex-row gap-4'>
-            <button className='flex py-[10px] px-[16px] bg-[#634af9] text-xl font-inter text-white rounded items-center gap-2'>
+            <button className='flex py-[10px] px-[16px] bg-[#634af9] text-sm font-lexend text-white rounded items-center gap-2'>
               {/* <img src={Import} className='w-6 h-6  ' alt=''/> */}
               Save
             </button>
@@ -94,10 +95,10 @@ const Orderform = () => {
       </div>
       <div className='p-8'>
         <div className='form px-10 pt-[100px] pb-[50px] flex flex-col w-full border-2 border-[#ebebeb] rounded-md'>
-          <h2 className='font-lexend text-2xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
+          <h2 className='font-lexend text-lg mt-[-25px] font-semibold leading-tight text-[#404040] mb-8 '>
             Billing Information
           </h2>
-          <div className='upperform flex flex-col lg:flex-row flex-row gap-6 w-full'>
+          <div className='upperform flex flex-col lg:flex-row  gap-6 w-full'>
             <div className='left lg:w-3/4'>
               <Formik
                 initialValues={initialValues}
@@ -110,7 +111,7 @@ const Orderform = () => {
                       <div className='w-full'>
                         <label
                           htmlFor='customerName'
-                          className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                          className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                         >
                           Customer Name
                         </label>
@@ -124,13 +125,13 @@ const Orderform = () => {
                         <ErrorMessage
                           name='customerName'
                           component='div'
-                          className='text-red-500 text-sm mt-1'
+                          className='text-red-500 font-inter text-sm mt-1'
                         />
                       </div>
-                      <div className='w-full'>
+                      {/* <div className='w-full'>
                         <label
                           htmlFor='phonenumber'
-                          className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                          className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                         >
                           Phone Number
                         </label>
@@ -146,13 +147,28 @@ const Orderform = () => {
                           component='div'
                           className='text-red-500 text-sm mt-1'
                         />
-                      </div>
+                      </div> */}
+                          <div className='w-full'>
+                    <label
+                      for='phone'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
+                    >
+                      Phone Number
+                    </label>
+                    {/* <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                  /> */}
+                    <Phonefield />
+                  </div>
                     </div>
                     <div className='flex flex-col  md:flex-row gap-4 mb-4 w-full'>
                       <div className='w-full'>
                         <label
                           htmlFor='country'
-                          className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                          className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                         >
                           Country
                         </label>
@@ -161,18 +177,18 @@ const Orderform = () => {
                           id='country'
                           name='country'
                           placeholder='Country'
-                          className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                          className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                         />
                         <ErrorMessage
                           name='country'
                           component='div'
-                          className='text-red-500 text-sm mt-1'
+                          className='text-red-500 font-inter text-sm mt-1'
                         />
                       </div>
                       <div className='w-full'>
                         <label
                           htmlFor='state'
-                          className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                          className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                         >
                           State
                         </label>
@@ -181,12 +197,12 @@ const Orderform = () => {
                           id='state'
                           name='state'
                           placeholder='State'
-                          className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                          className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                         />
                         <ErrorMessage
                           name='state'
                           component='div'
-                          className='text-red-500 text-sm mt-1'
+                          className='text-red-500 font-inter text-sm mt-1'
                         />
                       </div>
                     </div>
@@ -194,7 +210,7 @@ const Orderform = () => {
                       <div className='w-full'>
                         <label
                           htmlFor='city'
-                          className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                          className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                         >
                           City
                         </label>
@@ -203,7 +219,7 @@ const Orderform = () => {
                           id='city'
                           name='city'
                           placeholder='City'
-                          className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                          className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                         />
                         <ErrorMessage
                           name='city'
@@ -214,7 +230,7 @@ const Orderform = () => {
                       <div className='w-full'>
                         <label
                           htmlFor='zipPostcode'
-                          className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                          className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                         >
                           Zip / Postcode
                         </label>
@@ -223,19 +239,19 @@ const Orderform = () => {
                           id='zipPostcode'
                           name='zipPostcode'
                           placeholder='Zip / Postcode'
-                          className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                          className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                         />
                         <ErrorMessage
                           name='zipPostcode'
                           component='div'
-                          className='text-red-500 text-sm mt-1'
+                          className='text-red-500 font-inter text-sm mt-1'
                         />
                       </div>
                     </div>
                     <div className='w-full'>
                       <label
                         htmlFor='streetAddress'
-                        className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                        className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                       >
                         Street Address
                       </label>
@@ -244,12 +260,12 @@ const Orderform = () => {
                         id='streetAddress'
                         name='streetAddress'
                         placeholder='Street Address'
-                        className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                        className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                       />
                       <ErrorMessage
                         name='streetAddress'
                         component='div'
-                        className='text-red-500 text-sm mt-1'
+                        className='text-red-500 font-inter text-sm mt-1'
                       />
                     </div>
                     <div className='w-full mt-4 mb-2'>
@@ -261,7 +277,7 @@ const Orderform = () => {
                         />
                         <label
                           for='checkbox-table-search-3'
-                          className=' font-inter font-normal text-[#404040] text-base leading-7'
+                          className=' font-inter font-normal text-[#404040] text-sm leading-7'
                         >
                           Shipping Address is the same as Billing Address
                         </label>
@@ -270,7 +286,7 @@ const Orderform = () => {
                     <div className='w-full mb-4'>
                       <label
                         htmlFor='ordernote'
-                        className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                        className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                       >
                         Order Note (optional)
                       </label>
@@ -284,7 +300,7 @@ const Orderform = () => {
                       <ErrorMessage
                         name='ordernote'
                         component='div'
-                        className='text-red-500 text-sm mt-1'
+                        className='text-red-500 font-inter text-sm mt-1'
                       />
                     </div>
                   </Form>
@@ -294,7 +310,7 @@ const Orderform = () => {
             
             <div className='right lg:w-1/4 border border-[#ebebeb] rounded-md p-4'>
               <div className='flex flex-row justify-between'>
-                <h4 className='font-lexend font-bold text-[#404040] text-xl leading-7'>
+                <h4 className='font-lexend font-bold text-[#404040] text-lg leading-7'>
                   Customer Info
                 </h4>
                 <img src={Edit} alt='' className='h-6 w-6' />
@@ -302,7 +318,7 @@ const Orderform = () => {
               <div className='flex flex-col md:flex-row gap-4 mt-6'>
                 <img src={Profile} alt='' className='w-[50px] h-[50px]' />
                 <div className='flex flex-col'>
-                  <h6 className='font-lexend font-normal text-[#404040] text-lg leading-5'>
+                  <h6 className='font-lexend font-semibold text-[#404040] text-base leading-5'>
                     Mr. Irvin Farrell
                   </h6>
                   <p className='font-inter font-normal text-[#404040] text-sm leading-5'>
@@ -319,16 +335,16 @@ const Orderform = () => {
                 alt=''
               />
               <div className='flex flex-row justify-between mt-4'>
-                <h4 className='font-lexend font-bold text-[#404040] text-xl leading-7'>
+                <h4 className='font-lexend font-bold text-[#404040] text-base leading-7'>
                   Order Detials
                 </h4>
                 <img src={Edit} alt='' className='h-6 w-6' />
               </div>
               <div className='flex flex-col gap-2 mt-2'>
-                <h6 className='font-lexend font-normal text-[#404040] text-lg leading-5'>
+                <h6 className='font-lexend font-normal text-[#404040] text-xs leading-5'>
                   Order ID
                 </h6>
-                <h6 className='font-lexend font-normal text-[#404040] text-lg leading-5'>
+                <h6 className='font-lexend font-normal text-[#404040] text-xs leading-5'>
                   COMP1502
                 </h6>
               </div>
@@ -340,7 +356,7 @@ const Orderform = () => {
               <div className='w-full mt-4 flex  flex-col gap-2'>
                 <label
                   htmlFor='selectOption'
-                  className='font-inter font-normal text-[#404040] text-lg leading-5 '
+                  className='font-inter font-normal text-[#404040] text-sm leading-5 '
                 >
                   Payment Method
                 </label>
@@ -350,18 +366,18 @@ const Orderform = () => {
                   name='selectedOption'
                   className='border border-[#ebebeb] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
                 >
-                  <option value='' disabled>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='' disabled>
                     Select an option...
                   </option>
-                  <option value='option1'>Option 1</option>
-                  <option value='option2'>Option 2</option>
-                  <option value='option3'>Option 3</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option1'>Option 1</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option2'>Option 2</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option3'>Option 3</option>
                 </select>
               </div>
               <div className='w-full mt-4 flex flex-col gap-2'>
                 <label
                   htmlFor='selectOption'
-                  className='font-inter font-normal text-[#404040] text-lg leading-5 '
+                  className='font-inter font-normal text-[#404040] text-sm leading-5  '
                 >
                   Shipping Method
                 </label>
@@ -369,25 +385,25 @@ const Orderform = () => {
                   as='select'
                   id='selectOption'
                   name='selectedOption'
-                  className='border border-[#ebebeb] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
+                  className=' border border-[#ebebeb] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
                 >
-                  <option value='' disabled>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='' disabled>
                     Select an option...
                   </option>
-                  <option value='option1'>Option 1</option>
-                  <option value='option2'>Option 2</option>
-                  <option value='option3'>Option 3</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option1'>Option 1</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option2'>Option 2</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option3'>Option 3</option>
                 </select>
               </div>
               <div className='w-full mt-4 flex flex-col gap-2'>
                 <label
                   htmlFor='orderDate'
-                  className='font-inter font-normal text-[#404040] text-lg leading-5 '
+                  className='font-inter font-normal text-[#404040] text-sm leading-5 '
                 >
                   Order date
                 </label>
                 <div class='relative max-w-sm'>
-                  <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                  <div class='absolute text-sm inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
                     <svg
                       class='w-4 h-4 text-[#404040] '
                       aria-hidden='true'
@@ -413,15 +429,15 @@ const Orderform = () => {
           <div className='downform flex flex-row justify-between mt-8'>
             <div className='left w-3/4'></div>
             <div className='right lg:w-1/4 '>
-              <h4 className='font-lexend font-bold text-[#404040] text-xl leading-7 mb-4'>
+              <h4 className='font-lexend font-bold text-[#404040] text-base leading-7 mb-4'>
                 Your Order
               </h4>
               <div className='border border-[#ebebeb] rounded-md p-4 flex flex-col'>
                 <div className='flex flex-row justify-between'>
-                  <h4 className='font-lexend font-normal text-[#404040] text-xl leading-7'>
+                  <h4 className='font-lexend font-normal text-[#404040] text-sm leading-7'>
                     Ordered items
                   </h4>
-                  <a className='font-inter font-normal text-[#2591FA] text-lg leading-7'>
+                  <a className='font-lexend  font-normal text-[#2591FA] text-sm leading-7'>
                     Edit Cart
                   </a>
                 </div>
@@ -433,15 +449,15 @@ const Orderform = () => {
                 <div className='mt-6 mb-6 mx-auto'>
                   <img src={OrderItems} alt='' className='w-[87px] h-[68px]' />
                 </div>
-                <div className='flex flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
+                <div className='flex flex-row justify-between font-inter font-normal text-[#404040] text-sm leading-7'>
                   <p>Subtotal</p>
                   <p>$0.00</p>
                 </div>
-                <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
+                <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-sm leading-7'>
                   <p>Tax</p>
                   <p>$0.00</p>
                 </div>
-                <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
+                <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-sm leading-7'>
                   <p>Shipping</p>
                   <p>$0.00</p>
                 </div>
@@ -450,12 +466,12 @@ const Orderform = () => {
                   className='w-full mx-auto h-[2px] mt-4'
                   alt=''
                 />
-                <div className='flex mt-4 flex-row justify-between font-inter font-normal text-[#404040] text-lg leading-7'>
+                <div className='flex mt-4 flex-row justify-between font-inter font-semibold text-[#404040] text-sm leading-7'>
                   <p className='font-bold'>Total</p>
                   <p>$0.00</p>
                 </div>
                 <div className='mt-6 mx-auto'>
-                  <button className='bg-[#634AF9] rounded-md px-5 py-3 text-white font-inter font-normal text-xl leading-7 '>
+                  <button className='bg-[#634AF9] rounded-md px-5 py-3 text-white font-inter font-normal text-sm leading-7 '>
                     Back to Store
                   </button>
                 </div>

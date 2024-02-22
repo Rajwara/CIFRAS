@@ -13,7 +13,7 @@ const Numberofsuppliers = () => {
             <img src={Icons} className='' alt='' />
           </div>
           <div className=''>
-            <h6 className='font-normal font-lexend text-[#000000] text-xl leading-9'>
+            <h6 className='font-semibold font-lexend text-[#000000] text-lg leading-9'>
               Number of Suppliers
             </h6>
             <h6 className='font-bold font-lexend text-[#2591fa] text-xl leading-9'>
@@ -33,11 +33,11 @@ const Numberofsuppliers = () => {
       <div className='down flex lg:flex-col xl:flex-row items-center mt-2 gap-2'>
       <div className="flex gap-2 items-center">
         <img src={Arrow} className='h-4 w-4' alt='' />
-        <p className='font-medium font-inter text-[#04B076] text-xl leading-7'>
+        <p className='font-medium font-inter text-[#04B076] text-sm leading-7'>
           +25.45%
         </p>
         </div>
-        <p className='font-normal text-start lg:text-center xl:text-start font-inter text-[#404040] text-xl leading-7'>
+        <p className='font-normal text-start lg:text-center xl:text-start font-inter text-[#404040] text-sm leading-7'>
           Increased last month
         </p>
       </div>

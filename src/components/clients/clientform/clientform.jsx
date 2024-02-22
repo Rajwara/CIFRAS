@@ -41,7 +41,7 @@ const Clientform = () => {
     <div className='bg-white  px-4 pt-4 pb-[50px]'>
       <div className='grid grid-cols-1 border border-[#ebebeb] mt-[100px] md:ml-[60px] bg-[#fff] px-8 py-16 rounded'>
         <div className=''>
-          <h1 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
+          <h1 className='font-lexend text-2xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
             Add Client
           </h1>
           <Formik
@@ -55,7 +55,7 @@ const Clientform = () => {
                   <div className='w-full'>
                     <label
                       htmlFor='clientName'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Name
                     </label>
@@ -64,18 +64,18 @@ const Clientform = () => {
                       id='clientName'
                       name='clientName'
                       placeholder='Item Number'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='clientName'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div className='w-full'>
                     <label
                       htmlFor='phoneNumber'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Phone Number
                     </label>
@@ -84,18 +84,18 @@ const Clientform = () => {
                       id='phoneNumber'
                       name='phoneNumber'
                       placeholder=' +1 '
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='phoneNumber'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div className='w-full'>
                     <label
                       htmlFor='alias'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Alias
                     </label>
@@ -104,19 +104,19 @@ const Clientform = () => {
                       id='alias'
                       name='alias'
                       placeholder='Alias'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='alias'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                 </div>
                 <div className='w-full mb-4'>
                   <label
                     htmlFor='description'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Description
                   </label>
@@ -126,7 +126,7 @@ const Clientform = () => {
                     name='description'
                     rows='4'
                     placeholder='Description'
-                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
+                    className='border-2  border-[#C0C0C0] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
                   />
                   <ErrorMessage
                     name='description'
@@ -140,7 +140,7 @@ const Clientform = () => {
                     type='submit'
                     name='submit'
                     value='submit'
-                    className='bg-[#634af9] text-[#ffffff] rounded font-inter font-normal text-lg leading-7 px-10 py-2'
+                    className='bg-[#634af9] text-[#ffffff] rounded font-lexend font-normal text-sm leading-7 px-10 py-2'
                   >
                     Submit
                   </button>

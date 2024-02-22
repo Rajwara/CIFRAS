@@ -4,6 +4,7 @@ import Graph from "../../../assets/images/dashboard/graphorders.svg";
 import Icons from "../../../assets/images/dashboard/ordersicon.svg";
 import UnderLine from "../../../assets/images/dashboard/underlinecards.svg";
 
+
 const Numberofclients = () => {
   return (
     <div className=' bg-white  py-4 px-2 mt-4 lg:mt-0 w-full lg:w-1/3 rounded border border-[#ebebeb]'>
@@ -13,7 +14,7 @@ const Numberofclients = () => {
           <img src={Icons} className='' alt='' />
         </div>
             <div className=''>
-                <h6 className='font-normal font-lexend text-[#000000] text-xl leading-9'>Number of Clients</h6>
+                <h6 className='font-medium font-lexend text-[#000000] text-lg leading-9'>Number of Clients</h6>
                 <h6 className='font-bold font-lexend text-[#2591fa] text-xl leading-9'>1,200</h6>
 
             </div>
@@ -26,10 +27,10 @@ const Numberofclients = () => {
     <div className='down flex lg:flex-col xl:flex-row items-center mt-2 gap-2' >
       <img src={Arrow} className='h-4 w-4' alt='' />
       <div className="flex gap-2 items-center">
-      <p className='font-medium font-inter text-[#04B076] text-xl leading-7'>+25.45%</p>
+      <p className='font-medium font-inter text-[#04B076] text-sm leading-7'>+25.45%</p>
       </div>
       <div>
-      <p className='font-normal text-start lg:text-center xl:text-start font-inter text-[#404040] text-xl leading-7'>Increased last month</p>
+      <p className='font-normal text-start lg:text-center xl:text-start font-inter text-[#404040] text-sm leading-7'>Increased last month</p>
       </div>
     </div>
 

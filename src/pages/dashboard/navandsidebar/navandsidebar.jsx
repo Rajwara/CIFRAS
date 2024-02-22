@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Logo from "../../../assets/images/sitelogocolored.png";
 import profileImg from "../../../assets/images/dashboard/john.svg";
+import Isoimg from "../../../assets/images/isoprofile.webp"
 import DashboardSideIcon from "../../../assets/images/dashboard/dashboard.svg";
 import QuotesGenerationIcon from "../../../assets/images/dashboard/quotesgeneration.svg";
 import InvoiceGenerationIcon from "../../../assets/images/dashboard/invoicegeneration.svg";
@@ -183,15 +184,15 @@ const Navandsidebar = () => {
               </div>
               </div>
             </div>
-            <div class='flex items-center  gap-6 '>
+            <div class='flex items-center   '>
               <div className=' '>
-                <img src={NotificationIcon} alt='NotificationIcon' />
+                <img src={NotificationIcon}  alt='NotificationIcon' />
                 {/* <span class="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-normal text-[#FF3D00] font-inter ">
                   2*
                 </span> */}
               </div>
               <div></div>
-              <div class='flex items-center ms-3 '>
+              <div class='flex items-center  '>
                 <div class='relative inline-block text-left '>
                   <button
                     type='button'
@@ -202,13 +203,13 @@ const Navandsidebar = () => {
                     onClick={toggleDropdown}
                   >
                     <img
-                      class='w-[30%] h-[80%]   rounded-full'
-                      src={profileImg}
+                      class='w-[25%] h-[80%]   rounded-full'
+                      src={Isoimg}
                       alt='user photo'
                     />
-                    <h1 class='w- font-lexend font-normal text-base text-[#404040]'>
+                    {/* <h1 class='w- font-lexend font-semibold text-sm text-[#404040]'>
                       John Doe
-                    </h1>
+                    </h1> */}
                     <img src={DownArrow} alt='' />
                   </button>
                   {isDropdownOpen && (
@@ -220,10 +221,46 @@ const Navandsidebar = () => {
                       tabindex='-1'
                     >
                       <ul class='py-1' role='none'>
+
+                     
+                    <li>
+                          {/* <a
+                            href='/profile'
+                            class='block px-4 py-2 font-lexend text-sm text-[#404040] border-[#404040] border-b-2 hover:bg-gray-100 '
+                            role='menuitem'
+                          >
+                           John Doe
+                          </a> */}
+                          <div className="flex p-2 border-[#404040] border-b-2 align-middle">
+                          <img
+                      class='w-[15%] h-[80%]   rounded-full'
+                      src={Isoimg}
+                      alt='user photo'
+                    />
+                   <div>
+                   <a
+                            href='/profile'
+                            class='block px-4  font-lexend text-base font-semibold text-[#404040]  hover:bg-gray-100 '
+                            role='menuitem'
+                          >
+                           John Doe
+                          </a>
+                          <a
+                            href='/profile'
+                            class='block px-4 font-inter text-sm font-medium text-[#404040]  hover:bg-gray-100 '
+                            role='menuitem'
+                          >
+                           johndoe@cifraims.com
+                          </a>
+                   </div>
+                          </div>
+                        </li>
+
+
                         <li>
                           <a
                             href='/profile'
-                            class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '
+                            class='block font-inter font-medium px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '
                             role='menuitem'
                           >
                             Profile
@@ -232,7 +269,7 @@ const Navandsidebar = () => {
                         <li>
                           <a
                             href='/dashbaord'
-                            class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '
+                            class='block px-4 font-inter font-medium py-2 text-sm text-gray-700 hover:bg-gray-100 '
                             role='menuitem'
                           >
                             Dashboard
@@ -241,27 +278,19 @@ const Navandsidebar = () => {
                         <li>
                           <a
                             href='/settings'
-                            class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '
+                            class='block px-4 py-2 font-inter font-medium text-sm text-gray-700 hover:bg-gray-100 '
                             role='menuitem'
                           >
                             Settings
                           </a>
                         </li>
-                        <li>
-                          <a
-                            href='#'
-                            class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '
-                            role='menuitem'
-                          >
-                            Earnings
-                          </a>
-                        </li>
+                    
                         <li>
                           {console.log("Login ", isLogin)}
                           {isLogin ? (
                             <a
                               href='#'
-                              class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '
+                              className='font-inter font-medium block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 border-[#ebebeb] border-t-2 '
                               role='menuitem'
                               onClick={logouthandle}
                             >
@@ -290,9 +319,9 @@ const Navandsidebar = () => {
                 <img
                   src={DashboardSideIcon}
                   alt='DashboardSideIcon'
-                  className='w-7 h-7'
+                  className='w-6 h-6'
                 />
-                <span class='ms-5 font-inter text-base font-normal leading-5'>
+                <span class='ms-6 font-inter text-sm font-medium leading-5'>
                   Dashboard
                 </span>
               </a>
@@ -305,8 +334,8 @@ const Navandsidebar = () => {
                 aria-controls='dropdown-example'
                 data-collapse-toggle='dropdown-example'
               >
-                <img src={FacturaElectroncia} alt='' />
-                <span class='flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-base text-[#404040] font-normal'>
+                <img src={FacturaElectroncia} className='w-6 h-6' alt='' />
+                <span class='flex ms-4 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-sm text-[#404040] font-medium'>
                   Factura Electroncia
                 </span>
                 <svg
@@ -326,11 +355,11 @@ const Navandsidebar = () => {
                 </svg>
               </button>
               <ul id='dropdown-example' class='hidden py-2 space-y-2'>
-                <li className='flex hover:bg-gray-100 ml-12'>
-                  <img src={dropdownIcon} alt='' />
+                <li className='flex hover:bg-gray-100 ml-12 items-center p-2 rounded'>
+                  <img src={dropdownIcon} className="w-2 h-2" alt='' />
                   <a
                     href='/invoicedetails'
-                    class='flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal'
+                    class='flex items-center w-full   transition duration-75 rounded-lg pl-2 group font-inter font-medium text-sm'
                   >
                     Electronic Biling
                   </a>
@@ -340,8 +369,8 @@ const Navandsidebar = () => {
 
             <li>
               <a href='/products' class='flex items-center p-2 mt-5 group'>
-                <img src={ProductsidebarIcon} alt='' className='w-7 h-7' />
-                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5'>
+                <img src={ProductsidebarIcon} alt='' className='w-6 h-6' />
+                <span class='flex-1 ms-6 whitespace-nowrap font-inter text-sm font-medium leading-5'>
                   Products
                 </span>
               </a>
@@ -349,8 +378,8 @@ const Navandsidebar = () => {
 
             <li>
               <a href='/invoicelist' class='flex items-center p-2 group mt-5'>
-                <img src={InvoiceGenerationIcon} alt='' className='w-7 h-7' />
-                <span class='flex-1 ms-6 whitespace-nowrap font-inter text-base font-normal leading-5'>
+                <img src={InvoiceGenerationIcon} alt='' className='w-6 h-6' />
+                <span class='flex-1 ms-7 whitespace-nowrap font-inter text-sm font-medium leading-5'>
                   Invoice
                 </span>
               </a>
@@ -364,8 +393,8 @@ const Navandsidebar = () => {
                   aria-controls='dropdown-examp'
                   data-collapse-toggle='dropdown-examp'
                 >
-                  <img src={SupplierIcon} alt='' />
-                  <span class='flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-base text-[#404040] font-normal'>
+                  <img src={SupplierIcon} className='w-6 h-6' alt='' />
+                  <span class='flex ms-4 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-sm text-[#404040] font-medium'>
                     Suppliers
                   </span>
                   <svg
@@ -386,21 +415,21 @@ const Navandsidebar = () => {
                 </button>
               </a>
               <ul id='dropdown-examp' class='hidden py-2 space-y-2'>
-                <li className='flex hover:bg-gray-100 ml-12'>
-                  <img src={dropdownIcon} alt='' />
+                <li className='flex hover:bg-gray-100 ml-12 items-center p-2 rounded'>
+                  <img src={dropdownIcon} className="w-2 h-2" alt='' />
                   <a
                     href='/purchaseorder'
-                    class='flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal'
+                    class='flex items-center w-full   text-sm transition duration-75 rounded-lg pl-2 group font-inter font-medium'
                   >
                     Purchase Orders
                   </a>
                 </li>
 
-                <li className='flex hover:bg-gray-100 ml-12'>
-                  <img src={dropdownIcon} alt='' />
+                <li className='flex hover:bg-gray-100 ml-12 items-center p-2 rounded'>
+                  <img src={dropdownIcon} className="w-2 h-2" alt='' />
                   <a
                     href='/suppliers'
-                    class='flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal'
+                    class='flex items-center w-full  text-sm transition duration-75 rounded-lg pl-2 group font-inter  font-medium'
                   >
                     Suppliers
                   </a>
@@ -410,8 +439,8 @@ const Navandsidebar = () => {
 
             <li>
               <a href='/reports' class='flex items-center p-2 group mt-5'>
-                <img src={ReportsIcon} alt='' className='w-7 h-7' />
-                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5'>
+                <img src={ReportsIcon} alt='' className='w-6 h-6' />
+                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-sm font-medium leading-5'>
                   Reports
                 </span>
               </a>
@@ -419,8 +448,8 @@ const Navandsidebar = () => {
 
             <li>
               <a href='/inventory' class='flex items-center p-2 group mt-5'>
-                <img src={InventoryIcon} alt='' className='w-7 h-7' />
-                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5'>
+                <img src={InventoryIcon} alt='' className='w-6 h-6' />
+                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-sm font-medium leading-5'>
                   Inventory
                 </span>
               </a>
@@ -428,8 +457,8 @@ const Navandsidebar = () => {
 
             <li>
               <a href='/clients' class='flex items-center p-2 group mt-5'>
-                <img src={ClientIcon} alt='' className='w-7 h-7' />
-                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5'>
+                <img src={ClientIcon} alt='' className='w-6 h-6' />
+                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-sm font-medium leading-5'>
                   Clients
                 </span>
               </a>
@@ -437,8 +466,8 @@ const Navandsidebar = () => {
 
             <li>
               <a href='/orders' class='flex items-center p-2 group mt-5'>
-                <img src={OrderIcon} alt='' className='w-7 h-7' />
-                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5'>
+                <img src={OrderIcon} alt='' className='w-6 h-6' />
+                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-sm font-medium leading-5'>
                   Orders
                 </span>
               </a>
@@ -446,8 +475,8 @@ const Navandsidebar = () => {
 
             <li>
               <a href='/quotes' class='flex items-center p-2 group mt-5'>
-                <img src={QuotesGenerationIcon} alt='' className='w-7 h-7' />
-                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-base font-normal leading-5'>
+                <img src={QuotesGenerationIcon} alt='' className='w-6 h-6' />
+                <span class='flex-1 ms-5 whitespace-nowrap font-inter text-sm font-medium leading-5'>
                   Quotes
                 </span>
               </a>
@@ -460,8 +489,8 @@ const Navandsidebar = () => {
                 aria-controls='dropdown-ex'
                 data-collapse-toggle='dropdown-ex'
               >
-                <img src={OptionsIcon} alt='' />
-                <span class='flex-1 ms-3 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-base text-[#404040] font-normal'>
+                <img src={OptionsIcon} className="w-6 h-6" alt='' />
+                <span class='flex ms-3 text-left rtl:text-right whitespace-nowrap font-inter items-center w-full p-2 text-sm text-[#404040] font-medium'>
                   Options
                 </span>
                 <svg
@@ -481,21 +510,21 @@ const Navandsidebar = () => {
                 </svg>
               </button>
               <ul id='dropdown-ex' class='hidden py-2 space-y-2'>
-                <li className='flex hover:bg-gray-100 ml-12'>
-                  <img src={dropdownIcon} alt='' />
+                <li className='flex items-center p-2 rounded hover:bg-gray-100 ml-12'>
+                  <img src={dropdownIcon} className="w-2 h-2"  alt='' />
                   <a
                     href='/vendor'
-                    class='flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal'
+                    class='flex items-center w-full   transition duration-75 rounded-lg pl-2 group font-inter font-medium text-sm'
                   >
                     Vendor
                   </a>
                 </li>
 
-                <li className='flex hover:bg-gray-100 ml-12'>
-                  <img src={dropdownIcon} alt='' />
+                <li className='items-center flex p-2 hover:bg-gray-100 ml-12'>
+                  <img src={dropdownIcon} className="w-2 h-2" alt='' />
                   <a
                     href='/companydata'
-                    class='flex items-center w-full p-2  transition duration-75 rounded-lg pl-6 group font-inter font-normal'
+                    class='flex items-center w-full   transition duration-75 rounded-lg pl-2 group font-inter font-medium  text-sm'
                   >
                     Company Data
                   </a>

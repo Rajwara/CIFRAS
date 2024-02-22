@@ -41,7 +41,7 @@ const Clientform = () => {
     <div className='bg-white  px-4 pt-4 pb-[50px]'>
       <div className='grid grid-cols-1 border border-[#ebebeb] mt-[100px] md:ml-[60px] bg-[#fff] px-8 py-16 rounded'>
         <div className=''>
-          <h1 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
+          <h1 className='font-lexend text-2xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
             Add Client
           </h1>
           <Formik

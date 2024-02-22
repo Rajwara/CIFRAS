@@ -52,7 +52,7 @@ const Supplierform = () => {
     <div className='bg-white px-4 pt-4 '>
       <div className='grid grid-cols-1 mt-[100px] md:ml-[60px] border border-[#ebebeb] bg-[#fff] px-8 py-16 rounded'>
         <div className=''>
-          <h1 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
+          <h1 className='font-lexend text-2xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
             Add Supplier
           </h1>
           <Formik
@@ -66,7 +66,7 @@ const Supplierform = () => {
                   <div className='w-full'>
                     <label
                       htmlFor='name'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Name
                     </label>
@@ -75,18 +75,18 @@ const Supplierform = () => {
                       id='name'
                       name='name'
                       placeholder='Enter your name'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='name'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div className='w-[76%]   lg:w-full'>
                     <label
                       htmlFor='phonenumber'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Phone Number
                     </label>
@@ -95,7 +95,7 @@ const Supplierform = () => {
                     <ErrorMessage
                       name='phonenumber'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div className='w-full'>
@@ -110,7 +110,7 @@ const Supplierform = () => {
                       id='alias'
                       name='alias'
                       placeholder='Alias'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='alias'
@@ -123,7 +123,7 @@ const Supplierform = () => {
                   <div className='w-full'>
                     <label
                       htmlFor='ruc'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Ruc
                     </label>
@@ -132,18 +132,18 @@ const Supplierform = () => {
                       id='ruc'
                       name='ruc'
                       placeholder='Ruc'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='ruc'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div className='w-full'>
                     <label
                       htmlFor='dv'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       DV
                     </label>
@@ -152,12 +152,12 @@ const Supplierform = () => {
                       id='dv'
                       name='dv'
                       placeholder=' Dv '
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='dv'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const Supplierform = () => {
                   <div className='flex justify-between flex-row'>
                     <label
                       htmlFor='address'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Address
                     </label>
@@ -177,12 +177,12 @@ const Supplierform = () => {
                     name='address'
                     rows='4'
                     placeholder='Enter your address'
-                    className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
+                    className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5'
                   />
                   <ErrorMessage
                     name='address'
                     component='div'
-                    className='text-red-500 text-sm mt-1'
+                    className='text-red-500 font-inter text-sm mt-1'
                   />
                 </div>
                 <div className='mt-6'>
@@ -191,7 +191,7 @@ const Supplierform = () => {
                     type='submit'
                     name='submit'
                     value='submit'
-                    className='bg-[#634af9] text-[#ffffff] rounded font-inter font-normal text-lg leading-7 px-10 py-2'
+                    className='bg-[#634af9] text-[#ffffff] rounded font-lexend font-normal text-sm leading-7 px-10 py-2'
                   >
                     Submit
                   </button>

@@ -2,6 +2,7 @@ import React from "react";
 import Quoteadd from "../../../components/quote/quoteadd";
 import Quotetabledata from "../../../components/quote/quotetabledata";
 
+
 const Quote = () => {
   return (
     <div>

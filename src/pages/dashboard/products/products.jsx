@@ -2,6 +2,7 @@ import React from "react";
 import Addproduct from "../../../components/products/addproduct";
 import Producttabledata from "../../../components/products/productlist/producttabledata";
 
+
 const Products = () => {
   return (
     <div className=''>

@@ -7,7 +7,7 @@ const Addpurchaseorder = () => {
   return (
     <div className='flex flex-col lg:flex-row justify-between border border-[#ebebeb] bg-white   py-8 px-10 items-center'>
       <div className='left flex lg:w-[10%] xl:w-16 flex-col gap-2 relative'>
-        <h2 className='font-rubik font-bold text-[#404040] text-4xl leading-9'>
+        <h2 className='font-lexend font-semibold text-[#404040] text-2xl leading-9'>
           Purchase Order
         </h2>
       </div>
@@ -17,8 +17,8 @@ const Addpurchaseorder = () => {
       </div>
       <div className='right lg:w-[20%] xl:w-[25%] mt-6 lg:mt-0'>
         <a href='/purchaseform'>
-          <button className='flex py-[10px] px-[5px] bg-[#634af9] text-xl font-rubik text-white rounded items-center gap-2'>
-            <img src={Plus} className='w-6 h-6  ' alt='' />
+          <button className='flex py-[10px] px-[8px] bg-[#634af9] text-sm font-lexend text-white rounded items-center gap-2'>
+            <img src={Plus} className='w-3.5 h-3.5  ' alt='' />
             Add Order Purchase
           </button>
         </a>

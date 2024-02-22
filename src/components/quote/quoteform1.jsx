@@ -219,7 +219,7 @@ const Quoteform1 = () => {
               <ErrorMessage
                 name='item'
                 component='div'
-                className='text-red-500 text-sm mt-1'
+                className='text-red-500 font-inter text-sm mt-1'
               />
             </div>
             <div className='w-full '>
@@ -239,7 +239,7 @@ const Quoteform1 = () => {
               <ErrorMessage
                 name='quantity'
                 component='div'
-                className='text-red-500 text-sm mt-1'
+                className='text-red-500 font-inter text-sm mt-1'
               />
             </div>
             <div className='w-full '>
@@ -259,7 +259,7 @@ const Quoteform1 = () => {
               <ErrorMessage
                 name='price'
                 component='div'
-                className='text-red-500 text-sm mt-1'
+                className='text-red-500 font-inter text-sm mt-1'
               />
             </div>
           </div>
@@ -281,7 +281,7 @@ const Quoteform1 = () => {
               <ErrorMessage
                 name='commission'
                 component='div'
-                className='text-red-500 text-sm mt-1'
+                className='text-red-500 font-inter text-sm mt-1'
               />
             </div>
             <div className='w-full '>
@@ -301,7 +301,7 @@ const Quoteform1 = () => {
               <ErrorMessage
                 name='rate'
                 component='div'
-                className='text-red-500 text-sm mt-1'
+                className='text-red-500 font-inter text-sm mt-1'
               />
             </div>
             <div className='w-full '>
@@ -321,7 +321,7 @@ const Quoteform1 = () => {
               <ErrorMessage
                 name='discount'
                 component='div'
-                className='text-red-500 text-sm mt-1'
+                className='text-red-500 font-inter text-sm mt-1'
               />
             </div>
           </div>

@@ -4,6 +4,7 @@ import Graph from "../../assets/images/dashboard/totalrevenuegraph.svg";
 import Arrow from "../../assets/images/dashboard/arrowgreenup.svg";
 import UnderLine from "../../assets/images/dashboard/underlinecards.svg";
 
+
 const Totalrevenuecardforotherpage = () => {
   return (
     <div className=' bg-white py-4 mt-4 lg:mt-0 w-full lg:w-1/3 px-2 rounded border border-[#ebebeb]'>
@@ -13,7 +14,7 @@ const Totalrevenuecardforotherpage = () => {
             <img src={Icons} className='' alt='' />
           </div>
           <div className=''>
-            <h6 className='font-medium font-lexend text-[#000000] text-sm leading-9'>
+            <h6 className='font-medium font-lexend text-[#000000] text-lg leading-9'>
               Total Revenue
             </h6>
             <h6 className='font-semibold font-lexend text-[#04b076] text-xl leading-9'>

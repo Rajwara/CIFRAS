@@ -21,13 +21,13 @@ class ComponentToPrint extends React.Component {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 justify-between mt-12'>
               <div className=''>
-                <h4 className='font-lexend font-bold text-[#000000] text-base leading-7'>
+                <h4 className='font-lexend font-semibold text-[#000000] text-lg leading-7'>
                   From
                 </h4>
-                <h6 className='font-lexend font-normal text-[#000000] text-base leading-7 mt-2'>
+                <h6 className='font-lexend font-normal text-[#000000] text-sm leading-7 mt-2'>
                   REDQ, INC
                 </h6>
-                <p className='font-inter font-normal text-[#404040] text-base leading-5 mt-2'>
+                <p className='font-inter font-normal text-[#404040] text-sm leading-5 mt-2'>
                   <span>Jerome Bell</span>
                   <br />
                   <span>
@@ -38,10 +38,10 @@ class ComponentToPrint extends React.Component {
                   <br />
                   <span>(302) 555-0107</span>
                 </p>
-                <h6 className='font-lexend font-normal text-[#000000] text-base leading-7 mt-2'>
+                <h6 className='font-lexend font-semibold text-[#000000] text-sm leading-7 mt-2'>
                   Creation Date
                 </h6>
-                <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+                <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                   Jan 02, 2024
                 </p>
               </div>
@@ -49,10 +49,10 @@ class ComponentToPrint extends React.Component {
                 <h4 className='font-lexend font-bold text-[#000000] text-base leading-7'>
                   Bill To
                 </h4>
-                <h6 className='font-lexend font-normal text-[#000000] text-base leading-7 mt-2'>
+                <h6 className='font-lexend font-normal text-[#000000] text-sm leading-7 mt-2'>
                   TRANSPORT LLC
                 </h6>
-                <p className='font-inter font-normal text-[#404040] text-base leading-5 mt-2'>
+                <p className='font-inter font-normal text-[#404040] text-sm leading-5 mt-2'>
                   <span>Albert Flores</span>
                   <br />
                   <span>
@@ -63,10 +63,10 @@ class ComponentToPrint extends React.Component {
                   <br />
                   <span>(671) 555-0110</span>
                 </p>
-                <h6 className='font-lexend font-normal text-[#000000] text-base leading-7 mt-2'>
+                <h6 className='font-lexend font-semibold text-[#000000] text-sm leading-7 mt-2'>
                   Due Date
                 </h6>
-                <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+                <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                   Jan 02, 2024
                 </p>
               </div>
@@ -74,16 +74,18 @@ class ComponentToPrint extends React.Component {
           </div>
           <div className='right flex justify-end mt-6 md:mt-0'>
             <div className='flex flex-col gap-1'>
-              <button className='font-inter text-base leading-7 font-normal text-[#04B076] bg-[#94FEA3] rounded px-2 w-[50%]'>
+              <button className='font-inter text-sm leading-7 font-semibold text-[#04B076] bg-[#94FEA3] rounded px-2 w-[50%]'>
                 Paid
               </button>
-              <h4 className='font-lexend font-bold text-[#000000] text-base leading-7'>
+             <div className="">
+             <h4 className='font-lexend font-semibold text-[#000000] text-base leading-7'>
                 INV - #246098
               </h4>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-lexend font-normal text-[#000000] text-sm '>
                 Invoice Number
               </p>
               <img src={Whattsup} alt='' className='w-[115px] h-[115px]' />
+             </div>
             </div>
           </div>
         </div>
@@ -206,56 +208,56 @@ class ComponentToPrint extends React.Component {
 
         <div className='notes flex  md:ml-[60px]  flex-col md:flex-row justify-between mt-20'>
           <div className='left'>
-            <h4 className='font-lexend font-bold text-[#000000] text-base leading-7'>
+            <h4 className='font-lexend font-semibold text-[#000000] text-base leading-7'>
               NOTES
             </h4>
-            <p className='font-inter font-normal text-[#404040] text-base leading-5 mt-2'>
+            <p className='font-inter font-normal text-[#404040] text-sm leading-5 mt-2'>
               We appreciate your business. Should you need us to <br /> add VAT
               or extra notes let us know!
             </p>
           </div>
           <div className='right flex flex-col gap-4 mt-6 md:mt-0'>
             <div className='flex flex-row gap-[100px] md:gap-[200px] justify-between border-b'>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Subtotal:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 {" "}
                 $700
               </p>
             </div>
             <div className='flex flex-row gap-[100px] md:gap-[200px] justify-between border-b'>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Shipping:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 {" "}
                 $142
               </p>
             </div>
             <div className='flex flex-row gap-[100px] md:gap-[200px] justify-between border-b'>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Discount:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 {" "}
                 $250
               </p>
             </div>
             <div className='flex flex-row gap-[100px] md:gap-[200px] justify-between border-b'>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Taxes:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 {" "}
                 15%
               </p>
             </div>
             <div className='flex flex-row gap-[100px] md:gap-[200px] justify-between '>
-              <p className='font-inter font-bold text-[#404040] text-base leading-7'>
+              <p className='font-lexend font-semibold text-[#404040] text-sm leading-7'>
                 Total:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-base leading-7'>
+              <p className='font-inter font-semibold text-[#404040] text-sm leading-7'>
                 {" "}
                 $659.5
               </p>
@@ -291,7 +293,7 @@ class Example extends React.Component {
       <div>
         <div className=' flex flex-col md:flex-row justify-between  bg-white mt-20 md:ml-[60px]   py-8 px-10 items-center'>
           <div className='left flex flex-col gap-2 relative'>
-            <h2 className='font-lexend font-bold text-[#404040] text-4xl leading-9'>
+            <h2 className='font-lexend font-bold text-[#404040] text-2xl leading-9'>
               Invoice Details
             </h2>
           </div>
@@ -299,8 +301,8 @@ class Example extends React.Component {
             <div>
               <ReactToPrint
                 trigger={() => (
-                  <button className='flex py-[10px] text-[20px] px-[16px] bg-white text-[#404040] border border-[#c0c0c0] rounded items-center gap-2 font-lexend'>
-                    <img src={Print} className='w-6 h-6  ' alt='' />
+                  <button className='flex py-[10px] text-sm px-[16px] bg-white text-[#404040]  border border-[#c0c0c0] rounded items-center gap-2 font-lexend'>
+                    <img src={Print} className='w-4 h-4  ' alt='' />
                     Print
                   </button>
                 )}
@@ -310,9 +312,9 @@ class Example extends React.Component {
 
             <button
               onClick={handleDownloadPDF}
-              className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2 text-[20px] font-lexend'
+              className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2 text-sm font-lexend'
             >
-              <img src={Download} className='w-6 h-6  ' alt='' />
+              <img src={Download} className='w-4 h-4  ' alt='' />
               Download
             </button>
           </div>

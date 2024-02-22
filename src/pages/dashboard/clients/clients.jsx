@@ -2,6 +2,7 @@ import React from "react";
 import Addclients from "../../../components/clients/addclients";
 import Clienttabledata from "../../../components/clients/clientlist/clienttabledata";
 
+
 const Clients = () => {
   return (
     <div>

@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import Line from "../../../assets/images/vendorformlineblack.svg";
 import Detailsandhistorytabs from "../../detailsandhistorytabs/detailsandhistorytabs";
+import Phonefield from "../../phonefield/phonefield";
 
 const Vendorform = () => {
   // const [name , setName] = useState("");
@@ -58,7 +59,7 @@ const Vendorform = () => {
     <div className='bg-white px-4 pt-4 '>
       <div className='grid grid-cols-1 mt-[100px] md:ml-[60px] border border-[#ebebeb] bg-[#fff] px-8 py-16 rounded'>
         <div className=''>
-          <h1 className='font-lexend text-3xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
+          <h1 className='font-lexend text-2xl mt-[-25px] font-bold leading-tight text-[#404040] mb-8 '>
             Add Vendor
           </h1>
           <Formik
@@ -72,7 +73,7 @@ const Vendorform = () => {
                   <div className='w-full'>
                     <label
                       htmlFor='name'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Name
                     </label>
@@ -81,7 +82,7 @@ const Vendorform = () => {
                       id='name'
                       name='name'
                       placeholder='Enter your name'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter text-sm  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='name'
@@ -89,10 +90,10 @@ const Vendorform = () => {
                       className='text-red-500 text-sm mt-1'
                     />
                   </div>
-                  <div className='w-full'>
+                  {/* <div className='w-full'>
                     <label
                       htmlFor='phonenumber'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Phone Number
                     </label>
@@ -101,18 +102,33 @@ const Vendorform = () => {
                       id='phonenumber'
                       name='phonenumber'
                       placeholder=' +1 '
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter text-sm  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='phonenumber'
                       component='div'
                       className='text-red-500 text-sm mt-1'
                     />
+                  </div> */}
+                     <div className='w-full'>
+                    <label
+                      for='phone'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
+                    >
+                      Phone Number
+                    </label>
+                    {/* <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    class="font-inter bg-gray-50 border border-gray-300 text-[#C0C0C0] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                  /> */}
+                    <Phonefield />
                   </div>
                   <div className='w-full'>
                     <label
                       htmlFor='alias'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Alias
                     </label>
@@ -121,12 +137,12 @@ const Vendorform = () => {
                       id='alias'
                       name='alias'
                       placeholder='Alias'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='alias'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                 </div>
@@ -134,7 +150,7 @@ const Vendorform = () => {
                   <div className='w-full'>
                     <label
                       htmlFor='ruc'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Ruc
                     </label>
@@ -143,18 +159,18 @@ const Vendorform = () => {
                       id='ruc'
                       name='ruc'
                       placeholder='Ruc'
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='ruc'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div className='w-full'>
                     <label
                       htmlFor='dv'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       DV
                     </label>
@@ -163,12 +179,12 @@ const Vendorform = () => {
                       id='dv'
                       name='dv'
                       placeholder=' Dv '
-                      className='border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
+                      className='border-2 border-[#C0C0C0] text-[#c0c0c0] sm:text-sm  rounded-md leading-5 font-normal font-inter  block w-full p-2.5'
                     />
                     <ErrorMessage
                       name='dv'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                 </div>
@@ -176,7 +192,7 @@ const Vendorform = () => {
                   <div className='flex justify-between flex-row'>
                     <label
                       htmlFor='address'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Address
                     </label>
@@ -193,7 +209,7 @@ const Vendorform = () => {
                   <ErrorMessage
                     name='address'
                     component='div'
-                    className='text-red-500 text-sm mt-1'
+                    className='text-red-500 font-inter text-sm mt-1'
                   />
                 </div>
                 <div className='mt-6'>
@@ -202,7 +218,7 @@ const Vendorform = () => {
                     type='submit'
                     name='submit'
                     value='submit'
-                    className='bg-[#634af9] text-[#ffffff] rounded font-inter font-normal text-lg leading-7 px-10 py-2'
+                    className='bg-[#634af9] text-[#ffffff] rounded font-inter font-normal text-sm leading-7 px-10 py-2'
                   >
                     Submit
                   </button>
