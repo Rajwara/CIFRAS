@@ -202,8 +202,8 @@ const Navandsidebar = () => {
               </div>
             </div>
             <div class='flex items-center   '>
-              <div className='border border-[#ebebeb] rounded-md p-2  '>
-                <img src={NotificationIcon} className=" w-[500px] md:w-[200px] lg:w-[100px] xl:w-[50px] h-6 "  alt='NotificationIcon' />
+              <div className='border border-[#ebebeb] rounded-md py-2 '>
+                <img src={NotificationIcon} className=" w-[500px] md:w-[200px] lg:w-[100px] xl:w-[50px]  h-4 "  alt='NotificationIcon' />
                 {/* <span class="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-normal text-[#FF3D00] font-inter ">
                   2*
                 </span> */}
