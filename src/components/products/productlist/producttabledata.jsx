@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState ,useEffect} from "react";
 import Next from "../../../assets/images/nextbuttonfortable.svg";
 import Prev from "../../../assets/images/prevbuttonfortable.svg";
 import Edit from "../../../assets/images/edittablebutton.svg";
@@ -6,9 +6,24 @@ import Delete from "../../../assets/images/deletetablebutton.svg";
 import * as XLSX from "xlsx";
 import ExportXcelIcon from "../../../assets/images/exportexcelicon.svg";
 import FilterIcon from "../../../assets/images/filtericon.svg";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 
 const Producttabledata = () => {
   const [selectedItems, setSelectedItems] = useState([]);
+  const [isFilterOpen, setIsFilterOpen] = useState(false); 
+  const [selectedFilter, setSelectedFilter] = useState("Select...");
+
+  const handledropdown = () => {
+    setSelectedFilter(selectedFilter);
+  };
+
+
+  const handleFilterToggle = () => {
+    setIsFilterOpen(!isFilterOpen);
+  };
+
+
 
   const allData = [
     {
@@ -103,6 +118,23 @@ const Producttabledata = () => {
     },
   ];
 
+  useEffect(() => {
+    const createDateInput = document.querySelector(".date-create input");
+    const dueDateInput = document.querySelector(".due-date input");
+    if (createDateInput) {
+      flatpickr(createDateInput, {
+        dateFormat: "Y-m-d",
+        // Add other options or customization as needed
+      });
+    }
+    if (dueDateInput) {
+      flatpickr(dueDateInput, {
+        dateFormat: "Y-m-d",
+        // Add other options or customization as needed
+      });
+    }
+  }, []);
+
   const handleCheckboxChange = (id) => {
     const isSelected = selectedItems.includes(id);
 
@@ -175,64 +207,107 @@ const Producttabledata = () => {
           <input
             type='text'
             id='table-search-users'
-            className='block p-2 ps-10 text-sm font-medium text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
+            className='block p-2 ps-10 text-sm font-medium text-gray-900 border border-gray-300 rounded-lg md:w-60 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
             placeholder='Search for Products'
           />
         </div>
-        <div className='flex flex-col md:flex-row gap-6'>
-          <div className='flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-2 py-2 gap-2 items-center'>
-            <img src={ExportXcelIcon} className="h-4 w-4" alt='' />
-            <button
-              onClick={generateExcel}
-              className='text-[#404040] font-normal font-inter text-sm leading-7 '
-            >
-              Export to Excel
-            </button>
+        <div className='flex flex-col md:flex-row gap-6 text-[#404040] font-inter'>
+          <div  className={`inputsopentoclickfilter flex items-center gap-2 ${
+              isFilterOpen ? "block" : "hidden"
+            }`}>
+            <div className='flex items-center'>
+              <label htmlFor='' className="mr-2 text-sm font-medium">Amount</label>
+              <input
+                type='number'
+                name='amountto'
+                placeholder='$ 0.00'
+                className='w-[100px] font-inter border border-gray-300 text-gray-900 text-sm rounded-lg'
+              />
+              <span className=''>--</span>
+              <input
+                type='number'
+                name='amountfrom'
+                placeholder='$ 100.00'
+                className='w-[100px] font-inter border border-gray-300 text-gray-900 text-sm rounded-lg'
+              />
+            </div>
+            <div className='flex gap-2'>
+              <div class='relative max-w-sm date-create'>
+                <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                  <svg
+                    class='w-4 h-4 text-[#404040] '
+                    aria-hidden='true'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                  >
+                    <path d='M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z' />
+                  </svg>
+                </div>
+                <input
+                  datepicker
+                  datepicker-autohide
+                  type='text'
+                  class=' font-inter border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[150px] ps-10 mt-1 '
+                  placeholder='Select date'
+                />
+              </div>
+              <div class='relative max-w-sm due-date'>
+                <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                  <svg
+                    class='w-4 h-4 text-[#404040]'
+                    aria-hidden='true'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                  >
+                    <path d='M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z' />
+                  </svg>
+                </div>
+                <input
+                  datepicker
+                  datepicker-autohide
+                  type='text'
+                  class=' font-inter border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[150px] ps-10 mt-1 '
+                  placeholder='Select date'
+                />
+              </div>
+              <select
+                  as='select'
+                  id='selectOption'
+                  name='selectedOption'
+                  className='border border-[#ebebeb] text-[#c0c0c0] font-inter border border-gray-300 text-gray-900 text-sm rounded-lg w-full mt-1'
+                >
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='' disabled>
+                    Select an option...
+                  </option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option1'>Option 1</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option2'>Option 2</option>
+                  <option className="font-inter font-normal text-[#404040] text-sm leading-5" value='option3'>Option 3</option>
+                </select>
+                </div>
           </div>
           <button
             id='dropdownActionButton'
             data-dropdown-toggle='dropdownAction'
             className='inline-flex text-sm mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-2 py-2 gap-2 items-center text-[#404040] font-normal font-inter  bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  '
             type='button'
+            onClick={handleFilterToggle}
           >
-            <img src={FilterIcon} className="h-4 w-4" alt='' />
+            <img src={FilterIcon} className='h-4 w-4' alt='' />
             <span className='sr-only'>Action button</span>
             Filters
-
           </button>
           {/* <!-- Dropdown menu --> */}
-          <div
-            id='dropdownAction'
-            className='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '
-          >
-            <ul
-              className='py-1  text-[#404040] font-inter text-[12px]'
-              aria-labelledby='dropdownActionButton'
+
+          <div className='flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-2 py-2 gap-2 items-center'>
+            <img src={ExportXcelIcon} className='h-4 w-4' alt='' />
+            <button
+              onClick={generateExcel}
+              className='text-[#404040] font-normal font-inter text-sm leading-7 '
             >
-              <li>
-                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
-                  Reward
-                </a>
-              </li>
-              <li>
-                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
-                  Promote
-                </a>
-              </li>
-              <li>
-                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
-                  Activate account
-                </a>
-              </li>
-            </ul>
-            <div className='py-1'>
-              <a
-                href='#'
-                className='block px-4 py-2 text-[#404040] font-inter text-[12px] '
-              >
-                Delete User
-              </a>
-            </div>
+              Export to Excel
+            </button>
           </div>
         </div>
       </div>
@@ -288,13 +363,13 @@ const Producttabledata = () => {
               >
                 <td className='w-4 p-4'>
                   <div className='flex items-center'>
-                  <input
-                    id={`checkbox-table-search-${data.id}`}
-                    type='checkbox'
-                    className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
-                    checked={selectedItems.includes(data.id)}
-                    onChange={() => handleCheckboxChange(data.id)}
-                  />
+                    <input
+                      id={`checkbox-table-search-${data.id}`}
+                      type='checkbox'
+                      className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                      checked={selectedItems.includes(data.id)}
+                      onChange={() => handleCheckboxChange(data.id)}
+                    />
                     <label
                       htmlFor={`checkbox-table-search-${data.id}`}
                       className='sr-only'
