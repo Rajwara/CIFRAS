@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import Profile from "../../../assets/images/dashboard/john.svg";
 import Next from "../../../assets/images/nextbuttonfortable.svg";
 import Prev from "../../../assets/images/prevbuttonfortable.svg";
 import Edit from "../../../assets/images/edittablebutton.svg";
 import Delete from "../../../assets/images/deletetablebutton.svg";
+import * as XLSX from "xlsx";
+import ExportXcelIcon from "../../../assets/images/exportexcelicon.svg";
+import FilterIcon from "../../../assets/images/filtericon.svg";
 
 const Invoicelisttable = () => {
+  const [selectedItems, setSelectedItems] = useState([]);
   const tabledata = [
     {
       id: 1,
@@ -98,6 +102,29 @@ const Invoicelisttable = () => {
       role: "Edit User",
     },
   ];
+
+  const handleCheckboxChange = (id) => {
+    const isSelected = selectedItems.includes(id);
+
+    if (isSelected) {
+      setSelectedItems(selectedItems.filter((itemId) => itemId !== id));
+    } else {
+      setSelectedItems([...selectedItems, id]);
+    }
+  };
+
+  const handleSelectAll = () => {
+    const allIds = tabledata.map((data) => data.id);
+
+    if (selectedItems.length === allIds.length) {
+      // If all are selected, unselect all
+      setSelectedItems([]);
+    } else {
+      // Otherwise, select all
+      setSelectedItems(allIds);
+    }
+  };
+
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -106,100 +133,121 @@ const Invoicelisttable = () => {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+
+  const tableRef = useRef(null);
+
+  const generateExcel = () => {
+    // Assuming allData is the array containing your table data
+    const ws = XLSX.utils.json_to_sheet(tabledata);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet 1");
+    XLSX.writeFile(wb, "table.xlsx", {
+      bookType: "xlsx",
+      mimeType:
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    });
+  };
+
+
   return (
-    <div className=' relative overflow-x-auto border border-[#ebebeb] sm:rounded-lg p-5 bg-white'>
-    <div class='flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white '>
-      <div>
-        {/* <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="font-inter inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 " type="button">
-          <span class="sr-only">Action button</span>
-          Action
-          <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-          </svg>
-      </button> */}
-        <h3 className='font-lexend text-[18px] text-[#404040] font-bold'>Recent Order</h3>
-        <div
-          id='dropdownAction'
-          class='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '
-        >
-          <ul
-            class='py-1 text-sm text-[#404040] '
-            aria-labelledby='dropdownActionButton'
-          >
-            <li>
-              <a
-                href='#'
-                class='font-inter  block px-4 py-2 hover:bg-gray-100 '
-              >
-                Reward
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                class='font-inter block px-4 py-2 hover:bg-gray-100 '
-              >
-                Promote
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                class='font-inter block px-4 py-2 hover:bg-gray-100 '
-              >
-                Activate account
-              </a>
-            </li>
-          </ul>
-          <div class='py-1'>
-            <a
-              href='#'
-              class='font-inter block px-4 py-2 text-sm text-[#404040] hover:bg-gray-100 '
+    <div className=' relative overflow-x-auto border border-[#ebebeb] sm:rounded-lg  bg-white'>
+     <div className='flex items-center justify-between rounded flex-column p-8 flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white '>
+        <label for='table-search' className='sr-only '>
+          Search
+        </label>
+        <div className='relative'>
+          <div className='absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none'>
+            <svg
+              className='w-4 h-4 text-gray-500 '
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 20 20'
             >
-              Delete User
-            </a>
+              <path
+                stroke='currentColor'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
+              />
+            </svg>
+          </div>
+          <input
+            type='text'
+            id='table-search-users'
+            className='block p-2 ps-10 text-sm font-medium text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
+            placeholder='Search for Products'
+          />
+        </div>
+        <div className='flex flex-col md:flex-row gap-6'>
+          <div className='flex mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-2 py-2 gap-2 items-center'>
+            <img src={ExportXcelIcon} className="h-4 w-4" alt='' />
+            <button
+              onClick={generateExcel}
+              className='text-[#404040] font-normal font-inter text-sm leading-7 '
+            >
+              Export to Excel
+            </button>
+          </div>
+          <button
+            id='dropdownActionButton'
+            data-dropdown-toggle='dropdownAction'
+            className='inline-flex text-sm mt-0 md:mt-6 lg:mt-0 border border-[#ebebeb] rounded-md px-2 py-2 gap-2 items-center text-[#404040] font-normal font-inter  bg-white  focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  '
+            type='button'
+          >
+            <img src={FilterIcon} className="h-4 w-4" alt='' />
+            <span className='sr-only'>Action button</span>
+            Action
+          </button>
+          {/* <!-- Dropdown menu --> */}
+          <div
+            id='dropdownAction'
+            className='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '
+          >
+            <ul
+              className='py-1  text-[#404040] font-inter text-[12px]'
+              aria-labelledby='dropdownActionButton'
+            >
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+                  Reward
+                </a>
+              </li>
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+                  Promote
+                </a>
+              </li>
+              <li>
+                <a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+                  Activate account
+                </a>
+              </li>
+            </ul>
+            <div className='py-1'>
+              <a
+                href='#'
+                className='block px-4 py-2 text-[#404040] font-inter text-[12px] '
+              >
+                Delete User
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <label for='table-search' class='sr-only font-inter '>
-        Search
-      </label>
-      <div class='relative'>
-        <div class='absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none'>
-          <svg
-            class='w-4 h-4 text-gray-500 '
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 20 20'
-          >
-            <path
-              stroke='currentColor'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
-              d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
-            />
-          </svg>
-        </div>
-        <input
-          type='text'
-          id='table-search-users'
-          class='font-inter block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500   '
-          placeholder='Search for Orders'
-        />
-      </div>
-    </div>
-    <table class='w-full text-sm text-left rtl:text-right text-[#404040] '>
+    <table ref={tableRef} class='w-full text-sm text-left rtl:text-right text-[#404040] '>
       <thead class='text-xs text-[#404040]  uppercase bg-gray-50  '>
         <tr>
           <th scope='col' class='p-4'>
             <div class='flex items-center'>
-              <input
-                id='checkbox-all-search'
-                type='checkbox'
-                class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
-              />
+            <input
+                    id='checkbox-all-search'
+                    type='checkbox'
+                    className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                    checked={selectedItems.length === tabledata.length}
+                    onChange={handleSelectAll}
+                  />
               <label for='checkbox-all-search' class='sr-only'>
                 checkbox
               </label>
@@ -239,12 +287,17 @@ const Invoicelisttable = () => {
           >
             <td class='w-4 p-4'>
               <div class='flex items-center'>
-                <input
-                  id='checkbox-table-search-1'
-                  type='checkbox'
-                  class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
-                />
-                <label for='checkbox-table-search-1' class='sr-only'>
+              <input
+                    id={`checkbox-table-search-${data.id}`}
+                    type='checkbox'
+                    className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                    checked={selectedItems.includes(data.id)}
+                    onChange={() => handleCheckboxChange(data.id)}
+                  />
+                    <label
+                      htmlFor={`checkbox-table-search-${data.id}`}
+                      className='sr-only'
+                    >
                   checkbox
                 </label>
               </div>

@@ -510,7 +510,7 @@ const Navandsidebar = () => {
                 </svg>
               </button>
               <ul id='dropdown-ex' class='hidden py-2 space-y-2'>
-                <li className='flex-1 items-center py-2 rounded hover:bg-gray-100 ml-12'>
+                <li className='flex items-center py-2 rounded hover:bg-gray-100 ml-12'>
                   <img src={dropdownIcon} className="w-2 h-2"  alt='' />
                   <a
                     href='/vendor'

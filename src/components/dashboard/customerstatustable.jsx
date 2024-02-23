@@ -6,6 +6,29 @@ import Edit from "../../assets/images/edittablebutton.svg";
 import Delete from "../../assets/images/deletetablebutton.svg";
 
 const Customerstatustable = () => {
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  const handleCheckboxChange = (id) => {
+    const isSelected = selectedItems.includes(id);
+
+    if (isSelected) {
+      setSelectedItems(selectedItems.filter((itemId) => itemId !== id));
+    } else {
+      setSelectedItems([...selectedItems, id]);
+    }
+  };
+
+  const handleSelectAll = () => {
+    const allIds = tabledata.map((data) => data.id);
+
+    if (selectedItems.length === allIds.length) {
+      // If all are selected, unselect all
+      setSelectedItems([]);
+    } else {
+      // Otherwise, select all
+      setSelectedItems(allIds);
+    }
+  };
   const tabledata = [
     {
       id: 1,
@@ -108,8 +131,8 @@ const Customerstatustable = () => {
   };
 
   return (
-    <div className=' relative overflow-x-auto border border-[#ebebeb] sm:rounded-lg p-5 bg-white'>
-      <div class='flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white '>
+    <div className=' relative overflow-x-auto border border-[#ebebeb] sm:rounded-lg  bg-white'>
+      <div class='flex items-center justify-between flex-column flex-wrap md:flex-row p-8 space-y-4 md:space-y-0 pb-4 bg-white '>
         <div>
           {/* <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="font-inter inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 " type="button">
             <span class="sr-only">Action button</span>
@@ -196,11 +219,13 @@ const Customerstatustable = () => {
           <tr>
             <th scope='col' class='p-4'>
               <div class='flex items-center'>
-                <input
-                  id='checkbox-all-search'
-                  type='checkbox'
-                  class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
-                />
+              <input
+                    id='checkbox-all-search'
+                    type='checkbox'
+                    className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                    checked={selectedItems.length === tabledata.length}
+                    onChange={handleSelectAll}
+                  />
                 <label for='checkbox-all-search' class='sr-only'>
                   checkbox
                 </label>
@@ -240,12 +265,17 @@ const Customerstatustable = () => {
             >
               <td class='w-4 p-4'>
                 <div class='flex items-center'>
-                  <input
-                    id='checkbox-table-search-1'
+                <input
+                    id={`checkbox-table-search-${data.id}`}
                     type='checkbox'
-                    class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                    className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                    checked={selectedItems.includes(data.id)}
+                    onChange={() => handleCheckboxChange(data.id)}
                   />
-                  <label for='checkbox-table-search-1' class='sr-only'>
+                    <label
+                      htmlFor={`checkbox-table-search-${data.id}`}
+                      className='sr-only'
+                    >
                     checkbox
                   </label>
                 </div>

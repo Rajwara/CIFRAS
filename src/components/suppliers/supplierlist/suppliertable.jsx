@@ -8,6 +8,29 @@ import ExportXcelIcon from "../../../assets/images/exportexcelicon.svg";
 import FilterIcon from "../../../assets/images/filtericon.svg";
 
 const Suppliertable = () => {
+  const [selectedItems, setSelectedItems] = useState([]);
+  const handleCheckboxChange = (id) => {
+    const isSelected = selectedItems.includes(id);
+
+    if (isSelected) {
+      setSelectedItems(selectedItems.filter((itemId) => itemId !== id));
+    } else {
+      setSelectedItems([...selectedItems, id]);
+    }
+  };
+
+  const handleSelectAll = () => {
+    const allIds = allData.map((data) => data.id);
+
+    if (selectedItems.length === allIds.length) {
+      // If all are selected, unselect all
+      setSelectedItems([]);
+    } else {
+      // Otherwise, select all
+      setSelectedItems(allIds);
+    }
+  };
+
   const allData = [
     {
       id: 1,
@@ -133,7 +156,7 @@ const Suppliertable = () => {
   };
 
   return (
-    <div className='border border-[#ebebeb] rounded'>
+    <div className='border border-[#ebebeb] rounded '>
       <div className='flex items-center justify-between rounded flex-column p-8 flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white '>
         <label for='table-search' className='sr-only'>
           Search
@@ -228,10 +251,12 @@ const Suppliertable = () => {
             <tr>
               <th scope='col' className='p-4'>
                 <div className='flex items-center'>
-                  <input
+                <input
                     id='checkbox-all-search'
                     type='checkbox'
                     className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                    checked={selectedItems.length === allData.length}
+                    onChange={handleSelectAll}
                   />
                   <label for='checkbox-all-search' className='sr-only'>
                     checkbox
@@ -266,12 +291,17 @@ const Suppliertable = () => {
               <tr key={data.id} className='bg-white border-b '>
                 <td className='w-4 p-4'>
                   <div className='flex items-center'>
-                    <input
-                      id='checkbox-table-search-1'
-                      type='checkbox'
-                      className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 '
-                    />
-                    <label for='checkbox-table-search-1' className='sr-only'>
+                  <input
+                    id={`checkbox-table-search-${data.id}`}
+                    type='checkbox'
+                    className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 '
+                    checked={selectedItems.includes(data.id)}
+                    onChange={() => handleCheckboxChange(data.id)}
+                  />
+                    <label
+                      htmlFor={`checkbox-table-search-${data.id}`}
+                      className='sr-only'
+                    >
                       checkbox
                     </label>
                   </div>
