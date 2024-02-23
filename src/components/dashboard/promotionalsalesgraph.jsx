@@ -88,7 +88,7 @@ const Promotionalsalesgraph = () => {
 
       <div className='flex justify-between p-4 md:p-6 pb-0 md:pb-0'>
       <h5 className='leading-none text-[18px] font-bold text-[#404040]  pb-2 font-lexend'>
-              Total profit without tax included.
+      Promotional Sales
             </h5>
           
           
