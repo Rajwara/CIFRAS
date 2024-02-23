@@ -84,7 +84,7 @@ const Productform = () => {
                     Description
                   </label>
                   {/* <Field as="textarea" id="description" name="description" rows="4" placeholder="Description" className="border border-[#C0C0C0] text-[#c0c0c0] sm:text-sm rounded-md leading-5 font-normal font-inter block w-full p-2.5" /> */}
-                  <div class='w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 '>
+                  <div class='w-full mb-4 border-2 border-[#C0C0C0] rounded-lg bg-gray-50 '>
                     <div class='flex items-center justify-between px-3 py-2 border-b '>
                       <div class='flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse '>
                         <div class='flex items-center space-x-1 rtl:space-x-reverse sm:pe-4'>

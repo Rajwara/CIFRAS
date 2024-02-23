@@ -109,9 +109,13 @@ const TotalProfitGraph = () => {
   return (
     <div className='w-full bg-white font-inter rounded-lg shadow '>
       <div className='flex justify-between p-4 md:p-6 pb-0 md:pb-0'>
+      <div>
+      <p  className="font-lexend font-semibold text-sm text-[#3c3c3c] pb-2">Total Price</p>
+
       <h5 className='leading-none text-[18px] font-bold text-[#404040]  pb-2 font-lexend'>
-              Total profit without tax included.
+             $8,950.00
             </h5>
+      </div>
           
           
             <button
@@ -139,7 +143,7 @@ const TotalProfitGraph = () => {
               </svg>
             </button>
       </div>
-      <div class='flex p-1 pl-6 gap-3'>
+      <div class='flex  pl-6 gap-3'>
                 <div class='flex  items-center font-lexend   text-[14px] font-normal '>
                   <div class='h-2 w-2 rounded-full bg-[#7e3bf2] me-2 font-inter '></div>{" "}
                   Revenue
@@ -157,7 +161,14 @@ const TotalProfitGraph = () => {
           height='350'
         />
       </div>
-      <div className='grid grid-cols-1 items-center border-[#ebebeb] border-t  justify-between mt-14 p-4 md:p-6 pt-0 md:pt-0 font-inter '></div>
+      <div>
+      <h5 className='leading-none text-[18px] font-bold text-[#404040]  p-4 font-lexend'>
+              Total profit without tax included.
+            </h5>
+      </div>
+      <div className='grid grid-cols-1 items-center border-[#ebebeb] border-t  justify-between  p-4 md:p-6 pt-0 md:pt-0 font-inter '>
+     
+      </div>
     </div>
   );
 };

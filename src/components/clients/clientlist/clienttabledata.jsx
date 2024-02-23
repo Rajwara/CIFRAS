@@ -230,7 +230,7 @@ const Clienttabledata = () => {
           >
             <img src={FilterIcon} className="w-4 h-4" alt='' />
             <span className='sr-only'>Action button</span>
-            Action
+            Filters
           </button>
           {/* <!-- Dropdown menu --> */}
           <div

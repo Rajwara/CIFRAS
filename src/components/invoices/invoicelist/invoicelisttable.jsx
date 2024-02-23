@@ -198,7 +198,7 @@ const Invoicelisttable = () => {
           >
             <img src={FilterIcon} className="h-4 w-4" alt='' />
             <span className='sr-only'>Action button</span>
-            Action
+            Filters
           </button>
           {/* <!-- Dropdown menu --> */}
           <div

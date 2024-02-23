@@ -118,10 +118,10 @@ class ComponentToPrint extends React.Component {
                     1
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
-                  <span className="">
+                  <span className="font-lexend font-medium text-sm">
                 ChawkBazar Laravel Flutter Mobile App
                 </span>
-                <span className="text-[#a3a3a3]">
+                <span className="text-[#a3a3a3] font-inter">
                 Along With Wordpress Themes & Plug...
                 </span>
                 </td>
@@ -137,13 +137,13 @@ class ComponentToPrint extends React.Component {
             </tr>
             <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
                 <th scope="row" class="px-6 py-4 font-medium text-[#404040] whitespace-nowrap ">
-                    1
+                    2
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
-                  <span className="">
+                  <span className="font-lexend font-medium text-sm ">
                 ChawkBazar Laravel Flutter Mobile App
                 </span>
-                <span className="text-[#a3a3a3]">
+                <span className="text-[#a3a3a3] font-inter">
                 Along With Wordpress Themes & Plug...
                 </span>
                 </td>
@@ -159,13 +159,13 @@ class ComponentToPrint extends React.Component {
             </tr>
             <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
                 <th scope="row" class="px-6 py-4 font-medium text-[#404040] whitespace-nowrap ">
-                    1
+                    3
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
-                  <span className="">
+                  <span className="font-lexend font-medium text-sm">
                 ChawkBazar Laravel Flutter Mobile App
                 </span>
-                <span className="text-[#a3a3a3]">
+                <span className="text-[#a3a3a3] font-inter">
                 Along With Wordpress Themes & Plug...
                 </span>
                 </td>
@@ -181,13 +181,13 @@ class ComponentToPrint extends React.Component {
             </tr>
             <tr class="odd:bg-white  even:bg-gray-50  border-b font-inter">
                 <th scope="row" class="px-6 py-4 font-medium text-[#404040] whitespace-nowrap ">
-                    1
+                    4
                 </th>
                 <td class="px-6 py-4 flex flex-col gap-1">
-                  <span className="">
+                  <span className="font-lexend font-medium text-sm">
                 ChawkBazar Laravel Flutter Mobile App
                 </span>
-                <span className="text-[#a3a3a3]">
+                <span className="text-[#a3a3a3] font-inter">
                 Along With Wordpress Themes & Plug...
                 </span>
                 </td>
@@ -221,7 +221,7 @@ class ComponentToPrint extends React.Component {
               <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Subtotal:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
+              <p className='font-inter font-semibold text-[#484848] text-sm leading-7'>
                 {" "}
                 $700
               </p>
@@ -230,7 +230,7 @@ class ComponentToPrint extends React.Component {
               <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Shipping:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
+              <p className='font-inter font-semibold text-[#484848] text-sm leading-7'>
                 {" "}
                 $142
               </p>
@@ -239,7 +239,7 @@ class ComponentToPrint extends React.Component {
               <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Discount:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
+              <p className='font-inter font-semibold text-[#484848] text-sm leading-7'>
                 {" "}
                 $250
               </p>
@@ -248,16 +248,16 @@ class ComponentToPrint extends React.Component {
               <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
                 Taxes:
               </p>
-              <p className='font-inter font-normal text-[#404040] text-sm leading-7'>
+              <p className='font-inter font-semibold text-[#484848] text-sm leading-7'>
                 {" "}
                 15%
               </p>
             </div>
             <div className='flex flex-row gap-[100px] md:gap-[200px] justify-between '>
-              <p className='font-lexend font-semibold text-[#404040] text-sm leading-7'>
+              <p className='font-lexend font-semibold text-[#404040] text-base leading-7'>
                 Total:
               </p>
-              <p className='font-inter font-semibold text-[#404040] text-sm leading-7'>
+              <p className='font-inter font-semibold text-[#484848] text-base leading-7'>
                 {" "}
                 $659.5
               </p>

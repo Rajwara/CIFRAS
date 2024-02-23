@@ -466,12 +466,12 @@ const Orderform = () => {
                   className='w-full mx-auto h-[2px] mt-4'
                   alt=''
                 />
-                <div className='flex mt-4 flex-row justify-between font-inter font-semibold text-[#404040] text-sm leading-7'>
+                <div className='flex mt-4 flex-row justify-between font-inter font-semibold text-[#404040] text-base leading-7'>
                   <p className='font-bold'>Total</p>
                   <p>$0.00</p>
                 </div>
                 <div className='mt-6 mx-auto'>
-                  <button className='bg-[#634AF9] rounded-md px-5 py-3 text-white font-inter font-normal text-sm leading-7 '>
+                  <button className='bg-[#634AF9] rounded-md px-5 py-3 text-white font-lexend font-normal text-sm leading-7 '>
                     Back to Store
                   </button>
                 </div>

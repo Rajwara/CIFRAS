@@ -432,7 +432,7 @@ const Quoteform1 = () => {
             <Form className=''>
               <div className='flex flex-col md:flex-row justify-between  bg-white   items-center'>
                 <div className='left flex flex-col gap-2 relative'>
-                  <h2 className='font-lexend font-bold text-[#404040] text-xl leading-9'>
+                  <h2 className='font-lexend font-bold text-[#404040] text-2xl leading-9'>
                     Quote Information
                   </h2>
                 </div>

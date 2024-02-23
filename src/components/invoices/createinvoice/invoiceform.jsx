@@ -560,7 +560,7 @@ const Invoiceform = () => {
                   <p className='font-inter font-normal text-sm text-[#404040]'>
                     Taxes:
                   </p>
-                  <p className='font-inter font-bold text-sm text-[#404040]'>
+                  <p className='font-inter font-bold text-base text-[#404040]'>
                     Total:{" "}
                   </p>
                 </div>
@@ -577,7 +577,7 @@ const Invoiceform = () => {
                   <p className='font-inter font-normal text-[16px] text-[#FF3D00]'>
                     30%
                   </p>
-                  <p className='font-inter font-normal text-sm text-[#404040]'>
+                  <p className='font-inter font-normal text-base text-[#404040]'>
                     $840.3
                   </p>
                 </div>

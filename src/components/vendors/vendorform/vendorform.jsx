@@ -218,7 +218,7 @@ const Vendorform = () => {
                     type='submit'
                     name='submit'
                     value='submit'
-                    className='bg-[#634af9] text-[#ffffff] rounded font-inter font-normal text-sm leading-7 px-10 py-2'
+                    className='bg-[#634af9] text-[#ffffff] rounded font-lexend font-normal text-sm leading-7 px-10 py-2'
                   >
                     Submit
                   </button>

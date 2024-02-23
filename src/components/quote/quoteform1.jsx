@@ -97,20 +97,20 @@ const Quoteform1 = () => {
           <table class='w-full text-sm text-left rtl:text-right text-#404040]'>
             <thead class='text-sm font-bold font-inter leading-7 text-gray-700 uppercase bg-[#F4F4F4] '>
               <tr>
-                <th scope='col' class='px-6 py-3'>
+                <th scope='col' class='px-6 py-3 text-[12px]'>
                   User
                 </th>
-                <th scope='col' class='px-6 py-3'>
+                <th scope='col' class='px-6 py-3 text-[12px]'>
                   Type
                 </th>
-                <th scope='col' class='px-6 py-3'>
+                <th scope='col' class='px-6 py-3 text-[12px]'>
                   Date
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr class='bg-white border-b border-[#EBEBEB] font-inter font-normal text-[#404040] leading-7'>
-                <th scope='row' class='px-6 py-4 '>
+              <tr class='bg-white border-b border-[#EBEBEB] font-inter font-normal text-[#404040] leading-7 '>
+                <th scope='row' class='px-6 py-4  '>
                   Jamal Saied
                 </th>
                 <td class='px-6 py-4  uppercase '>INSERT</td>
@@ -190,12 +190,12 @@ const Quoteform1 = () => {
     return (
       <Form className='grid grid-cols-1 '>
         <div className='flex flex-row flex-wrap justify-between'>
-          <div className='left rounded-full border border-[#04B076] px-4 py-2 text-[#04B076] font-normal font-inter '>
-            <span className='rounded-r-lg border h-4 w-4 px-2 mr-2 border-[#04B076]'></span>
-            <span className='font-bold text-sm leading-5'># 1</span>
+          <div className='left rounded-full border border-[#04B076] px-4 py-3 text-[#04B076] font-normal font-inter'>
+            <span className='rounded-r-lg border h-3 w-3 px-2 mr-2 border-[#04B076]'></span>
+            <span className='font-semibold font-lexend text-sm leading-5'># 1</span>
           </div>
           <div className='right mt-6 md:mt-0'>
-            <button className='text-[#04b076] font-inter rounded-full px-4 py-2 font-bold text-xl leading-7 border border-[#04B076] bg-[#B9F9CF]'>
+            <button className='text-[#04b076] font-inter rounded-full px-4 py-2 font-semibold text-sm leading-7 border border-[#04B076] bg-[#B9F9CF]'>
               Total $ 0.00
             </button>
           </div>
@@ -205,7 +205,7 @@ const Quoteform1 = () => {
             <div className='w-full '>
               <label
                 htmlFor='item'
-                className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
               >
                 Item
               </label>
@@ -225,7 +225,7 @@ const Quoteform1 = () => {
             <div className='w-full '>
               <label
                 htmlFor='quantity'
-                className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
               >
                 Quantity
               </label>
@@ -245,7 +245,7 @@ const Quoteform1 = () => {
             <div className='w-full '>
               <label
                 htmlFor='price'
-                className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
               >
                 Price
               </label>
@@ -267,7 +267,7 @@ const Quoteform1 = () => {
             <div className='w-full '>
               <label
                 htmlFor='commission'
-                className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
               >
                 Commission
               </label>
@@ -287,7 +287,7 @@ const Quoteform1 = () => {
             <div className='w-full '>
               <label
                 htmlFor='rate'
-                className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
               >
                 Rate
               </label>
@@ -307,7 +307,7 @@ const Quoteform1 = () => {
             <div className='w-full '>
               <label
                 htmlFor='discount'
-                className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
               >
                 Discount
               </label>
@@ -328,8 +328,8 @@ const Quoteform1 = () => {
           <div className='flex flex-row flex-wrap justify-between mt-6'>
             <div className=' w-[32.5%]'></div>
             <div className=' '>
-              <button className='flex py-[10px] px-[16px]  text-[#FF3D00] text-base rounded items-center gap-2'>
-                <img src={Delete} className='w-6 h-6  ' alt='' />
+              <button className='flex py-[10px] px-[16px]  text-[#FF3D00] text-sm rounded items-center gap-2'>
+                <img src={Delete} className='w-3.5 h-3.5  ' alt='' />
                 Remove
               </button>
             </div>
@@ -345,41 +345,41 @@ const Quoteform1 = () => {
       // side bar start
       <div className='sidebar border border-[#ebebeb] rounded'>
         <div className='quotesidebar flex flex-col gap-4 px-6 pt-[150px] pb-[600px]    bg-white'>
-          <h2 className='font-lexend font-bold text-[#634AF9] text-2xl leading-9'>
+          <h2 className='font-lexend font-semibold text-[#634AF9] text-lg leading-9'>
             Quote Summary
           </h2>
-          <div className='flex gap-2'>
+          <div className='flex gap-2 items-center'>
             <img src={Line} alt='' className='w-6 h-6' />
-            <p className='text-[#404040] text-xl font-inter font-normal leading-7'>
-              Lines: <span className='text-[#C0C0C0] text-lg'> 00</span>
+            <p className='text-[#404040] text-base font-inter font-medium leading-7'>
+              Lines: <span className='text-[#C0C0C0] text-sm'> 00</span>
             </p>
           </div>
-          <div className='flex gap-2'>
+          <div className='flex gap-2 items-center'>
             <img src={SubTotal} alt='' className='w-6 h-6' />
-            <p className='text-[#404040] text-xl font-inter font-normal leading-7'>
-              SubTotal: <span className='text-[#C0C0C0] text-lg'> 0.00</span>
+            <p className='text-[#404040] text-base font-inter font-medium leading-7'>
+              SubTotal: <span className='text-[#C0C0C0] text-sm'> 0.00</span>
             </p>
           </div>
-          <div className='flex gap-2'>
+          <div className='flex gap-2 items-center'>
             <img src={Commision} alt='' className='w-6 h-6' />
-            <p className='text-[#404040] text-xl font-inter font-normal leading-7'>
-              Commision: <span className='text-[#C0C0C0] text-lg'> 0.00</span>
+            <p className='text-[#404040] text-base font-inter font-medium leading-7'>
+              Commision: <span className='text-[#C0C0C0] text-sm'> 0.00</span>
             </p>
           </div>
-          <div className='flex gap-2'>
+          <div className='flex gap-2 items-center'>
             <img src={Discount} alt='' className='w-6 h-6' />
-            <p className='text-[#404040] text-xl font-inter font-normal leading-7'>
-              Discount %: <span className='text-[#C0C0C0] text-lg'> 0.00</span>
+            <p className='text-[#404040] text-base font-inter font-medium leading-7'>
+              Discount %: <span className='text-[#C0C0C0] text-sm'> 0.00</span>
             </p>
           </div>
-          <div className='flex gap-2 '>
+          <div className='flex gap-2 items-center '>
             <img src={Total} alt='' className='w-6 h-6' />
-            <p className='text-[#404040]  text-xl font-inter font-normal leading-7'>
-              Total $: <span className='text-[#C0C0C0] text-lg'> 0.00</span>
+            <p className='text-[#404040]  text-base font-inter font-medium leading-7'>
+              Total $: <span className='text-[#C0C0C0] text-sm'> 0.00</span>
             </p>
           </div>
-          <button onClick={onClose} className='close-btn absolute top-[90px] '>
-            <IoClose className='w-10 h-10 text-[#634AF9]' />
+          <button onClick={onClose} className='close-btn absolute top-[100px] '>
+            <IoClose className='w-8 h-8 text-[#634AF9]' />
           </button>
         </div>
       </div>
@@ -432,7 +432,7 @@ const Quoteform1 = () => {
             <Form className=''>
               <div className='flex flex-col md:flex-row justify-between  bg-white   items-center'>
                 <div className='left flex flex-col gap-2 relative'>
-                  <h2 className='font-lexend font-bold text-[#404040] text-xl leading-9'>
+                  <h2 className='font-lexend font-bold text-[#404040] text-2xl leading-9'>
                     Quote Information
                   </h2>
                 </div>
@@ -446,9 +446,9 @@ const Quoteform1 = () => {
                     type='submit'
                     name='submit'
                     value='submit'
-                    className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'
+                    className='flex py-[10px] px-[16px] bg-[#634af9] text-white font-lexend text-sm rounded items-center gap-2'
                   >
-                    <img src={Save} className='w-6 h-6  ' alt='' />
+                    <img src={Save} className='w-4 h-4  ' alt='' />
                     Save
                   </button>
                 </div>
@@ -458,7 +458,7 @@ const Quoteform1 = () => {
                   <div className='w-full'>
                     <label
                       htmlFor='quoteNumber'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Quote Number
                     </label>
@@ -472,13 +472,13 @@ const Quoteform1 = () => {
                     <ErrorMessage
                       name='quoteNumber'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div class='relative max-w-sm quoteDate'>
                     <label
                       htmlFor='quoteDate'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Quote Date
                     </label>
@@ -505,13 +505,13 @@ const Quoteform1 = () => {
                     <ErrorMessage
                       name='quoteDate'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div class='relative max-w-sm notificationDate'>
                     <label
                       htmlFor='notificationDate'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Notification Date
                     </label>
@@ -538,13 +538,13 @@ const Quoteform1 = () => {
                     <ErrorMessage
                       name='notificationDate'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                   <div class='relative max-w-sm expirationDate'>
                     <label
                       htmlFor='expirationDate'
-                      className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                      className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                     >
                       Expiration Date
                     </label>
@@ -571,14 +571,14 @@ const Quoteform1 = () => {
                     <ErrorMessage
                       name='expirationDate'
                       component='div'
-                      className='text-red-500 text-sm mt-1'
+                      className='text-red-500 font-inter text-sm mt-1'
                     />
                   </div>
                 </div>
                 <div className='w-full mt-6'>
                   <label
                     htmlFor='client'
-                    className='block mb-2 text-base font-normal text-[#404040] font-inter leading-7'
+                    className='block mb-2 text-sm font-normal text-[#404040] font-inter leading-7'
                   >
                     Client
                   </label>
@@ -595,18 +595,18 @@ const Quoteform1 = () => {
                     className='text-red-500 text-sm mt-1'
                   />
                 </div>
-                <div className='tabs'>
+                <div className='tabs font-inter text-sm '>
                   <div className='container mx-auto mt-8'>
                     <Tabs data={tabData} />
                   </div>
                 </div>
-                <div className='buttons flex flex-col  md:flex-row gap-4 mt-6'>
-                  <button className='flex py-[10px] px-[16px] bg-[#B9F9CF] text-[#04b076] rounded border border-[#04B076] items-center gap-2'>
-                    <img src={Green} className='w-6 h-6 ' alt='' />
+                <div className='buttons flex flex-col  md:flex-row gap-4 pl-10 mt-6'>
+                  <button className='flex font-lexend text-sm py-[10px] px-[16px] bg-[#B9F9CF] text-[#04b076] rounded border border-[#04B076] items-center gap-2'>
+                    <img src={Green} className='w-3 h-3 ' alt='' />
                     Add Notes
                   </button>
-                  <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
-                    <img src={Plus} className='w-6 h-6  ' alt='' />
+                  <button className='flex font-lexend text-sm py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-2'>
+                    <img src={Plus} className='w-3 h-3  ' alt='' />
                     Add Quote
                   </button>
                 </div>

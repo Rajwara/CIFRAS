@@ -15,7 +15,7 @@ const Detailsandhistorytabs = () => {
             <div className='flex flex-row flex-wrap justify-between'>
               <div className='left rounded-full border border-[#04B076] px-4 py-3 text-[#04B076] font-normal font-inter '>
                 <span className='rounded-r-lg border h-3 w-3 px-2 mr-2 border-[#04B076]'></span>
-                <span className='font-bold text-sm leading-5'># 1</span>
+                <span className='font-semibold font-lexend text-sm leading-5'># 1</span>
               </div>
               <div className='right mt-4 md:mt-0'>
                 <button className='text-[#04b076] font-inter rounded-full px-4 py-2 font-semibold text-sm leading-7 border border-[#04B076] bg-[#B9F9CF]'>
@@ -149,13 +149,13 @@ const Detailsandhistorytabs = () => {
             <table class='w-full text-sm text-left rtl:text-right text-#404040]'>
               <thead class='text-sm font-bold font-inter leading-7 text-gray-700 uppercase bg-[#F4F4F4] '>
                 <tr>
-                  <th scope='col' class='px-6 py-3'>
+                  <th scope='col' class='px-6 py-3 text-[12px]'>
                     User
                   </th>
                   <th scope='col' className='px-6 text-[12px] py-3'>
                     Type
                   </th>
-                  <th scope='col' class='px-6 py-3'>
+                  <th scope='col' class='px-6 py-3 text-[12px]'>
                     Date
                   </th>
                 </tr>
