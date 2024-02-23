@@ -5,7 +5,7 @@ import Totalrevenuecardforotherpage from "../cards/totalrevenuecard";
 
 const Addproduct = () => {
   return (
-    <div className='flex w-full flex-col lg:flex-row  justify-between  bg-white   py-8 px-10 items-center'>
+    <div className='flex w-full flex-col lg:flex-row  justify-between border border-[#ebebeb]  bg-white   py-8 px-10 items-center'>
       <div className='left lg:w-[10%] xl:w-16 flex flex-col gap-2 relative'>
         <h2 className='font-lexend font-bold text-[#404040] text-2xl leading-9'>
           Products

@@ -99,19 +99,21 @@ const RepeatCustomerRateChart = () => {
       </CardHeader>
       <CardBody className='px-2 pb-0'>
         <div className='flex flex-col justify-between mb-4'>
-          <h6 className='font-inter font-bold text-xl text-[#404040] leading-9 mb-4'>
+          <h6 className='font-lexend font-semibold text-xl text-[#404040] leading-9 mb-4'>
             Repeat Customer Rate
           </h6>
           <div className='flex gap-6'>
             <Button
               color={customerType === "new" ? "blue" : "gray"}
               onClick={() => setCustomerType("new")}
+              className="font-lexend font-normal text-sm"
             >
               New Customer
             </Button>
             <Button
               color={customerType === "old" ? "blue" : "gray"}
               onClick={() => setCustomerType("old")}
+              className="font-lexend font-normal text-sm"
             >
               Old Customer
             </Button>

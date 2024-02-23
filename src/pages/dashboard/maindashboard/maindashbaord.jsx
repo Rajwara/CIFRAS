@@ -15,19 +15,19 @@ const Maindashbaord = () => {
     <div>
       {" "}
       <div class='p-4 sm:ml-[60px] mt-20 bg-white'>
-        <div class=' '>
-          <div class='mb-4'>
+        <div class='grid grid-cols-1 '>
+          <div class='mb-4 w-full'>
             <p class='text-2xl text-gray-400 '>
               <Goodmorning />
             </p>
           </div>
           <div class='grid gird-cols-1 md:grid-cols-2 gap-4 mb-4  '>
-            <div class='  rounded border border-[#ebebeb]'>
+            <div class='w-full  rounded border border-[#ebebeb]'>
               <p class='text-2xl text-gray-400 '>
                 <Numberofordercards />
               </p>
             </div>
-            <div class=' rounded border border-[#ebebeb]'>
+            <div class='w-full rounded border border-[#ebebeb]'>
               <p class='text-2xl text-gray-400 '>
                 <Mostsoldproductscard />
               </p>
