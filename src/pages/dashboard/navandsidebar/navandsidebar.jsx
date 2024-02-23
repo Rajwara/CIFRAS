@@ -22,6 +22,7 @@ import { logout } from "../../../redux/reducers/UserSlice";
 import Searchbar from "../../../components/searchbar/searchbar";
 import LogoOnly from "../../../assets/images/logoonly.png";
 import { MdClose } from "react-icons/md";
+import SearchButtonIcon from "../../../assets/images/searchbuttonicon.svg"
 
 const Navandsidebar = () => {
   const [isSearchVisible, setSearchVisible] = useState(false);
@@ -173,9 +174,10 @@ const Navandsidebar = () => {
                           <input
                             type='text'
                             id='table-search-users'
-                            className='block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 '
+                            className='block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg md:w-80 bg-white focus:ring-blue-500 focus:border-blue-500 '
                             placeholder='Search your page...'
                           />
+                          <img src={SearchButtonIcon} alt="" className="w-10 h-12 absolute right-[10px] -top-[5px] " />
                         </div>
                       </button>
 
