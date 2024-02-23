@@ -21,11 +21,11 @@ const invoicelistbtnbar = () => {
         <Totalrevenuecardforotherpage />
       </div>
 
-      <div className='right flex flex-col xl:flex-row justify-center items-center gap-4 mt-4 lg:mt-0 lg:w-[20%] xl:w-[35%]'>
-        <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-4 text-sm font-semibold'>
+      <div className='right flex flex-col xl:flex-row justify-center items-center gap-4 mt-4 lg:mt-0 lg:w-[20%] xl:w-[20%]'>
+        {/* <button className='flex py-[10px] px-[16px] bg-[#634af9] text-white rounded items-center gap-4 text-sm font-semibold'>
           <img src={ImportIcon} className='w-3.5 h-3.5  ' alt='' />
           Import
-        </button>
+        </button> */}
         <a href='/createinvoiceform '>
           <button className='flex py-[10px] px-[16px] bg-[#634af9] text-sm text-white rounded items-center gap-2 font-semibold'>
             <img src={Plus} className='w-3.5 h-3.5  ' alt='' />

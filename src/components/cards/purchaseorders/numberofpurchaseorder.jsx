@@ -14,7 +14,7 @@ const Numberofpurchaseorder = () => {
           </div>
           <div className=''>
             <h6 className='font-medium font-lexend text-[#000000] text-lg leading-9'>
-              Number of Purchase Orders
+              Purchase Orders
             </h6>
             <h6 className='font-bold font-lexend text-[#2591fa] text-xl leading-9'>
               1,200
